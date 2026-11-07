@@ -12,10 +12,11 @@ import { reactTopics } from "@/lib/learning/react-topics";
 const frontend = categories.find((category) => category.id === "frontend");
 const react = frontendTechnologies.find((technology) => technology.id === "react");
 const description = "Learn the core concepts behind building interactive user interfaces with React.";
+const publishedCount = reactTopics.filter((topic) => topic.status === "available").length;
 
 export const metadata: Metadata = {
   title: `${react?.name ?? "Technology"} | Explain Dev`,
-  description: `${description} Start with Introduction to React, Thinking in declarative UI, useState, and useEffect; more topics are coming in future milestones.`,
+  description: `${description} Follow the curriculum from fundamentals to advanced patterns.`,
 };
 
 export default function ReactPage() {
@@ -42,12 +43,12 @@ export default function ReactPage() {
       <section aria-labelledby="react-overview-heading" className="mt-12 max-w-2xl sm:mt-14">
         <h2 id="react-overview-heading" className="text-xl font-semibold tracking-tight">A component-based approach to interfaces</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-          React is a JavaScript library for building user interfaces with components: reusable pieces that describe parts of the screen. This collection will introduce the concepts behind composing those pieces into interactive applications.
+          React is a JavaScript library for building user interfaces with components: reusable pieces that describe parts of the screen. This collection introduces the concepts behind composing those pieces into interactive applications.
         </p>
       </section>
 
       <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-        The Introduction to React, Thinking in declarative UI, useState, and useEffect articles are available now. All other lessons are coming soon. Follow the curriculum from fundamentals to advanced patterns, or jump to a group below.
+        {publishedCount === reactTopics.length ? `All ${reactTopics.length} lessons are available now.` : `${publishedCount} of ${reactTopics.length} lessons are available now, and the rest are coming soon.`} Follow the curriculum from fundamentals to advanced patterns, or jump to a group below.
       </p>
 
       <nav aria-label="React curriculum" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">

@@ -37,7 +37,7 @@ describe("frontend technology presentation", () => {
   it("retains one primary heading and a truthful learning-content message", () => {
     expect(html.match(/<h1\b/g)).toHaveLength(1);
     expect(html).toContain("More learning content is coming soon");
-    expect(html).toContain("published Introduction to React, Thinking in declarative UI, useState, and useEffect articles");
+    expect(html).toContain("React has an overview page and a complete curriculum of published lessons.");
   });
 });
 
@@ -48,10 +48,9 @@ describe("React technology introduction", () => {
     expect(html.match(/<h1\b/g)).toHaveLength(1);
     expect(html).toMatch(/<h1\b[^>]*>React<\/h1>/);
     expect(html).toContain("Learn the core concepts behind building interactive user interfaces with React.");
-    expect(html).toContain("The Introduction to React, Thinking in declarative UI, useState, and useEffect articles are available now.");
+    expect(html).toMatch(/(?:\d+ of 119 lessons are available now, and the rest are coming soon|All 119 lessons are available now)\./);
     expect(html).toContain("React Hooks");
     expect(html).toContain("React Fundamentals");
-    expect(html).toContain("All other lessons are coming soon.");
   });
 
   it("renders the breadcrumb hierarchy with two real links and a non-linked current page", () => {
@@ -68,7 +67,7 @@ describe("React technology introduction", () => {
 
   it("provides metadata that identifies the technology without claiming published lessons", () => {
     expect(reactMetadata.title).toBe("React | Explain Dev");
-    expect(reactMetadata.description).toContain("Start with Introduction to React, Thinking in declarative UI, useState, and useEffect");
-    expect(reactMetadata.description).toContain("coming in future milestones");
+    expect(reactMetadata.description).toContain("Follow the curriculum");
+    expect(reactMetadata.description).not.toMatch(/\d/);
   });
 });

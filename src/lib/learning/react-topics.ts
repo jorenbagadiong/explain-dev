@@ -36,7 +36,7 @@ export const reactTopics = [
   },
   {
     id: "declarative-ui",
-    title: "Thinking in declarative UI",
+    title: "Thinking in Declarative UI",
     summary: "Describe the screen for each state instead of manually updating the DOM.",
     categoryId: "frontend",
     technologyId: "react",
@@ -54,7 +54,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/writing-ui-with-jsx",
     order: 3,
   },
   {
@@ -65,7 +66,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/understanding-components",
     order: 4,
   },
   {
@@ -76,7 +78,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/passing-data-with-props",
     order: 5,
   },
   {
@@ -87,7 +90,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/rendering-elements-and-components",
     order: 6,
   },
   {
@@ -98,7 +102,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/conditional-rendering",
     order: 7,
   },
   {
@@ -109,7 +114,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/rendering-lists",
     order: 8,
   },
   {
@@ -120,7 +126,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/keys-and-component-identity",
     order: 9,
   },
   {
@@ -131,7 +138,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/handling-events",
     order: 10,
   },
   {
@@ -142,7 +150,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/keeping-components-pure",
     order: 11,
   },
   {
@@ -153,7 +162,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/rendering-and-committing",
     order: 12,
   },
   {
@@ -164,7 +174,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/component-lifecycle-concepts",
     order: 13,
   },
   {
@@ -175,7 +186,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/understanding-component-state",
     order: 1,
   },
   {
@@ -186,7 +198,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/state-as-a-snapshot",
     order: 2,
   },
   {
@@ -197,7 +210,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/update-queues-and-batching",
     order: 3,
   },
   {
@@ -208,7 +222,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/updating-objects-immutably",
     order: 4,
   },
   {
@@ -219,7 +234,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/updating-arrays-immutably",
     order: 5,
   },
   {
@@ -230,7 +246,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/sharing-state-between-components",
     order: 6,
   },
   {
@@ -241,7 +258,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/lifting-state-up",
     order: 7,
   },
   {
@@ -252,7 +270,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/controlled-and-uncontrolled-components",
     order: 8,
   },
   {
@@ -263,7 +282,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/preserving-and-resetting-state",
     order: 9,
   },
   {
@@ -274,7 +294,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/state-structure-and-derived-values",
     order: 10,
   },
   {
@@ -285,7 +306,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/organizing-updates-with-reducers",
     order: 11,
   },
   {
@@ -296,7 +318,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/context-and-data-flow",
     order: 12,
   },
   {
@@ -307,7 +330,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "state-data-flow",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/avoiding-unnecessary-state",
     order: 13,
   },
   {
@@ -345,7 +369,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-ref",
     order: 3,
   },
   {
@@ -357,7 +382,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-memo",
     order: 4,
   },
   {
@@ -369,7 +395,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-callback",
     order: 5,
   },
   {
@@ -381,7 +408,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-context",
     order: 6,
   },
   {
@@ -393,7 +421,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-reducer",
     order: 7,
   },
   {
@@ -405,7 +434,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-action-state",
     order: 8,
   },
   {
@@ -417,7 +447,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-optimistic",
     order: 9,
   },
   {
@@ -429,7 +460,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-imperative-handle",
     order: 10,
   },
   {
@@ -441,7 +473,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-layout-effect",
     order: 11,
   },
   {
@@ -453,7 +486,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-insertion-effect",
     order: 12,
   },
   {
@@ -465,7 +499,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-effect-event",
     order: 13,
   },
   {
@@ -477,7 +512,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-transition",
     order: 14,
   },
   {
@@ -489,7 +525,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-deferred-value",
     order: 15,
   },
   {
@@ -501,7 +538,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-id",
     order: 16,
   },
   {
@@ -513,7 +551,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-sync-external-store",
     order: 17,
   },
   {
@@ -525,7 +564,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "hook",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-debug-value",
     order: 18,
   },
   {
@@ -537,7 +577,8 @@ export const reactTopics = [
     groupId: "hooks",
     kind: "react-dom-hook",
     package: "react-dom",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-form-status",
     order: 19,
   },
   {
@@ -548,7 +589,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/component-composition",
     order: 1,
   },
   {
@@ -559,7 +601,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/children-and-composition-patterns",
     order: 2,
   },
   {
@@ -570,7 +613,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/building-reusable-components",
     order: 3,
   },
   {
@@ -581,7 +625,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/creating-custom-hooks",
     order: 4,
   },
   {
@@ -592,7 +637,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/separating-ui-and-logic",
     order: 5,
   },
   {
@@ -603,7 +649,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/choosing-component-responsibilities",
     order: 6,
   },
   {
@@ -614,7 +661,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/prop-drilling-and-alternatives",
     order: 7,
   },
   {
@@ -625,7 +673,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/context-provider-architecture",
     order: 8,
   },
   {
@@ -636,7 +685,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/understanding-error-boundaries",
     order: 9,
   },
   {
@@ -648,7 +698,8 @@ export const reactTopics = [
     groupId: "component-architecture",
     kind: "api",
     package: "react-dom",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/create-portal-and-portals",
     order: 10,
   },
   {
@@ -659,7 +710,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/ref-props-and-forwarding",
     order: 11,
   },
   {
@@ -670,7 +722,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/imperative-component-interfaces",
     order: 12,
   },
   {
@@ -681,7 +734,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "component-architecture",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/designing-component-apis",
     order: 13,
   },
   {
@@ -693,7 +747,8 @@ export const reactTopics = [
     groupId: "component-architecture",
     kind: "api",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/create-context",
     order: 14,
   },
   {
@@ -704,7 +759,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/controlled-inputs",
     order: 1,
   },
   {
@@ -715,7 +771,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/uncontrolled-inputs",
     order: 2,
   },
   {
@@ -726,7 +783,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/form-submission",
     order: 3,
   },
   {
@@ -737,7 +795,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/form-validation-concepts",
     order: 4,
   },
   {
@@ -748,7 +807,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-form-actions",
     order: 5,
   },
   {
@@ -759,7 +819,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/pending-and-submission-states",
     order: 6,
   },
   {
@@ -770,7 +831,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/handling-form-errors",
     order: 7,
   },
   {
@@ -781,7 +843,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/optimistic-form-interactions",
     order: 8,
   },
   {
@@ -792,7 +855,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/accessible-forms",
     order: 9,
   },
   {
@@ -803,7 +867,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/managing-focus",
     order: 10,
   },
   {
@@ -814,7 +879,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/keyboard-interactions",
     order: 11,
   },
   {
@@ -825,7 +891,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "forms-interaction",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/managing-complex-forms",
     order: 12,
   },
   {
@@ -836,7 +903,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/understanding-react-re-renders",
     order: 1,
   },
   {
@@ -847,7 +915,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/reconciliation-and-identity",
     order: 2,
   },
   {
@@ -858,7 +927,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/understanding-rendering-performance",
     order: 3,
   },
   {
@@ -870,7 +940,8 @@ export const reactTopics = [
     groupId: "performance-rendering",
     kind: "api",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-memo",
     order: 4,
   },
   {
@@ -881,7 +952,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/memoization-strategies",
     order: 5,
   },
   {
@@ -893,7 +965,8 @@ export const reactTopics = [
     groupId: "performance-rendering",
     kind: "api",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/lazy-and-code-splitting",
     order: 6,
   },
   {
@@ -905,7 +978,8 @@ export const reactTopics = [
     groupId: "performance-rendering",
     kind: "component",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/suspense",
     order: 7,
   },
   {
@@ -916,7 +990,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/transitions-and-update-priority",
     order: 8,
   },
   {
@@ -927,7 +1002,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/deferred-rendering",
     order: 9,
   },
   {
@@ -938,7 +1014,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "tooling",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-devtools-profiler",
     order: 10,
   },
   {
@@ -949,7 +1026,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "tooling",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-compiler",
     order: 11,
   },
   {
@@ -960,7 +1038,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/avoiding-unnecessary-renders",
     order: 12,
   },
   {
@@ -971,7 +1050,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/measuring-before-optimizing",
     order: 13,
   },
   {
@@ -982,7 +1062,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "performance-rendering",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/performance-anti-patterns",
     order: 14,
   },
   {
@@ -993,7 +1074,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-server-components",
     order: 1,
   },
   {
@@ -1004,7 +1086,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/client-components-and-boundaries",
     order: 2,
   },
   {
@@ -1015,7 +1098,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/server-and-client-rendering",
     order: 3,
   },
   {
@@ -1026,7 +1110,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/hydration",
     order: 4,
   },
   {
@@ -1037,7 +1122,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/streaming-ui",
     order: 5,
   },
   {
@@ -1048,7 +1134,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/designing-suspense-boundaries",
     order: 6,
   },
   {
@@ -1059,7 +1146,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/error-boundaries-in-larger-applications",
     order: 7,
   },
   {
@@ -1071,7 +1159,8 @@ export const reactTopics = [
     groupId: "advanced-react",
     kind: "api",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/the-react-use-api",
     order: 8,
   },
   {
@@ -1082,7 +1171,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/server-functions-and-actions",
     order: 9,
   },
   {
@@ -1093,7 +1183,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/concurrent-rendering-concepts",
     order: 10,
   },
   {
@@ -1104,7 +1195,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/integrating-external-stores",
     order: 11,
   },
   {
@@ -1115,7 +1207,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/advanced-ref-patterns",
     order: 12,
   },
   {
@@ -1126,7 +1219,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/choosing-escape-hatches",
     order: 13,
   },
   {
@@ -1137,7 +1231,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-rendering-architecture",
     order: 14,
   },
   {
@@ -1148,7 +1243,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "advanced-react",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/version-dependent-react-features",
     order: 15,
   },
   {
@@ -1160,7 +1256,8 @@ export const reactTopics = [
     groupId: "advanced-react",
     kind: "component",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/activity-boundaries",
     order: 16,
   },
   {
@@ -1172,7 +1269,8 @@ export const reactTopics = [
     groupId: "advanced-react",
     kind: "component",
     package: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/view-transition",
     order: 17,
   },
   {
@@ -1183,7 +1281,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/testing-react-components",
     order: 1,
   },
   {
@@ -1194,7 +1293,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "tooling",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/react-testing-library",
     order: 2,
   },
   {
@@ -1205,7 +1305,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "tooling",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/vitest-fundamentals",
     order: 3,
   },
   {
@@ -1216,7 +1317,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/testing-user-interactions",
     order: 4,
   },
   {
@@ -1227,7 +1329,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/testing-asynchronous-ui",
     order: 5,
   },
   {
@@ -1238,7 +1341,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/testing-custom-hooks",
     order: 6,
   },
   {
@@ -1249,7 +1353,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/mocking-external-dependencies",
     order: 7,
   },
   {
@@ -1260,7 +1365,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/accessibility-fundamentals",
     order: 8,
   },
   {
@@ -1271,7 +1377,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/semantic-html-in-react",
     order: 9,
   },
   {
@@ -1282,7 +1389,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/keyboard-accessibility",
     order: 10,
   },
   {
@@ -1293,7 +1401,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/rules-of-hooks",
     order: 11,
   },
   {
@@ -1304,7 +1413,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/effect-best-practices",
     order: 12,
   },
   {
@@ -1315,7 +1425,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "tooling",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/debugging-react-applications",
     order: 13,
   },
   {
@@ -1326,7 +1437,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/common-react-anti-patterns",
     order: 14,
   },
   {
@@ -1337,7 +1449,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/component-maintainability",
     order: 15,
   },
   {
@@ -1348,7 +1461,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "tooling",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/typescript-with-react",
     order: 16,
   },
   {
@@ -1359,7 +1473,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "testing-best-practices",
     kind: "pattern",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/error-handling-and-recovery",
     order: 17,
   },
 ] as const satisfies readonly ReactTopicMetadata[];

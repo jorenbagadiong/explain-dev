@@ -8,7 +8,7 @@ export interface CodeExample {
   id: string;
   title: string;
   description: string;
-  language: "tsx" | "typescript";
+  language: "tsx" | "typescript" | "text" | "json" | "bash";
   code: string;
 }
 
@@ -66,4 +66,42 @@ export interface ArticleHierarchyVisual {
   context: string;
   root: ArticleHierarchyNode;
   note: string;
+}
+
+// How a lesson's code block may be read and validated:
+// - complete, client, server, framework: compile as shown under strict TypeScript.
+// - snippet: a partial fragment, compiled inside its typecheckContext.
+// - external: needs a package this project does not install, so it cannot compile here.
+// - pseudocode: conceptual only, never presented as executable.
+export type LessonExampleClassification = "complete" | "client" | "server" | "framework" | "snippet" | "external" | "pseudocode";
+
+export interface LessonExample extends CodeExample {
+  classification: LessonExampleClassification;
+  typecheckContext?: { before?: string; after?: string };
+}
+
+export interface LessonMistake extends Omit<CommonMistake, "examples"> {
+  examples?: readonly LessonExample[];
+}
+
+export interface LessonSection {
+  id: string;
+  heading: string;
+  paragraphs: readonly string[];
+  comparison?: readonly ComparisonColumn[];
+  list?: readonly string[];
+  visual?: ArticleConceptVisual | ArticleHierarchyVisual;
+  examples?: readonly LessonExample[];
+  closing?: string;
+}
+
+// Topic identity, title, summary, group, and route stay in the React topic registry.
+export interface LessonArticle {
+  tier: "A" | "B" | "C";
+  sections: readonly LessonSection[];
+  mistakes: readonly LessonMistake[];
+  interview: readonly InterviewQuestion[];
+  takeaways: readonly string[];
+  quickReview: Omit<ArticleQuickReview, "codeReminder"> & { codeReminder: LessonExample };
+  sources: readonly ArticleSource[];
 }

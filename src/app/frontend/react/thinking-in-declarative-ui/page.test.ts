@@ -40,7 +40,7 @@ describe("published Thinking in Declarative UI article", () => {
   it("renders Home, Frontend, and React breadcrumbs followed by the non-linked current topic", () => {
     const breadcrumb = html.match(/<nav\b[^>]*aria-label="Breadcrumb"[^>]*>([\s\S]*?)<\/nav>/)?.[1] ?? "";
     expect([...breadcrumb.matchAll(/href="([^"]+)"/g)].map((match) => match[1])).toEqual(["/", "/frontend", "/frontend/react"]);
-    expect(breadcrumb).toMatch(/<span\b[^>]*aria-current="page"[^>]*>Thinking in declarative UI<\/span>/);
+    expect(breadcrumb).toMatch(/<span\b[^>]*aria-current="page"[^>]*>Thinking in Declarative UI<\/span>/);
   });
 
   it("starts in Learn, with the other two modes hidden from keyboard and assistive technology", () => {

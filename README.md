@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-012 is complete: Thinking in Declarative UI is published, and all articles have a Back to Top button.** All four published articles offer Learn, Quick Review, and Interview modes. React retains its eight-group curriculum with 119 topics. Only Introduction to React, Thinking in Declarative UI, useState, and useEffect are published; the other 115 lessons are Coming soon. React is still the only available frontend technology; the other technologies and learning categories remain upcoming.
+Explain Dev is a developer learning and reference project. **ED-013 is complete: all 119 React topics are published as static lessons.** Every lesson offers Learn, Quick Review, and Interview modes, and has a Back to Top button. See [React curriculum completion (ED-013)](#react-curriculum-completion-ed-013) for status, workflow, and limitations. The other frontend technologies and the remaining categories are still coming soon.
 
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
@@ -125,6 +125,53 @@ The React introduction reads its name and icon from the same registry. Its light
 
 The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
 
+## React curriculum completion (ED-013)
+
+**Objective:** publish all 115 remaining React topics in verified batches, with persistent progress so that the work could stop and resume. **Result: 119 of 119 available** (4 existing, 115 new, 0 pending, 0 blocked) across 20 batches.
+
+**Routes:** each topic is a thin static route at `/frontend/react/<slug>`, where the slug comes from the topic's title. `docs/ed-013/curriculum-manifest.json` lists every route. A published route's href lives in the registry, and tests fail if a route and its topic disagree.
+
+**Learning modes:** every lesson reuses the existing Learn, Quick Review, and Interview modes, and Back to Top, through `ArticleLayout`. No new storage keys or schema were added.
+
+**Content architecture:**
+
+- `src/content/react/lessons/<topic-id>.ts` holds one typed `LessonArticle`, with only a type import.
+- `src/components/learning/lesson-article.tsx` is the shared server renderer, and it returns 404 unless the registry says the topic is available.
+- `src/content/react/lessons/lesson-corpus.ts` is a test-only loader for the whole corpus.
+- Lesson text renders on the server, and it was not found in `.next/static` when sampled, so it does not ship in client JavaScript.
+
+**Code examples** carry a classification: `complete`, `client`, `server`, `framework`, `snippet`, `external`, or `pseudocode`. All TypeScript examples compile together in one strict program, except `external` and `pseudocode` ones and non-code languages. `external` examples use packages that this project does not install, such as React Testing Library, so they are checked by reading them against the docs and are labelled on the page. Compiling is not the same as running. Only the 22 Vitest tests inside `complete` examples were also executed, once, in a scratch project.
+
+**Batch workflow and resuming:** `docs/ed-013/progress.md` has the resume protocol and batch log, and `docs/ed-013/tools/run-batch.sh <batch> [detail-ids...]` runs one batch through every gate. To check state:
+
+```sh
+git status --short --branch
+node docs/ed-013/tools/sync-manifest.mjs --check
+yarn lint && yarn typecheck && yarn test && yarn build
+```
+
+**Publication gates** are defined in `docs/ed-013/content-quality.md`: registry integrity, content completeness, technical accuracy, TypeScript, rendering and accessibility, and regression. A topic is published only after the pre-publish gates pass, and a batch is complete only after the post-publish gates pass.
+
+**Accuracy policy:** a lesson may only cite URLs recorded in `docs/ed-013/verified-references.json`, and if authoritative verification is unavailable, the topic stays blocked. No topic needed blocking. Pages were read through a summarizing fetch tool, so a recorded URL means the page was consulted on that date, not that each line was compared.
+
+**Limitations:**
+
+- Browser checks used Chromium headless shell 156 only. Firefox, Safari, and physical devices were not tested.
+- Real browser zoom was not tested, because it is not available through this tooling.
+- No screen reader testing or full accessibility audit was done, so this is not a claim of WCAG conformance.
+- Width, theme, and keyboard checks ran on representative lessons, one or more per group. Other lessons had the smaller per-route check.
+- Lesson accuracy was reviewed by its author and by automated gates, with no independent human technical review.
+
+**Outstanding topics:** none. The manifest has per-topic detail, so this README does not repeat the list.
+
+**Final verification:**
+
+- `yarn lint`, `yarn typecheck`, `yarn build`: passed. The build generated 125 static pages.
+- `yarn test`: **1,752 tests passed** in 23 files.
+- `sync-manifest --check`: the manifest matches the registry and the files on disk.
+- Browser smoke against the production build: all 119 routes returned 200, 8 representative lessons in detail at 320, 375, 768, 1024, and 1440px in both themes, **2,359 checks passed, 0 failed, 0 console issues**.
+- Across all 119 routes, HTML is 70.7 to 178 KB, with a median of 89.5 KB, and each route loads the same 663,515 bytes of uncompressed JavaScript, so lesson length does not affect client JavaScript.
+
 ## React curriculum and topic metadata (ED-009)
 
 The React technology page now organizes discovery into eight learning groups. These belong within React and do not add global navigation categories.
@@ -145,7 +192,7 @@ The React technology page now organizes discovery into eight learning groups. Th
 
 Every topic belongs to exactly one primary group. IDs are authored independently of groups or array indices. The six original Hook IDs, summaries, and relative order are preserved: `use-state`, `use-effect`, `use-ref`, `use-memo`, `use-callback`, and `use-context`. Conceptual lessons such as context/data flow or reducer patterns are distinct from canonical Hook records. No related-topic system was added.
 
-**React API availability and Explain Dev article publication are separate.** The registry covers 18 verified stable React Hooks and one stable React DOM Hook, but only four topics have published articles and hrefs: Introduction to React, Thinking in declarative UI, useState, and useEffect. The other 115 topics are `coming-soon` and have no href. The discriminated metadata type requires a route for available topics and prohibits one for upcoming topics; Hook kinds also require the matching package and Hooks group. Educational content, preferences, and progress are not stored in these registries.
+**React API availability and Explain Dev article publication are separate.** The registry covers 18 verified stable React Hooks and one stable React DOM Hook, and since ED-013 all 119 topics have published lessons and hrefs. Publication in this project still says nothing about an API's release status: lessons on version-sensitive features state their own requirements.
 
 The React page derives eight sections and a static keyboard-accessible table of contents from the registries. Each group has its description, h2, and ordered card grid. TopicCard retains h3 titles, summaries, status labels, and semantic Next.js Links with arrows for the two published articles. All other cards are plain articles with no controls, handlers, tab stops, or hover effects suggesting navigation. Repeated decorative brace icons were removed to keep the larger collection compact. The existing one/two/three-column grid, theme tokens, introduction, metadata, breadcrumbs, and shell remain. There is no scroll spy, client state, search, filter, or collapsed group.
 
@@ -447,4 +494,4 @@ Browser checks used preinstalled Playwright/Chromium through a temporary script;
 
 ## Next planned milestone
 
-Recommended next: **Writing UI with JSX**, the next React Fundamentals topic in curriculum order, as a separately approved publishing milestone. Only Introduction to React, Thinking in declarative UI, useState, and useEffect are published. The other 115 topics, including the JSX and components lessons, remain a discovery plan rather than completed educational content.
+No milestone is scheduled. The React curriculum is complete, so the next one is a product decision for the maintainer.

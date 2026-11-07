@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { describe, expect, it } from "vitest";
 
 import { reactCurriculumGroups } from "./react-curriculum";
-import { reactTopics, type ReactTopicKind } from "./react-topics";
+import { reactTopics, type ReactTopic, type ReactTopicKind } from "./react-topics";
 
 // Reviewed against the official React 19.3 Hook references and installed exports.
 const stableReactHooks = ["useState", "useReducer", "useActionState", "useOptimistic", "useContext", "useRef", "useImperativeHandle", "useEffect", "useLayoutEffect", "useInsertionEffect", "useEffectEvent", "useMemo", "useCallback", "useTransition", "useDeferredValue", "useId", "useSyncExternalStore", "useDebugValue"] as const;
@@ -55,20 +55,18 @@ describe("React curriculum topic metadata", () => {
     expect(originals.every((topic) => topic.groupId === "hooks")).toBe(true);
   });
 
-  it("publishes only the four released articles at their canonical URLs", () => {
+  it("keeps the original four articles at their canonical URLs, and only published topics have routes", () => {
     expect(reactTopics).toHaveLength(119);
-    expect(reactTopics.filter((topic) => topic.status === "available").map(({ id, href }) => ({ id, href }))).toEqual([
+    const published = reactTopics.filter((topic) => topic.status === "available").map(({ id, href }) => ({ id, href }));
+    expect(published).toEqual(expect.arrayContaining([
       { id: "react-introduction", href: "/frontend/react/introduction-to-react" },
       { id: "declarative-ui", href: "/frontend/react/thinking-in-declarative-ui" },
       { id: "use-state", href: "/frontend/react/use-state" },
       { id: "use-effect", href: "/frontend/react/use-effect" },
-    ]);
-    const upcoming = reactTopics.filter((topic) => !["react-introduction", "declarative-ui", "use-state", "use-effect"].includes(topic.id));
-    expect(upcoming).toHaveLength(115);
-    for (const topic of upcoming) {
-      expect(topic.status).toBe("coming-soon");
-      expect(topic).not.toHaveProperty("href");
-    }
+    ]));
+    expect(new Set(published.map((topic) => topic.href)).size).toBe(published.length);
+    const allTopics: readonly ReactTopic[] = reactTopics;
+    for (const topic of allTopics.filter((entry) => entry.status === "coming-soon")) expect(topic).not.toHaveProperty("href");
   });
 
   it("keeps Introduction to React as one Fundamentals entry with its original metadata", () => {
@@ -83,11 +81,11 @@ describe("React curriculum topic metadata", () => {
     });
   });
 
-  it("keeps Thinking in declarative UI as one Fundamentals entry with its original metadata", () => {
+  it("keeps Thinking in Declarative UI as one Fundamentals entry with its original metadata", () => {
     const matches = reactTopics.filter((topic) => topic.id === "declarative-ui");
     expect(matches).toHaveLength(1);
     expect(matches[0]).toMatchObject({
-      title: "Thinking in declarative UI",
+      title: "Thinking in Declarative UI",
       summary: "Describe the screen for each state instead of manually updating the DOM.",
       groupId: "fundamentals",
       kind: "concept",
@@ -120,7 +118,7 @@ describe("React curriculum topic metadata", () => {
   it("identifies useFormStatus as the stable React DOM Hook without duplicating deprecated useFormState", () => {
     const hooks = reactTopics.filter((topic) => topic.kind === "react-dom-hook");
     expect(hooks.map((topic) => topic.title)).toEqual(["useFormStatus"]);
-    expect(hooks[0]).toMatchObject({ groupId: "hooks", package: "react-dom", status: "coming-soon" });
+    expect(hooks[0]).toMatchObject({ groupId: "hooks", package: "react-dom" });
     expect(ReactDOM.useFormStatus).toBeTypeOf("function");
     expect(Object.keys(ReactDOM).filter((key) => /^use[A-Z]/.test(key) && key !== "useFormState")).toEqual(["useFormStatus"]);
     expect(reactTopics.some((topic) => /useFormState|unstable_|experimental_/.test(topic.title))).toBe(false);
@@ -137,6 +135,6 @@ describe("React curriculum topic metadata", () => {
     ["react-compiler", "tooling", "performance-rendering"],
     ["client-boundaries", "concept", "advanced-react"],
   ])("classifies %s independently of built-in Hooks", (id, kind, groupId) => {
-    expect(reactTopics.find((topic) => topic.id === id)).toMatchObject({ kind, groupId, status: "coming-soon" });
+    expect(reactTopics.find((topic) => topic.id === id)).toMatchObject({ kind, groupId });
   });
 });

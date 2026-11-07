@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
 import { reactCurriculumGroups } from "@/lib/learning/react-curriculum";
-import { reactTopics } from "@/lib/learning/react-topics";
+import { reactTopics, type ReactTopic } from "@/lib/learning/react-topics";
 import ReactPage from "./page";
 
 const html = renderToStaticMarkup(createElement(ReactPage));
@@ -39,11 +39,12 @@ describe("grouped React curriculum", () => {
 
   it("links only published cards and leaves all upcoming cards outside the tab order", () => {
     const curriculum = sections.map((section) => section[2]).join("");
-    expect([...curriculum.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1])).toEqual([
-      "/frontend/react/introduction-to-react", "/frontend/react/thinking-in-declarative-ui", "/frontend/react/use-state", "/frontend/react/use-effect",
-    ]);
+    const published = reactCurriculumGroups.flatMap((group) => reactTopics.filter((topic) => topic.groupId === group.id).sort((a, b) => a.order - b.order).flatMap((topic) => (topic.status === "available" ? [topic.href] : [])));
+    for (const route of ["/frontend/react/introduction-to-react", "/frontend/react/thinking-in-declarative-ui", "/frontend/react/use-state", "/frontend/react/use-effect"]) expect(published).toContain(route);
+    expect([...curriculum.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1])).toEqual(published);
     const upcoming = [...curriculum.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/g)];
-    expect(upcoming).toHaveLength(reactTopics.filter((topic) => topic.status === "coming-soon").length);
+    const allTopics: readonly ReactTopic[] = reactTopics;
+    expect(upcoming).toHaveLength(allTopics.filter((topic) => topic.status === "coming-soon").length);
     for (const card of upcoming) {
       expect(card[1]).toContain("Coming soon");
       expect(card[0]).not.toMatch(/<a\b|<button\b|<input\b|\btabindex=|\bonclick=|\brole="(?:button|link)"|hover:/);
