@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Clock3 } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import { TopicCard } from "@/components/learning/topic-card";
 import { categories } from "@/components/navigation/categories";
 import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
+import { reactCurriculumGroups } from "@/lib/learning/react-curriculum";
 import { reactTopics } from "@/lib/learning/react-topics";
 
 const frontend = categories.find((category) => category.id === "frontend");
@@ -45,26 +46,30 @@ export default function ReactPage() {
         </p>
       </section>
 
-      <section aria-labelledby="react-hooks-heading" className="mt-10">
-        <h2 id="react-hooks-heading" className="text-xl font-semibold tracking-tight">React Hooks</h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Explore the core React Hooks used to manage state, synchronize with external systems, share context, and optimize rendering.
-        </p>
-        <ul className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3 sm:gap-5">
-          {reactTopics.map((topic) => <li key={topic.id}><TopicCard topic={topic} /></li>)}
-        </ul>
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Broader React coverage, including components, testing, and custom Hooks, is planned for future milestones. Start with the published useState and useEffect articles; the other Hook articles are coming soon.
-        </p>
-      </section>
+      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        The useState and useEffect articles are available now. All other lessons are coming soon. Follow the curriculum from fundamentals to advanced patterns, or jump to a group below.
+      </p>
 
-      <section aria-labelledby="react-content-status-heading" className="mt-10 flex max-w-2xl items-start gap-4 rounded-xl border bg-muted/30 p-6 sm:mt-12 sm:p-7">
-        <Clock3 className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
-        <div>
-          <h2 id="react-content-status-heading" className="text-base font-semibold tracking-tight">More {react.name} learning topics are coming soon.</h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">The useState and useEffect articles are available now. The other four Hook articles will be added in future milestones.</p>
-        </div>
-      </section>
+      <nav aria-label="React curriculum" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">
+        <p className="mb-3 text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">Explore the curriculum</p>
+        <ol className="grid gap-x-6 sm:grid-cols-2">
+          {[...reactCurriculumGroups].sort((a, b) => a.order - b.order).map((group) => (
+            <li key={group.id}><a href={`#${group.id}`} className="inline-flex min-h-11 items-center rounded-md py-2 text-sm text-primary underline-offset-4 hover:underline">{group.title}</a></li>
+          ))}
+        </ol>
+      </nav>
+
+      {[...reactCurriculumGroups].sort((a, b) => a.order - b.order).map((group) => (
+        <section key={group.id} id={group.id} aria-labelledby={`${group.id}-heading`} className="mt-14 scroll-mt-28 border-t pt-8 sm:mt-16">
+          <h2 id={`${group.id}-heading`} className="text-2xl font-semibold tracking-tight">{group.title}</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{group.description}</p>
+          <ul className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3 sm:gap-5">
+            {reactTopics.filter((topic) => topic.groupId === group.id).sort((a, b) => a.order - b.order).map((topic) => (
+              <li key={topic.id}><TopicCard topic={topic} /></li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </>
   );
 }

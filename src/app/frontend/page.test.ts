@@ -50,7 +50,8 @@ describe("React technology introduction", () => {
     expect(html).toContain("Learn the core concepts behind building interactive user interfaces with React.");
     expect(html).toContain("The useState and useEffect articles are available now.");
     expect(html).toContain("React Hooks");
-    expect(html).toContain("Broader React coverage");
+    expect(html).toContain("React Fundamentals");
+    expect(html).toContain("All other lessons are coming soon.");
   });
 
   it("renders the breadcrumb hierarchy with two real links and a non-linked current page", () => {

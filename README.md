@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-008 is complete: Understanding React useEffect is published**, at `/frontend/react/use-effect`, alongside the published useState article. useRef, useMemo, useCallback, and useContext remain **Coming soon**. React is still the only available frontend technology; the other technologies and learning categories remain upcoming.
+Explain Dev is a developer learning and reference project. **ED-009 is complete: React now has an eight-group curriculum with 119 topics.** Only useState and useEffect are published; the other 117 lessons are Coming soon. React is still the only available frontend technology; the other technologies and learning categories remain upcoming.
 
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
@@ -33,7 +33,7 @@ Open http://localhost:3000.
 | --- | --- |
 | `/` | Four category cards; Frontend Development links to its category page. |
 | `/frontend` | Frontend introduction and seven technologies; React links to its introduction. |
-| `/frontend/react` | React introduction and six Hook cards; useState and useEffect link to their articles. |
+| `/frontend/react` | React introduction, eight curriculum groups, and 119 topic cards; only useState and useEffect link to articles. |
 | `/frontend/react/use-state` | Complete useState article, examples, mistakes, interview answers, and takeaways. |
 | `/frontend/react/use-effect` | Complete useEffect article, dependencies, cleanup, Strict Mode, examples, mistakes, and interview answers. |
 | Other `/frontend/*` routes | Default Next.js 404; unavailable technologies and topic routes have not been created. |
@@ -86,7 +86,7 @@ src/components/theme-toggle.tsx
 src/components/ui/             Locally owned shadcn/ui Button and Sheet
 src/lib/utils.ts               Class name merging
 src/lib/storage/               Preferences repository and colocated tests
-src/lib/learning/              Technology/topic metadata registries and colocated tests
+src/lib/learning/              Technology, curriculum-group, and topic registries with tests
 src/content/react/             Shared article types, separate article content, compiler helper, and tests
 src/types/preferences.ts       Versioned preferences model
 vitest.config.mjs              Minimal Node test environment and @ alias
@@ -119,26 +119,46 @@ The hierarchy is **Frontend Development → Technology → Topic**. Category and
 
 The registry follows the category configuration's discriminated union: available entries require an href, while upcoming entries cannot have one. `/frontend` renders its technology list directly from this registry, using semantic Next.js Links only for available entries. Upcoming entries have no handlers, links, buttons, or tab stops. There is no client state for this static presentation and no duplicate technology list in the global sidebar.
 
-The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. The useState and useEffect cards link to their articles; the other four Hook cards remain non-interactive.
+The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. The useState and useEffect cards link to their articles; every other curriculum card remains non-interactive.
 
 The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
 
-## React topic metadata and cards (ED-006–ED-008)
+## React curriculum and topic metadata (ED-009)
 
-`src/lib/learning/react-topics.ts` is the single source of truth for six React Hook metadata entries, in this order:
+The React technology page now organizes discovery into eight learning groups. These belong within React and do not add global navigation categories.
 
-1. useState
-2. useEffect
-3. useRef
-4. useMemo
-5. useCallback
-6. useContext
+| Group | Topics |
+| --- | ---: |
+| React Fundamentals | 13 |
+| State & Data Flow | 13 |
+| React Hooks | 19 |
+| Component Architecture | 14 |
+| Forms & User Interaction | 12 |
+| Performance & Rendering | 14 |
+| Advanced React | 17 |
+| Testing & Best Practices | 17 |
+| **Total** | **119** |
 
-Every entry has a stable ID, title, concise summary, `categoryId: "frontend"`, `technologyId: "react"`, explicit status, and a positive order value. **useState and useEffect are `available`, with hrefs `/frontend/react/use-state` and `/frontend/react/use-effect`.** The other four are `coming-soon` and have no href. The discriminated union prevents upcoming entries from declaring a route. Article content is maintained separately; the registry contains no explanations, code examples, interview questions, preferences, or progress data.
+`src/lib/learning/react-curriculum.ts` owns group IDs, titles, descriptions, and order. `src/lib/learning/react-topics.ts` remains the single topic-metadata registry: stable IDs, titles, short summaries, category/technology ownership, primary group, topic kind, explicit publication status, and order within the group. Hook and relevant API/component records also identify their package origin. Both registries use `as const satisfies` for compile-time validation while retaining literal types. Existing `ReactTopic`, `ReactTopicId`, and `reactTopics` exports remain available; topic IDs are inferred from the authored registry.
 
-The React page renders the registry through the server-rendered `TopicCard` component under an h2 titled “React Hooks.” Each card has an h3 title, summary, and explicit availability. Available cards use semantic Next.js Links with an arrow and visible focus styling. Upcoming cards remain semantic articles with no links, handlers, tab stops, or hover effects suggesting navigation. The grid uses one column on mobile, two from 768px, and three from 1280px within the existing shell.
+Every topic belongs to exactly one primary group. IDs are authored independently of groups or array indices. The six original Hook IDs, summaries, and relative order are preserved: `use-state`, `use-effect`, `use-ref`, `use-memo`, `use-callback`, and `use-context`. Conceptual lessons such as context/data flow or reducer patterns are distinct from canonical Hook records. No related-topic system was added.
 
-The previous overlapping future-subject list has been simplified to a note about broader planned React coverage. The original introduction and breadcrumbs are preserved. Collection copy identifies both published articles. Theme configuration, navigation, and storage APIs remain unchanged.
+**React API availability and Explain Dev article publication are separate.** The registry covers 18 verified stable React Hooks and one stable React DOM Hook, but only useState and useEffect have published articles and hrefs. All other 117 topics are `coming-soon` and have no href. The discriminated metadata type requires a route for available topics and prohibits one for upcoming topics; Hook kinds also require the matching package and Hooks group. Educational content, preferences, and progress are not stored in these registries.
+
+The React page derives eight sections and a static keyboard-accessible table of contents from the registries. Each group has its description, h2, and ordered card grid. TopicCard retains h3 titles, summaries, status labels, and semantic Next.js Links with arrows for the two published articles. All other cards are plain articles with no controls, handlers, tab stops, or hover effects suggesting navigation. Repeated decorative brace icons were removed to keep the larger collection compact. The existing one/two/three-column grid, theme tokens, introduction, metadata, breadcrumbs, and shell remain. There is no scroll spy, client state, search, filter, or collapsed group.
+
+### Verified API inventory
+
+Reviewed against installed **react 19.3.1** and **react-dom 19.3.1**, their runtime exports, and official React 19.3 documentation:
+
+- React Hooks: useState, useReducer, useActionState, useOptimistic, useContext, useRef, useImperativeHandle, useEffect, useLayoutEffect, useInsertionEffect, useEffectEvent, useMemo, useCallback, useTransition, useDeferredValue, useId, useSyncExternalStore, and useDebugValue.
+- React DOM Hook: useFormStatus. Its package origin is `react-dom`.
+- `use()` is classified as an API in Advanced React. It has different calling rules, including support for loops and conditions, while still requiring a component or Hook context. Its name does not make it a conventional Hook.
+- `memo`, `lazy`, `createContext`, and React DOM's `createPortal` are APIs. Suspense, Activity, and ViewTransition are components. Custom Hooks are developer-created patterns. React Compiler is build tooling; merely installing React does not enable it. Client boundaries introduce the `use client` directive as a concept, not a Hook.
+- `useEffectEvent` is supported by the installed release (introduced as stable in React 19.2). Activity is also available since 19.2; ViewTransition is present in the installed 19.3.1 exports and current stable documentation. Their cards remain unpublished. Adoption still requires checking browser, bundler, and framework support. React Server Components are distinguished from Next.js conventions; their integration infrastructure can be version-sensitive.
+- Deprecated `react-dom.useFormState` remains exported for compatibility, but the canonical current Hook is `react.useActionState`; no duplicate lesson was added. `unstable_useCacheRefresh` is excluded from the stable Hook inventory. Legacy ref forwarding is covered conceptually alongside React 19 ref props, without treating forwardRef as a Hook or recommending it as the default modern pattern.
+
+References: [React Hooks](https://react.dev/reference/react/hooks), [React DOM Hooks](https://react.dev/reference/react-dom/hooks), [React reference](https://react.dev/reference/react), [React APIs](https://react.dev/reference/react/apis), [Learn React](https://react.dev/learn), [use](https://react.dev/reference/react/use), [useEffectEvent](https://react.dev/reference/react/useEffectEvent), [React 19.2 release](https://react.dev/blog/2025/10/01/react-19-2), [Activity](https://react.dev/reference/react/Activity), [ViewTransition](https://react.dev/reference/react/ViewTransition), [React 19 rename/deprecation notes](https://react.dev/blog/2024/12/05/react-19), and [forwardRef](https://react.dev/reference/react/forwardRef). The supplied `/reference/react/compiler` URL returned 404; the official [React Compiler guide](https://react.dev/learn/react-compiler) was used instead. Export checks corroborate API presence; documentation establishes classification and release status.
 
 ## Published useState article (ED-007)
 
@@ -209,6 +229,19 @@ Run `yarn test` for the colocated storage, registry, navigation, and page-render
 
 ## Verification
 
+Verified for ED-009 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed with strict checking.
+- `yarn test`: **265 tests passed** in 13 files. New coverage checks eight group identities/order/descriptions, topic identity and canonical ownership, kinds/package origins, all 18 React Hooks and the React DOM Hook against the reviewed inventory and installed exports, preservation of the original six records, exactly two published URLs, and absence of hrefs for all other topics. Grouped page tests verify metadata-driven cards, headings, anchors, unique rendering, and non-interactive upcoming cards. The former flat six-card assertion was replaced by grouped rendering checks; per-card checks now cover every topic. All existing article, TypeScript-example, storage, and navigation suites passed.
+- `yarn build`: passed outside the sandbox to permit Turbopack's local worker port. No build failure or retry occurred. The route table is unchanged: `/`, `/frontend`, `/frontend/react`, both existing articles, the default not-found route, and the app icon. All application pages are statically generated.
+- Four fresh cached Chromium headless-shell processes passed at **375×900, 768×900, 1024×900, and 1440×900 in both themes**. Each checked all five application routes, eight correctly ordered sections, 119 unique topic cards in their groups, two published links, 117 upcoming cards without controls, expected one/two/three-column layouts, all eight keyboard curriculum anchors, and both articles' existing section anchors.
+- Both article routes passed card navigation, direct loading, refresh, unchanged metadata/breadcrumb hierarchy, expected section/code-block counts, and internal code scrolling. Curriculum breadcrumbs and Frontend active navigation passed. Mobile/tablet Sheet focus containment, Escape dismissal, focus return, and navigation dismissal passed. Theme switching/persistence and byte-identical seeded preferences passed.
+- Within the available accessibility checks, headings remained unclipped, anchors cleared the sticky header, links displayed keyboard focus, tab navigation skipped upcoming cards, and sampled leaf paragraph/list/link/code/status text met 4.5:1 contrast in both themes. No horizontal page overflow, unexpected console errors, page errors, or hydration warnings occurred. Screenshots were captured at every width/theme; mobile dark introduction, mobile light Hooks, laptop dark Hooks, and desktop light introduction were visually reviewed.
+- The first mobile run stopped on a browser-test assertion that checked a focus ring after anchor activation had moved focus to the target section. The assertion was corrected to inspect keyboard focus before activation, then the complete mobile run passed. No application source change was needed. No browser crashes occurred in ED-009. Full Chromium was not retried after the historical ED-006 crashes; Firefox, Safari, assistive-technology testing, and a full accessibility audit remain unperformed.
+- Sandbox Yarn commands reported an unwritable preferred cache/global folder and used the writable temporary cache; lint, typecheck, and tests still passed. Browser QA used the existing cached browser and a temporary local production server, which was stopped after verification. No browser or project dependency was installed.
+- Article content/routes/layout/CodeBlock, navigation, theme tokens/configuration, preference schema/repository, package manifest, lockfile, and deployment configuration are unchanged. ED-008 was committed separately as `4ddd82b` at the user's request. ED-009 remains uncommitted; nothing was pushed.
+
 Verified for ED-008 on Node 22.20.0:
 
 - `yarn lint`: passed with zero ESLint warnings.
@@ -221,7 +254,7 @@ Verified for ED-008 on Node 22.20.0:
 - Frontend active navigation, desktop sidebar, mobile/tablet Sheet focus containment, Escape dismissal, focus return, and navigation dismissal passed. Theme switching/persistence and unchanged seeded preference data passed. All four unpublished Hook URLs returned 404 without redirects.
 - No unexpected console errors, page errors, or hydration warnings occurred. Headless-shell runs completed without crashes or retries. Full Chromium was not retried after the historical ED-006 crashes; this is not cross-browser verification or a complete accessibility audit.
 - Screenshots were captured in both themes. Mobile light and desktop dark complete-example screenshots were visually reviewed with code scrolling reset to the start. A final production build and screenshot check included the final cleanup-wording clarification; the complete browser suite preceded that prose-only clarification.
-- No dependencies, theme configuration, storage implementation, or preference schema changed. ED-008 remains uncommitted for review.
+- No dependencies, theme configuration, storage implementation, or preference schema changed. ED-008 was subsequently committed as `4ddd82b` at the user’s request before ED-009 began.
 
 Verified for ED-007 on Node 22.20.0:
 
@@ -301,4 +334,4 @@ Browser checks used preinstalled Playwright/Chromium through a temporary script;
 
 ## Next planned milestone
 
-Proposed next: add another carefully scoped Hook article while preserving the content/metadata boundary. Only useState and useEffect are published in ED-008; useRef, useMemo, useCallback, and useContext require later milestones.
+Proposed next: select and publish one scoped lesson from the curriculum, such as useRef, in a separately approved milestone. ED-009 adds no articles or routes; only useState and useEffect are published. The remaining curriculum is a discovery plan, not completed educational content.
