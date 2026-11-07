@@ -36,8 +36,8 @@ describe("frontend technology presentation", () => {
 
   it("retains one primary heading and a truthful learning-content message", () => {
     expect(html.match(/<h1\b/g)).toHaveLength(1);
-    expect(html).toContain("Learning content is coming soon");
-    expect(html).toContain("no learning topics have been published yet");
+    expect(html).toContain("More learning content is coming soon");
+    expect(html).toContain("published useState article");
   });
 });
 
@@ -48,7 +48,7 @@ describe("React technology introduction", () => {
     expect(html.match(/<h1\b/g)).toHaveLength(1);
     expect(html).toMatch(/<h1\b[^>]*>React<\/h1>/);
     expect(html).toContain("Learn the core concepts behind building interactive user interfaces with React.");
-    expect(html).toContain("React learning topics are coming soon.");
+    expect(html).toContain("The useState article is available now.");
     expect(html).toContain("React Hooks");
     expect(html).toContain("Broader React coverage");
   });
@@ -67,6 +67,7 @@ describe("React technology introduction", () => {
 
   it("provides metadata that identifies the technology without claiming published lessons", () => {
     expect(reactMetadata.title).toBe("React | Explain Dev");
+    expect(reactMetadata.description).toContain("Start with useState");
     expect(reactMetadata.description).toContain("coming in future milestones");
   });
 });

@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-006 is complete: React topic metadata and presentation are available.** `/frontend/react` now displays six non-interactive React Hooks cards, all marked **Coming soon**. There are no topic routes or published articles. `/frontend` still lists seven technologies with React as the only available technology introduction. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**.
+Explain Dev is a developer learning and reference project. **ED-007 is complete: the first published article is Understanding React useState**, at `/frontend/react/use-state`. Only useState is available; the other five Hook cards remain **Coming soon**. `/frontend` still lists seven technologies, with React as the only available technology. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**.
 
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
@@ -33,7 +33,8 @@ Open http://localhost:3000.
 | --- | --- |
 | `/` | Four category cards; Frontend Development links to its category page. |
 | `/frontend` | Frontend introduction and seven technologies; React links to its introduction. |
-| `/frontend/react` | React introduction, breadcrumbs, six upcoming Hook cards, and a coming-soon topics message. |
+| `/frontend/react` | React introduction and six Hook cards; only useState links to its article. |
+| `/frontend/react/use-state` | Complete useState article, examples, mistakes, interview answers, and takeaways. |
 | Other `/frontend/*` routes | Default Next.js 404; unavailable technologies and topic routes have not been created. |
 | `/backend`, `/fullstack`, `/devops` | Default Next.js 404; no placeholder routes or redirects. |
 | Other unknown routes | Default Next.js 404. |
@@ -75,34 +76,35 @@ yarn start     # Serve the production build after yarn build
 ```text
 src/app/                       Shared root layout, homepage, global styles
 src/app/frontend/page.tsx       Server-rendered Frontend technology list and metadata
-src/app/frontend/react/         Server-rendered React introduction, Hook cards, and metadata
+src/app/frontend/react/         Server-rendered React collection and static useState article route
 src/components/layout/         Shared shell, header, sidebar, and mobile menu
 src/components/navigation/     Typed category configuration and route-aware navigation
-src/components/learning/       Static topic card and rendering tests
+src/components/learning/       Topic cards, plain code blocks, and rendering tests
 src/components/theme-provider.tsx
 src/components/theme-toggle.tsx
 src/components/ui/             Locally owned shadcn/ui Button and Sheet
 src/lib/utils.ts               Class name merging
 src/lib/storage/               Preferences repository and colocated tests
 src/lib/learning/              Technology/topic metadata registries and colocated tests
+src/content/react/             Typed useState prose, examples, and content tests
 src/types/preferences.ts       Versioned preferences model
 vitest.config.mjs              Minimal Node test environment and @ alias
 ```
 
-The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, published topics, search, or progress features are included.
+The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, search, bookmarks, or progress UI are included. useState is the only published topic.
 
 ## Application shell
 
 - The root layout mounts `AppShell` around page content. The shared shell owns the header, navigation, skip link, main landmark, and footer; pages supply their own headings and content.
 - At 1024px and above, navigation appears in a sticky desktop sidebar. Smaller widths use a modal Sheet, leaving the full width available for content. Category cards use one column on mobile and two from 768px.
 - `src/components/navigation/categories.ts` is the single source of category labels, descriptions, icons, and availability. The discriminated union requires an href for an available category and prevents one on upcoming categories. Only add an available link after implementing its route. Available navigation items use `aria-current` when their route or a descendant is active.
-- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. There are no published topic articles, search, bookmarks, or progress features.
-- `/`, `/frontend`, and `/frontend/react` inherit the same shell from the root layout. Both learning pages are Server Components with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
+- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. useState is the only published article; search, bookmarks, and progress UI are not implemented.
+- All four application routes inherit the same shell from the root layout. Learning pages and the article are Server Components with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
 - The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
 
 ## Frontend technologies (ED-005)
 
-The hierarchy is **Frontend Development → Technology → Topic**. The category and technology introduction levels have routes. Topic metadata is presented as upcoming cards, with no topic routes. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
+The hierarchy is **Frontend Development → Technology → Topic**. Category and technology introductions have routes, and the useState topic has its own published article route. The other topic metadata entries remain upcoming. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
 
 | Technology | Status | Route |
 | --- | --- | --- |
@@ -116,11 +118,11 @@ The hierarchy is **Frontend Development → Technology → Topic**. The category
 
 The registry follows the category configuration's discriminated union: available entries require an href, while upcoming entries cannot have one. `/frontend` renders its technology list directly from this registry, using semantic Next.js Links only for available entries. Upcoming entries have no handlers, links, buttons, or tab stops. There is no client state for this static presentation and no duplicate technology list in the global sidebar.
 
-The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. React Hooks are now presented as non-interactive metadata cards; no topic pages or lessons exist.
+The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. The useState Hook card links to its article; the other five Hook cards remain non-interactive.
 
 The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
 
-## React topic metadata and cards (ED-006)
+## React topic metadata and cards (ED-006/ED-007)
 
 `src/lib/learning/react-topics.ts` is the single source of truth for six React Hook metadata entries, in this order:
 
@@ -131,11 +133,31 @@ The existing focused navigation Client Component keeps Frontend active on `/fron
 5. useCallback
 6. useContext
 
-Every entry has a stable ID, title, concise summary, `categoryId: "frontend"`, `technologyId: "react"`, explicit status, and a positive order value. **All six are `coming-soon`, and none has an href.** The discriminated union prevents upcoming entries from declaring a route. Future article content will be maintained separately; the registry contains no explanations, code examples, interview questions, preferences, or progress data.
+Every entry has a stable ID, title, concise summary, `categoryId: "frontend"`, `technologyId: "react"`, explicit status, and a positive order value. **Only useState is `available`, with href `/frontend/react/use-state`.** The other five are `coming-soon` and have no href. The discriminated union prevents upcoming entries from declaring a route. Article content is maintained separately; the registry contains no explanations, code examples, interview questions, preferences, or progress data.
 
-The React page renders the registry through the server-rendered `TopicCard` component under an h2 titled “React Hooks.” Each list item contains a semantic article with an h3 title, summary, and readable Coming-soon label. Cards have no links, buttons, handlers, tab stops, or hover effects suggesting navigation. The grid uses one column on mobile, two from 768px, and three from 1280px within the existing shell.
+The React page renders the registry through the server-rendered `TopicCard` component under an h2 titled “React Hooks.” Each card has an h3 title, summary, and explicit availability. Available cards use semantic Next.js Links with an arrow and visible focus styling. Upcoming cards remain semantic articles with no links, handlers, tab stops, or hover effects suggesting navigation. The grid uses one column on mobile, two from 768px, and three from 1280px within the existing shell.
 
-The previous overlapping future-subject list has been simplified to a note about broader planned React coverage. The original introduction, breadcrumbs, page metadata, theme configuration, navigation, storage APIs, and available routes remain unchanged.
+The previous overlapping future-subject list has been simplified to a note about broader planned React coverage. The original introduction and breadcrumbs are preserved. Collection copy now identifies useState as published. Theme configuration, navigation, and storage APIs remain unchanged.
+
+## Published useState article (ED-007)
+
+`/frontend/react/use-state` is the sole article route. It is a static App Router page using the existing shell, an article landmark, one primary heading, wrapping Home → Frontend → React → useState breadcrumbs, and a readable column capped at 48rem.
+
+`src/content/react/use-state.ts` stores original prose and independently readable code strings in an explicit typed structure for this article. The topic registry continues to own identity, availability, route, and summary; the page uses the registry summary for its metadata. There is no CMS, MDX, Markdown parser, generic nested-block renderer, or browser access in the content module.
+
+The article covers:
+
+- What useState returns and how state snapshots relate to renders.
+- Practical use cases, derived values, and when refs are a better fit.
+- Queued replacement versus functional updates, batching, equality bailouts, and pure updaters.
+- Three complete TSX components: counter, controlled text input, and immutable typed object updates.
+- Five common mistakes with corrections, seven interview questions and answers, and key takeaways.
+
+A static table of contents points to the seven actual section IDs. The small server-rendered CodeBlock component uses native pre/code markup, a visible language label, and internal horizontal scrolling. Examples are displayed text only. There is no live execution, copy control, or syntax-highlighting dependency.
+
+Technical explanations were reviewed against the official React documentation linked from the article: [useState](https://react.dev/reference/react/useState), [state snapshots](https://react.dev/learn/state-as-a-snapshot), [update queues](https://react.dev/learn/queueing-a-series-of-state-updates), [immutable objects](https://react.dev/learn/updating-objects-in-state), and [Rules of Hooks](https://react.dev/reference/rules/rules-of-hooks), with additional references for derived state, refs, and state lifetime. These are original explanations and examples. All three complete examples are strictly type-checked against the installed React types using TypeScript's existing compiler API and virtual files; no compiler dependency or runnable example route was added. Compilation verifies types and syntax, not the accuracy of educational claims, which were reviewed separately.
+
+Only useState is published. The other five Hook URLs still return 404; no dynamic topic route, search, bookmark UI, progress UI, or backend was added.
 
 ## Browser preferences (ED-003)
 
@@ -173,6 +195,19 @@ Persistence limitations:
 Run `yarn test` for the colocated storage, registry, navigation, and page-rendering tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Navigation tests render the real component with React’s existing server renderer and a mocked pathname. Vite is installed as Vitest's required peer dependency.
 
 ## Verification
+
+Verified for ED-007 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed.
+- `yarn test`: **120 tests passed** in nine files. Coverage includes useState-only availability and unchanged topic order, five upcoming cards with no hrefs or controls, content section/anchor integrity, unique code and interview IDs, required mistakes/answers, escaped pre/code output, breadcrumbs, metadata, and Server Component source directives. Existing storage tests and earlier suites remain; copy/status assertions were updated to reflect publication.
+- The three complete displayed TSX components passed strict semantic TypeScript checking with the installed React types using virtual files. No example was executed as a live feature. Educational correctness was reviewed separately against the official React references linked above; tests alone do not establish technical accuracy.
+- `yarn build`: passed with only the explicit `/frontend/react/use-state` article route added. The build ran outside the sandbox to permit Turbopack's local worker port; no ED-007 build failure or retry occurred.
+- Fresh cached Chromium headless-shell processes passed at **375×900, 768×900, 1024×900, and 1440×900 in both themes**. Checks covered all four application routes, the available useState card, five non-interactive upcoming cards, direct article loading and refresh, all breadcrumbs, seven real table-of-contents anchors, six preformatted code blocks, five mistakes, and seven interview answers.
+- Article width stayed within 48rem. Code scrolled internally when needed, with no horizontal page overflow or clipped headings. All section anchors left headings clear of the sticky header. Sampled article/link/code text met a 4.5:1 contrast ratio in both themes. Additional 375px and 1440px tests activated all seven section links by keyboard; at 375px, an overflowing code block accepted native focus and ArrowRight scrolling without a custom tabindex.
+- Frontend remained active on the article route. Mobile/tablet Sheet keyboard focus, Escape dismissal, focus return, and navigation passed. Theme switching/persistence and unchanged seeded preference data passed. All five unpublished Hook URLs returned 404 without redirects.
+- No console errors, page errors, or hydration warnings occurred in successful checks. Full Chromium was not retried after the ED-006 crashes; headless-shell runs completed without crashes. No new browser infrastructure dependency was added.
+- Screenshots were captured in both themes. Desktop article light, mobile article dark, mobile code light, desktop code dark, and the React topic listing dark were visually reviewed. Code screenshot scroll positions were reset after overflow testing for that review.
 
 Verified for ED-006 on Node 22.20.0:
 
@@ -239,4 +274,4 @@ Browser checks used preinstalled Playwright/Chromium through a temporary script;
 
 ## Next planned milestone
 
-Proposed next: introduce a first React article and its published route, keeping article content separate from topic metadata. Article routes, full explanations, and code examples require a future milestone; none are implemented in ED-006.
+Proposed next: expand the React reference with another carefully scoped Hook article and preserve the metadata/content boundary. The next article and its route require a separate milestone; ED-007 publishes useState only.

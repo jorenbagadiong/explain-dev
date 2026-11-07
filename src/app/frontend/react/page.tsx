@@ -14,7 +14,7 @@ const description = "Learn the core concepts behind building interactive user in
 
 export const metadata: Metadata = {
   title: `${react?.name ?? "Technology"} | Explain Dev`,
-  description: `${description} Learning topics are coming in future milestones.`,
+  description: `${description} Start with useState; more topics are coming in future milestones.`,
 };
 
 export default function ReactPage() {
@@ -54,15 +54,15 @@ export default function ReactPage() {
           {reactTopics.map((topic) => <li key={topic.id}><TopicCard topic={topic} /></li>)}
         </ul>
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Broader React coverage, including components, testing, and custom Hooks, is planned for future milestones. These cards preview upcoming topics; no articles are published yet.
+          Broader React coverage, including components, testing, and custom Hooks, is planned for future milestones. Start with the published useState article; the other Hook articles are coming soon.
         </p>
       </section>
 
       <section aria-labelledby="react-content-status-heading" className="mt-10 flex max-w-2xl items-start gap-4 rounded-xl border bg-muted/30 p-6 sm:mt-12 sm:p-7">
         <Clock3 className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
         <div>
-          <h2 id="react-content-status-heading" className="text-base font-semibold tracking-tight">{react.name} learning topics are coming soon.</h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Detailed explanations and practical examples will be added in future milestones. For now, you can explore the technology introduction and return to the Frontend collection.</p>
+          <h2 id="react-content-status-heading" className="text-base font-semibold tracking-tight">More {react.name} learning topics are coming soon.</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">The useState article is available now. The other five Hook articles will be added in future milestones.</p>
         </div>
       </section>
     </>

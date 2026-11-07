@@ -27,12 +27,19 @@ describe("React topic metadata", () => {
     expect(reactTopics.every((topic) => topic.technologyId === "react")).toBe(true);
   });
 
-  it("explicitly marks all topics coming soon", () => {
-    expect(reactTopics.every((topic) => topic.status === "coming-soon")).toBe(true);
+  it("makes only useState available at its article route", () => {
+    expect(reactTopics.filter((topic) => topic.status === "available")).toHaveLength(1);
+    expect(reactTopics.find((topic) => topic.id === "use-state")).toMatchObject({
+      status: "available",
+      href: "/frontend/react/use-state",
+    });
   });
 
-  it("exposes no topic destinations", () => {
-    for (const topic of reactTopics) {
+  it("keeps the other five topics coming soon without destinations", () => {
+    const upcoming = reactTopics.filter((topic) => topic.id !== "use-state");
+    expect(upcoming).toHaveLength(5);
+    for (const topic of upcoming) {
+      expect(topic.status).toBe("coming-soon");
       expect(topic.href).toBeUndefined();
       expect(topic).not.toHaveProperty("href");
     }

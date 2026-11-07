@@ -37,7 +37,7 @@ export default function FrontendPage() {
       <section aria-labelledby="technologies-heading" className="mt-12 sm:mt-14">
         <h2 id="technologies-heading" className="text-xl font-semibold tracking-tight">Explore frontend technologies</h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Start with a technology to see its planned learning areas. React is open to explore; detailed learning topics will follow in future milestones.
+          Start with a technology to see its planned learning areas. React is open to explore, including the first published useState article. More technologies and topics will follow.
         </p>
         <ul className="mt-6 grid gap-4 md:grid-cols-2 sm:gap-5">
           {frontendTechnologies.map((technology) => {
@@ -79,9 +79,9 @@ export default function FrontendPage() {
       <section aria-labelledby="content-status-heading" className="mt-10 flex max-w-2xl items-start gap-4 rounded-xl border bg-muted/30 p-6 sm:mt-12 sm:p-7">
         <Clock3 className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
         <div>
-          <h2 id="content-status-heading" className="text-base font-semibold tracking-tight">Learning content is coming soon</h2>
+          <h2 id="content-status-heading" className="text-base font-semibold tracking-tight">More learning content is coming soon</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Technology introductions are available where marked. Detailed explanations and practical examples are still coming in future milestones; no learning topics have been published yet.
+            React has an introduction and a published useState article. The other technologies and remaining Hook articles are coming in future milestones.
           </p>
         </div>
       </section>

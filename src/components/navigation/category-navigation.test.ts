@@ -45,6 +45,7 @@ describe("shared category navigation", () => {
     ["/", "/"],
     ["/frontend", "/frontend"],
     ["/frontend/react", "/frontend"],
+    ["/frontend/react/use-state", "/frontend"],
     ["/frontend-other", undefined],
     ["/frontend-tools", undefined],
     ["/backend", undefined],

@@ -18,7 +18,7 @@ export type ReactTopic = {
   | { status: "available"; href: string }
 );
 
-// Metadata only. Article content and routes belong to a future milestone.
+// Metadata only. Published article content is maintained separately.
 export const reactTopics: readonly ReactTopic[] = [
   {
     id: "use-state",
@@ -26,7 +26,8 @@ export const reactTopics: readonly ReactTopic[] = [
     summary: "Manage state that triggers component re-renders when updated.",
     categoryId: "frontend",
     technologyId: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-state",
     order: 1,
   },
   {
