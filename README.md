@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-002 adds a responsive application shell:** a shared header, desktop sidebar, accessible mobile/tablet menu, and four category overview cards. The ED-001 foundation, Inter typography, shadcn/ui Button, and light/dark themes (dark by default) are preserved. All learning categories are marked **Coming soon**; category pages and educational content are not implemented.
+Explain Dev is a developer learning and reference project. **ED-002 adds a responsive application shell:** a shared header, desktop sidebar, accessible mobile/tablet menu, and four category overview cards. The ED-001 foundation, Inter typography, shadcn/ui Button, and light/dark themes (dark by default) are preserved. All learning categories are marked **Coming soon**; category pages and educational content are not implemented. **ED-003 is complete: it adds the browser preferences repository and storage tests only.** It does not add bookmark, reading progress, or settings UI.
 
 ## Prerequisites
 
@@ -32,6 +32,7 @@ Open http://localhost:3000. The only application route is `/`.
 ```sh
 yarn lint       # Next.js ESLint rules; warnings fail the check
 yarn typecheck  # Strict TypeScript checking
+yarn test       # Run Node-based Vitest storage tests once
 yarn build     # Production build
 yarn start     # Serve the production build after yarn build
 ```
@@ -42,7 +43,7 @@ yarn start     # Serve the production build after yarn build
 - Strict TypeScript 6.0 and the `@/*` alias pointing to `src/*`.
 - Tailwind CSS 4 with `@tailwindcss/postcss`. All theme tokens and the class-based dark variant live in `src/app/globals.css`; no JavaScript Tailwind configuration is needed. This follows the [Tailwind PostCSS setup](https://tailwindcss.com/docs/installation/using-postcss).
 - shadcn/ui initialized manually through `components.json`, CSS variables, the `cn` utility, and the locally owned Button component, following its [manual installation approach](https://ui.shadcn.com/docs/installation/manual). Button uses Radix Slot, class-variance-authority, clsx, and tailwind-merge. Sheet uses Radix Dialog for modal semantics, keyboard focus management, Escape dismissal, and focus return. Controls use a 44px touch target.
-- lucide-react icons and next-themes. Client Components are limited to theme controls, route-aware navigation, the mobile menu, and Sheet primitives. The default is dark; next-themes manages preference persistence and its pre-hydration theme script. No custom storage utilities are present.
+- lucide-react icons and next-themes. Client Components are limited to theme controls, route-aware navigation, the mobile menu, and Sheet primitives. The default is dark; next-themes manages preference persistence and its pre-hydration theme script. Application preferences have a separate focused repository; theme is not part of its schema.
 - Inter is bundled from `@fontsource/inter` (Latin, weights 400–700), avoiding a remote font request during builds.
 - ESLint flat configuration with Next.js accessibility, React, and TypeScript rules.
 
@@ -54,6 +55,9 @@ src/components/theme-provider.tsx
 src/components/theme-toggle.tsx
 src/components/ui/             Locally owned shadcn/ui Button and Sheet
 src/lib/utils.ts               Class name merging
+src/lib/storage/               Preferences repository and colocated tests
+src/types/preferences.ts       Versioned preferences model
+vitest.config.mjs              Minimal Node test environment and @ alias
 ```
 
 The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, content browser, search, or progress features are included.
@@ -66,7 +70,51 @@ The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0
 - All four categories are currently non-interactive labels/cards with a visible “Coming soon” status. Home is the only internal navigation destination. There are no topic cards, search, bookmarks, or progress features.
 - The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
 
+## Browser preferences (ED-003)
+
+This is persistence infrastructure for future features, not a bookmark or reading progress feature. No current component imports the repository, and opening the homepage does not create a preferences entry.
+
+The single localStorage key is **`explain-dev:v1:preferences`**. It stores only this schema:
+
+```ts
+interface UserPreferences {
+  version: 1;
+  bookmarkedTopicIds: string[];
+  readTopicIds: string[];
+}
+```
+
+The focused API is exported from `src/lib/storage/preferences.ts`:
+
+| Function | Behavior |
+| --- | --- |
+| `getPreferences()` | Returns a validated snapshot, or fresh defaults with empty arrays. Never writes, removes, repairs, or migrates data. |
+| `savePreferences(preferences)` | Validates at runtime and writes a JSON snapshot; returns `true` on success, `false` for invalid input, unavailable storage, or a write failure. |
+| `clearPreferences()` | Removes only the preferences key; returns `true` on success (including an already-missing key), `false` if storage is unavailable or removal fails. Never calls `localStorage.clear()`. |
+
+Validation requires exactly the three own schema fields, literal version `1`, and arrays containing only strings. Malformed JSON, missing/extra fields, incorrect types, and unsupported versions return defaults without changing the stored data. The exported `DEFAULT_PREFERENCES` object and its nested arrays are frozen; each fallback read returns new mutable arrays, and valid reads return independent snapshots. No schema-validation dependency is needed.
+
+Storage is accessed only inside guarded function calls. Module initialization does not touch browser APIs. Without `window`, reads return defaults and writes/clears return `false`. Future UI consumers should call this API from browser interactions or after mounting, rather than reading storage during server rendering. This milestone adds no React storage hook, provider, or global state.
+
+Persistence limitations:
+
+- Data remains in the user's browser and does not synchronize across devices. No account or backend is used.
+- Clearing browser site data can remove preferences. Private browsing, blocked storage, and quota limits can prevent persistence; callers should handle the boolean failure result.
+- Theme persistence remains managed separately by next-themes and is unaffected by clearing this repository's key.
+- There are no migrations, storage event subscriptions, or concurrent update coordination. A successful save replaces the complete preferences snapshot. Educational content is never stored here.
+
+Run `yarn test` for the colocated storage tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Vite is installed as Vitest's required peer dependency.
+
 ## Verification
+
+Verified for ED-003 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed.
+- `yarn test`: **59 tests passed** in one Node-based test file, covering valid and invalid reads/writes, blocked storage, quota failure, key isolation, module initialization, server-side execution, and default/snapshot mutation safety.
+- `yarn build`: passed outside the sandbox, allowing Turbopack's PostCSS worker to bind its required local port. Homepage and app icon prerendered successfully.
+- Reused cached Chromium for regression checks at 375×900 and 1440×900 in both themes: homepage, category statuses, links, navigation, theme persistence, keyboard behavior, and no horizontal overflow passed. Visiting the homepage, switching themes, and using navigation did not create a preferences entry.
+- No browser console errors, page errors, or hydration warnings. No UI components or theme persistence code were changed in ED-003.
 
 Verified for ED-002 on Node 22.20.0:
 
