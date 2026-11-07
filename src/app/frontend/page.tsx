@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Clock3 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Clock3 } from "lucide-react";
 
 import { categories } from "@/components/navigation/categories";
+import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
 
 const frontend = categories.find((category) => category.id === "frontend");
 const description = "Explore the technologies and concepts used to build modern web interfaces.";
@@ -12,16 +13,6 @@ export const metadata: Metadata = {
   title: `${frontend?.label ?? "Category"} | Explain Dev`,
   description: `${description} Detailed learning content is coming in future milestones.`,
 };
-
-const futureCoverage = [
-  "HTML & CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Web Accessibility",
-  "Frontend Performance",
-];
 
 export default function FrontendPage() {
   if (!frontend || frontend.status !== "available") notFound();
@@ -43,13 +34,45 @@ export default function FrontendPage() {
         {description}
       </p>
 
-      <section aria-labelledby="coverage-heading" className="mt-12 max-w-2xl sm:mt-14">
-        <h2 id="coverage-heading" className="text-xl font-semibold tracking-tight">What this category will cover</h2>
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-          From the structure of a page to the way it responds to people, frontend development brings web interfaces to life. Future coverage will connect browser fundamentals, modern tools, and the practices that make interfaces accessible and fast.
+      <section aria-labelledby="technologies-heading" className="mt-12 sm:mt-14">
+        <h2 id="technologies-heading" className="text-xl font-semibold tracking-tight">Explore frontend technologies</h2>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Start with a technology to see its planned learning areas. React is open to explore; detailed learning topics will follow in future milestones.
         </p>
-        <ul className="mt-6 grid list-inside list-disc gap-x-8 gap-y-3 text-sm text-muted-foreground marker:text-primary sm:grid-cols-2">
-          {futureCoverage.map((area) => <li key={area}>{area}</li>)}
+        <ul className="mt-6 grid gap-4 md:grid-cols-2 sm:gap-5">
+          {frontendTechnologies.map((technology) => {
+            const TechnologyIcon = technology.icon;
+            const content = (
+              <>
+                <div className="mb-7 flex items-center justify-between gap-3">
+                  <span className="flex size-11 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                    <TechnologyIcon className="size-5" aria-hidden="true" />
+                  </span>
+                  <span className="rounded-md border bg-muted px-2.5 py-1 text-[10px] font-medium text-muted-foreground">
+                    {technology.status === "available" ? "Available" : "Coming soon"}
+                  </span>
+                </div>
+                <h3 className="flex items-center justify-between gap-3 text-lg font-semibold tracking-tight">
+                  {technology.name}
+                  {technology.status === "available" && <ArrowUpRight className="size-4 text-primary" aria-hidden="true" />}
+                </h3>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{technology.description}</p>
+              </>
+            );
+            const cardClassName = "block h-full rounded-xl border bg-background p-6 sm:p-7";
+
+            return (
+              <li key={technology.id}>
+                {technology.status === "available" ? (
+                  <Link href={technology.href} className={`${cardClassName} transition-colors hover:border-primary/50 hover:bg-accent/30`}>
+                    {content}
+                  </Link>
+                ) : (
+                  <article className={cardClassName}>{content}</article>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </section>
 
@@ -58,7 +81,7 @@ export default function FrontendPage() {
         <div>
           <h2 id="content-status-heading" className="text-base font-semibold tracking-tight">Learning content is coming soon</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            This category is open to explore. Detailed explanations and practical examples will be added in future milestones. The areas above describe planned coverage and are not yet available as learning pages.
+            Technology introductions are available where marked. Detailed explanations and practical examples are still coming in future milestones; no learning topics have been published yet.
           </p>
         </div>
       </section>

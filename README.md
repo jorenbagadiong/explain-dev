@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-004 is complete:** Frontend Development is available at `/frontend`, with working category links, active navigation, and a category introduction. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**. Detailed learning content is not available yet.
+Explain Dev is a developer learning and reference project. **ED-005 is complete: frontend technology navigation is available.** `/frontend` lists seven technologies, with React as the only available technology at `/frontend/react`. The React page introduces the technology and lists planned learning areas. Detailed topics and educational articles are not available yet. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**.
 
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
@@ -32,7 +32,9 @@ Open http://localhost:3000.
 | Route | Current behavior |
 | --- | --- |
 | `/` | Four category cards; Frontend Development links to its category page. |
-| `/frontend` | Frontend introduction, planned coverage, and a coming-soon content message. |
+| `/frontend` | Frontend introduction and seven technologies; React links to its introduction. |
+| `/frontend/react` | React introduction, breadcrumbs, planned subjects, and a coming-soon topics message. |
+| Other `/frontend/*` routes | Default Next.js 404; unavailable technologies and topic routes have not been created. |
 | `/backend`, `/fullstack`, `/devops` | Default Next.js 404; no placeholder routes or redirects. |
 | Other unknown routes | Default Next.js 404. |
 
@@ -55,7 +57,7 @@ If a deployment reports `STATIC_BUILD_NO_OUT_DIR` for `dist`, check the framewor
 ```sh
 yarn lint       # Next.js ESLint rules; warnings fail the check
 yarn typecheck  # Strict TypeScript checking
-yarn test       # Run storage and navigation tests once
+yarn test       # Run storage, registry, navigation, and rendering tests once
 yarn build     # Production build
 yarn start     # Serve the production build after yarn build
 ```
@@ -72,7 +74,8 @@ yarn start     # Serve the production build after yarn build
 
 ```text
 src/app/                       Shared root layout, homepage, global styles
-src/app/frontend/page.tsx       Server-rendered Frontend introduction and metadata
+src/app/frontend/page.tsx       Server-rendered Frontend technology list and metadata
+src/app/frontend/react/         Server-rendered React introduction and metadata
 src/components/layout/         Shared shell, header, sidebar, and mobile menu
 src/components/navigation/     Typed category configuration and route-aware navigation
 src/components/theme-provider.tsx
@@ -80,11 +83,12 @@ src/components/theme-toggle.tsx
 src/components/ui/             Locally owned shadcn/ui Button and Sheet
 src/lib/utils.ts               Class name merging
 src/lib/storage/               Preferences repository and colocated tests
+src/lib/learning/              Frontend technology registry and colocated tests
 src/types/preferences.ts       Versioned preferences model
 vitest.config.mjs              Minimal Node test environment and @ alias
 ```
 
-The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, content browser, search, or progress features are included.
+The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, published topics, search, or progress features are included.
 
 ## Application shell
 
@@ -92,8 +96,28 @@ The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0
 - At 1024px and above, navigation appears in a sticky desktop sidebar. Smaller widths use a modal Sheet, leaving the full width available for content. Category cards use one column on mobile and two from 768px.
 - `src/components/navigation/categories.ts` is the single source of category labels, descriptions, icons, and availability. The discriminated union requires an href for an available category and prevents one on upcoming categories. Only add an available link after implementing its route. Available navigation items use `aria-current` when their route or a descendant is active.
 - Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. There are no topic cards, search, bookmarks, or progress features.
-- Both `/` and `/frontend` inherit the same shell from the root layout. Frontend is a Server Component with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
+- `/`, `/frontend`, and `/frontend/react` inherit the same shell from the root layout. Both learning pages are Server Components with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
 - The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
+
+## Frontend technologies (ED-005)
+
+The hierarchy is **Frontend Development → Technology → Topic**. Only the category and technology introduction levels are implemented. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
+
+| Technology | Status | Route |
+| --- | --- | --- |
+| HTML & CSS | Coming soon | — |
+| JavaScript | Coming soon | — |
+| TypeScript | Coming soon | — |
+| React | Available introduction | `/frontend/react` |
+| Next.js | Coming soon | — |
+| Web Accessibility | Coming soon | — |
+| Frontend Performance | Coming soon | — |
+
+The registry follows the category configuration's discriminated union: available entries require an href, while upcoming entries cannot have one. `/frontend` renders its technology list directly from this registry, using semantic Next.js Links only for available entries. Upcoming entries have no handlers, links, buttons, or tab stops. There is no client state for this static presentation and no duplicate technology list in the global sidebar.
+
+The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. Planned React subjects are a plain, non-interactive list; no topic pages, lessons, or article cards exist.
+
+The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
 
 ## Browser preferences (ED-003)
 
@@ -128,9 +152,21 @@ Persistence limitations:
 - Theme persistence remains managed separately by next-themes and is unaffected by clearing this repository's key.
 - There are no migrations, storage event subscriptions, or concurrent update coordination. A successful save replaces the complete preferences snapshot. Educational content is never stored here.
 
-Run `yarn test` for the colocated storage and navigation tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Navigation tests render the real component with React’s existing server renderer and a mocked pathname. Vite is installed as Vitest's required peer dependency.
+Run `yarn test` for the colocated storage, registry, navigation, and page-rendering tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Navigation tests render the real component with React’s existing server renderer and a mocked pathname. Vite is installed as Vitest's required peer dependency.
 
 ## Verification
+
+Verified for ED-005 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed.
+- `yarn test`: **90 tests passed** in five files. All ED-003/ED-004 tests remain; new coverage checks the seven-technology registry, stable IDs/order, React availability and route, non-interactive upcoming entries, names/descriptions, page headings, breadcrumbs, metadata, and the `/frontend-tools` active-state boundary.
+- `yarn build`: passed with `/frontend/react` statically generated. The build ran outside the sandbox to allow Turbopack's local worker port; no ED-005 environment failures or retries occurred.
+- Cached Chromium at 375×900, 768×900, 1024×900, and 1440×900 checked `/`, `/frontend`, and `/frontend/react` in both themes. Homepage → Frontend → React navigation, keyboard activation, breadcrumbs back to Frontend/Home, direct React loading, refresh, theme switching/persistence, and a shared header instance across client navigation passed.
+- Frontend remained active on the nested React route in desktop and Sheet navigation. Mobile/tablet menu opening, navigation dismissal, modal keyboard focus containment, Escape/close controls, and focus return passed. No technology entries were added to the global sidebar.
+- Seven technologies appeared in registry order; only React was a link. Upcoming entries and planned subjects had no controls or tab stops. No horizontal overflow or clipped headings was detected; breadcrumbs stayed inside the viewport. Sampled text contrast met 4.5:1 in both themes. Browser checks ran with reduced motion emulated.
+- All six unavailable technology paths and a proposed React topic path returned 404 without redirects. `/frontend-tools` also returned 404 and did not activate Frontend. Its expected 404 resource console entry was excluded from unexpected-error checks.
+- No unexpected console errors, page errors, or hydration warnings. Seeded preference data stayed unchanged. Screenshots were captured at every width/theme; desktop Frontend dark, mobile Frontend light, mobile React light, and tablet Sheet dark were visually reviewed.
 
 Verified for ED-004 on Node 22.20.0:
 
@@ -173,4 +209,4 @@ Browser checks used preinstalled Playwright/Chromium through a temporary script;
 
 ## Next planned milestone
 
-Proposed next: organize frontend technologies and their navigation, starting with a scoped technology registry. Technology routes, topic listings, and educational articles are future work and have not been implemented in ED-004.
+Proposed next: define a scoped React topic registry and topic-listing behavior. Topic detail routes and educational articles require a future milestone; none are implemented in ED-005.

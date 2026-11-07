@@ -46,6 +46,7 @@ describe("shared category navigation", () => {
     ["/frontend", "/frontend"],
     ["/frontend/react", "/frontend"],
     ["/frontend-other", undefined],
+    ["/frontend-tools", undefined],
     ["/backend", undefined],
     ["/unknown", undefined],
   ])("identifies the active link on %s without matching unrelated paths", (pathname, activeHref) => {
