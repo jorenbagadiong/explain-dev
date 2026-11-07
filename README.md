@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-001 implements the project foundation only:** a responsive homepage, light/dark themes (dark by default), and a shadcn/ui Button linking to the repository. Educational content and additional features are not implemented.
+Explain Dev is a developer learning and reference project. **ED-002 adds a responsive application shell:** a shared header, desktop sidebar, accessible mobile/tablet menu, and four category overview cards. The ED-001 foundation, Inter typography, shadcn/ui Button, and light/dark themes (dark by default) are preserved. All learning categories are marked **Coming soon**; category pages and educational content are not implemented.
 
 ## Prerequisites
 
@@ -41,22 +41,40 @@ yarn start     # Serve the production build after yarn build
 - Next.js 16 App Router and React 19; Server Components by default.
 - Strict TypeScript 6.0 and the `@/*` alias pointing to `src/*`.
 - Tailwind CSS 4 with `@tailwindcss/postcss`. All theme tokens and the class-based dark variant live in `src/app/globals.css`; no JavaScript Tailwind configuration is needed. This follows the [Tailwind PostCSS setup](https://tailwindcss.com/docs/installation/using-postcss).
-- shadcn/ui initialized manually through `components.json`, CSS variables, the `cn` utility, and the locally owned Button component, following its [manual installation approach](https://ui.shadcn.com/docs/installation/manual). Button uses Radix Slot, class-variance-authority, clsx, and tailwind-merge. Its default controls use a 44px touch target.
-- lucide-react icons and next-themes. Only the theme provider and toggle declare `use client`. The default is dark; next-themes manages preference persistence and its pre-hydration theme script. No custom storage utilities are present.
+- shadcn/ui initialized manually through `components.json`, CSS variables, the `cn` utility, and the locally owned Button component, following its [manual installation approach](https://ui.shadcn.com/docs/installation/manual). Button uses Radix Slot, class-variance-authority, clsx, and tailwind-merge. Sheet uses Radix Dialog for modal semantics, keyboard focus management, Escape dismissal, and focus return. Controls use a 44px touch target.
+- lucide-react icons and next-themes. Client Components are limited to theme controls, route-aware navigation, the mobile menu, and Sheet primitives. The default is dark; next-themes manages preference persistence and its pre-hydration theme script. No custom storage utilities are present.
 - Inter is bundled from `@fontsource/inter` (Latin, weights 400–700), avoiding a remote font request during builds.
 - ESLint flat configuration with Next.js accessibility, React, and TypeScript rules.
 
 ```text
-src/app/                       Root layout, homepage, global styles
+src/app/                       Root layout, category homepage, global styles
+src/components/layout/         Shared shell, header, sidebar, and mobile menu
+src/components/navigation/     Typed category configuration and route-aware navigation
 src/components/theme-provider.tsx
 src/components/theme-toggle.tsx
-src/components/ui/button.tsx    Locally owned shadcn/ui Button
-src/lib/utils.ts               Class name merging used by Button
+src/components/ui/             Locally owned shadcn/ui Button and Sheet
+src/lib/utils.ts               Class name merging
 ```
 
 The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, content browser, search, or progress features are included.
 
+## Application shell
+
+- The root layout mounts `AppShell` around page content. The shared shell owns the header, navigation, skip link, main landmark, and footer; pages supply their own headings and content.
+- At 1024px and above, navigation appears in a sticky desktop sidebar. Smaller widths use a modal Sheet, leaving the full width available for content. Category cards use one column on mobile and two from 768px.
+- `src/components/navigation/categories.ts` is the single source of category labels, descriptions, icons, and availability. The discriminated union requires an href for an available category and prevents one on upcoming categories. Only add an available link after implementing its route. Available navigation items use `aria-current` when their route or a descendant is active.
+- All four categories are currently non-interactive labels/cards with a visible “Coming soon” status. Home is the only internal navigation destination. There are no topic cards, search, bookmarks, or progress features.
+- The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
+
 ## Verification
+
+Verified for ED-002 on Node 22.20.0:
+
+- `yarn lint`, `yarn typecheck`, and `yarn build`: passed. A final sandboxed build attempt was blocked from binding the PostCSS worker’s local port; moving aside the generated Turbopack cache and rerunning outside the sandbox succeeded without source changes.
+- Chromium at 375×900, 768×900, 1024×900, and 1440×900 in light and dark themes: expected headings, four upcoming category cards, correct sidebar/menu breakpoint, no broken category links, and no horizontal overflow passed.
+- Mobile/tablet Sheet: keyboard opening, focus containment, Escape dismissal, close button, outside click, Home selection, focus return, and closing on desktop resize passed.
+- Theme preference after reload and skip-link focus passed. Browser tests ran with reduced motion emulated. Sampled body copy, availability badges, and active navigation text met a 4.5:1 contrast ratio in both themes.
+- No browser console errors, page errors, or hydration warnings. Screenshots were captured for each width/theme and mobile/tablet menu states; desktop dark, mobile light, mobile dark menu, and tablet light menu screenshots were visually reviewed.
 
 Verified for ED-001 on Node 22.20.0:
 
