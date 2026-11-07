@@ -27,17 +27,21 @@ describe("React topic metadata", () => {
     expect(reactTopics.every((topic) => topic.technologyId === "react")).toBe(true);
   });
 
-  it("makes only useState available at its article route", () => {
-    expect(reactTopics.filter((topic) => topic.status === "available")).toHaveLength(1);
+  it("keeps useState and useEffect available at their article routes", () => {
+    expect(reactTopics.filter((topic) => topic.status === "available")).toHaveLength(2);
     expect(reactTopics.find((topic) => topic.id === "use-state")).toMatchObject({
       status: "available",
       href: "/frontend/react/use-state",
     });
+    expect(reactTopics.find((topic) => topic.id === "use-effect")).toMatchObject({
+      status: "available",
+      href: "/frontend/react/use-effect",
+    });
   });
 
-  it("keeps the other five topics coming soon without destinations", () => {
-    const upcoming = reactTopics.filter((topic) => topic.id !== "use-state");
-    expect(upcoming).toHaveLength(5);
+  it("keeps the other four topics coming soon without destinations", () => {
+    const upcoming = reactTopics.filter((topic) => !["use-state", "use-effect"].includes(topic.id));
+    expect(upcoming).toHaveLength(4);
     for (const topic of upcoming) {
       expect(topic.status).toBe("coming-soon");
       expect(topic.href).toBeUndefined();

@@ -54,7 +54,7 @@ describe("published useState article", () => {
   });
 
   it("keeps the article page and code presentation as Server Components", () => {
-    for (const fileName of ["src/app/frontend/react/use-state/page.tsx", "src/components/learning/code-block.tsx"]) {
+    for (const fileName of ["src/app/frontend/react/use-state/page.tsx", "src/components/learning/code-block.tsx", "src/components/learning/article-layout.tsx"]) {
       const file = path.resolve(fileName);
       const source = ts.createSourceFile(file, readFileSync(file, "utf8"), ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
       const clientDirective = source.statements.some((statement) =>

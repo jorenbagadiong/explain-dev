@@ -36,7 +36,8 @@ export const reactTopics: readonly ReactTopic[] = [
     summary: "Synchronize a component with external systems.",
     categoryId: "frontend",
     technologyId: "react",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/use-effect",
     order: 2,
   },
   {

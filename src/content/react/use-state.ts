@@ -1,22 +1,6 @@
-export interface ArticleSection {
-  id: string;
-  heading: string;
-  paragraphs: readonly string[];
-}
+import type { ArticleSection, ArticleSource, CodeExample, CommonMistake, InterviewQuestion } from "./article-types";
 
-export interface CodeExample {
-  id: string;
-  title: string;
-  description: string;
-  language: "tsx" | "typescript";
-  code: string;
-}
-
-export interface InterviewQuestion {
-  id: string;
-  question: string;
-  answer: string;
-}
+export type { ArticleSection, CodeExample, InterviewQuestion } from "./article-types";
 
 interface UseStateArticle {
   heading: string;
@@ -24,10 +8,10 @@ interface UseStateArticle {
   usage: ArticleSection & { useCases: readonly string[]; alternatives: readonly string[] };
   updates: ArticleSection & { comparison: readonly CodeExample[]; conclusion: string };
   examples: ArticleSection & { items: readonly CodeExample[] };
-  mistakes: ArticleSection & { items: readonly { id: string; heading: string; problem: string; correction: string }[] };
+  mistakes: ArticleSection & { items: readonly CommonMistake[] };
   interview: ArticleSection & { questions: readonly InterviewQuestion[] };
   takeaways: ArticleSection & { items: readonly string[] };
-  sources: readonly { label: string; href: string }[];
+  sources: readonly ArticleSource[];
 }
 
 // Educational content only: topic identity, summary, availability, and route

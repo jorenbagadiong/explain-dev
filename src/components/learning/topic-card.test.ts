@@ -33,9 +33,10 @@ describe("topic cards", () => {
       expect(cards[index]).toContain(topic.title);
       expect(cards[index]).toContain(topic.summary);
     });
-    expect(section?.match(/Coming soon/g)).toHaveLength(5);
-    expect(section?.match(/<a\b/g)).toHaveLength(1);
+    expect(section?.match(/Coming soon/g)).toHaveLength(4);
+    expect(section?.match(/<a\b/g)).toHaveLength(2);
     expect(section).toContain('href="/frontend/react/use-state"');
+    expect(section).toContain('href="/frontend/react/use-effect"');
     expect(section).not.toMatch(/<button\b|\btabindex=/);
     expect(html).not.toContain("Planned learning areas");
   });
