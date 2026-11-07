@@ -1,22 +1,6 @@
-export interface ArticleSection {
-  id: string;
-  heading: string;
-  paragraphs: readonly string[];
-}
+import type { ArticleConceptVisual, ArticleQuickReview, ArticleSection, ArticleSource, CodeExample, CommonMistake, InterviewQuestion } from "./article-types";
 
-export interface CodeExample {
-  id: string;
-  title: string;
-  description: string;
-  language: "tsx" | "typescript";
-  code: string;
-}
-
-export interface InterviewQuestion {
-  id: string;
-  question: string;
-  answer: string;
-}
+export type { ArticleSection, CodeExample, InterviewQuestion } from "./article-types";
 
 interface UseStateArticle {
   heading: string;
@@ -24,10 +8,12 @@ interface UseStateArticle {
   usage: ArticleSection & { useCases: readonly string[]; alternatives: readonly string[] };
   updates: ArticleSection & { comparison: readonly CodeExample[]; conclusion: string };
   examples: ArticleSection & { items: readonly CodeExample[] };
-  mistakes: ArticleSection & { items: readonly { id: string; heading: string; problem: string; correction: string }[] };
+  mistakes: ArticleSection & { items: readonly CommonMistake[] };
   interview: ArticleSection & { questions: readonly InterviewQuestion[] };
   takeaways: ArticleSection & { items: readonly string[] };
-  sources: readonly { label: string; href: string }[];
+  quickReview: ArticleQuickReview;
+  visual: ArticleConceptVisual;
+  sources: readonly ArticleSource[];
 }
 
 // Educational content only: topic identity, summary, availability, and route
@@ -282,6 +268,35 @@ export function TaskCard() {
       "Derive values you can calculate; reserve refs for retained data that does not drive rendering.",
       "Follow the Rules of Hooks: call useState at the top level of components or custom Hooks.",
     ],
+  },
+  quickReview: {
+    definition: "useState gives a component memory. Each render receives a snapshot; its setter queues a future update.",
+    keyPoints: [
+      "A setter does not rewrite the variable in the running handler.",
+      "React can batch queued updates into a later render.",
+      "Use a pure functional updater when the next value depends on pending state.",
+      "Replace objects and arrays instead of mutating existing snapshots.",
+      "Equal next/current values under Object.is can let React skip rendering; setter calls do not count commits.",
+    ],
+    codeReminder: {
+      id: "state-review-updater",
+      title: "Calculate from pending state",
+      language: "tsx",
+      code: "setCount(previous => previous + 1);",
+      description: "previous includes the result of earlier updates in the queue.",
+    },
+    commonMistakes: ["Mutating an object and passing back the same reference.", "Expecting the current handler to read a new snapshot after a setter.", "Storing a value that can already be derived from existing inputs."],
+    interviewTrap: "With count starting at 0, two setCount(count + 1) calls in the same handler both queue the replacement 1. With no other updates, the result is 1. Two functional increments instead use pending state and produce 2.",
+    takeaway: "Read a snapshot. Queue the next value. Keep previous state intact.",
+  },
+  visual: {
+    heading: "One snapshot, two different queues",
+    context: "Assume count is 0, both calls run in the same event handler, and there are no other updates. These are alternative handlers, not four calls in one handler.",
+    steps: [
+      { id: "replacement-updates", title: "Direct updates → 1", description: "Both expressions read 0. The queue replaces with 1, then replaces with 1 again." },
+      { id: "functional-updates", title: "Functional updates → 2", description: "The first updater turns 0 into 1. The second receives that pending 1 and returns 2." },
+    ],
+    note: "The result follows from this snapshot and queue. Separate events or a different queue can produce different results.",
   },
   sources: [
     { label: "useState reference", href: "https://react.dev/reference/react/useState" },

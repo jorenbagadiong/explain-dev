@@ -1,4 +1,4 @@
-import type { CodeExample } from "@/content/react/use-state";
+import type { CodeExample } from "@/content/react/article-types";
 
 export function CodeBlock({ example }: { example: CodeExample }) {
   return (

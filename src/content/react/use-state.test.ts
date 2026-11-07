@@ -1,8 +1,7 @@
-import path from "node:path";
-import ts from "typescript";
 import { describe, expect, it } from "vitest";
 
 import { useStateArticle as article } from "./use-state";
+import { typecheckExamples } from "./test-utils";
 
 const sections = [article.overview, article.usage, article.updates, article.examples, article.mistakes, article.interview, article.takeaways];
 const codeExamples = [article.overview.syntax, ...article.updates.comparison, ...article.examples.items];
@@ -37,32 +36,7 @@ describe("useState article content", () => {
   });
 
   it("strictly type-checks every complete TSX example with the installed React types", () => {
-    // Virtual files avoid creating runnable example routes or writing snippets to disk.
-    const files = new Map(article.examples.items.map((example) => [
-      path.resolve("src/content/react/__snippet_checks__", `${example.id}.tsx`), example.code,
-    ]));
-    const options: ts.CompilerOptions = {
-      strict: true,
-      noEmit: true,
-      skipLibCheck: true,
-      target: ts.ScriptTarget.ES2017,
-      module: ts.ModuleKind.ESNext,
-      moduleResolution: ts.ModuleResolutionKind.Bundler,
-      jsx: ts.JsxEmit.ReactJSX,
-      types: ["react"],
-    };
-    const host = ts.createCompilerHost(options);
-    const originalGetSourceFile = host.getSourceFile.bind(host);
-    host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
-      const code = files.get(path.resolve(fileName));
-      return code !== undefined
-        ? ts.createSourceFile(fileName, code, languageVersion, true, ts.ScriptKind.TSX)
-        : originalGetSourceFile(fileName, languageVersion, onError, shouldCreateNewSourceFile);
-    };
-    const program = ts.createProgram([...files.keys()], options, host);
-    const errors = ts.getPreEmitDiagnostics(program)
-      .filter((diagnostic) => diagnostic.category === ts.DiagnosticCategory.Error)
-      .map((diagnostic) => ts.flattenDiagnosticMessageText(diagnostic.messageText, "\n"));
+    const errors = typecheckExamples(article.examples.items);
     expect(errors).toEqual([]);
   });
 
