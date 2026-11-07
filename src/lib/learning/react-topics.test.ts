@@ -55,15 +55,31 @@ describe("React curriculum topic metadata", () => {
     expect(originals.every((topic) => topic.groupId === "hooks")).toBe(true);
   });
 
-  it("publishes only useState and useEffect at their unchanged URLs", () => {
+  it("publishes only Introduction to React, useState, and useEffect at their canonical URLs", () => {
+    expect(reactTopics).toHaveLength(119);
     expect(reactTopics.filter((topic) => topic.status === "available").map(({ id, href }) => ({ id, href }))).toEqual([
+      { id: "react-introduction", href: "/frontend/react/introduction-to-react" },
       { id: "use-state", href: "/frontend/react/use-state" },
       { id: "use-effect", href: "/frontend/react/use-effect" },
     ]);
-    for (const topic of reactTopics.filter((topic) => !["use-state", "use-effect"].includes(topic.id))) {
+    const upcoming = reactTopics.filter((topic) => !["react-introduction", "use-state", "use-effect"].includes(topic.id));
+    expect(upcoming).toHaveLength(116);
+    for (const topic of upcoming) {
       expect(topic.status).toBe("coming-soon");
       expect(topic).not.toHaveProperty("href");
     }
+  });
+
+  it("keeps Introduction to React as one Fundamentals entry with its original metadata", () => {
+    const matches = reactTopics.filter((topic) => topic.title === "Introduction to React");
+    expect(matches).toHaveLength(1);
+    expect(matches[0]).toMatchObject({
+      id: "react-introduction",
+      summary: "Discover how React helps you build interfaces from reusable pieces.",
+      groupId: "fundamentals",
+      kind: "concept",
+      order: 1,
+    });
   });
 
   it("uses deterministic unique positive ordering within every group", () => {

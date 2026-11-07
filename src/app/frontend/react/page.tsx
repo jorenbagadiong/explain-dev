@@ -15,7 +15,7 @@ const description = "Learn the core concepts behind building interactive user in
 
 export const metadata: Metadata = {
   title: `${react?.name ?? "Technology"} | Explain Dev`,
-  description: `${description} Start with useState and useEffect; more topics are coming in future milestones.`,
+  description: `${description} Start with Introduction to React, useState, and useEffect; more topics are coming in future milestones.`,
 };
 
 export default function ReactPage() {
@@ -47,7 +47,7 @@ export default function ReactPage() {
       </section>
 
       <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-        The useState and useEffect articles are available now. All other lessons are coming soon. Follow the curriculum from fundamentals to advanced patterns, or jump to a group below.
+        The Introduction to React, useState, and useEffect articles are available now. All other lessons are coming soon. Follow the curriculum from fundamentals to advanced patterns, or jump to a group below.
       </p>
 
       <nav aria-label="React curriculum" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">

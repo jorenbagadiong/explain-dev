@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-010 is complete: the two published articles now offer Learn, Quick Review, and Interview modes.** React retains its eight-group curriculum with 119 topics. Only useState and useEffect are published; the other 117 lessons are Coming soon. React is still the only available frontend technology; the other technologies and learning categories remain upcoming.
+Explain Dev is a developer learning and reference project. **ED-011 is complete: Introduction to React is published as the first React Fundamentals article.** All three published articles offer Learn, Quick Review, and Interview modes. React retains its eight-group curriculum with 119 topics. Only Introduction to React, useState, and useEffect are published; the other 116 lessons are Coming soon. React is still the only available frontend technology; the other technologies and learning categories remain upcoming.
 
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
@@ -33,7 +33,8 @@ Open http://localhost:3000.
 | --- | --- |
 | `/` | Four category cards; Frontend Development links to its category page. |
 | `/frontend` | Frontend introduction and seven technologies; React links to its introduction. |
-| `/frontend/react` | React introduction, eight curriculum groups, and 119 topic cards; only useState and useEffect link to articles. |
+| `/frontend/react` | React introduction, eight curriculum groups, and 119 topic cards; only Introduction to React, useState, and useEffect link to articles. |
+| `/frontend/react/introduction-to-react` | Complete Introduction to React article covering components, props, JSX, rendering, common mistakes, and interview answers. |
 | `/frontend/react/use-state` | Complete useState article, examples, mistakes, interview answers, and takeaways. |
 | `/frontend/react/use-effect` | Complete useEffect article, dependencies, cleanup, Strict Mode, examples, mistakes, and interview answers. |
 | Other `/frontend/*` routes | Default Next.js 404; unavailable technologies and topic routes have not been created. |
@@ -105,7 +106,7 @@ The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0
 
 ## Frontend technologies (ED-005)
 
-The hierarchy is **Frontend Development → Technology → Topic**. Category and technology introductions have routes, and useState and useEffect each have a published article route. The other topic metadata entries remain upcoming. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
+The hierarchy is **Frontend Development → Technology → Topic**. Category and technology introductions have routes, and Introduction to React, useState, and useEffect each have a published article route. The other topic metadata entries remain upcoming. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
 
 | Technology | Status | Route |
 | --- | --- | --- |
@@ -119,7 +120,7 @@ The hierarchy is **Frontend Development → Technology → Topic**. Category and
 
 The registry follows the category configuration's discriminated union: available entries require an href, while upcoming entries cannot have one. `/frontend` renders its technology list directly from this registry, using semantic Next.js Links only for available entries. Upcoming entries have no handlers, links, buttons, or tab stops. There is no client state for this static presentation and no duplicate technology list in the global sidebar.
 
-The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. The useState and useEffect cards link to their articles; every other curriculum card remains non-interactive.
+The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. The Introduction to React, useState, and useEffect cards link to their articles; every other curriculum card remains non-interactive.
 
 The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
 
@@ -143,7 +144,7 @@ The React technology page now organizes discovery into eight learning groups. Th
 
 Every topic belongs to exactly one primary group. IDs are authored independently of groups or array indices. The six original Hook IDs, summaries, and relative order are preserved: `use-state`, `use-effect`, `use-ref`, `use-memo`, `use-callback`, and `use-context`. Conceptual lessons such as context/data flow or reducer patterns are distinct from canonical Hook records. No related-topic system was added.
 
-**React API availability and Explain Dev article publication are separate.** The registry covers 18 verified stable React Hooks and one stable React DOM Hook, but only useState and useEffect have published articles and hrefs. All other 117 topics are `coming-soon` and have no href. The discriminated metadata type requires a route for available topics and prohibits one for upcoming topics; Hook kinds also require the matching package and Hooks group. Educational content, preferences, and progress are not stored in these registries.
+**React API availability and Explain Dev article publication are separate.** The registry covers 18 verified stable React Hooks and one stable React DOM Hook, but only three topics have published articles and hrefs: Introduction to React, useState, and useEffect. The other 116 topics are `coming-soon` and have no href. The discriminated metadata type requires a route for available topics and prohibits one for upcoming topics; Hook kinds also require the matching package and Hooks group. Educational content, preferences, and progress are not stored in these registries.
 
 The React page derives eight sections and a static keyboard-accessible table of contents from the registries. Each group has its description, h2, and ordered card grid. TopicCard retains h3 titles, summaries, status labels, and semantic Next.js Links with arrows for the two published articles. All other cards are plain articles with no controls, handlers, tab stops, or hover effects suggesting navigation. Repeated decorative brace icons were removed to keep the larger collection compact. The existing one/two/three-column grid, theme tokens, introduction, metadata, breadcrumbs, and shell remain. There is no scroll spy, client state, search, filter, or collapsed group.
 
@@ -210,6 +211,24 @@ Progressive disclosure is limited to optional suggested answers in Learn using n
 
 New text was reviewed against [useState](https://react.dev/reference/react/useState), [state snapshots](https://react.dev/learn/state-as-a-snapshot), [queued updates](https://react.dev/learn/queueing-a-series-of-state-updates), [useEffect](https://react.dev/reference/react/useEffect), [synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects), [unnecessary Effects](https://react.dev/learn/you-might-not-need-an-effect), and [StrictMode](https://react.dev/reference/react/StrictMode). Answer controls follow the [WAI disclosure pattern](https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/). Complete examples still use the existing strict compiler checks; short reminders are additionally compiled inside their stated component context. Node tests exercise the real interaction handlers using small Hook stubs, while browser checks cover actual hydration, keyboard events, visibility, focus, and scrolling. Hook stubs are not a DOM or React scheduler emulator.
 
+## Published Introduction to React article (ED-011)
+
+`/frontend/react/introduction-to-react` is the first published React Fundamentals article. It publishes the existing `react-introduction` topic: only that entry's status and href changed, and its ID, title, summary, group, kind, and order are preserved. The registry remains at 119 topics, with 3 published and 116 Coming soon.
+
+The article is a static Server Component route using the existing ArticleLayout, ArticleModes, panels, CodeBlock, and AnswerReveal. Its content lives in `src/content/react/introduction-to-react.ts`, separate from the topic metadata. There is no CMS, MDX, dynamic route, or new dependency.
+
+- **Learn** has twelve sections: what React is, why to use it (with tradeoffs), declarative versus imperative UI, components, props and data flow, JSX, rendering, React versus JavaScript, when to use React, common mistakes, interview questions, and key takeaways. Interview answers use the same native disclosures as the earlier articles; the rest of the lesson stays visible.
+- **Quick Review** is authored separately: a definition, six key points, one short TSX reminder, three common mistakes, the "entire DOM" interview trap, and a takeaway.
+- **Interview** has twelve questions, including the ten core ones, with independent Reveal/Hide controls. There is no scoring, persistence, or evaluation, and the questions are not presented as verified for any specific company.
+- **Examples:** twelve code blocks in Learn (eleven complete TSX components and one imperative TypeScript snippet), plus one review reminder, all checked by the existing strict `typecheckExamples` helper. Code that illustrates a mistake appears only in comments, so everything displayed compiles. The imperative snippet is labelled as a single DOM update rather than an equivalent counter.
+- **Visuals:** a component tree (App, then Header, MainContent, and Footer) and a four-step update flow, labelled as a simplified model in which not every render causes DOM mutations.
+
+One additive type supports the tree. `ArticleHierarchyVisual` lets `ConceptVisual` render a nested list, because numbered steps would imply a sequence that component nesting does not have. Existing `ArticleConceptVisual` data and rendering are unchanged. Comparison cards are a small helper local to this route.
+
+The `/frontend` and `/frontend/react` pages and the React page metadata named only the two earlier articles, so that copy was corrected along with its tests. The layout is unchanged.
+
+Explanations were reviewed against the official docs: [Quick Start](https://react.dev/learn), [Describing the UI](https://react.dev/learn/describing-the-ui), [Your First Component](https://react.dev/learn/your-first-component), [Passing Props](https://react.dev/learn/passing-props-to-a-component), [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx), [Render and Commit](https://react.dev/learn/render-and-commit), [State as a Snapshot](https://react.dev/learn/state-as-a-snapshot), [Queueing State Updates](https://react.dev/learn/queueing-a-series-of-state-updates), [Creating a React App](https://react.dev/learn/creating-a-react-app), and the [React reference](https://react.dev/reference/react). The text is original rather than copied from them.
+
 ## Browser preferences (ED-003)
 
 This is persistence infrastructure for future features, not a bookmark or reading progress feature. No current component imports the repository, and opening the homepage does not create a preferences entry.
@@ -247,6 +266,20 @@ Run `yarn test` for the colocated storage, registry, navigation, and page-render
 
 ## Verification
 
+Verified for ED-011 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed with strict checking.
+- `yarn test`: **309 tests passed** in 17 files. New checks cover registry publication, required sections and IDs, strict example compilation, mistakes, interview questions, Quick Review, visuals, rendering, anchors, breadcrumbs, and answer controls. The published-list assertions and page-copy assertions were updated to the three-article state.
+- Three deliberate faults were each caught by the suite and then reverted: a type error in an example, an unpublished topic, and a flattened hierarchy.
+- `yarn build`: passed. All routes, including the new article, are statically generated.
+- Cached Chromium headless shell 156 ran **425 passing checks with no console issues** against the production build at 375, 768, 1024, and 1440px in both themes. They cover the curriculum card, direct load and refresh, breadcrumbs, anchors, all three modes, keyboard reveal and hide, retained focus, no automatic scrolling, focus indicators, a full Tab pass with no trap, inactive modes not being focusable, heading order, code blocks, both visuals, sampled text contrast of at least 4.5:1, the mobile Sheet, sidebar, theme switching and persistence, and the useState and useEffect articles. The first run reported 16 failures from two over-broad selectors in the temporary script; narrowing them showed 116 curriculum Coming-soon labels and hidden answers as expected.
+- Article interactions left localStorage and the URL unchanged. Reflow passed at 320px and at a 720x450 viewport with DPR 2 in both themes. That is a 200% zoom equivalent, because real browser zoom controls were not available in the headless shell. With JavaScript disabled, Learn and its native disclosures stayed usable.
+- A development-server pass over the curriculum and all three articles, including mode changes and answer reveals, reported no hydration warnings or console errors.
+- Screenshots of the visuals, comparison cards, a mistake, Quick Review, Interview, and the Learn header were reviewed across a sample of widths and themes.
+- `use-state.ts`, `use-effect.ts`, their routes, `package.json`, and `yarn.lock` are identical to the ED-010 commit.
+- Not performed: testing in Firefox or Safari, testing with a screen reader, real browser zoom, or a complete WCAG audit. Contrast was sampled from computed colors, not audited for every state.
+
 Verified for ED-010 on Node 22.20.0:
 
 - `yarn lint`: passed with zero ESLint warnings.
@@ -261,7 +294,7 @@ Verified for ED-010 on Node 22.20.0:
 - Both articles and all modes passed **200% zoom-equivalent reflow** checks in both themes at a 720×450 CSS viewport with DPR 2, corresponding to a 1440×900 physical display. Actual browser chrome zoom was not available in headless shell; this is an equivalent viewport check, not a claim that browser zoom controls were exercised.
 - Screenshots were captured for both articles, all widths/themes, Learn/Review/Interview views, and concept visuals. Mobile light review, desktop dark Interview, tablet light Learn, and desktop light state comparison were visually reviewed. Long element screenshots can include the existing sticky header during capture; viewport/layout assertions confirmed anchors cleared it.
 - No dependencies, registry data, curriculum presentation, global shell, theme configuration/tokens, CodeBlock implementation, storage schema/repository, or deployment settings changed. Full Chromium was not retried after historical ED-006 crashes. Firefox, Safari, assistive-technology testing, and a full WCAG audit remain unperformed. Hook-stub unit tests do not emulate React scheduling or the DOM; browser checks provide actual interaction coverage.
-- ED-010 remains uncommitted. Nothing was pushed. The temporary production server was stopped after verification.
+- The temporary production server was stopped after verification.
 
 Verified for ED-009 on Node 22.20.0:
 
@@ -368,4 +401,4 @@ Browser checks used preinstalled Playwright/Chromium through a temporary script;
 
 ## Next planned milestone
 
-Proposed next: review feedback on the two-article learning pilot, then select one scoped curriculum lesson, such as useRef, for a separately approved publishing milestone. ED-010 adds no articles or routes; only useState and useEffect are published. The other 117 topics remain a discovery plan rather than completed educational content.
+Recommended next: **Thinking in declarative UI**, the next React Fundamentals topic in curriculum order, as a separately approved publishing milestone. Only Introduction to React, useState, and useEffect are published. The other 116 topics, including the JSX and components lessons, remain a discovery plan rather than completed educational content.

@@ -30,7 +30,8 @@ export const reactTopics = [
     technologyId: "react",
     groupId: "fundamentals",
     kind: "concept",
-    status: "coming-soon",
+    status: "available",
+    href: "/frontend/react/introduction-to-react",
     order: 1,
   },
   {

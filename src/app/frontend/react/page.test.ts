@@ -40,7 +40,7 @@ describe("grouped React curriculum", () => {
   it("links only published cards and leaves all upcoming cards outside the tab order", () => {
     const curriculum = sections.map((section) => section[2]).join("");
     expect([...curriculum.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1])).toEqual([
-      "/frontend/react/use-state", "/frontend/react/use-effect",
+      "/frontend/react/introduction-to-react", "/frontend/react/use-state", "/frontend/react/use-effect",
     ]);
     const upcoming = [...curriculum.matchAll(/<article\b[^>]*>([\s\S]*?)<\/article>/g)];
     expect(upcoming).toHaveLength(reactTopics.filter((topic) => topic.status === "coming-soon").length);

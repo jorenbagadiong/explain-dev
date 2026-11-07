@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { ArticleModes } from "./article-modes";
 import { AnswerReveal } from "./answer-reveal";
+import { introductionToReactArticle } from "@/content/react/introduction-to-react";
 
 // Small Hook stubs exercise the real event handlers in the existing Node suite.
 // Browser QA verifies React hydration, DOM focus, keyboard, and native events.
@@ -102,5 +103,21 @@ describe("suggested answer interactions", () => {
     button(first()).props.onClick?.();
     expect(button(first()).props["aria-expanded"]).toBe(false);
     expect(button(second()).props["aria-expanded"]).toBe(true);
+  });
+
+  it("reveals and hides every Introduction to React answer through its own labelled control", () => {
+    for (const { question, answer } of introductionToReactArticle.interview.questions) {
+      const render = harness(() => AnswerReveal({ question, children: answer }), question);
+      const control = () => render().find((node) => node.type === "button")!;
+      const panel = () => render().find((node) => node.props.id === question)!;
+      expect(panel().props.hidden).toBe(true);
+      expect(control().props["aria-label"]).toBe(`Reveal answer: ${question}`);
+      control().props.onClick?.();
+      expect(panel().props.hidden).toBe(false);
+      expect(panel().props.children).toContain(answer);
+      expect(control().props["aria-label"]).toBe(`Hide answer: ${question}`);
+      control().props.onClick?.();
+      expect(panel().props.hidden).toBe(true);
+    }
   });
 });

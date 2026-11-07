@@ -3,11 +3,12 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
 import { QuickReviewPanel, InterviewPanel } from "@/components/learning/article-panels";
+import { introductionToReactArticle } from "./introduction-to-react";
 import { useStateArticle } from "./use-state";
 import { useEffectArticle } from "./use-effect";
 import { typecheckExamples } from "./test-utils";
 
-const articles = [useStateArticle, useEffectArticle];
+const articles = [useStateArticle, useEffectArticle, introductionToReactArticle];
 
 describe("article learning content", () => {
   it.each(articles)("authors a complete concise review for $heading", (article) => {
@@ -25,6 +26,12 @@ describe("article learning content", () => {
     const escaped = (text: string) => renderToStaticMarkup(createElement("span", null, text)).slice(6, -7);
     for (const text of [review.definition, ...review.keyPoints, ...review.commonMistakes, review.interviewTrap, review.takeaway, review.codeReminder.code]) expect(html).toContain(escaped(text));
     expect(html.match(/<pre\b/g)).toHaveLength(1);
+  });
+
+  it("keeps the introduction review on its render-versus-commit trap and diagram caveat", () => {
+    expect(introductionToReactArticle.quickReview.interviewTrap).toMatch(/entire DOM.*No\..*committing.*only the DOM changes needed/);
+    expect(introductionToReactArticle.visual.note).toContain("not every render causes DOM mutations");
+    expect(introductionToReactArticle.visual.steps.map((step) => step.id)).toEqual(["change", "render", "commit", "display"]);
   });
 
   it("keeps the two reviews specific to their topics and preserves important caveats", () => {

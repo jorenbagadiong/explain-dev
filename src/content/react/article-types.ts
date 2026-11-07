@@ -46,3 +46,18 @@ export interface ArticleConceptVisual {
   steps: readonly { id: string; title: string; description: string }[];
   note: string;
 }
+
+export interface ArticleHierarchyNode {
+  id: string;
+  title: string;
+  description: string;
+  children?: readonly ArticleHierarchyNode[];
+}
+
+// For relationships with no sequence, where numbered steps would imply an order.
+export interface ArticleHierarchyVisual {
+  heading: string;
+  context: string;
+  root: ArticleHierarchyNode;
+  note: string;
+}
