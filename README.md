@@ -2,7 +2,7 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-005 is complete: frontend technology navigation is available.** `/frontend` lists seven technologies, with React as the only available technology at `/frontend/react`. The React page introduces the technology and lists planned learning areas. Detailed topics and educational articles are not available yet. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**.
+Explain Dev is a developer learning and reference project. **ED-006 is complete: React topic metadata and presentation are available.** `/frontend/react` now displays six non-interactive React Hooks cards, all marked **Coming soon**. There are no topic routes or published articles. `/frontend` still lists seven technologies with React as the only available technology introduction. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**.
 
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
@@ -33,7 +33,7 @@ Open http://localhost:3000.
 | --- | --- |
 | `/` | Four category cards; Frontend Development links to its category page. |
 | `/frontend` | Frontend introduction and seven technologies; React links to its introduction. |
-| `/frontend/react` | React introduction, breadcrumbs, planned subjects, and a coming-soon topics message. |
+| `/frontend/react` | React introduction, breadcrumbs, six upcoming Hook cards, and a coming-soon topics message. |
 | Other `/frontend/*` routes | Default Next.js 404; unavailable technologies and topic routes have not been created. |
 | `/backend`, `/fullstack`, `/devops` | Default Next.js 404; no placeholder routes or redirects. |
 | Other unknown routes | Default Next.js 404. |
@@ -75,15 +75,16 @@ yarn start     # Serve the production build after yarn build
 ```text
 src/app/                       Shared root layout, homepage, global styles
 src/app/frontend/page.tsx       Server-rendered Frontend technology list and metadata
-src/app/frontend/react/         Server-rendered React introduction and metadata
+src/app/frontend/react/         Server-rendered React introduction, Hook cards, and metadata
 src/components/layout/         Shared shell, header, sidebar, and mobile menu
 src/components/navigation/     Typed category configuration and route-aware navigation
+src/components/learning/       Static topic card and rendering tests
 src/components/theme-provider.tsx
 src/components/theme-toggle.tsx
 src/components/ui/             Locally owned shadcn/ui Button and Sheet
 src/lib/utils.ts               Class name merging
 src/lib/storage/               Preferences repository and colocated tests
-src/lib/learning/              Frontend technology registry and colocated tests
+src/lib/learning/              Technology/topic metadata registries and colocated tests
 src/types/preferences.ts       Versioned preferences model
 vitest.config.mjs              Minimal Node test environment and @ alias
 ```
@@ -95,13 +96,13 @@ The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0
 - The root layout mounts `AppShell` around page content. The shared shell owns the header, navigation, skip link, main landmark, and footer; pages supply their own headings and content.
 - At 1024px and above, navigation appears in a sticky desktop sidebar. Smaller widths use a modal Sheet, leaving the full width available for content. Category cards use one column on mobile and two from 768px.
 - `src/components/navigation/categories.ts` is the single source of category labels, descriptions, icons, and availability. The discriminated union requires an href for an available category and prevents one on upcoming categories. Only add an available link after implementing its route. Available navigation items use `aria-current` when their route or a descendant is active.
-- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. There are no topic cards, search, bookmarks, or progress features.
+- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. There are no published topic articles, search, bookmarks, or progress features.
 - `/`, `/frontend`, and `/frontend/react` inherit the same shell from the root layout. Both learning pages are Server Components with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
 - The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
 
 ## Frontend technologies (ED-005)
 
-The hierarchy is **Frontend Development → Technology → Topic**. Only the category and technology introduction levels are implemented. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
+The hierarchy is **Frontend Development → Technology → Topic**. The category and technology introduction levels have routes. Topic metadata is presented as upcoming cards, with no topic routes. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
 
 | Technology | Status | Route |
 | --- | --- | --- |
@@ -115,9 +116,26 @@ The hierarchy is **Frontend Development → Technology → Topic**. Only the cat
 
 The registry follows the category configuration's discriminated union: available entries require an href, while upcoming entries cannot have one. `/frontend` renders its technology list directly from this registry, using semantic Next.js Links only for available entries. Upcoming entries have no handlers, links, buttons, or tab stops. There is no client state for this static presentation and no duplicate technology list in the global sidebar.
 
-The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. Planned React subjects are a plain, non-interactive list; no topic pages, lessons, or article cards exist.
+The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. React Hooks are now presented as non-interactive metadata cards; no topic pages or lessons exist.
 
 The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
+
+## React topic metadata and cards (ED-006)
+
+`src/lib/learning/react-topics.ts` is the single source of truth for six React Hook metadata entries, in this order:
+
+1. useState
+2. useEffect
+3. useRef
+4. useMemo
+5. useCallback
+6. useContext
+
+Every entry has a stable ID, title, concise summary, `categoryId: "frontend"`, `technologyId: "react"`, explicit status, and a positive order value. **All six are `coming-soon`, and none has an href.** The discriminated union prevents upcoming entries from declaring a route. Future article content will be maintained separately; the registry contains no explanations, code examples, interview questions, preferences, or progress data.
+
+The React page renders the registry through the server-rendered `TopicCard` component under an h2 titled “React Hooks.” Each list item contains a semantic article with an h3 title, summary, and readable Coming-soon label. Cards have no links, buttons, handlers, tab stops, or hover effects suggesting navigation. The grid uses one column on mobile, two from 768px, and three from 1280px within the existing shell.
+
+The previous overlapping future-subject list has been simplified to a note about broader planned React coverage. The original introduction, breadcrumbs, page metadata, theme configuration, navigation, storage APIs, and available routes remain unchanged.
 
 ## Browser preferences (ED-003)
 
@@ -155,6 +173,18 @@ Persistence limitations:
 Run `yarn test` for the colocated storage, registry, navigation, and page-rendering tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Navigation tests render the real component with React’s existing server renderer and a mocked pathname. Vite is installed as Vitest's required peer dependency.
 
 ## Verification
+
+Verified for ED-006 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed.
+- `yarn test`: **106 tests passed** in seven files. Registry tests cover six unique IDs/titles, Frontend/React ownership, explicit Coming-soon status, absence of hrefs, stable positive ordering, and non-empty summaries. Card/page tests cover semantic article/h3 markup, registry-driven titles and summaries, six status labels, and no controls or tab stops. The existing future-subject assertion was updated for the simplified coverage section; earlier test suites remain.
+- `yarn build`: passed outside the sandbox to permit Turbopack's local worker port. Its route table remains `/`, `/frontend`, `/frontend/react`, the default not-found page, and the app icon; no topic routes were generated.
+- The first full-Chromium run completed 375px and 768px, then its renderer crashed during the 1024px theme-toggle check. A fresh full-Chromium retry also crashed at tab creation before loading the app. The underlying browser crash cause was not established; no source changes were made in response.
+- Retrying with the cached Chromium headless shell, using a fresh process per width, passed at **375×900, 768×900, 1024×900, and 1440×900 in both themes**. Each run verified all three application routes, all six titles/summaries/statuses, one/two/three grid columns, no card controls or tab stops, no pointer/hover affordance, no navigation after a card click, and keyboard tab order skipping the cards.
+- Breadcrumb links, direct React loading, refresh, Frontend active state, mobile/tablet Sheet keyboard behavior and focus return, category/technology navigation, theme switching/persistence, and unchanged seeded preference data passed. No horizontal overflow or clipped headings was detected; sampled text contrast met 4.5:1 in both themes. Reduced motion was emulated.
+- All six proposed topic URLs returned 404 without redirects. Unavailable technology/category routes also remained 404s. The intentional `/frontend-tools` 404 resource entry was excluded from unexpected-console-error checks.
+- Successful headless-shell runs reported no unexpected console errors, page errors, or hydration warnings. Screenshots were captured at every width/theme; mobile React light, laptop React dark, desktop React light, and tablet Sheet dark were visually reviewed.
 
 Verified for ED-005 on Node 22.20.0:
 
@@ -209,4 +239,4 @@ Browser checks used preinstalled Playwright/Chromium through a temporary script;
 
 ## Next planned milestone
 
-Proposed next: define a scoped React topic registry and topic-listing behavior. Topic detail routes and educational articles require a future milestone; none are implemented in ED-005.
+Proposed next: introduce a first React article and its published route, keeping article content separate from topic metadata. Article routes, full explanations, and code examples require a future milestone; none are implemented in ED-006.

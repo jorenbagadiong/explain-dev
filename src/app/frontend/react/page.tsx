@@ -3,8 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight, Clock3 } from "lucide-react";
 
+import { TopicCard } from "@/components/learning/topic-card";
 import { categories } from "@/components/navigation/categories";
 import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
+import { reactTopics } from "@/lib/learning/react-topics";
 
 const frontend = categories.find((category) => category.id === "frontend");
 const react = frontendTechnologies.find((technology) => technology.id === "react");
@@ -14,17 +16,6 @@ export const metadata: Metadata = {
   title: `${react?.name ?? "Technology"} | Explain Dev`,
   description: `${description} Learning topics are coming in future milestones.`,
 };
-
-const futureLearningAreas = [
-  "Components and JSX",
-  "Props and State",
-  "React Hooks",
-  "Effects and Lifecycle",
-  "Context API",
-  "Rendering and Performance",
-  "Custom Hooks",
-  "Testing React Components",
-];
 
 export default function ReactPage() {
   if (!frontend || frontend.status !== "available" || !react || react.status !== "available") notFound();
@@ -54,12 +45,17 @@ export default function ReactPage() {
         </p>
       </section>
 
-      <section aria-labelledby="planned-areas-heading" className="mt-10 max-w-2xl">
-        <h2 id="planned-areas-heading" className="text-xl font-semibold tracking-tight">Planned learning areas</h2>
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">These subjects describe future coverage. They are not published topics or links to lessons.</p>
-        <ul className="mt-6 grid list-inside list-disc gap-x-8 gap-y-3 text-sm text-muted-foreground marker:text-primary sm:grid-cols-2">
-          {futureLearningAreas.map((area) => <li key={area}>{area}</li>)}
+      <section aria-labelledby="react-hooks-heading" className="mt-10">
+        <h2 id="react-hooks-heading" className="text-xl font-semibold tracking-tight">React Hooks</h2>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Explore the core React Hooks used to manage state, synchronize with external systems, share context, and optimize rendering.
+        </p>
+        <ul className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3 sm:gap-5">
+          {reactTopics.map((topic) => <li key={topic.id}><TopicCard topic={topic} /></li>)}
         </ul>
+        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          Broader React coverage, including components, testing, and custom Hooks, is planned for future milestones. These cards preview upcoming topics; no articles are published yet.
+        </p>
       </section>
 
       <section aria-labelledby="react-content-status-heading" className="mt-10 flex max-w-2xl items-start gap-4 rounded-xl border bg-muted/30 p-6 sm:mt-12 sm:p-7">

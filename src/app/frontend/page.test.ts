@@ -44,14 +44,13 @@ describe("frontend technology presentation", () => {
 describe("React technology introduction", () => {
   const html = renderToStaticMarkup(createElement(ReactPage));
 
-  it("shows one primary heading, planned subjects, and the coming-soon state", () => {
+  it("preserves the primary heading, introduction, and coming-soon state", () => {
     expect(html.match(/<h1\b/g)).toHaveLength(1);
     expect(html).toMatch(/<h1\b[^>]*>React<\/h1>/);
     expect(html).toContain("Learn the core concepts behind building interactive user interfaces with React.");
     expect(html).toContain("React learning topics are coming soon.");
-    const areas = html.match(/<ul\b[^>]*>([\s\S]*?)<\/ul>/)?.[1];
-    expect(areas?.match(/<li\b/g)).toHaveLength(8);
-    expect(areas).not.toMatch(/<a\b|<button\b|\btabindex=/);
+    expect(html).toContain("React Hooks");
+    expect(html).toContain("Broader React coverage");
   });
 
   it("renders the breadcrumb hierarchy with two real links and a non-linked current page", () => {
