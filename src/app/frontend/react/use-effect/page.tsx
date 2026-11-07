@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ArticleExamples, ArticleLayout, ArticleSection } from "@/components/learning/article-layout";
+import { LearnInterview } from "@/components/learning/article-panels";
+import { ConceptVisual } from "@/components/learning/concept-visual";
 import { CodeBlock } from "@/components/learning/code-block";
 import { useEffectArticle as article } from "@/content/react/use-effect";
 import { reactTopics } from "@/lib/learning/react-topics";
@@ -18,7 +20,7 @@ export default function UseEffectPage() {
   const sections = [article.overview, article.usage, article.dependencies, article.cleanup, article.strictMode, article.examples, article.mistakes, article.interview, article.takeaways];
 
   return (
-    <ArticleLayout topic={topic} heading={article.heading} eyebrow="React · External synchronization" sections={sections} sources={article.sources}>
+    <ArticleLayout topic={topic} heading={article.heading} eyebrow="React · External synchronization" sections={sections} sources={article.sources} quickReview={article.quickReview} questions={article.interview.questions}>
       <ArticleSection section={article.overview}>
         <CodeBlock example={article.overview.syntax} />
         <p className="leading-8 text-muted-foreground">{article.overview.syntax.description}</p>
@@ -31,7 +33,7 @@ export default function UseEffectPage() {
       <ArticleSection section={article.dependencies}>
         {article.dependencies.forms.map((example) => <div key={example.id}><CodeBlock example={example} /><p className="leading-8 text-muted-foreground">{example.description}</p></div>)}
       </ArticleSection>
-      <ArticleSection section={article.cleanup} />
+      <ArticleSection section={article.cleanup}><ConceptVisual visual={article.visual} /></ArticleSection>
       <ArticleSection section={article.strictMode} />
       <ArticleExamples section={article.examples} />
       <ArticleSection section={article.mistakes}>
@@ -47,9 +49,7 @@ export default function UseEffectPage() {
         </ol>
       </ArticleSection>
       <ArticleSection section={article.interview}>
-        <ol className="mt-6 space-y-7">
-          {article.interview.questions.map((question, index) => <li key={question.id}><h3 className="text-lg font-semibold">{index + 1}. {question.question}</h3><p className="mt-3 leading-8 text-muted-foreground">{question.answer}</p></li>)}
-        </ol>
+        <LearnInterview section={article.interview} />
       </ArticleSection>
       <ArticleSection section={article.takeaways}>
         <ul className="mt-4 list-outside list-disc space-y-3 pl-5 leading-8 text-muted-foreground marker:text-primary">{article.takeaways.items.map((item) => <li key={item}>{item}</li>)}</ul>

@@ -2,9 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 
+import { ArticleModes } from "@/components/learning/article-modes";
+import { InterviewPanel, QuickReviewPanel } from "@/components/learning/article-panels";
 import { CodeBlock } from "@/components/learning/code-block";
 import { categories } from "@/components/navigation/categories";
-import type { ArticleSection as SectionContent, ArticleSource, CodeExample } from "@/content/react/article-types";
+import type { ArticleSection as SectionContent, ArticleSource, ArticleQuickReview, CodeExample, InterviewQuestion } from "@/content/react/article-types";
 import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
 import type { ReactTopic } from "@/lib/learning/react-topics";
 
@@ -14,11 +16,13 @@ interface ArticleLayoutProps {
   eyebrow: string;
   sections: readonly SectionContent[];
   sources: readonly ArticleSource[];
+  quickReview: ArticleQuickReview;
+  questions: readonly InterviewQuestion[];
   children: React.ReactNode;
 }
 
 // Shared article chrome only. Each route explicitly composes its own content.
-export function ArticleLayout({ topic, heading, eyebrow, sections, sources, children }: ArticleLayoutProps) {
+export function ArticleLayout({ topic, heading, eyebrow, sections, sources, quickReview, questions, children }: ArticleLayoutProps) {
   const frontend = categories.find((category) => category.id === "frontend");
   const react = frontendTechnologies.find((technology) => technology.id === "react");
   if (!frontend || frontend.status !== "available" || !react || react.status !== "available") notFound();
@@ -42,13 +46,21 @@ export function ArticleLayout({ topic, heading, eyebrow, sections, sources, chil
           <h1 id="article-heading" className="text-4xl leading-tight font-semibold tracking-[-0.045em] sm:text-5xl">{heading}</h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">{topic.summary}</p>
         </header>
-        <nav aria-label="On this page" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">
-          <p className="mb-3 text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">On this page</p>
-          <ol className="grid gap-x-6 sm:grid-cols-2">
-            {sections.map((section) => <li key={section.id}><a href={`#${section.id}`} className="inline-flex min-h-11 items-center rounded-md py-2 text-sm text-primary underline-offset-4 hover:underline">{section.heading}</a></li>)}
-          </ol>
-        </nav>
-        {children}
+        <ArticleModes
+          learn={
+            <>
+              <nav aria-label="On this page" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">
+                <p className="mb-3 text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">On this page</p>
+                <ol className="grid gap-x-6 sm:grid-cols-2">
+                  {sections.map((section) => <li key={section.id}><a href={`#${section.id}`} className="inline-flex min-h-11 items-center rounded-md py-2 text-sm text-primary underline-offset-4 hover:underline">{section.heading}</a></li>)}
+                </ol>
+              </nav>
+              {children}
+            </>
+          }
+          review={<QuickReviewPanel review={quickReview} />}
+          interview={<InterviewPanel questions={questions} />}
+        />
         <footer className="mt-12 border-t pt-6">
           <h2 className="text-lg font-semibold">Continue with the official React documentation</h2>
           <ul className="mt-3 flex flex-wrap gap-x-6">{sources.map((source) => <li key={source.href}><a href={source.href} className="inline-flex min-h-11 items-center rounded-md py-2 text-sm text-primary underline underline-offset-4">{source.label}</a></li>)}</ul>

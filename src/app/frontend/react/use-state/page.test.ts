@@ -10,6 +10,9 @@ import { reactTopics } from "@/lib/learning/react-topics";
 import UseStatePage, { metadata } from "./page";
 
 const html = renderToStaticMarkup(createElement(UseStatePage));
+const learnStart = html.search(/<div\b[^>]*id="[^"]+-learn-panel"/);
+const reviewStart = html.search(/<div\b[^>]*id="[^"]+-review-panel"/);
+const learnHtml = html.slice(learnStart, reviewStart);
 const sections = [article.overview, article.usage, article.updates, article.examples, article.mistakes, article.interview, article.takeaways];
 const codeExamples = [article.overview.syntax, ...article.updates.comparison, ...article.examples.items];
 
@@ -38,14 +41,32 @@ describe("published useState article", () => {
   });
 
   it("preserves code as escaped preformatted text without creating live controls", () => {
-    const blocks = [...html.matchAll(/<pre\b[^>]*><code>([\s\S]*?)<\/code><\/pre>/g)].map((match) => match[1]);
+    const blocks = [...learnHtml.matchAll(/<pre\b[^>]*><code>([\s\S]*?)<\/code><\/pre>/g)].map((match) => match[1]);
     expect(blocks).toHaveLength(codeExamples.length);
     codeExamples.forEach((example, index) => {
       const escaped = example.code.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
       expect(blocks[index]).toBe(escaped);
     });
-    expect(html).not.toMatch(/<button\b|<input\b/);
+    expect(learnHtml).not.toMatch(/<button\b|<input\b/);
     expect(html).toContain("TSX");
+  });
+
+  it("preserves every long-form explanation, example description, mistake, answer, and takeaway in Learn", () => {
+    const preserved = [
+      ...sections.flatMap((section) => section.paragraphs),
+      ...codeExamples.map((example) => example.description),
+      ...article.usage.useCases, ...article.usage.alternatives,
+      ...article.mistakes.items.flatMap((mistake) => [mistake.heading, mistake.problem, mistake.correction]),
+      ...article.interview.questions.flatMap((question) => [question.question, question.answer]),
+      ...article.takeaways.items,
+      article.updates.conclusion,
+    ];
+    for (const text of preserved) {
+      const escaped = renderToStaticMarkup(createElement("span", null, text)).slice(6, -7);
+      expect(learnHtml).toContain(escaped);
+    }
+    expect(learnHtml.match(/<details\b/g)).toHaveLength(article.interview.questions.length);
+    expect(learnHtml.match(/<summary\b/g)).toHaveLength(article.interview.questions.length);
   });
 
   it("takes the summary from the topic registry for page metadata", () => {

@@ -1,4 +1,4 @@
-import type { ArticleSection, ArticleSource, CodeExample, CommonMistake, InterviewQuestion } from "./article-types";
+import type { ArticleConceptVisual, ArticleQuickReview, ArticleSection, ArticleSource, CodeExample, CommonMistake, InterviewQuestion } from "./article-types";
 
 interface UseEffectArticle {
   heading: string;
@@ -11,6 +11,8 @@ interface UseEffectArticle {
   mistakes: ArticleSection & { items: readonly CommonMistake[] };
   interview: ArticleSection & { questions: readonly InterviewQuestion[] };
   takeaways: ArticleSection & { items: readonly string[] };
+  quickReview: ArticleQuickReview;
+  visual: ArticleConceptVisual;
   sources: readonly ArticleSource[];
 }
 
@@ -292,6 +294,39 @@ export function OnlineStatus() {
       "Remove unnecessary Effects in favor of derived calculations, event handlers, or better component structure.",
       "Keep browser reads out of server rendering, and do not confuse commit timing with paint timing.",
     ],
+  },
+  quickReview: {
+    definition: "useEffect synchronizes a component with an external system after a client commit. It does not run during server rendering.",
+    keyPoints: [
+      "Dependencies describe all reactive values read by setup and cleanup; React compares them with Object.is.",
+      "On a dependency change, old cleanup precedes new setup; unmount runs the latest cleanup.",
+      "An empty array means no reactive inputs, not exactly one setup forever.",
+      "Development Strict Mode can add a setup/cleanup check, depending on its boundary and environment.",
+      "Derive render values during rendering and handle event-specific work in the event handler.",
+    ],
+    codeReminder: {
+      id: "effect-review-subscription",
+      title: "Pair a subscription with its cleanup",
+      language: "tsx",
+      code: 'useEffect(() => {\n  window.addEventListener("resize", onResize);\n  return () => window.removeEventListener("resize", onResize);\n}, [onResize]);',
+      description: "Assume onResize is a handler from this component. Include it as a dependency; its changing identity restarts synchronization. Browser access is inside setup.",
+    },
+    commonMistakes: ["Omitting reactive dependencies or silencing the lint rule.", "Leaving a listener or timer active after its setup should end.", "Copying a derived value into state through an unnecessary Effect."],
+    interviewTrap: "[] describes dependency behavior, not an exactly-once guarantee. Remounts start new setups; development Strict Mode can check setup → cleanup → setup. Production does not add that development check. Fix cleanup instead of hiding the check with a ref.",
+    takeaway: "Identify the external system, declare its inputs, and undo each acquired resource.",
+  },
+  visual: {
+    heading: "An Effect is a synchronization cycle",
+    context: "Follow an Effect that acquires a resource and returns cleanup. This sequence shows a normal changed-dependency commit followed later by unmount.",
+    steps: [
+      { id: "commit", title: "Render and commit", description: "React commits the UI. Effects do not run during server rendering or a discarded render attempt." },
+      { id: "setup", title: "Effect setup", description: "Begin synchronization with the current inputs, such as subscribing to an event source." },
+      { id: "changed-input", title: "A dependency changes", description: "React commits an update with a listed input that differs under Object.is." },
+      { id: "old-cleanup", title: "Previous cleanup", description: "Release the old resource using the old captured values. The component is still mounted." },
+      { id: "new-setup", title: "New setup", description: "Start synchronization with the newly committed inputs." },
+      { id: "unmount-cleanup", title: "Final cleanup on unmount", description: "Release the latest resource when the component is removed, without starting another setup." },
+    ],
+    note: "This is about commit and synchronization, not guaranteed paint timing. Development Strict Mode checks are a separate case, explained in the next section; extra setups are possible.",
   },
   sources: [
     { label: "useEffect reference", href: "https://react.dev/reference/react/useEffect" },
