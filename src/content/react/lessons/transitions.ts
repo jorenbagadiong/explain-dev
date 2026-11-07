@@ -38,7 +38,7 @@ export const lesson: LessonArticle = {
           { id: "discard", title: "Old work is discarded", description: "The first tab’s partial render is thrown away, with no effect on the screen." },
           { id: "finish", title: "The latest result commits", description: "React finishes rendering the tab that was chosen last." },
         ],
-        note: "This is simplified. Whether React pauses or restarts at a given point is an implementation detail, and multiple Transitions are currently batched together.",
+        note: "This is simplified. Whether React pauses or restarts at a given point is an implementation detail. The React 19.3 changelog records separate rendering of independent Transitions. Do not rely on a particular batching relationship or commit order.",
       },
     },
     {
@@ -206,6 +206,7 @@ export default function Filter() {
     takeaway: "Tell React what can wait, so that it never makes an interaction wait.",
   },
   sources: [
+    { label: "React 19.3 changelog: independent Transitions (#37290)", href: "https://react.dev/blog/2026/09/09/react-19-3#changelog" },
     { label: "useTransition reference", href: "https://react.dev/reference/react/useTransition" },
     { label: "Suspense reference", href: "https://react.dev/reference/react/Suspense" },
     { label: "Keeping Components Pure", href: "https://react.dev/learn/keeping-components-pure" },

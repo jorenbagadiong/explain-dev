@@ -834,6 +834,7 @@
       "workflowStatus": "published",
       "verificationStatus": "gates-passed",
       "docReferences": [
+        "https://react.dev/blog/2026/09/09/react-19-3#changelog",
         "https://react.dev/reference/react/useTransition",
         "https://react.dev/reference/react/useDeferredValue",
         "https://react.dev/reference/react/useActionState"
@@ -1654,6 +1655,7 @@
       "workflowStatus": "published",
       "verificationStatus": "gates-passed",
       "docReferences": [
+        "https://react.dev/blog/2026/09/09/react-19-3#changelog",
         "https://react.dev/reference/react/useTransition",
         "https://react.dev/reference/react/Suspense",
         "https://react.dev/learn/keeping-components-pure"

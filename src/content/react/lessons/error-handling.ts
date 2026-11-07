@@ -7,13 +7,13 @@ export const lesson: LessonArticle = {
       id: "kinds-of-failure",
       heading: "Different failures need different handling",
       paragraphs: [
-        "Not all errors reach React in the same way, and where one happens decides how you can handle it. An Error Boundary only catches errors thrown while React is rendering. A failure in a click handler or a request happens outside rendering, so you handle it in your own code.",
+        "Not all errors reach React in the same way, and where one happens decides how you can handle it. An Error Boundary catches errors from rendering descendants, their lifecycle methods, and their synchronous Effect setup or cleanup. It also handles errors from Actions passed to the startTransition returned by useTransition. Ordinary click-handler errors and detached asynchronous callbacks need your own error handling.",
       ],
       comparison: [
         {
           id: "render-errors",
           title: "Handled by an Error Boundary",
-          items: ["Errors thrown during rendering.", "Errors in lifecycle methods and Effects.", "Rejected Promises read with use, or thrown in an Action’s transition."],
+          items: ["Errors thrown during descendant rendering, including rejected Promises read with use.", "Errors in descendants’ lifecycle methods and synchronous Effect setup/cleanup.", "Errors thrown or rejected by Actions passed to useTransition’s startTransition."],
         },
         {
           id: "own-errors",
@@ -222,12 +222,12 @@ export function startApp(container: HTMLElement) {
     {
       id: "eh-boundaries",
       question: "What do Error Boundaries catch, and what don’t they?",
-      answer: "They catch errors during rendering, in lifecycle methods, and in Effects of the tree below them. They do not catch errors in event handlers, in code such as setTimeout, during server rendering, or thrown in the boundary itself.",
+      answer: "They catch descendant rendering, lifecycle, and synchronous Effect setup/cleanup errors, plus failures of Actions passed to useTransition’s startTransition. They do not catch ordinary event-handler errors, detached callbacks such as setTimeout, server rendering errors, or their own failures.",
     },
     {
       id: "eh-events",
       question: "How do you handle errors in event handlers?",
-      answer: "With try/catch in the handler, usually storing a message in state so that the UI can show it. Async handlers need the await inside the try. If you want a boundary to handle it, an Action wrapped in a transition can throw into the nearest boundary.",
+      answer: "With try/catch in the handler, usually storing a message in state so that the UI can show it. Async handlers need the await inside the try. An Action passed to the startTransition returned by useTransition can instead surface its failure through the nearest boundary; detached callbacks still need their own handling.",
     },
     {
       id: "eh-fetch",
@@ -247,19 +247,19 @@ export function startApp(container: HTMLElement) {
     {
       id: "eh-report",
       question: "How do you report errors in production?",
-      answer: "With componentDidCatch in a boundary, and the root options onCaughtError, onUncaughtError, and onRecoverableError, which send details to a monitoring service. Events and async code report from their own catch blocks. Users get a plain message, with details kept for developers.",
+      answer: "With componentDidCatch in a boundary, and the root options onCaughtError, onUncaughtError, and onRecoverableError, which send details to a monitoring service. Ordinary event handlers and detached async callbacks report from their own catch blocks. Users get a plain message, with details kept for developers.",
     },
   ],
   takeaways: [
-    "Error Boundaries only catch rendering-phase errors.",
-    "Handle event and async errors in your own code, and check response.ok.",
+    "Error Boundaries cover descendant rendering, lifecycle methods, synchronous Effects, and useTransition Actions.",
+    "Handle ordinary event and detached async errors in your own code, and check response.ok.",
     "Place boundaries so that useful parts of the page keep working.",
     "Explain the problem, offer a next step, and report the details.",
   ],
   quickReview: {
-    definition: "Error handling means separating rendering failures from event and async errors, then offering useful recovery for each.",
+    definition: "Error handling means distinguishing failures covered by a boundary from ordinary event-handler and detached async failures, then offering useful recovery for each.",
     keyPoints: [
-      "Boundaries do not catch event handler errors.",
+      "Boundaries do not catch ordinary event-handler errors.",
       "fetch does not reject on a 500 response.",
       "Boundaries are written as classes.",
       "Root options can report errors.",
@@ -281,7 +281,7 @@ export function startApp(container: HTMLElement) {
       "Not checking response.ok.",
       "Leaving a catch block empty.",
     ],
-    interviewTrap: "“Will an Error Boundary catch an error from my onClick?” No. Handlers run outside rendering, so use try/catch there.",
+    interviewTrap: "“Will an Error Boundary catch an error thrown directly by my onClick?” No. Handle ordinary event errors yourself. An Action passed to useTransition’s startTransition has separate boundary integration.",
     takeaway: "Every failure needs a place to be caught, and a way forward for the person.",
   },
   sources: [

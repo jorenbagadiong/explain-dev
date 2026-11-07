@@ -56,12 +56,12 @@ export class ErrorBoundary extends Component<Props, State> {
         {
           id: "caught",
           title: "Caught",
-          items: ["Errors thrown while rendering children, including distant descendants.", "Errors thrown inside a startTransition function from useTransition."],
+          items: ["Errors thrown while rendering children, including distant descendants.", "Errors thrown in descendants’ lifecycle methods or synchronous Effect setup and cleanup.", "Errors thrown or rejected by an Action passed to the startTransition returned by useTransition."],
         },
         {
           id: "not-caught",
           title: "Not caught",
-          items: ["Event handlers.", "Asynchronous code such as setTimeout.", "Server-side rendering.", "Errors in the boundary itself."],
+          items: ["Ordinary event handlers.", "Detached asynchronous callbacks such as setTimeout.", "Server-side rendering.", "Errors in the boundary itself."],
         },
       ],
       examples: [
@@ -160,14 +160,14 @@ export default function Dashboard() {
     {
       id: "expects-event-catch",
       heading: "Expecting a boundary to catch event handler errors",
-      problem: "Wrapping a button in a boundary and throwing in its click handler shows no fallback. Handlers do not run during rendering, so the error goes uncaught and the UI shows no sign of a failure.",
+      problem: "Wrapping a button in a boundary does not catch an error thrown directly by an ordinary click handler. A boundary’s coverage of descendant rendering, lifecycle methods, and synchronous Effects does not extend to that handler.",
       correction: "Use try and catch in the handler, and store the error in state to display it.",
     },
     {
       id: "async-errors",
-      heading: "Expecting a boundary to catch async errors",
-      problem: "A rejected promise or an error in setTimeout happens outside rendering, so a boundary will never see it. Unhandled errors appear only in the console, while the UI keeps showing stale content.",
-      correction: "Handle the error where it happens. To send it to a boundary, set it in state and throw it during rendering.",
+      heading: "Expecting a boundary to catch detached async errors",
+      problem: "A rejection in detached async work, such as an unhandled request started by an ordinary event handler, or an error in a detached setTimeout callback, does not reach a boundary automatically. This differs from an Action passed to the startTransition returned by useTransition, whose thrown errors and rejections can reach the boundary.",
+      correction: "Handle detached failures where they happen. To surface one through a boundary, store the error and throw it during rendering; useTransition Actions already provide tracked error handling.",
     },
     {
       id: "one-global-boundary",
@@ -197,7 +197,7 @@ export default function Dashboard() {
     {
       id: "eb-not-catch",
       question: "What don’t error boundaries catch?",
-      answer: "Errors in event handlers, asynchronous code such as setTimeout callbacks, server-side rendering, and errors in the boundary itself. Those need ordinary try and catch, or state that carries the error into a render.",
+      answer: "Errors thrown directly in ordinary event handlers, detached async callbacks such as setTimeout, server-side rendering, and errors in the boundary itself. Handle detached failures yourself; Actions passed to useTransition’s startTransition are a separate, tracked case.",
     },
     {
       id: "eb-methods",
@@ -226,8 +226,8 @@ export default function Dashboard() {
     },
   ],
   takeaways: [
-    "Boundaries catch rendering errors in descendants and show a fallback.",
-    "They do not catch event handler, async, or server rendering errors.",
+    "Boundaries cover descendant rendering, lifecycle methods, synchronous Effect setup/cleanup, and useTransition Actions.",
+    "They do not catch ordinary event-handler or async-callback errors, or server rendering errors.",
     "A boundary is a class today, or comes from a separate package.",
     "Place them where a failure can be contained usefully.",
   ],
@@ -236,7 +236,7 @@ export default function Dashboard() {
     keyPoints: [
       "It needs a class with getDerivedStateFromError or componentDidCatch.",
       "Fallbacks should be set in the first, and reporting done in the second.",
-      "Event handlers and async code are not covered.",
+      "Ordinary event handlers and detached async callbacks need their own handling.",
       "A changed key resets it.",
     ],
     codeReminder: {
@@ -255,8 +255,8 @@ export default function Dashboard() {
       "Having only one boundary at the root.",
       "Reporting from getDerivedStateFromError.",
     ],
-    interviewTrap: "“Do error boundaries catch all errors?” No. Only rendering errors in descendants, plus those in useTransition’s startTransition.",
-    takeaway: "Use boundaries for rendering failures, and try and catch for everything else.",
+    interviewTrap: "“Do error boundaries catch all errors?” No. They cover descendant rendering, lifecycle methods, synchronous Effect setup/cleanup, and Actions passed to useTransition’s startTransition. Ordinary event handlers and detached async callbacks need their own handling.",
+    takeaway: "Use boundaries for descendant rendering, lifecycle, synchronous Effect, and useTransition Action failures; handle ordinary event and detached async failures where they happen.",
   },
   sources: [
     { label: "Component reference: error boundaries", href: "https://react.dev/reference/react/Component" },

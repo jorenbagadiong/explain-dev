@@ -1,0 +1,2053 @@
+{
+  "scope": "119 articles, all extracted prose strings and all 445 example records. Candidate matching does not establish correctness or incorrectness.",
+  "articles": 119,
+  "stringsScanned": 13279,
+  "examplesScanned": 445,
+  "routeChecks": [
+    {
+      "topicId": "react-introduction",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "declarative-ui",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "jsx",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-components",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "props",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "rendering-elements",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "conditional-rendering",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "rendering-lists",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "list-keys",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "event-handling",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-purity",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "render-and-commit",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-lifecycle",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-state",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "state-snapshots",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "state-update-queues",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "immutable-objects",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "immutable-arrays",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "sharing-state",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "lifting-state",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "controlled-uncontrolled",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "state-preservation",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "state-structure",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "reducer-patterns",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "context-data-flow",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "avoiding-unnecessary-state",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-state",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-effect",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-ref",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-memo",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-callback",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-context",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-reducer",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-action-state",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-optimistic",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-imperative-handle",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-layout-effect",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-insertion-effect",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-effect-event",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-transition",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-deferred-value",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-id",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-sync-external-store",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-debug-value",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "use-form-status",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-composition",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "children-composition",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "reusable-components",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "custom-hooks",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "ui-logic-separation",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-responsibilities",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "prop-drilling",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "context-providers",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "error-boundaries",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-portals",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "ref-props",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "imperative-interfaces",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-api-design",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-create-context",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "controlled-inputs",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "uncontrolled-inputs",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "form-submission",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "form-validation",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "form-actions",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "submission-states",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "form-errors",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "optimistic-forms",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "accessible-forms",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "focus-management",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "keyboard-interactions",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "complex-forms",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-rerenders",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "reconciliation-identity",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "rendering-performance",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-memo",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "memoization-strategies",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-lazy",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-suspense",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "transitions",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "deferred-rendering",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-profiler",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-compiler",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "avoiding-renders",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "measuring-performance",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "performance-antipatterns",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "server-components",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "client-boundaries",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "server-client-rendering",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "hydration",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "streaming",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "suspense-boundaries",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "error-recovery-boundaries",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-use-api",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "server-functions",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "concurrent-rendering",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "external-stores",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "advanced-refs",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "escape-hatches",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "rendering-architecture",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "version-sensitive-features",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-activity",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-view-transition",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "testing-components",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-testing-library",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "vitest-fundamentals",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "testing-interactions",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "testing-async-ui",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "testing-custom-hooks",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "mocking-dependencies",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "accessibility-fundamentals",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "semantic-react-html",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "keyboard-accessibility",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "effect-best-practices",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-debugging",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "react-antipatterns",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "component-maintainability",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "typescript-react",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    },
+    {
+      "topicId": "error-handling",
+      "title": true,
+      "heading": true,
+      "breadcrumb": true,
+      "serverRoute": true
+    }
+  ],
+  "invalidInstalledRuntimeImports": [],
+  "exactDuplicateInterviewAnswers": [],
+  "placeholders": [],
+  "htmlInjectionExamples": [],
+  "absoluteClaimCandidates": [
+    {
+      "topicId": "react-introduction",
+      "location": "article.rendering.conclusion",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "You may hear this comparison described as the Virtual DOM. It is a useful mental model, not a performance guarantee. Comparing output is also work, and a carefully written direct DOM update can be faster. Real performance depends on what your application renders and how much code it ships."
+    },
+    {
+      "topicId": "react-introduction",
+      "location": "article.mistakes.items.4.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "JSX treats a lowercase tag as a built-in element. Writing <profileCard /> asks for an element with that tag name instead of calling your function, so your component never runs. In TypeScript, this is a compile error."
+    },
+    {
+      "topicId": "react-introduction",
+      "location": "article.mistakes.items.5.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Assuming every render replaces the entire DOM"
+    },
+    {
+      "topicId": "react-introduction",
+      "location": "article.visual.note",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "This is a simplified conceptual model, and not every render causes DOM mutations. It leaves out details such as batching and Effects."
+    },
+    {
+      "topicId": "declarative-ui",
+      "location": "article.conditional.formExample.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The input is controlled, so state always holds its value. hasError and the message are calculated from that value on each render, and nothing has to remember to update them. The label and description stay connected for assistive technology. This is a teaching check, not full email validation."
+    },
+    {
+      "topicId": "declarative-ui",
+      "location": "article.avoidingDom.comparison.1.items.2",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Changing a container whose contents React never renders."
+    },
+    {
+      "topicId": "declarative-ui",
+      "location": "article.mistakes.items.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "If every render seems to mean a DOM update, you may try to prevent renders that were never a problem, or expect the screen to change just because a component ran. Rendering only calculates a result, and committing is the later step that may change nothing."
+    },
+    {
+      "topicId": "declarative-ui",
+      "location": "article.mistakes.items.3.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "total is recalculated from quantity on every render, so it cannot fall out of date."
+    },
+    {
+      "topicId": "react-components",
+      "location": "article.sections.1.list.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Declare components at the top level of a file. A component defined inside another one becomes a new type on every render, which resets its state and is slow."
+    },
+    {
+      "topicId": "react-components",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A function called profile renders nothing useful when written as <profile />, because JSX treats any lowercase tag as a built-in element and never calls your function."
+    },
+    {
+      "topicId": "react-components",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A nested definition looks tidy and can read the parent’s variables. But every render creates a new function, which React treats as a brand-new component type, so the child loses its state and its DOM on every update."
+    },
+    {
+      "topicId": "react-components",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "JSX uses case to decide what a tag means. A lowercase tag compiles to a string naming a built-in element, while a capitalized tag refers to a value in scope. Without the capital, your function is never called."
+    },
+    {
+      "topicId": "react-components",
+      "location": "article.quickReview.commonMistakes.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Defining a component inside another one, which resets its state every render."
+    },
+    {
+      "topicId": "rendering-elements",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It is easy to expect a log inside a component to run when its JSX line runs. It runs later, when React renders the element, and it does not run at all if that element is never placed in the output."
+    },
+    {
+      "topicId": "rendering-elements",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "No. It creates an element object. React calls Greeting only when that element is part of what it renders, and it controls the timing. An element you create but never return will never cause the function to run."
+    },
+    {
+      "topicId": "rendering-lists",
+      "location": "article.interview.3.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Usually not. It can be calculated from the source list and the filter during rendering, so it always stays correct. Storing it creates a second copy that must be kept in sync, and useMemo can cache the calculation if it proves expensive."
+    },
+    {
+      "topicId": "list-keys",
+      "location": "article.sections.2.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The result is a subtle bug: state such as typed text stays at its position while the data moves. Random keys are worse, because every render produces a new key, so React destroys and re-creates everything, losing input and doing unnecessary work."
+    },
+    {
+      "topicId": "list-keys",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "key={Math.random()} also removes the warning, but the key differs on every render. React sees all new items each time, so it destroys and re-creates the components and DOM, which is slow and loses input."
+    },
+    {
+      "topicId": "list-keys",
+      "location": "article.quickReview.keyPoints.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Created with the data, never generated during rendering."
+    },
+    {
+      "topicId": "event-handling",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "onClick={handleClick()} looks like it is wiring up the function. It actually runs the function during every render, and if that handler sets state, the result can be an infinite render loop."
+    },
+    {
+      "topicId": "event-handling",
+      "location": "article.quickReview.commonMistakes.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Writing onClick={save()} and running it on every render."
+    },
+    {
+      "topicId": "component-purity",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Calling a request function or writing to localStorage in the body seems convenient. But it runs on every render, possibly more than once, and may run on the server, where those browser APIs do not exist."
+    },
+    {
+      "topicId": "render-and-commit",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "If a re-render seems to mean the page was rebuilt, you may try to prevent renders that were never a problem. Rendering only calculates a result, and the commit may find nothing to change."
+    },
+    {
+      "topicId": "component-lifecycle",
+      "location": "article.sections.0.visual.note",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A render is not always an update to the DOM. Also, identity decides whether an instance is kept, so a changed key causes an unmount and a new mount."
+    },
+    {
+      "topicId": "component-lifecycle",
+      "location": "article.sections.3.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "In development, Strict Mode runs an extra setup and cleanup cycle for Effects when a component mounts, to check that cleanup properly undoes setup. An Effect with an empty dependency array is therefore not guaranteed to run exactly once."
+    },
+    {
+      "topicId": "component-lifecycle",
+      "location": "article.interview.5.question",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Is every render of a component a mount?"
+    },
+    {
+      "topicId": "component-state",
+      "location": "article.sections.0.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A component often needs to remember something: the current slide, the text in a field, or whether a menu is open. A local variable cannot do this, for two reasons. It is created fresh on every render, so changes are lost, and changing it does not tell React to render again."
+    },
+    {
+      "topicId": "component-state",
+      "location": "article.sections.0.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The index survives between renders, and setIndex requests the next one. hasNext is calculated from state rather than being stored, because it can always be worked out."
+    },
+    {
+      "topicId": "component-state",
+      "location": "article.quickReview.keyPoints.3",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Hook order must be the same on every render."
+    },
+    {
+      "topicId": "state-snapshots",
+      "location": "article.sections.2.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A state variable’s value never changes within a render, including inside code that runs later. A delayed callback sees the state from the render that created it, not the latest one."
+    },
+    {
+      "topicId": "state-update-queues",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A developer might put three setters in a handler and expect the screen to step through each. Batching means React runs the whole handler first, so intermediate values are never shown."
+    },
+    {
+      "topicId": "immutable-objects",
+      "location": "article.sections.0.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Numbers and strings can only be replaced, never changed. Objects can technically be changed, but when one is in React state, you should treat it as if it could not be. Changing a property directly does not tell React anything happened, so nothing renders."
+    },
+    {
+      "topicId": "controlled-uncontrolled",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Are controlled components always better?” No. They cost wiring and renders. If nothing needs the value until submit, uncontrolled is a fine choice."
+    },
+    {
+      "topicId": "state-structure",
+      "location": "article.sections.4.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The selected plan is always current, because it is looked up from the source each render."
+    },
+    {
+      "topicId": "state-structure",
+      "location": "article.interview.3.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "As an ID. The object already exists in the list, so storing it again creates a duplicate that goes stale when the list changes. Looking it up during rendering always gives the current version."
+    },
+    {
+      "topicId": "state-structure",
+      "location": "article.quickReview.codeReminder.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "fullName is recalculated each render, so it can never be out of date."
+    },
+    {
+      "topicId": "context-data-flow",
+      "location": "article.mistakes.2.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Passing a new object on every render"
+    },
+    {
+      "topicId": "context-data-flow",
+      "location": "article.interview.5.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It is used when a component reads the context with no provider above it. A sensible default keeps components working without setup, which helps in tests. It never changes, so anything dynamic needs a provider with state."
+    },
+    {
+      "topicId": "context-data-flow",
+      "location": "article.quickReview.commonMistakes.2",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Passing a new object value on every render."
+    },
+    {
+      "topicId": "avoiding-unnecessary-state",
+      "location": "article.sections.1.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "fullName is a plain constant, so it is correct on every render without any extra work."
+    },
+    {
+      "topicId": "avoiding-unnecessary-state",
+      "location": "article.mistakes.3.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useState(OPTIONS) with no setter usage adds a Hook for a value that never changes. It suggests to readers that the value may change, and it hides the fact that it does not."
+    },
+    {
+      "topicId": "avoiding-unnecessary-state",
+      "location": "article.interview.1.question",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Isn’t recalculating a value on every render wasteful compared to storing it?"
+    },
+    {
+      "topicId": "avoiding-unnecessary-state",
+      "location": "article.quickReview.codeReminder.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "There is no state and no Effect, and the result is always correct."
+    },
+    {
+      "topicId": "use-effect",
+      "location": "article.dependencies.forms.2.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "An empty array says the Effect has no reactive inputs. It does not mean exactly once forever: remounts start new setups, and development checks can exercise additional setup/cleanup cycles. Do not omit dependencies merely to get this behavior."
+    },
+    {
+      "topicId": "use-effect",
+      "location": "article.strictMode.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The checks depend on the React development environment and where StrictMode is enabled. For example, a StrictMode boundary below a non-Strict root does not add the initial Effect replay described for a root boundary. Avoid promises that every Effect always runs exactly twice."
+    },
+    {
+      "topicId": "use-ref",
+      "location": "article.sections.0.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useRef lets a component hold on to a value that is not needed for rendering. It returns a plain object with one property, current, set to the initial value you pass. React gives back the same object on every render, and it ignores the argument after the first one."
+    },
+    {
+      "topicId": "use-ref",
+      "location": "article.sections.4.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Read and write refs in event handlers and Effects. If you need a value while rendering, it belongs in state. The one exception is lazy initialization: checking for null and creating an object once, because the result is always the same."
+    },
+    {
+      "topicId": "use-ref",
+      "location": "article.sections.4.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Writing useRef(new AudioMeter()) would construct a new object on every render and discard all but the first."
+    },
+    {
+      "topicId": "use-ref",
+      "location": "article.mistakes.3.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useRef(new VideoPlayer()) constructs a player on every render, though only the first is kept. The waste is invisible, but the constructor may have a real cost, or side effects you did not expect to repeat."
+    },
+    {
+      "topicId": "use-memo",
+      "location": "article.sections.1.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Without useMemo, map creates a new array on every render, so a change to label alone would defeat memo."
+    },
+    {
+      "topicId": "use-memo",
+      "location": "article.sections.2.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useMemo is a performance optimization, not a semantic guarantee. React may discard the cache, such as when you edit the file in development or when a component suspends during its first mount. If your code needs a value to persist for correctness, use state or a ref."
+    },
+    {
+      "topicId": "use-memo",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Does useMemo guarantee the function runs once per dependency change?” No. React may discard the cache and recalculate, so the code must not depend on that."
+    },
+    {
+      "topicId": "use-callback",
+      "location": "article.sections.0.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It does not stop the function being created. A new one is still created on every render, and React returns the cached one when nothing changed. The benefit is a stable reference, not saved creation work."
+    },
+    {
+      "topicId": "use-context",
+      "location": "article.mistakes.2.correction",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Always pass value explicitly, and use a checked custom Hook where it helps."
+    },
+    {
+      "topicId": "use-context",
+      "location": "article.mistakes.4.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "createContext inside a component body produces a new context on each render. Providers and readers then hold different references, so readers fall back to the default and the value never arrives."
+    },
+    {
+      "topicId": "use-reducer",
+      "location": "article.sections.2.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Passing createInitialState(username) as the second argument calls that function on every render, though only the first result is used. To run it once, pass the function itself as the third argument, and pass its input as the second."
+    },
+    {
+      "topicId": "use-reducer",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useReducer(reducer, createInitialState(name)) runs the function on every render and discards the result after the first. For anything expensive, this wastes work on each keystroke or update."
+    },
+    {
+      "topicId": "use-layout-effect",
+      "location": "article.sections.0.comparison.1.items.2",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The user never sees the intermediate render."
+    },
+    {
+      "topicId": "use-layout-effect",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "React re-renders synchronously, before the browser paints, so users never see the intermediate state. It also runs all remaining Effects immediately. This is the mechanism that prevents flicker, and also the reason it can be costly."
+    },
+    {
+      "topicId": "use-insertion-effect",
+      "location": "article.sections.3.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "This is a sketch of the pattern for library authors, not something most applications should write. It never removes rules. A real library also deals with server collection and removal."
+    },
+    {
+      "topicId": "use-effect-event",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "const onEvent = useEffectEvent(callback) returns an Effect Event: a function with the same signature as your callback. When called, it runs the callback and always reads the latest committed props and state at the time of the call."
+    },
+    {
+      "topicId": "use-effect-event",
+      "location": "article.sections.2.closing",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Its identity is deliberately not stable, and it changes on every render. That way, adding it to a dependency array makes the Effect re-run on each render, which reveals the mistake."
+    },
+    {
+      "topicId": "use-effect-event",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Adding it to the array looks like the correct habit. The lint rule reports it, and because its identity changes every render, the Effect would re-run on each render."
+    },
+    {
+      "topicId": "use-effect-event",
+      "location": "article.interview.3.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "No. Its identity intentionally changes on every render. It should never be in a dependency array, and if someone adds it, the Effect re-runs on every render, which makes the mistake visible rather than hiding it."
+    },
+    {
+      "topicId": "use-effect-event",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Is useEffectEvent just a stable callback?” No. Its identity deliberately changes every render, and it can only be called from Effects."
+    },
+    {
+      "topicId": "use-transition",
+      "location": "article.sections.2.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It does not make the work faster. The same rendering still has to happen, and on a slow device it simply happens without freezing the page. The React 19.3 changelog records separate rendering of independent Transitions, so a slow one need not hold up an unrelated one. This does not guarantee a particular batching relationship or commit order, especially for updates sharing state or asynchronous Actions."
+    },
+    {
+      "topicId": "use-transition",
+      "location": "article.sections.4.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Content that has never been shown still displays its fallback, and a nested Suspense boundary inside the new content is not waited for. This is why routers commonly wrap navigation in Transitions."
+    },
+    {
+      "topicId": "use-deferred-value",
+      "location": "article.sections.4.list.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Pass primitives, or objects created outside of rendering. A new object created during rendering differs on every render, causing repeated background renders."
+    },
+    {
+      "topicId": "use-deferred-value",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useDeferredValue({ query }) gives a new object on each render. Under Object.is it is always different, so React keeps scheduling background renders that never settle usefully."
+    },
+    {
+      "topicId": "use-deferred-value",
+      "location": "article.quickReview.commonMistakes.2",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Passing a new object on every render."
+    },
+    {
+      "topicId": "use-sync-external-store",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "That can work, but with concurrent rendering, different parts of the tree could read different values from a mutable store during one render, which is called tearing. This Hook guarantees a consistent snapshot, and it handles server snapshots too."
+    },
+    {
+      "topicId": "use-debug-value",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The optional second argument is a format function. It receives the value and returns what to display, and it runs only when the component is actually inspected in DevTools, not on every render."
+    },
+    {
+      "topicId": "use-debug-value",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useDebugValue(formatLargeObject(value)) runs the formatter on every render, including for users who never open DevTools. The label costs real time, even though only developers ever see it."
+    },
+    {
+      "topicId": "use-debug-value",
+      "location": "article.quickReview.commonMistakes.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Formatting expensively inline, on every render."
+    },
+    {
+      "topicId": "use-form-status",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The component is probably not inside the form. The Hook only reports on a parent form, so calling it in the component that renders the form never sees a submission. It could also be that the form has no function action or Transition to track."
+    },
+    {
+      "topicId": "children-composition",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Does a parent’s state change always re-render children passed to it?” Not if those elements were created higher up and that component did not re-render."
+    },
+    {
+      "topicId": "custom-hooks",
+      "location": "article.sections.0.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Think of the code inside as part of the calling component’s body. It re-runs on every render, it always receives the latest props and state, and it must stay pure."
+    },
+    {
+      "topicId": "custom-hooks",
+      "location": "article.interview.5.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Wrap the callback with useEffectEvent inside the Hook, so the Effect always calls the latest version without listing it as a dependency. On older versions, a ref holding the latest callback is the usual approach."
+    },
+    {
+      "topicId": "prop-drilling",
+      "location": "article.mistakes.3.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "State lifted further than needed forces it through components that never use it. The drilling is a symptom here, and it is often accompanied by whole-page re-renders on small changes."
+    },
+    {
+      "topicId": "context-providers",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "When unrelated values change at different rates or are read by different components. Without selectors, any change re-renders every reader. Splitting state from dispatch is a common case, since dispatch never changes."
+    },
+    {
+      "topicId": "react-portals",
+      "location": "article.sections.0.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The notice escapes the parent’s overflow, but its state and handlers still belong to NoticeButton. It reads document.body only after a click, so it never runs during server rendering."
+    },
+    {
+      "topicId": "react-create-context",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "defaultValue is what components receive when no matching provider exists above them. It is a static last resort that never changes, so calling createContext(\"light\") does not create something you can update. To make a value change, add state and render a provider."
+    },
+    {
+      "topicId": "react-create-context",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A context created in a component body is a new object on each render. Providers and readers then hold different references, so readers get the default value and the data never arrives."
+    },
+    {
+      "topicId": "react-create-context",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Only when no matching provider exists above the reader. It never changes, so it cannot be used for dynamic data. If there is no sensible default, use null and check for it in a custom Hook."
+    },
+    {
+      "topicId": "react-create-context",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Can you change a context by changing its default?” No. The default never changes, so dynamic values need state and a provider."
+    },
+    {
+      "topicId": "form-validation",
+      "location": "article.sections.0.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "So every rule that protects your data must also run on the server. Never trust data just because the form validated it."
+    },
+    {
+      "topicId": "submission-states",
+      "location": "article.sections.3.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The paragraph is always rendered, so changes to its text are announced. Here, aria-disabled keeps the button focusable, although dispatches are queued rather than dropped, so a repeat would still run. If that matters, also guard against it."
+    },
+    {
+      "topicId": "submission-states",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Calling it in the component that renders the form gives pending false forever, because it only reads a parent form. The button never shows progress, with no error to explain why."
+    },
+    {
+      "topicId": "form-errors",
+      "location": "article.interview.3.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "As structured data, such as a map from field name to message, so that each appears by its field. Unknown failures get a general message and a way to retry. Internal details stay in server logs, and the client never sees them."
+    },
+    {
+      "topicId": "optimistic-forms",
+      "location": "article.sections.0.visual.note",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The item never appears as finished until the server has confirmed it."
+    },
+    {
+      "topicId": "accessible-forms",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "To name a group of related controls, and always for radio groups, where an option’s label alone lacks context. It also separates repeated labels, as in shipping and billing addresses. Keep legends short, because they may be read with every field."
+    },
+    {
+      "topicId": "focus-management",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Calling ref.current.focus() right after a setter fails because React has not rendered yet. current is null or still points to the old node, and the focus never moves."
+    },
+    {
+      "topicId": "react-rerenders",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "This is the most common belief about React rendering. By default, a child renders whenever its parent does, so wrapping values in useMemo alone does nothing, because the child was never comparing props."
+    },
+    {
+      "topicId": "react-rerenders",
+      "location": "article.mistakes.1.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Treating every render as a problem"
+    },
+    {
+      "topicId": "react-rerenders",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Seeing many renders in a tool creates pressure to remove them, which leads to memoization everywhere. Most renders are cheap, so this adds complexity to fix something that users never notice."
+    },
+    {
+      "topicId": "react-rerenders",
+      "location": "article.interview.3.question",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Does a re-render always update the DOM?"
+    },
+    {
+      "topicId": "react-rerenders",
+      "location": "article.quickReview.commonMistakes.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Treating every render as a performance bug."
+    },
+    {
+      "topicId": "reconciliation-identity",
+      "location": "article.sections.3.list.3",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Never define components inside others, because that creates a new type on every render."
+    },
+    {
+      "topicId": "reconciliation-identity",
+      "location": "article.sections.4.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "You may hear this comparison described as diffing the Virtual DOM, and it is a reasonable mental model. It does not guarantee an application is fast. Comparing has a cost, and it is often the amount of rendering, not the DOM changes, that determines how fast a React page feels. The model’s real value is that it lets you write declarative code."
+    },
+    {
+      "topicId": "rendering-performance",
+      "location": "article.sections.2.list.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A heavy calculation running on every render."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.sections.0.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It is a performance optimization, not a guarantee. React may still re-render a memoized component, so your code must work correctly without memo."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.sections.2.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "By default, React compares each prop shallowly with Object.is. Object.is(3, 3) is true, while Object.is({}, {}) is false, so a new object or inline function on each render counts as a change. One always-new prop defeats memo for the whole component."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.sections.3.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "memo helps when a component re-renders often with the same props and its rendering is expensive. It adds little for coarse interactions, such as replacing a whole page, or where nothing feels slow, or where props are always new."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.mistakes.0.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Treating memo as a guarantee"
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Relying on a memoized component never re-rendering, such as by putting side effects in it, breaks when React re-renders it anyway. Fast Refresh, state, and context can each cause a render."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.mistakes.0.correction",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Keep rendering pure, so that an extra render never changes behavior."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "style={{ color: \"red\" }} or an inline handler creates a new value on each render, so the shallow comparison always fails, and memo adds its comparison cost with no benefit at all."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.interview.0.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It lets React skip re-rendering a component when its parent renders and its props are unchanged, using a shallow Object.is comparison. It is an optimization rather than a guarantee, so correct behavior must not depend on it."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "memo compares by reference, so a new object or function each render always looks changed. useMemo and useCallback keep those references stable. Without them, memo does its comparison and then renders anyway. On their own, those Hooks do not stop a child from rendering."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.takeaways.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "memo skips re-renders for unchanged props, and it is not a guarantee."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Does memo guarantee a component will not re-render?” No. Its own state, context, and React itself can all still cause a render."
+    },
+    {
+      "topicId": "react-memo",
+      "location": "article.quickReview.takeaway",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Treat memo as a measured optimization, and never as behavior your code relies on."
+    },
+    {
+      "topicId": "memoization-strategies",
+      "location": "article.sections.1.visual.steps.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Otherwise it renders with its parent and never compares props."
+    },
+    {
+      "topicId": "memoization-strategies",
+      "location": "article.sections.2.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Stable inputs matter as much as the placement. A cache whose input changes on every render never hits, and it still costs you the comparison."
+    },
+    {
+      "topicId": "memoization-strategies",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Writing useMemo and useCallback around everything feels safe, but it adds noise, and each dependency list is a place to introduce stale-value bugs. Most values were never expensive in the first place."
+    },
+    {
+      "topicId": "memoization-strategies",
+      "location": "article.mistakes.2.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Using dependencies that change on every render"
+    },
+    {
+      "topicId": "memoization-strategies",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A useMemo that depends on an object created in the same render recalculates every time, so the cache never hits. It looks optimized, but it costs more than the plain calculation."
+    },
+    {
+      "topicId": "memoization-strategies",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "More code to read, dependency lists that can produce stale-value bugs when wrong, and comparison work on every render. If inputs change each time, you pay for the comparison and get nothing. That is why applying it everywhere is rarely a net gain."
+    },
+    {
+      "topicId": "react-lazy",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A lazy call in a component body creates a new component type on every render, so React resets all of its state each time. It looks as if the component keeps losing its data for no clear reason."
+    },
+    {
+      "topicId": "react-suspense",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A boundary only reacts to sources that integrate with Suspense. Fetching inside an Effect or an event handler does not activate it. The fallback never shows, and the content simply stays empty until the data arrives."
+    },
+    {
+      "topicId": "react-suspense",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Wrapping a component that fetches in useEffect shows no fallback, because Suspense cannot see that request. The component renders empty and fills in later, while the loading UI never appears."
+    },
+    {
+      "topicId": "react-suspense",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "No. Only Suspense-enabled sources activate it: lazy, use with a cached Promise, and framework data sources. A fetch inside useEffect or an event handler does not, so the fallback never appears. You would manage that loading state yourself."
+    },
+    {
+      "topicId": "react-suspense",
+      "location": "article.interview.4.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Boundaries define what can arrive later. React can send a fallback in the initial HTML, then stream the content when it is ready. If a component throws on the server, the fallback is sent, and React retries on the client, so a transient server error may never be visible."
+    },
+    {
+      "topicId": "react-suspense",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Will Suspense show a spinner for my useEffect fetch?” No. It cannot see that request, so the fallback never appears."
+    },
+    {
+      "topicId": "transitions",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "If a user types while a chart re-renders in a Transition, React handles the typing first, and then restarts the chart render with the latest data. Abandoned work never reaches the screen, because React only commits a finished result. That is one reason why rendering has to stay pure."
+    },
+    {
+      "topicId": "transitions",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Because a Transition’s render can be abandoned or restarted, a side effect in the component body may run for work that never appears. Sending a request there can fire repeatedly, for results nobody sees."
+    },
+    {
+      "topicId": "transitions",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A Transition’s render may be interrupted, restarted, or abandoned, so the component may be called with no visible result. Side effects during rendering would then fire for work that never reaches the screen, or more often than expected."
+    },
+    {
+      "topicId": "transitions",
+      "location": "article.takeaways.2",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Abandoned renders never reach the screen, so rendering must stay pure."
+    },
+    {
+      "topicId": "react-profiler",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Development builds include extra checks, so a 40 ms render might be far less in production. Reporting those numbers as actual costs can send you after a problem that users never have."
+    },
+    {
+      "topicId": "react-profiler",
+      "location": "article.mistakes.2.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Treating every render in the chart as a bug"
+    },
+    {
+      "topicId": "react-profiler",
+      "location": "article.quickReview.commonMistakes.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Trying to remove every render shown."
+    },
+    {
+      "topicId": "react-compiler",
+      "location": "article.sections.1.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "With the compiler enabled, this plain code gets automatic caching. Without it, this is simply ordinary code that re-runs on every render, with no change in behavior."
+    },
+    {
+      "topicId": "avoiding-renders",
+      "location": "article.sections.0.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "When too much renders, the instinct is to add memo and useMemo. There is usually a better starting point: change the structure, so that the update never reaches components that do not care. A structural fix has no dependency lists, no comparison cost, and it keeps working as the code changes."
+    },
+    {
+      "topicId": "avoiding-renders",
+      "location": "article.mistakes.4.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Optimizing renders that were never slow"
+    },
+    {
+      "topicId": "avoiding-renders",
+      "location": "article.interview.4.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Passing a derived primitive, such as isLoggedIn instead of a whole user object, means a memoized child only updates when that answer changes. Objects created during rendering are always new, so they defeat memo, while primitives compare by value."
+    },
+    {
+      "topicId": "avoiding-renders",
+      "location": "article.quickReview.commonMistakes.2",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Optimizing renders that were never slow."
+    },
+    {
+      "topicId": "avoiding-renders",
+      "location": "article.quickReview.takeaway",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The cheapest render is the one that the update never reached."
+    },
+    {
+      "topicId": "performance-antipatterns",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Wrapping a component in memo while passing inline objects or functions means the comparison always fails. You pay for comparing on every render, and the component re-renders anyway."
+    },
+    {
+      "topicId": "performance-antipatterns",
+      "location": "article.mistakes.1.correction",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Stabilize the props or remove the memo. Either way, do not keep a comparison that never succeeds."
+    },
+    {
+      "topicId": "performance-antipatterns",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Isn’t more memoization always safer?” No. It adds dependency lists, comparison costs, and possible stale values for no certain gain."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.sections.0.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "React Server Components are a type of component that renders ahead of time, before bundling, in an environment separate from your client app or SSR server. That environment is the server in their name. Their code, and the libraries they use, are never sent to the browser. Only the rendered output arrives."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.sections.0.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "They can run at build time on a CI server, or per request on a web server. So despite the name, a running web server is not always required. A site can read Markdown files during its build, and ship only the resulting HTML."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "These are separate steps, and they are often confused. Server-side rendering turns your components into HTML for the first page load, and the client later hydrates it, so the components’ code is still sent to the browser. Server Components render to a serialized output, and their code is never sent."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Both involve a server, so they are easily mixed up. SSR still sends the component code to the browser for hydration, while Server Component code never goes there. Confusing them leads to wrong expectations about bundle size and hooks."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useState or onClick in a Server Component fails, because the component never runs in a browser. In Next.js this appears as an error that may suggest adding a directive, and adding it to a whole page moves too much to the client."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "SSR renders components to HTML for the first load, and their code still ships to be hydrated. Server Components produce output that never needs their code on the client, so they reduce the bundle. They are complementary, and frameworks commonly use both."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.interview.4.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Less JavaScript in the browser, since their code and dependencies never ship. Direct access to server data, without building an API for each need. Secrets can stay on the server. The tradeoff is more to reason about, with two environments and a boundary."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.takeaways.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Server Components render outside the client, and their code never ships."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.quickReview.codeReminder.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It awaits data during rendering, and its code never reaches the browser."
+    },
+    {
+      "topicId": "server-components",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Are Server Components the same as SSR?” No. SSR ships the component code for hydration, while Server Component code never reaches the client."
+    },
+    {
+      "topicId": "client-boundaries",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "This is the most common misunderstanding. \"use client\" says the component’s code must be sent to the client. It does not say that the component is never rendered on a server."
+    },
+    {
+      "topicId": "client-boundaries",
+      "location": "article.sections.2.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "So what a Client Component imports becomes client code. But a Server Component passed to it as children stays on the server, because the parent created it, and the Client Component never imported it."
+    },
+    {
+      "topicId": "client-boundaries",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Are Client Components never rendered on the server?” They can be. In Next.js they are prerendered to HTML, then hydrated in the browser."
+    },
+    {
+      "topicId": "server-client-rendering",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Rendering every page on demand spends server resources on content that never changes, while client-rendering everything delays content for all visitors. The needs of different pages rarely match."
+    },
+    {
+      "topicId": "hydration",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "React warns in development, and it can recover from some cases, perhaps by re-rendering on the client. At best, that costs time. At worst, handlers attach to the wrong elements. It does not guarantee patching attributes, so mismatches should be treated as bugs."
+    },
+    {
+      "topicId": "streaming",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Effects do not run on the server, so data fetched there never appears in the HTML or the stream. The server sends the empty state, and the content only arrives after hydration."
+    },
+    {
+      "topicId": "error-recovery-boundaries",
+      "location": "article.sections.4.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A larger application still has errors that never reach a boundary: event handlers, asynchronous callbacks, and server rendering. A boundary strategy has to be combined with ordinary error handling in those places, so that a failed save is reported as clearly as a failed render."
+    },
+    {
+      "topicId": "react-use-api",
+      "location": "article.sections.0.comparison.0.items.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Same order on every render."
+    },
+    {
+      "topicId": "react-use-api",
+      "location": "article.sections.3.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Promises passed to use must be cached, so that the same instance is reused across renders. A Promise created during rendering is new each time. React shows the fallback, retries, gets another new Promise, and the content never appears. React reports this as a component being suspended by an uncached promise."
+    },
+    {
+      "topicId": "react-use-api",
+      "location": "article.sections.4.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The Promise now always resolves, so no Error Boundary is needed for this case. Create it outside of rendering, and cache it as above."
+    },
+    {
+      "topicId": "react-use-api",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A new Promise is created on every render. React suspends, retries, and gets a different Promise, so the content never appears, and React warns about an uncached promise. Promises should be created outside rendering, or returned from a cache."
+    },
+    {
+      "topicId": "server-functions",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The directive can sit at the top of an async function’s body, or at the top of a module to mark all its exports. Client Components can import them from such a module, or receive them as props from a Server Component. Either way, the client gets a reference and never sees the function’s body."
+    },
+    {
+      "topicId": "concurrent-rendering",
+      "location": "article.sections.1.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "That is how React guarantees a consistent UI, even when a render is interrupted. People never see a half-finished tree, because a tree only appears when it is complete."
+    },
+    {
+      "topicId": "concurrent-rendering",
+      "location": "article.sections.3.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Because a render may run more than once, or never commit, rendering must stay pure. Most components work without any change, but code that relies on a render happening exactly once, or having side effects, can misbehave."
+    },
+    {
+      "topicId": "concurrent-rendering",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A render that might be abandoned or repeated can run a logging call or request several times, including for work that never appears. Such code worked by accident when renders happened exactly once."
+    },
+    {
+      "topicId": "concurrent-rendering",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It defers DOM changes until the entire tree has been evaluated, so an interrupted or abandoned render never appears. Rendering is only calculation, and only a finished result gets committed. That is why rendering has to stay pure."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A resource should be created once per component instance. useRef(new Player()) constructs a new one on every render and discards all but the first. Starting with null and checking it is the accepted exception to the rule against touching refs during rendering, because the result is always the same."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.sections.2.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The observer starts when the node attaches, and it disconnects when the node is removed. useCallback keeps it from restarting on every render."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.mistakes.0.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useRef(new VideoPlayer()) runs the constructor on every render, keeping only the first result. For a resource with real setup costs or side effects, this repeats that work again and again, for nothing."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "An inline function is new on every render, so React cleans up and re-attaches each time. For a focus call that is harmless, while for a new observer or third-party widget it can be expensive, and it may cause flicker."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.mistakes.4.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Writing latestRef.current = value in the component body is a common pattern, but it is a write during rendering. In a concurrent render that gets discarded, the ref holds a value that never reached the screen."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "React cannot track them, so output based on a ref can be stale or inconsistent. A write may also come from a render that is later discarded. Lazy initialization is the exception, since it always produces the same result."
+    },
+    {
+      "topicId": "advanced-refs",
+      "location": "article.interview.3.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A ref’s current changes synchronously and immediately, while a state update takes effect on the next render, with each render having its own snapshot. That makes refs useful inside callbacks, and it also means they never cause a re-render."
+    },
+    {
+      "topicId": "escape-hatches",
+      "location": "article.sections.3.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "If a third-party library must control DOM content, give it a node whose contents React never renders, such as an empty div. React then has no reason to touch that node’s children, so the two do not collide."
+    },
+    {
+      "topicId": "escape-hatches",
+      "location": "article.sections.3.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The declare block stands in for a real library. React renders an empty div and never touches its contents. Creating the widget and updating its data are separate Effects, because they synchronize different things."
+    },
+    {
+      "topicId": "escape-hatches",
+      "location": "article.interview.2.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "For non-destructive actions such as focusing, scrolling, and measuring. Also for nodes whose contents React never renders, which is how third-party widgets can be integrated. Changing nodes React manages risks being overwritten, or a crash."
+    },
+    {
+      "topicId": "rendering-architecture",
+      "location": "article.mistakes.0.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Assuming useEffect always runs after paint"
+    },
+    {
+      "topicId": "rendering-architecture",
+      "location": "article.quickReview.commonMistakes.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Assuming useEffect always follows paint."
+    },
+    {
+      "topicId": "react-activity",
+      "location": "article.sections.3.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Activity boundaries divide a tree into independent units for hydration, so React can hydrate the rest of the page first. In a tabs page, the tab buttons can become interactive before each tab’s content. Suspense could do this too, but it would show a fallback on the initial render, which an always-visible Activity avoids."
+    },
+    {
+      "topicId": "react-activity",
+      "location": "article.interview.5.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Boundaries divide the tree into separately hydratable units, so the rest of the page can become interactive first. Unlike Suspense, an always-visible Activity shows no fallback on the initial render, so it can improve hydration without changing what appears."
+    },
+    {
+      "topicId": "testing-async-ui",
+      "location": "article.mistakes.2.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A suite that only covers successful responses leaves the failure state unverified, and that is where users get stuck. An error message that never renders can go unnoticed until production."
+    },
+    {
+      "topicId": "testing-custom-hooks",
+      "location": "article.mistakes.4.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "A Hook that adds a listener can look perfect in tests that never unmount it. Without a cleanup test, a leak or a late callback goes unnoticed until it appears as a subtle production bug."
+    },
+    {
+      "topicId": "testing-custom-hooks",
+      "location": "article.quickReview.interviewTrap",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "“Do reusable Hooks always need renderHook tests?” No. Testing through a component, or testing extracted logic directly, is often better."
+    },
+    {
+      "topicId": "mocking-dependencies",
+      "location": "article.mistakes.4.heading",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Using responses the real server would never send"
+    },
+    {
+      "topicId": "semantic-react-html",
+      "location": "article.sections.0.paragraphs.1",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "JSX does not change this. React renders the elements you write, so a component built from div elements gives the browser no more information than hand-written div elements would. CSS can make any element look however you like, so appearance is never a reason to choose the wrong element."
+    },
+    {
+      "topicId": "semantic-react-html",
+      "location": "article.sections.4.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Components can accidentally hide semantics. A Card that always renders a div forces each caller into the same structure, and a heading level fixed inside a component may not fit each page where it appears. Let callers choose the level or pass through attributes when structure depends on context. Also watch for invalid nesting: for example, a list’s direct children must be li elements, so an extra wrapper component rendering a div breaks that."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Hooks have no names that React can use. When you call useState twice, React knows which state is which by the order of the calls. Each Hook call takes the next position in a list kept for that component. So the list has to match on every render."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.sections.1.examples.1.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Moving the Hook into its own component keeps each component’s Hook order stable. ProfileForm always calls it, and it is simply rendered or not."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.sections.2.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Often the fix is to always call the Hook, and put the condition inside it. An Effect can check something and return early, and a value can be computed by testing a condition after the call. If a list needs a Hook per item, extract a component for each item, so that each has its own Hook calls."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.sections.2.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useEffect is called on every render, so the order stays stable, and the condition decides what the Effect does."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "React identifies each Hook by its position in the sequence of calls, as they have no names. With a stable order, the first useState call always gets the first state. If a call is skipped, the later ones read the wrong positions, and values get mixed up."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.quickReview.definition",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "The Rules of Hooks require calling Hooks at the top level of components and custom Hooks, so that their order is the same on every render."
+    },
+    {
+      "topicId": "rules-of-hooks",
+      "location": "article.quickReview.codeReminder.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "useState runs on every render, and the early return comes after it."
+    },
+    {
+      "topicId": "effect-best-practices",
+      "location": "article.sections.2.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "An options object created during rendering would be new each time, so the connection would restart on every render. Created inside the Effect, it is only rebuilt when roomId changes. connect stands in for your own connection code."
+    },
+    {
+      "topicId": "effect-best-practices",
+      "location": "article.mistakes.4.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "An object or function created in the component is new on every render, so an Effect depending on it re-runs every time. A connection may then reconnect on every keystroke, for no visible reason."
+    },
+    {
+      "topicId": "react-antipatterns",
+      "location": "article.sections.1.paragraphs.0",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "React decides whether state has changed by comparing it with Object.is, and an object changed in place is still the same object. So a mutation may not trigger an update, and it can also corrupt the values captured by earlier renders. Props belong to the parent, so they should never be changed either."
+    },
+    {
+      "topicId": "react-antipatterns",
+      "location": "article.sections.4.examples.0.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "NameInput is defined once, so it has the same identity on every render, and it keeps its DOM node and focus."
+    },
+    {
+      "topicId": "react-antipatterns",
+      "location": "article.sections.5.closing",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Some of these are acceptable in context. An index key is fine for a static list that never reorders, for example. The problem is using them without considering why they can go wrong."
+    },
+    {
+      "topicId": "react-antipatterns",
+      "location": "article.mistakes.1.problem",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "Rendering can happen more than once, and a render may be discarded. A request or subscription started there can run repeatedly, or never be cleaned up, and it breaks the rule that rendering must be pure."
+    },
+    {
+      "topicId": "react-antipatterns",
+      "location": "article.interview.1.answer",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "It creates two sources of truth that must be kept in step, and any update can forget one. Synchronizing with an Effect adds a render with stale data. Calculating during rendering is simpler and always correct, and useMemo can cache it if it is truly expensive."
+    },
+    {
+      "topicId": "react-antipatterns",
+      "location": "article.quickReview.codeReminder.description",
+      "reason": "absolute-claim candidate; may be a correction of a misconception",
+      "text": "total is calculated on each render, so it can never disagree with prices."
+    }
+  ]
+}

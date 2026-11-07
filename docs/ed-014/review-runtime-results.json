@@ -1,0 +1,105 @@
+{
+  "engine": "156.0.8078.4",
+  "results": [
+    {
+      "name": "fundamentals: render preserves uncontrolled input",
+      "passed": true
+    },
+    {
+      "name": "state: three functional updaters accumulate",
+      "passed": true
+    },
+    {
+      "name": "effects: obsolete connections and Strict Mode probes do not notify",
+      "passed": true,
+      "evidence": [
+        "Connected to new"
+      ]
+    },
+    {
+      "name": "effects: no notification after unmount",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "optimistic: immediate like",
+      "passed": true
+    },
+    {
+      "name": "optimistic: confirmed like persists",
+      "passed": true
+    },
+    {
+      "name": "optimistic: identical pending submissions have distinct identity",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "optimistic: both confirmed comments persist without pending labels",
+      "passed": true,
+      "evidence": [
+        "Same text ",
+        "Same text "
+      ]
+    },
+    {
+      "name": "actions: expected validation remains in form",
+      "passed": true
+    },
+    {
+      "name": "actions: success and reset",
+      "passed": true
+    },
+    {
+      "name": "architecture: composed callbacks",
+      "passed": true
+    },
+    {
+      "name": "forms: labels target controls and native validity works",
+      "passed": true
+    },
+    {
+      "name": "performance: memoized child and parent update",
+      "passed": true
+    },
+    {
+      "name": "advanced: pending promise activates Suspense",
+      "passed": true
+    },
+    {
+      "name": "advanced: stable promise resolves",
+      "passed": true
+    },
+    {
+      "name": "boundaries: render error shows fallback",
+      "passed": true
+    },
+    {
+      "name": "audit probe: synchronous Effect errors reach a boundary",
+      "passed": true
+    },
+    {
+      "name": "audit probe: independent transition commits while sibling is suspended",
+      "passed": true
+    },
+    {
+      "name": "testing/best practices: typed failure state",
+      "passed": true
+    },
+    {
+      "name": "stores: snapshot updates subscriber",
+      "passed": true
+    },
+    {
+      "name": "no unexpected runtime warnings",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "passed": 21,
+  "failed": 0,
+  "warnings": [
+    "%o\n\n%s\n\n%s\n Error: Chart data was malformed.\n    at RevenueChart (/tmp/explain-dev-ed014-runtime/examples.js:17296:9)\n    at Object.react_stack_bottom_frame (/tmp/explain-dev-ed014-runtime/examples.js:15125:13)\n    at renderWithHooks (/tmp/explain-dev-ed014-runtime/examples.js:5383:20)\n    at updateFunctionComponent (/tmp/explain-dev-ed014-runtime/examples.js:6758:17)\n    at beginWork (/tmp/explain-dev-ed014-runtime/examples.js:7374:21)\n    at runWithFiberInDEV (/tmp/explain-dev-ed014-runtime/examples.js:1927:67)\n    at performUnitOfWork (/tmp/explain-dev-ed014-runtime/examples.js:10131:93)\n    at workLoopSync (/tmp/explain-dev-ed014-runtime/examples.js:10027:38)\n    at renderRootSync (/tmp/explain-dev-ed014-runtime/examples.js:10011:7)\n    at performWorkOnRoot (/tmp/explain-dev-ed014-runtime/examples.js:9698:28) The above error occurred in the <RevenueChart> component. React will try to recreate this component tree from scratch using the error boundary you provided, ErrorBoundary.",
+    "%o\n\n%s\n\n%s\n Error: audit effect failure\n    at /tmp/explain-dev-ed014-runtime/examples.js:17368:10\n    at Object.react_stack_bottom_frame (/tmp/explain-dev-ed014-runtime/examples.js:15161:14)\n    at runWithFiberInDEV (/tmp/explain-dev-ed014-runtime/examples.js:1927:67)\n    at commitHookEffectListMount (/tmp/explain-dev-ed014-runtime/examples.js:7884:154)\n    at commitHookPassiveMountEffects (/tmp/explain-dev-ed014-runtime/examples.js:7919:56)\n    at commitPassiveMountOnFiber (/tmp/explain-dev-ed014-runtime/examples.js:9296:23)\n    at recursivelyTraversePassiveMountEffects (/tmp/explain-dev-ed014-runtime/examples.js:9283:314)\n    at commitPassiveMountOnFiber (/tmp/explain-dev-ed014-runtime/examples.js:9300:7)\n    at recursivelyTraversePassiveMountEffects (/tmp/explain-dev-ed014-runtime/examples.js:9283:314)\n    at commitPassiveMountOnFiber (/tmp/explain-dev-ed014-runtime/examples.js:9295:7) The above error occurred in the <Child> component. React will try to recreate this component tree from scratch using the error boundary you provided, Boundary."
+  ]
+}

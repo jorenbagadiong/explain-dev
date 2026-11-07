@@ -80,7 +80,7 @@ export default function Tabs() {
       heading: "Non-blocking and interruptible",
       paragraphs: [
         "A Transition can be interrupted by other updates. If a user types while a chart re-renders in a Transition, React handles the typing first and then restarts the chart. That is what keeps the page responsive.",
-        "It does not make the work faster. The same rendering still has to happen, and on a slow device it simply happens without freezing the page. Multiple ongoing Transitions are currently batched together, a limitation the docs say may change.",
+        "It does not make the work faster. The same rendering still has to happen, and on a slow device it simply happens without freezing the page. The React 19.3 changelog records separate rendering of independent Transitions, so a slow one need not hold up an unrelated one. This does not guarantee a particular batching relationship or commit order, especially for updates sharing state or asynchronous Actions.",
       ],
     },
     {
@@ -255,6 +255,7 @@ startTransition(() => setTab("posts"));`,
     takeaway: "Use Transitions to tell React what can wait, and fix slow rendering separately.",
   },
   sources: [
+    { label: "React 19.3 changelog: independent Transitions (#37290)", href: "https://react.dev/blog/2026/09/09/react-19-3#changelog" },
     { label: "useTransition reference", href: "https://react.dev/reference/react/useTransition" },
     { label: "useDeferredValue reference", href: "https://react.dev/reference/react/useDeferredValue" },
     { label: "useActionState reference", href: "https://react.dev/reference/react/useActionState" },

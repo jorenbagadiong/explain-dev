@@ -33,12 +33,13 @@ Open http://localhost:3000.
 | --- | --- |
 | `/` | Four category cards; Frontend Development links to its category page. |
 | `/frontend` | Frontend introduction and seven technologies; React links to its introduction. |
-| `/frontend/react` | React introduction, eight curriculum groups, and 119 topic cards; only Introduction to React, Thinking in declarative UI, useState, and useEffect link to articles. |
+| `/frontend/react` | React introduction, eight curriculum groups, and 119 topic cards, all linking to published articles. |
 | `/frontend/react/introduction-to-react` | Complete Introduction to React article covering components, props, JSX, rendering, common mistakes, and interview answers. |
 | `/frontend/react/thinking-in-declarative-ui` | Complete Thinking in Declarative UI article covering UI states, state-driven rendering, conditional rendering, composition, DOM access, common mistakes, and interview answers. |
 | `/frontend/react/use-state` | Complete useState article, examples, mistakes, interview answers, and takeaways. |
 | `/frontend/react/use-effect` | Complete useEffect article, dependencies, cleanup, Strict Mode, examples, mistakes, and interview answers. |
-| Other `/frontend/*` routes | Default Next.js 404; unavailable technologies and topic routes have not been created. |
+| Other `/frontend/react/<lesson>` routes | The remaining 115 published React lessons; see the [curriculum manifest](docs/ed-013/curriculum-manifest.json) for every route. Unknown lesson routes return 404. |
+| Other `/frontend/*` routes | Default Next.js 404; unavailable technology routes have not been created. |
 | `/backend`, `/fullstack`, `/devops` | Default Next.js 404; no placeholder routes or redirects. |
 | Other unknown routes | Default Next.js 404. |
 
@@ -94,20 +95,20 @@ src/types/preferences.ts       Versioned preferences model
 vitest.config.mjs              Minimal Node test environment and @ alias
 ```
 
-The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, search, bookmarks, or progress UI are included. useState and useEffect are the only published topics.
+The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0 and ESLint to 9 because the current Next.js lint plugins do not declare compatibility with TypeScript 7 or ESLint 10. Yarn reports that ESLint 9 is no longer supported upstream; migrate when the Next.js plugins support ESLint 10. No authentication, APIs, database, search, bookmarks, or progress UI are included. All 119 React topics are published.
 
 ## Application shell
 
 - The root layout mounts `AppShell` around page content. The shared shell owns the header, navigation, skip link, main landmark, and footer; pages supply their own headings and content.
 - At 1024px and above, navigation appears in a sticky desktop sidebar. Smaller widths use a modal Sheet, leaving the full width available for content. Category cards use one column on mobile and two from 768px.
 - `src/components/navigation/categories.ts` is the single source of category labels, descriptions, icons, and availability. The discriminated union requires an href for an available category and prevents one on upcoming categories. Only add an available link after implementing its route. Available navigation items use `aria-current` when their route or a descendant is active.
-- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. useState and useEffect are the only published articles; search, bookmarks, and progress UI are not implemented.
-- All five application routes inherit the same shell from the root layout. Learning pages and both articles are Server Components with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
+- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. All 119 React articles are published; search, bookmarks, and progress UI are not implemented.
+- All application routes inherit the same shell from the root layout. Learning pages and articles are Server Components with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
 - The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
 
 ## Frontend technologies (ED-005)
 
-The hierarchy is **Frontend Development → Technology → Topic**. Category and technology introductions have routes, and Introduction to React, Thinking in declarative UI, useState, and useEffect each have a published article route. The other topic metadata entries remain upcoming. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
+The hierarchy is **Frontend Development → Technology → Topic**. Category and technology introductions have routes, and all 119 React topics have published article routes. The single source of truth for technology IDs, names, descriptions, icons, status, and routes is `src/lib/learning/frontend-technologies.ts`.
 
 | Technology | Status | Route |
 | --- | --- | --- |
@@ -121,7 +122,7 @@ The hierarchy is **Frontend Development → Technology → Topic**. Category and
 
 The registry follows the category configuration's discriminated union: available entries require an href, while upcoming entries cannot have one. `/frontend` renders its technology list directly from this registry, using semantic Next.js Links only for available entries. Upcoming entries have no handlers, links, buttons, or tab stops. There is no client state for this static presentation and no duplicate technology list in the global sidebar.
 
-The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. The Introduction to React, Thinking in declarative UI, useState, and useEffect cards link to their articles; every other curriculum card remains non-interactive.
+The React introduction reads its name and icon from the same registry. Its lightweight breadcrumb links Home and Frontend, then identifies React as the non-linked current page. All 119 curriculum cards link to their articles.
 
 The existing focused navigation Client Component keeps Frontend active on `/frontend` and `/frontend/react` using exact matches or a `/` segment boundary. `/frontend-tools` and other unrelated paths do not activate Frontend. The rest of the shell remains server-rendered. Theme configuration and the preferences repository are unchanged.
 
@@ -170,7 +171,11 @@ yarn lint && yarn typecheck && yarn test && yarn build
 - `yarn test`: **1,752 tests passed** in 23 files.
 - `sync-manifest --check`: the manifest matches the registry and the files on disk.
 - Browser smoke against the production build: all 119 routes returned 200, 8 representative lessons in detail at 320, 375, 768, 1024, and 1440px in both themes, **2,359 checks passed, 0 failed, 0 console issues**.
-- Across all 119 routes, HTML is 70.7 to 178 KB, with a median of 89.5 KB, and each route loads the same 663,515 bytes of uncompressed JavaScript, so lesson length does not affect client JavaScript.
+- Across all 119 routes, HTML is 70.7 to 178 KB, with a median of 89.5 KB, and each route references the same 663,515 bytes of uncompressed JavaScript. ED-014 distinguished these references from browser requests: Chromium skips the `nomodule` polyfill and receives about 167.6 KB of gzip JavaScript bodies on a cold local load. See [the performance audit](docs/ed-014/performance.md) for scope and limitations.
+
+## React curriculum audit (ED-014)
+
+The audit starts from ED-013 commit `6dec9dd`. Findings, minimal content corrections, example/browser checks, performance measurements, and outstanding verification limits are recorded in [release readiness](docs/ed-014/release-readiness.md) and [the verification log](docs/ed-014/verification.md). The release assessment is limited to the checks recorded there; outstanding browser, zoom, and assistive-technology checks still require verification.
 
 ## React curriculum and topic metadata (ED-009)
 
@@ -194,7 +199,7 @@ Every topic belongs to exactly one primary group. IDs are authored independently
 
 **React API availability and Explain Dev article publication are separate.** The registry covers 18 verified stable React Hooks and one stable React DOM Hook, and since ED-013 all 119 topics have published lessons and hrefs. Publication in this project still says nothing about an API's release status: lessons on version-sensitive features state their own requirements.
 
-The React page derives eight sections and a static keyboard-accessible table of contents from the registries. Each group has its description, h2, and ordered card grid. TopicCard retains h3 titles, summaries, status labels, and semantic Next.js Links with arrows for the two published articles. All other cards are plain articles with no controls, handlers, tab stops, or hover effects suggesting navigation. Repeated decorative brace icons were removed to keep the larger collection compact. The existing one/two/three-column grid, theme tokens, introduction, metadata, breadcrumbs, and shell remain. There is no scroll spy, client state, search, filter, or collapsed group.
+The React page derives eight sections and a static keyboard-accessible table of contents from the registries. Each group has its description, h2, and ordered card grid. TopicCard retains h3 titles, summaries, status labels, and semantic Next.js Links with arrows. ED-009 originally left unpublished topics as plain cards; since ED-013, all 119 cards link to published lessons. Repeated decorative brace icons were removed to keep the larger collection compact. The existing one/two/three-column grid, theme tokens, introduction, metadata, breadcrumbs, and shell remain. There is no scroll spy, client state, search, filter, or collapsed group.
 
 ### Verified API inventory
 
@@ -204,12 +209,14 @@ Reviewed against installed **react 19.3.1** and **react-dom 19.3.1**, their runt
 - React DOM Hook: useFormStatus. Its package origin is `react-dom`.
 - `use()` is classified as an API in Advanced React. It has different calling rules, including support for loops and conditions, while still requiring a component or Hook context. Its name does not make it a conventional Hook.
 - `memo`, `lazy`, `createContext`, and React DOM's `createPortal` are APIs. Suspense, Activity, and ViewTransition are components. Custom Hooks are developer-created patterns. React Compiler is build tooling; merely installing React does not enable it. Client boundaries introduce the `use client` directive as a concept, not a Hook.
-- `useEffectEvent` is supported by the installed release (introduced as stable in React 19.2). Activity is also available since 19.2; ViewTransition is present in the installed 19.3.1 exports and current stable documentation. Their cards remain unpublished. Adoption still requires checking browser, bundler, and framework support. React Server Components are distinguished from Next.js conventions; their integration infrastructure can be version-sensitive.
+- `useEffectEvent` is supported by the installed release (introduced as stable in React 19.2). Activity is also available since 19.2; ViewTransition is present in the installed 19.3.1 exports and current stable documentation. Both lessons are published: [Activity boundaries](/frontend/react/activity-boundaries) and [ViewTransition](/frontend/react/view-transition), matching the curriculum manifest. Adoption still requires checking browser, bundler, and framework support. React Server Components are distinguished from Next.js conventions; their integration infrastructure can be version-sensitive.
 - Deprecated `react-dom.useFormState` remains exported for compatibility, but the canonical current Hook is `react.useActionState`; no duplicate lesson was added. `unstable_useCacheRefresh` is excluded from the stable Hook inventory. Legacy ref forwarding is covered conceptually alongside React 19 ref props, without treating forwardRef as a Hook or recommending it as the default modern pattern.
 
 References: [React Hooks](https://react.dev/reference/react/hooks), [React DOM Hooks](https://react.dev/reference/react-dom/hooks), [React reference](https://react.dev/reference/react), [React APIs](https://react.dev/reference/react/apis), [Learn React](https://react.dev/learn), [use](https://react.dev/reference/react/use), [useEffectEvent](https://react.dev/reference/react/useEffectEvent), [React 19.2 release](https://react.dev/blog/2025/10/01/react-19-2), [Activity](https://react.dev/reference/react/Activity), [ViewTransition](https://react.dev/reference/react/ViewTransition), [React 19 rename/deprecation notes](https://react.dev/blog/2024/12/05/react-19), and [forwardRef](https://react.dev/reference/react/forwardRef). The supplied `/reference/react/compiler` URL returned 404; the official [React Compiler guide](https://react.dev/learn/react-compiler) was used instead. Export checks corroborate API presence; documentation establishes classification and release status.
 
 ## Published useState article (ED-007)
+
+Historical milestone records below describe the 2026-11-07 implementation snapshots through ED-012. Publication counts and unavailable routes in these records are historical; ED-013 subsequently published all 119 React lessons.
 
 `/frontend/react/use-state` is the first published article route. It is a static App Router page using the existing shell, an article landmark, one primary heading, wrapping Home → Frontend → React → useState breadcrumbs, and a readable column capped at 48rem.
 

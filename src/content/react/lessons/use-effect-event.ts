@@ -29,11 +29,14 @@ export const lesson: LessonArticle = {
 import { useEffect, useEffectEvent } from "react";
 
 function createConnection(roomId: string) {
+  let connectedTimer: number | undefined;
+
   return {
     onConnected(handler: () => void) {
-      window.setTimeout(handler, 100);
+      connectedTimer = window.setTimeout(handler, 100);
     },
     disconnect() {
+      window.clearTimeout(connectedTimer);
       console.log("Disconnected from " + roomId);
     },
   };
@@ -53,7 +56,7 @@ export default function ChatRoom({ roomId, isMuted }: { roomId: string; isMuted:
 
   return <h2>Room: {roomId}</h2>;
 }`,
-          description: "Changing roomId reconnects, while changing isMuted does not. When the event fires, it still reads the current isMuted. The connection here is a small stand-in for a real one.",
+          description: "Changing roomId reconnects, while changing isMuted does not. When the event fires, it still reads the current isMuted. This stand-in cancels its pending event on disconnect, so an old connection cannot notify after cleanup.",
         },
       ],
     },

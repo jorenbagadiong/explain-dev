@@ -143,14 +143,14 @@ interface Comment {
 }
 
 export default function Comments({ comments, addComment }: { comments: readonly Comment[]; addComment: (text: string) => Promise<void> }) {
-  const [optimisticComments, addOptimistic] = useOptimistic(comments, (current: readonly Comment[], text: string) => [
+  const [optimisticComments, addOptimistic] = useOptimistic(comments, (current: readonly Comment[], pending: { id: string; text: string }) => [
     ...current,
-    { id: "pending-" + text, text, isPending: true },
+    { ...pending, isPending: true },
   ]);
 
   async function formAction(formData: FormData) {
     const text = String(formData.get("text") ?? "");
-    addOptimistic(text);
+    addOptimistic({ id: "pending-" + crypto.randomUUID(), text });
     await addComment(text);
   }
 
@@ -173,7 +173,7 @@ export default function Comments({ comments, addComment }: { comments: readonly 
     </>
   );
 }`,
-          description: "The pending label is text rather than only a color change, so everyone can see the item is not yet saved.",
+          description: "The Action creates each temporary ID before calling the pure reducer, so identical pending comments still have distinct keys. The pending label uses text rather than only color. addComment must update the parent’s confirmed comments before it resolves.",
         },
       ],
     },

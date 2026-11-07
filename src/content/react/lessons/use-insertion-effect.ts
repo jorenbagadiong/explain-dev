@@ -15,7 +15,7 @@ export const lesson: LessonArticle = {
       id: "when-it-runs",
       heading: "When it runs",
       paragraphs: [
-        "It runs after a component is added to the DOM but before any layout Effects fire. That order is the whole point. Styles need to exist before anything else reads layout, or those measurements would be based on outdated styles.",
+        "It runs before any layout Effects fire, so styles exist before those Effects read layout. It may run before or after React updates the DOM; do not rely on a particular DOM-update order. Without the styles in place, later layout measurements could use outdated styles.",
         "It also differs in how it sequences work. Other Effects run all cleanups and then all setups, while this one runs cleanup and setup one component at a time, so they interleave.",
       ],
       visual: {

@@ -1,0 +1,1955 @@
+{
+  "engine": "156.0.8078.4",
+  "passed": 71,
+  "failed": [],
+  "results": [
+    {
+      "name": "jsx: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "jsx: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "jsx: one active named region",
+      "passed": true
+    },
+    {
+      "name": "jsx: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "jsx: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "jsx: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "jsx: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "theme persists across reload",
+      "passed": true
+    },
+    {
+      "name": "mobile Sheet traps focus inside dialog",
+      "passed": true
+    },
+    {
+      "name": "Back to Top has 44px target",
+      "passed": true,
+      "evidence": {
+        "outline": "none",
+        "width": "2px",
+        "rect": {
+          "width": 44,
+          "height": 44
+        }
+      }
+    },
+    {
+      "name": "Back to Top focus target is programmatically focusable",
+      "passed": true
+    },
+    {
+      "name": "state-snapshots: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "state-snapshots: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "state-snapshots: one active named region",
+      "passed": true
+    },
+    {
+      "name": "state-snapshots: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "state-snapshots: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "state-snapshots: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "state-snapshots: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "use-optimistic: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "use-optimistic: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "use-optimistic: one active named region",
+      "passed": true
+    },
+    {
+      "name": "use-optimistic: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "use-optimistic: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "use-optimistic: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "use-optimistic: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "component-composition: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "component-composition: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "component-composition: one active named region",
+      "passed": true
+    },
+    {
+      "name": "component-composition: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "component-composition: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "component-composition: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "component-composition: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "accessible-forms: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "accessible-forms: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "accessible-forms: one active named region",
+      "passed": true
+    },
+    {
+      "name": "accessible-forms: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "accessible-forms: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "accessible-forms: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "accessible-forms: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "rendering-performance: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "rendering-performance: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "rendering-performance: one active named region",
+      "passed": true
+    },
+    {
+      "name": "rendering-performance: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "rendering-performance: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "rendering-performance: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "rendering-performance: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "server-components: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "server-components: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "server-components: one active named region",
+      "passed": true
+    },
+    {
+      "name": "server-components: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "server-components: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "server-components: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "server-components: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "typescript-react: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "typescript-react: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "typescript-react: one active named region",
+      "passed": true
+    },
+    {
+      "name": "typescript-react: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "typescript-react: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "typescript-react: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "typescript-react: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "declarative-ui: Space switches mode and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "declarative-ui: unique IDs and valid control references",
+      "passed": true,
+      "evidence": {
+        "regions": [
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": true,
+            "labelExists": true
+          },
+          {
+            "hidden": false,
+            "labelExists": true
+          }
+        ],
+        "duplicateIds": [],
+        "danglingControls": 0
+      }
+    },
+    {
+      "name": "declarative-ui: one active named region",
+      "passed": true
+    },
+    {
+      "name": "declarative-ui: Space reveals answer and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "declarative-ui: focus is outside hidden content",
+      "passed": true
+    },
+    {
+      "name": "declarative-ui: dark core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.085792481426243
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 7.687897769981105
+        },
+        {
+          "token": "--primary",
+          "ratio": 9.447082878418302
+        }
+      ]
+    },
+    {
+      "name": "declarative-ui: light core text/background contrast >= 4.5",
+      "passed": true,
+      "evidence": [
+        {
+          "token": "--foreground",
+          "ratio": 17.401813149648095
+        },
+        {
+          "token": "--muted-foreground",
+          "ratio": 6.541969568210259
+        },
+        {
+          "token": "--primary",
+          "ratio": 6.681035315767658
+        }
+      ]
+    },
+    {
+      "name": "/: direct load, one heading, no page overflow",
+      "passed": true
+    },
+    {
+      "name": "/frontend: direct load, one heading, no page overflow",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react: direct load, one heading, no page overflow",
+      "passed": true
+    },
+    {
+      "name": "no console or hydration issues",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "samples": [
+    {
+      "id": "jsx",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 16444,
+          "decodedBodySize": 82986,
+          "transferSize": 16744,
+          "domContentLoaded": 81.70000000018626,
+          "load": 123.70000000018626
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 100
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "zoomProbe": {
+        "beforeZoom": {
+          "innerWidth": 320,
+          "dpr": 1,
+          "scale": 1
+        },
+        "afterZoom": {
+          "innerWidth": 320,
+          "dpr": 1,
+          "scale": 1
+        },
+        "realZoomEstablished": false
+      }
+    },
+    {
+      "id": "state-snapshots",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 16055,
+          "decodedBodySize": 83167,
+          "transferSize": 16355,
+          "domContentLoaded": 36.799999999813735,
+          "load": 114.1000000005588
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 80
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "use-optimistic",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 18335,
+          "decodedBodySize": 94597,
+          "transferSize": 18635,
+          "domContentLoaded": 40.09999999962747,
+          "load": 118.8999999994412
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 84
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "component-composition",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 17661,
+          "decodedBodySize": 89518,
+          "transferSize": 17961,
+          "domContentLoaded": 38.799999999813735,
+          "load": 117.29999999981374
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 52
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 84
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "accessible-forms",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 17586,
+          "decodedBodySize": 92440,
+          "transferSize": 17886,
+          "domContentLoaded": 38.39999999944121,
+          "load": 115.69999999925494
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 80
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "rendering-performance",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 17502,
+          "decodedBodySize": 90851,
+          "transferSize": 17802,
+          "domContentLoaded": 40.59999999962747,
+          "load": 80.8999999994412
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 104
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "server-components",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 17825,
+          "decodedBodySize": 96274,
+          "transferSize": 18125,
+          "domContentLoaded": 39.799999999813735,
+          "load": 114
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 80
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "typescript-react",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 18762,
+          "decodedBodySize": 97877,
+          "transferSize": 19062,
+          "domContentLoaded": 72.20000000018626,
+          "load": 110.1000000005588
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 52
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 88
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    },
+    {
+      "id": "declarative-ui",
+      "resources": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "initiatorType": "link",
+          "decodedBodySize": 5364,
+          "encodedBodySize": 1970,
+          "transferSize": 2270
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "initiatorType": "script",
+          "decodedBodySize": 29127,
+          "encodedBodySize": 7650,
+          "transferSize": 7950
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "initiatorType": "script",
+          "decodedBodySize": 169437,
+          "encodedBodySize": 46446,
+          "transferSize": 46746
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "initiatorType": "script",
+          "decodedBodySize": 229288,
+          "encodedBodySize": 71752,
+          "transferSize": 72052
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "initiatorType": "script",
+          "decodedBodySize": 9974,
+          "encodedBodySize": 3905,
+          "transferSize": 4205
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "initiatorType": "script",
+          "decodedBodySize": 24139,
+          "encodedBodySize": 7330,
+          "transferSize": 7630
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "initiatorType": "script",
+          "decodedBodySize": 46723,
+          "encodedBodySize": 15984,
+          "transferSize": 16284
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "initiatorType": "script",
+          "decodedBodySize": 33628,
+          "encodedBodySize": 11046,
+          "transferSize": 11346
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "initiatorType": "script",
+          "decodedBodySize": 3241,
+          "encodedBodySize": 1489,
+          "transferSize": 1789
+        }
+      ],
+      "navigation": [
+        {
+          "encodedBodySize": 32910,
+          "decodedBodySize": 178072,
+          "transferSize": 33210,
+          "domContentLoaded": 72.69999999925494,
+          "load": 110.8999999994412
+        }
+      ],
+      "paints": [
+        {
+          "name": "first-paint",
+          "startTime": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "startTime": 88
+        }
+      ],
+      "encodings": [
+        {
+          "url": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/1wnov70f88xjy.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/36skgmk00yv1h.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "encoding": "gzip"
+        },
+        {
+          "url": "/_next/static/chunks/23e6jep2anmtk.js",
+          "encoding": "gzip"
+        }
+      ],
+      "executedDuringModeSwitch": [
+        "/_next/static/chunks/1wnov70f88xjy.js",
+        "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "/_next/static/chunks/3x4kf2jcacpg6.js",
+        "/_next/static/chunks/0c1ad7rcpjghx.js",
+        "/_next/static/chunks/23e6jep2anmtk.js"
+      ]
+    }
+  ]
+}

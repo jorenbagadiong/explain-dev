@@ -128,7 +128,7 @@ export default function AddButton() {
           { id: "second-runs", title: "The second action runs", description: "It receives the first’s result as previousState." },
           { id: "settle", title: "State settles", description: "isPending becomes false once the queue is empty." },
         ],
-        note: "This is simplified. React batches multiple ongoing Actions together, which the docs describe as a current limitation that may change.",
+        note: "This describes one useActionState queue. Its dispatches run sequentially; do not infer ordering or shared batching across independent Hooks or Transitions.",
       },
     },
     {
