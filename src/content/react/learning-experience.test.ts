@@ -4,11 +4,12 @@ import { describe, expect, it } from "vitest";
 
 import { QuickReviewPanel, InterviewPanel } from "@/components/learning/article-panels";
 import { introductionToReactArticle } from "./introduction-to-react";
+import { thinkingInDeclarativeUiArticle } from "./thinking-in-declarative-ui";
 import { useStateArticle } from "./use-state";
 import { useEffectArticle } from "./use-effect";
 import { typecheckExamples } from "./test-utils";
 
-const articles = [useStateArticle, useEffectArticle, introductionToReactArticle];
+const articles = [useStateArticle, useEffectArticle, introductionToReactArticle, thinkingInDeclarativeUiArticle];
 
 describe("article learning content", () => {
   it.each(articles)("authors a complete concise review for $heading", (article) => {
@@ -32,6 +33,12 @@ describe("article learning content", () => {
     expect(introductionToReactArticle.quickReview.interviewTrap).toMatch(/entire DOM.*No\..*committing.*only the DOM changes needed/);
     expect(introductionToReactArticle.visual.note).toContain("not every render causes DOM mutations");
     expect(introductionToReactArticle.visual.steps.map((step) => step.id)).toEqual(["change", "render", "commit", "display"]);
+  });
+
+  it("keeps the declarative review on its DOM-access trap and flow caveat", () => {
+    expect(thinkingInDeclarativeUiArticle.quickReview.interviewTrap).toMatch(/never interact with the DOM.*No\..*state and props/);
+    expect(thinkingInDeclarativeUiArticle.visual.note).toContain("simplified");
+    expect(thinkingInDeclarativeUiArticle.visual.steps.map((step) => step.id)).toEqual(["event", "update-state", "render-ui", "commit-changes"]);
   });
 
   it("keeps the two reviews specific to their topics and preserves important caveats", () => {

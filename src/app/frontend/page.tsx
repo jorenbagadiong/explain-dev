@@ -37,7 +37,7 @@ export default function FrontendPage() {
       <section aria-labelledby="technologies-heading" className="mt-12 sm:mt-14">
         <h2 id="technologies-heading" className="text-xl font-semibold tracking-tight">Explore frontend technologies</h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Start with a technology to see its planned learning areas. React is open to explore, including the published Introduction to React, useState, and useEffect articles. More technologies and topics will follow.
+          Start with a technology to see its planned learning areas. React is open to explore, including the published Introduction to React, Thinking in declarative UI, useState, and useEffect articles. More technologies and topics will follow.
         </p>
         <ul className="mt-6 grid gap-4 md:grid-cols-2 sm:gap-5">
           {frontendTechnologies.map((technology) => {
@@ -81,7 +81,7 @@ export default function FrontendPage() {
         <div>
           <h2 id="content-status-heading" className="text-base font-semibold tracking-tight">More learning content is coming soon</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            React has an overview page and published Introduction to React, useState, and useEffect articles. The other technologies and remaining React articles are coming in future milestones.
+            React has an overview page and published Introduction to React, Thinking in declarative UI, useState, and useEffect articles. The other technologies and remaining React articles are coming in future milestones.
           </p>
         </div>
       </section>

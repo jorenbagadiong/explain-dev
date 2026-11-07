@@ -1,10 +1,4 @@
-import type { ArticleConceptVisual, ArticleHierarchyVisual, ArticleQuickReview, ArticleSection, ArticleSource, CodeExample, CommonMistake, InterviewQuestion } from "./article-types";
-
-export interface ComparisonColumn {
-  id: string;
-  title: string;
-  items: readonly string[];
-}
+import type { ArticleConceptVisual, ArticleHierarchyVisual, ArticleQuickReview, ArticleSection, ArticleSource, CodeExample, CommonMistake, ComparisonColumn, InterviewQuestion } from "./article-types";
 
 interface IntroductionToReactArticle {
   heading: string;

@@ -47,6 +47,12 @@ export interface ArticleConceptVisual {
   note: string;
 }
 
+export interface ComparisonColumn {
+  id: string;
+  title: string;
+  items: readonly string[];
+}
+
 export interface ArticleHierarchyNode {
   id: string;
   title: string;
@@ -54,7 +60,7 @@ export interface ArticleHierarchyNode {
   children?: readonly ArticleHierarchyNode[];
 }
 
-// For relationships with no sequence, where numbered steps would imply an order.
+// For nesting or branching, where numbered steps would imply one straight sequence.
 export interface ArticleHierarchyVisual {
   heading: string;
   context: string;

@@ -2,11 +2,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 
+import { BackToTop } from "@/components/navigation/back-to-top";
 import { ArticleModes } from "@/components/learning/article-modes";
 import { InterviewPanel, QuickReviewPanel } from "@/components/learning/article-panels";
 import { CodeBlock } from "@/components/learning/code-block";
 import { categories } from "@/components/navigation/categories";
-import type { ArticleSection as SectionContent, ArticleSource, ArticleQuickReview, CodeExample, InterviewQuestion } from "@/content/react/article-types";
+import type { ArticleSection as SectionContent, ArticleSource, ArticleQuickReview, CodeExample, ComparisonColumn, InterviewQuestion } from "@/content/react/article-types";
 import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
 import type { ReactTopic } from "@/lib/learning/react-topics";
 
@@ -66,6 +67,7 @@ export function ArticleLayout({ topic, heading, eyebrow, sections, sources, quic
           <ul className="mt-3 flex flex-wrap gap-x-6">{sources.map((source) => <li key={source.href}><a href={source.href} className="inline-flex min-h-11 items-center rounded-md py-2 text-sm text-primary underline underline-offset-4">{source.label}</a></li>)}</ul>
         </footer>
       </article>
+      <BackToTop />
     </div>
   );
 }
@@ -77,6 +79,24 @@ export function ArticleSection({ section, children }: { section: SectionContent;
       {section.paragraphs.map((paragraph) => <p key={paragraph} className="mt-4 leading-8 text-muted-foreground">{paragraph}</p>)}
       {children}
     </section>
+  );
+}
+
+export function ArticleExample({ example }: { example: CodeExample }) {
+  return <div><CodeBlock example={example} /><p className="leading-8 text-muted-foreground">{example.description}</p></div>;
+}
+
+// Stacks on small screens, so comparisons never need horizontal scrolling.
+export function ArticleComparison({ columns }: { columns: readonly ComparisonColumn[] }) {
+  return (
+    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      {columns.map((column) => (
+        <div key={column.id} className="min-w-0 rounded-xl border p-5">
+          <h3 className="font-semibold">{column.title}</h3>
+          <ul className="mt-3 list-outside list-disc space-y-3 pl-5 text-sm leading-7 text-muted-foreground marker:text-primary">{column.items.map((item) => <li key={item}>{item}</li>)}</ul>
+        </div>
+      ))}
+    </div>
   );
 }
 

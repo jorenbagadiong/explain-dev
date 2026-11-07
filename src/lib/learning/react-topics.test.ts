@@ -55,15 +55,16 @@ describe("React curriculum topic metadata", () => {
     expect(originals.every((topic) => topic.groupId === "hooks")).toBe(true);
   });
 
-  it("publishes only Introduction to React, useState, and useEffect at their canonical URLs", () => {
+  it("publishes only the four released articles at their canonical URLs", () => {
     expect(reactTopics).toHaveLength(119);
     expect(reactTopics.filter((topic) => topic.status === "available").map(({ id, href }) => ({ id, href }))).toEqual([
       { id: "react-introduction", href: "/frontend/react/introduction-to-react" },
+      { id: "declarative-ui", href: "/frontend/react/thinking-in-declarative-ui" },
       { id: "use-state", href: "/frontend/react/use-state" },
       { id: "use-effect", href: "/frontend/react/use-effect" },
     ]);
-    const upcoming = reactTopics.filter((topic) => !["react-introduction", "use-state", "use-effect"].includes(topic.id));
-    expect(upcoming).toHaveLength(116);
+    const upcoming = reactTopics.filter((topic) => !["react-introduction", "declarative-ui", "use-state", "use-effect"].includes(topic.id));
+    expect(upcoming).toHaveLength(115);
     for (const topic of upcoming) {
       expect(topic.status).toBe("coming-soon");
       expect(topic).not.toHaveProperty("href");
@@ -79,6 +80,18 @@ describe("React curriculum topic metadata", () => {
       groupId: "fundamentals",
       kind: "concept",
       order: 1,
+    });
+  });
+
+  it("keeps Thinking in declarative UI as one Fundamentals entry with its original metadata", () => {
+    const matches = reactTopics.filter((topic) => topic.id === "declarative-ui");
+    expect(matches).toHaveLength(1);
+    expect(matches[0]).toMatchObject({
+      title: "Thinking in declarative UI",
+      summary: "Describe the screen for each state instead of manually updating the DOM.",
+      groupId: "fundamentals",
+      kind: "concept",
+      order: 2,
     });
   });
 
