@@ -2,7 +2,9 @@
 
 Complex development concepts, explained simply.
 
-Explain Dev is a developer learning and reference project. **ED-002 adds a responsive application shell:** a shared header, desktop sidebar, accessible mobile/tablet menu, and four category overview cards. The ED-001 foundation, Inter typography, shadcn/ui Button, and light/dark themes (dark by default) are preserved. All learning categories are marked **Coming soon**; category pages and educational content are not implemented. **ED-003 is complete: it adds the browser preferences repository and storage tests only.** It does not add bookmark, reading progress, or settings UI.
+Explain Dev is a developer learning and reference project. **ED-004 is complete:** Frontend Development is available at `/frontend`, with working category links, active navigation, and a category introduction. Backend Development, Full-Stack Engineering, and DevOps & Cloud remain **Coming soon**. Detailed learning content is not available yet.
+
+The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
 ## Prerequisites
 
@@ -25,14 +27,35 @@ yarn install --frozen-lockfile
 yarn dev
 ```
 
-Open http://localhost:3000. The only application route is `/`.
+Open http://localhost:3000.
+
+| Route | Current behavior |
+| --- | --- |
+| `/` | Four category cards; Frontend Development links to its category page. |
+| `/frontend` | Frontend introduction, planned coverage, and a coming-soon content message. |
+| `/backend`, `/fullstack`, `/devops` | Default Next.js 404; no placeholder routes or redirects. |
+| Other unknown routes | Default Next.js 404. |
+
+## Vercel deployment
+
+The root `vercel.json` explicitly selects the Next.js framework, runs `yarn install --frozen-lockfile` and `yarn build`, and sets `outputDirectory` to `null` so Vercel detects the framework's output automatically. This overrides a custom output directory such as `dist`; see the [Vercel configuration reference](https://vercel.com/docs/project-configuration/vercel-json#outputdirectory).
+
+In the Vercel project’s Build and Deployment settings, use:
+
+- **Root Directory:** the repository root containing `package.json` and `vercel.json` (not `src` or `src/app`).
+- **Framework Preset:** Next.js.
+- **Build Command:** `yarn build`.
+- **Install Command:** `yarn install --frozen-lockfile`.
+- **Output Directory:** automatic; turn off the custom override rather than entering `dist`.
+
+If a deployment reports `STATIC_BUILD_NO_OUT_DIR` for `dist`, check the framework preset and output override. Deploy a commit containing `vercel.json`, or correct the dashboard settings and redeploy. This application uses Next.js’s normal build output and Vercel integration; it is not configured to export a standalone static `dist` directory. A local build passing does not verify a Vercel deployment.
 
 ## Commands
 
 ```sh
 yarn lint       # Next.js ESLint rules; warnings fail the check
 yarn typecheck  # Strict TypeScript checking
-yarn test       # Run Node-based Vitest storage tests once
+yarn test       # Run storage and navigation tests once
 yarn build     # Production build
 yarn start     # Serve the production build after yarn build
 ```
@@ -48,7 +71,8 @@ yarn start     # Serve the production build after yarn build
 - ESLint flat configuration with Next.js accessibility, React, and TypeScript rules.
 
 ```text
-src/app/                       Root layout, category homepage, global styles
+src/app/                       Shared root layout, homepage, global styles
+src/app/frontend/page.tsx       Server-rendered Frontend introduction and metadata
 src/components/layout/         Shared shell, header, sidebar, and mobile menu
 src/components/navigation/     Typed category configuration and route-aware navigation
 src/components/theme-provider.tsx
@@ -67,7 +91,8 @@ The dependency lockfile pins actual resolved versions. TypeScript is held to 6.0
 - The root layout mounts `AppShell` around page content. The shared shell owns the header, navigation, skip link, main landmark, and footer; pages supply their own headings and content.
 - At 1024px and above, navigation appears in a sticky desktop sidebar. Smaller widths use a modal Sheet, leaving the full width available for content. Category cards use one column on mobile and two from 768px.
 - `src/components/navigation/categories.ts` is the single source of category labels, descriptions, icons, and availability. The discriminated union requires an href for an available category and prevents one on upcoming categories. Only add an available link after implementing its route. Available navigation items use `aria-current` when their route or a descendant is active.
-- All four categories are currently non-interactive labels/cards with a visible “Coming soon” status. Home is the only internal navigation destination. There are no topic cards, search, bookmarks, or progress features.
+- Frontend Development is explicitly available at `/frontend`. Its homepage card and navigation entry use Next.js Link, with a visible arrow on the card and `aria-current="page"` on active navigation. The other three categories remain non-interactive with a visible “Coming soon” status and no href. Home remains available in both navigation layouts. There are no topic cards, search, bookmarks, or progress features.
+- Both `/` and `/frontend` inherit the same shell from the root layout. Frontend is a Server Component with page metadata; only the existing focused navigation component uses `usePathname()` for active state. Category display names are defined once in the shared configuration and reused by cards, navigation, and the Frontend heading.
 - The menu closes on Escape, close-button activation, outside click, and navigation selection. Resizing to desktop dismisses it and focuses the visible home branding link rather than the now-hidden mobile trigger.
 
 ## Browser preferences (ED-003)
@@ -103,9 +128,20 @@ Persistence limitations:
 - Theme persistence remains managed separately by next-themes and is unaffected by clearing this repository's key.
 - There are no migrations, storage event subscriptions, or concurrent update coordination. A successful save replaces the complete preferences snapshot. Educational content is never stored here.
 
-Run `yarn test` for the colocated storage tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Vite is installed as Vitest's required peer dependency.
+Run `yarn test` for the colocated storage and navigation tests. Vitest uses a Node environment and a small mocked localStorage, with no DOM environment, React Testing Library, or added browser-test dependencies. Navigation tests render the real component with React’s existing server renderer and a mocked pathname. Vite is installed as Vitest's required peer dependency.
 
 ## Verification
+
+Verified for ED-004 on Node 22.20.0:
+
+- `yarn lint`: passed with zero ESLint warnings.
+- `yarn typecheck`: passed.
+- `yarn test`: **73 tests passed** in three files: all 59 existing storage tests plus 14 category/navigation tests. The new tests cover category count/order/uniqueness, explicit availability and routes, semantic links versus upcoming labels, Home navigation, active Frontend routes, and unrelated-path matching.
+- `yarn build`: passed, including static generation of `/frontend`. The build ran outside the sandbox to permit Turbopack's required local worker port; there was no ED-004 build failure or retry.
+- Cached Chromium at 375×900, 768×900, 1024×900, and 1440×900 verified both routes in light and dark themes: keyboard activation of the Frontend card, desktop navigation, Sheet Frontend selection and dismissal, active `aria-current`, modal focus containment, Escape/focus return, Home/back links, direct `/frontend` navigation, and refresh all passed.
+- Both routes retained the same header instance and geometry during client navigation. Intended sidebar/menu breakpoints, no page overflow, sampled text contrast of at least 4.5:1, theme switching/persistence, and unchanged seeded preference data all passed. Browser checks ran with reduced motion emulated.
+- Requests to `/backend`, `/fullstack`, `/devops`, and an unknown path returned 404 without redirects. Homepage metadata was preserved; Frontend metadata describes future learning content.
+- No console errors, page errors, or hydration warnings. Screenshots were captured at each width/theme; desktop Frontend dark, mobile Frontend light, tablet navigation dark, and desktop homepage light were visually reviewed.
 
 Verified for ED-003 on Node 22.20.0:
 
@@ -133,3 +169,8 @@ Verified for ED-001 on Node 22.20.0:
 - Browser console and page error checks: no errors on the final build. Screenshots were captured for both widths and themes; mobile dark and desktop light screenshots were visually reviewed.
 
 Browser checks used preinstalled Playwright/Chromium through a temporary script; they do not add a project test dependency. Cross-browser verification and a full accessibility audit have not been performed. To reproduce static checks, run the commands above.
+
+
+## Next planned milestone
+
+Proposed next: organize frontend technologies and their navigation, starting with a scoped technology registry. Technology routes, topic listings, and educational articles are future work and have not been implemented in ED-004.

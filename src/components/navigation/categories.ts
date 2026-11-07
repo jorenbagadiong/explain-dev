@@ -3,10 +3,9 @@ import type { LucideIcon } from "lucide-react";
 
 export type LearningCategory = "frontend" | "backend" | "fullstack" | "devops";
 
-type NavigationCategory = {
+export type NavigationCategory = {
   id: LearningCategory;
   label: string;
-  title: string;
   description: string;
   icon: LucideIcon;
 } & (
@@ -18,24 +17,22 @@ type NavigationCategory = {
 export const categories: readonly NavigationCategory[] = [
   {
     id: "frontend",
-    label: "Frontend",
-    title: "Frontend Development",
+    label: "Frontend Development",
     description: "Build clear, accessible interfaces and understand how the web works in the browser.",
     icon: PanelsTopLeft,
-    status: "coming-soon",
+    href: "/frontend",
+    status: "available",
   },
   {
     id: "backend",
-    label: "Backend",
-    title: "Backend Development",
+    label: "Backend Development",
     description: "Explore the server-side foundations that power reliable applications and services.",
     icon: Server,
     status: "coming-soon",
   },
   {
     id: "fullstack",
-    label: "Full-Stack",
-    title: "Full-Stack Engineering",
+    label: "Full-Stack Engineering",
     description: "Connect the pieces, from user interfaces to the systems working behind them.",
     icon: Layers3,
     status: "coming-soon",
@@ -43,7 +40,6 @@ export const categories: readonly NavigationCategory[] = [
   {
     id: "devops",
     label: "DevOps & Cloud",
-    title: "DevOps & Cloud",
     description: "Understand how software is shipped, operated, and supported in the cloud.",
     icon: Cloud,
     status: "coming-soon",

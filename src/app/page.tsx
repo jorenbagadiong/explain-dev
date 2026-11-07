@@ -38,7 +38,7 @@ export default function Home() {
                   </span>
                 </div>
                 <h3 className="flex items-center justify-between gap-3 text-lg font-semibold tracking-tight">
-                  {category.title}
+                  {category.label}
                   {category.status === "available" && <ArrowUpRight className="size-4 text-primary" aria-hidden="true" />}
                 </h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{category.description}</p>
