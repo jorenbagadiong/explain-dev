@@ -1,0 +1,15 @@
+yarn run v1.22.22
+warning Skipping preferred cache folder "/home/joren/.cache/yarn" because it is not writable.
+warning Selected the next writable cache folder in the list, will be "/tmp/.yarn-cache-1000".
+$ vitest run
+warning Cannot find a suitable global folder. Tried these: "/usr/local, /home/joren/.yarn"
+
+ RUN  v5.1.0 /home/joren/claude/explain-dev
+
+
+ Test Files  25 passed (25)
+      Tests  1775 passed (1775)
+   Start at  12:41:06
+   Duration  6.20s (tests 51%, import 38%, transform 11%)
+
+Done in 6.64s.

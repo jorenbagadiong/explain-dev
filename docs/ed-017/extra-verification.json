@@ -1,0 +1,234 @@
+{
+  "checks": [
+    {
+      "name": "320/dark Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark IDs unique",
+      "passed": true
+    },
+    {
+      "name": "320/dark panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "320/light Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light IDs unique",
+      "passed": true
+    },
+    {
+      "name": "320/light panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "375/dark Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark IDs unique",
+      "passed": true
+    },
+    {
+      "name": "375/dark panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "375/light Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light IDs unique",
+      "passed": true
+    },
+    {
+      "name": "375/light panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "768/dark Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark IDs unique",
+      "passed": true
+    },
+    {
+      "name": "768/dark panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "768/light Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light IDs unique",
+      "passed": true
+    },
+    {
+      "name": "768/light panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "1024/dark Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark IDs unique",
+      "passed": true
+    },
+    {
+      "name": "1024/dark panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "1024/dark same group navigation remains open",
+      "passed": true
+    },
+    {
+      "name": "1024/dark unrelated mode update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1024/dark theme update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1024/light Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light IDs unique",
+      "passed": true
+    },
+    {
+      "name": "1024/light panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "1024/light same group navigation remains open",
+      "passed": true
+    },
+    {
+      "name": "1024/light unrelated mode update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1024/light theme update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1440/dark Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark IDs unique",
+      "passed": true
+    },
+    {
+      "name": "1440/dark panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "1440/dark same group navigation remains open",
+      "passed": true
+    },
+    {
+      "name": "1440/dark unrelated mode update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1440/dark theme update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1440/light Hooks: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light IDs unique",
+      "passed": true
+    },
+    {
+      "name": "1440/light panels associated and collapsed panels hidden",
+      "passed": true
+    },
+    {
+      "name": "1440/light same group navigation remains open",
+      "passed": true
+    },
+    {
+      "name": "1440/light unrelated mode update respects manual collapse",
+      "passed": true
+    },
+    {
+      "name": "1440/light theme update respects manual collapse",
+      "passed": true
+    }
+  ],
+  "contrasts": [
+    {
+      "name": "320/dark Hooks",
+      "count": 17,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "320/light Hooks",
+      "count": 17,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "375/dark Hooks",
+      "count": 17,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "375/light Hooks",
+      "count": 17,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "768/dark Hooks",
+      "count": 17,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "768/light Hooks",
+      "count": 17,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1024/dark Hooks",
+      "count": 16,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1024/light Hooks",
+      "count": 16,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1440/dark Hooks",
+      "count": 16,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1440/light Hooks",
+      "count": 16,
+      "minimum": 6.077498072462552,
+      "failures": []
+    }
+  ]
+}

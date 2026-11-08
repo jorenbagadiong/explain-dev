@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactLessonNavigationData } from "@/lib/learning/react-navigation";
 import { useEffect, useState } from "react";
 import { Code2, Menu } from "lucide-react";
 
@@ -16,7 +17,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-export function MobileNavigation() {
+export function MobileNavigation({ lessonNavigation }: { lessonNavigation: ReactLessonNavigationData | null }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -43,6 +44,16 @@ export function MobileNavigation() {
       </SheetTrigger>
       <SheetContent
         className={styles.drawerSurface}
+        data-navigation-scroll=""
+        onOpenAutoFocus={(event) => {
+          const content = event.target;
+          if (!(content instanceof HTMLElement)) return;
+          const active = content.querySelector<HTMLElement>('[data-lesson-link][aria-current="page"]');
+          if (active) {
+            event.preventDefault();
+            active.focus({ preventScroll: true });
+          }
+        }}
         onCloseAutoFocus={(event) => {
           // The trigger is hidden after switching to the desktop layout.
           if (window.matchMedia("(min-width: 1024px)").matches) {
@@ -56,7 +67,7 @@ export function MobileNavigation() {
           <SheetDescription>Find your next area of development.</SheetDescription>
         </SheetHeader>
         <div className={styles.drawerNav}>
-          <CategoryNavigation onNavigate={() => setOpen(false)} />
+          <CategoryNavigation lessonNavigation={lessonNavigation} onNavigate={() => setOpen(false)} />
         </div>
         <p className={styles.drawerFooter}>
           Complex development concepts, explained simply.

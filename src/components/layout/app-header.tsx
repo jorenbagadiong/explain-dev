@@ -1,3 +1,4 @@
+import type { ReactLessonNavigationData } from "@/lib/learning/react-navigation";
 import Link from "next/link";
 import { Code2 } from "lucide-react";
 
@@ -6,7 +7,7 @@ import styles from "@/components/navigation/navigation.module.css";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-export function AppHeader() {
+export function AppHeader({ lessonNavigation }: { lessonNavigation: ReactLessonNavigationData | null }) {
   return (
     <header className="sticky top-0 z-30 flex h-20 items-center justify-between gap-4 border-b bg-background px-5 sm:px-8">
       <Link id="app-home-link" href="/" aria-label="Explain Dev home" className={`${styles.brandLink} flex items-center gap-3 rounded-md font-semibold tracking-tight`}>
@@ -17,7 +18,7 @@ export function AppHeader() {
       </Link>
       <div className="flex items-center gap-2">
         <ThemeToggle />
-        <MobileNavigation />
+        <MobileNavigation lessonNavigation={lessonNavigation} />
       </div>
     </header>
   );

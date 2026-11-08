@@ -42,3 +42,32 @@
 .drawerTitle .brandMark { display: grid; place-items: center; flex-shrink: 0; width: 1.75rem; height: 1.75rem; border: 1px solid color-mix(in oklch, var(--primary) 24%, var(--border)); border-radius: 0.5rem; color: var(--primary); }
 .drawerNav { flex-shrink: 0; margin-top: 1.25rem; }
 .drawerFooter { flex-shrink: 0; margin-top: auto; padding-top: 2rem; font-size: 0.75rem; line-height: 1.75; color: var(--muted-foreground); }
+
+/* Metadata-only React curriculum shared by the sidebar and Sheet. */
+.reactBranch { margin: .375rem 0 .75rem .5rem; padding-left: .5rem; border-left: 1px solid var(--border); }
+.reactLink, .groupButton, .lessonLink { display: flex; align-items: center; min-width: 0; min-height: 2.75rem; width: 100%; border: 1px solid transparent; border-radius: .5rem; text-align: left; overflow-wrap: anywhere; }
+.reactLink { gap: .5rem; padding: .5rem .625rem; font-size: .875rem; font-weight: 600; color: var(--muted-foreground); }
+.reactLink[data-route-match] { color: var(--foreground); background: color-mix(in oklab, var(--primary) 5%, transparent); }
+.groupList { display: grid; gap: .125rem; margin-top: .25rem; }
+.groupButton { justify-content: space-between; gap: .375rem; padding: .5rem .625rem; color: var(--muted-foreground); font-size: .8125rem; line-height: 1.45; font-weight: 500; cursor: pointer; }
+.groupButton[data-active-group] { color: var(--foreground); }
+.chevron { width: .875rem; height: .875rem; flex-shrink: 0; transition: transform 160ms ease; }
+.groupButton[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+.lessonList { display: grid; gap: .125rem; padding: .125rem 0 .375rem .375rem; }
+.lessonLink { position: relative; padding: .5rem .625rem .5rem .875rem; color: var(--muted-foreground); font-size: .8125rem; line-height: 1.5; font-weight: 500; }
+.lessonLink[aria-current="page"] { color: var(--foreground); background: color-mix(in oklab, var(--primary) 11%, transparent); border-color: color-mix(in oklab, var(--primary) 25%, transparent); }
+.lessonLink[aria-current="page"]::before { content: ""; position: absolute; left: 2px; top: .5rem; bottom: .5rem; width: 3px; border-radius: 2px; background: var(--primary); }
+.reactLink:focus-visible, .groupButton:focus-visible, .lessonLink:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) {
+  .reactLink:hover, .groupButton:hover, .lessonLink:hover { color: var(--foreground); background-color: color-mix(in oklab, var(--primary) 7%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) { .chevron { transition: none; } }
+
+.branchRow { display: flex; align-items: stretch; gap: .125rem; }
+.branchRow > a { flex: 1; min-width: 0; width: auto; }
+.branchToggle { display: grid; place-items: center; flex-shrink: 0; width: 2.75rem; min-height: 2.75rem; border: 1px solid transparent; border-radius: .5rem; color: var(--muted-foreground); cursor: pointer; }
+.branchToggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+.branchToggle:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) {
+  .branchToggle:hover { color: var(--foreground); background: color-mix(in oklab, var(--primary) 7%, transparent); }
+}

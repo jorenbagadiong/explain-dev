@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 
+import { reactLessonNavigation } from "@/lib/learning/react-navigation";
 import { categories } from "./categories";
 import { CategoryNavigation } from "./category-navigation";
 
@@ -10,11 +11,12 @@ vi.mock("next/navigation", () => ({ usePathname: () => route.pathname }));
 
 function renderNavigation(pathname: string) {
   route.pathname = pathname;
-  const html = renderToStaticMarkup(createElement(CategoryNavigation));
-  const links = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map((match) => ({
+  const html = renderToStaticMarkup(createElement(CategoryNavigation, { lessonNavigation: reactLessonNavigation }));
+  const links = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].filter((match) => match[1].includes("data-category-link")).map((match) => ({
     href: match[1].match(/\bhref="([^"]+)"/)?.[1],
     routeMatch: match[1].match(/\bdata-route-match="([^"]+)"/)?.[1],
-    current: match[1].includes('aria-current="page"'),
+    current: /aria-current="(?:page|location)"/.test(match[1]),
+    currentValue: match[1].match(/aria-current="([^"]+)"/)?.[1],
     content: match[2],
   }));
   return { html, links };
@@ -29,6 +31,24 @@ describe("shared category navigation", () => {
     expect(links[1].content).toContain("Available");
   });
 
+  it.each([
+    ["/", false, false],
+    ["/frontend", true, false],
+    ["/frontend/react", true, true],
+    ["/frontend/react/use-state", true, true],
+    ["/frontend-tools", false, false],
+    ["/frontend/react-other", true, false],
+  ])("initializes parent disclosures from the route boundary on %s", (pathname, frontendOpen, reactOpen) => {
+    const { html } = renderNavigation(pathname);
+    const buttons = [...html.matchAll(/<button\b([^>]*)>/g)].map((match) => match[1]);
+    for (const [label, open] of [["Frontend Development navigation", frontendOpen], ["React navigation", reactOpen]] as const) {
+      const control = buttons.find((attributes) => attributes.includes(`aria-label="${label}"`))!;
+      expect(control).toContain(`aria-expanded="${open}"`);
+      const panelId = control.match(/aria-controls="([^"]+)"/)![1];
+      expect(html).toContain(`<div id="${panelId}"${open ? "" : ' hidden=""'}`);
+    }
+  });
+
   it("renders upcoming categories and their status outside links", () => {
     const { html, links } = renderNavigation("/");
     expect(html.match(/Coming soon/g)).toHaveLength(3);
@@ -38,7 +58,10 @@ describe("shared category navigation", () => {
       expect(html).toContain(label);
       expect(links.some((link) => link.content.includes(label))).toBe(false);
     }
-    expect(html).not.toContain("<button");
+    for (const item of html.matchAll(/<li data-category-id="(backend|fullstack|devops)">([\s\S]*?)<\/li>/g)) {
+      expect(item[2]).not.toContain("<button");
+      expect(item[2]).not.toContain("<a ");
+    }
     expect(html).not.toContain('tabindex="0"');
   });
 
@@ -55,6 +78,7 @@ describe("shared category navigation", () => {
       href ? [{ href, routeMatch }] : [],
     );
     expect(matched.every((link) => link.current)).toBe(true);
+    if (matched.length) expect(matched[0].currentValue).toBe(routeMatch === "exact" ? "page" : "location");
   });
 
   it.each([

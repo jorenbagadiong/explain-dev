@@ -1,0 +1,689 @@
+{
+  "checks": [
+    {
+      "name": "320/dark Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "320/dark Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "320/dark React Space expands",
+      "pass": true
+    },
+    {
+      "name": "320/dark lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "320/dark React collapses",
+      "pass": true
+    },
+    {
+      "name": "320/dark reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "320/dark Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "320/dark nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "320/dark targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "320/dark direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "320/dark active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "320/dark panel associations",
+      "pass": true
+    },
+    {
+      "name": "320/dark keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "320/dark focus visible",
+      "pass": true
+    },
+    {
+      "name": "320/dark route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "320/dark Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "320/dark overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "320/light Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "320/light Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "320/light React Space expands",
+      "pass": true
+    },
+    {
+      "name": "320/light lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "320/light React collapses",
+      "pass": true
+    },
+    {
+      "name": "320/light reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "320/light Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "320/light nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "320/light targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "320/light direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "320/light active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "320/light panel associations",
+      "pass": true
+    },
+    {
+      "name": "320/light keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "320/light focus visible",
+      "pass": true
+    },
+    {
+      "name": "320/light route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "320/light Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "320/light overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "375/dark Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "375/dark Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "375/dark React Space expands",
+      "pass": true
+    },
+    {
+      "name": "375/dark lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "375/dark React collapses",
+      "pass": true
+    },
+    {
+      "name": "375/dark reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "375/dark Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "375/dark nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "375/dark targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "375/dark direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "375/dark active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "375/dark panel associations",
+      "pass": true
+    },
+    {
+      "name": "375/dark keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "375/dark focus visible",
+      "pass": true
+    },
+    {
+      "name": "375/dark route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "375/dark Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "375/dark overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "375/light Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "375/light Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "375/light React Space expands",
+      "pass": true
+    },
+    {
+      "name": "375/light lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "375/light React collapses",
+      "pass": true
+    },
+    {
+      "name": "375/light reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "375/light Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "375/light nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "375/light targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "375/light direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "375/light active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "375/light panel associations",
+      "pass": true
+    },
+    {
+      "name": "375/light keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "375/light focus visible",
+      "pass": true
+    },
+    {
+      "name": "375/light route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "375/light Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "375/light overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "768/dark Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "768/dark Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "768/dark React Space expands",
+      "pass": true
+    },
+    {
+      "name": "768/dark lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "768/dark React collapses",
+      "pass": true
+    },
+    {
+      "name": "768/dark reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "768/dark Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "768/dark nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "768/dark targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "768/dark direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "768/dark active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "768/dark panel associations",
+      "pass": true
+    },
+    {
+      "name": "768/dark keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "768/dark focus visible",
+      "pass": true
+    },
+    {
+      "name": "768/dark route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "768/dark Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "768/dark overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "768/light Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "768/light Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "768/light React Space expands",
+      "pass": true
+    },
+    {
+      "name": "768/light lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "768/light React collapses",
+      "pass": true
+    },
+    {
+      "name": "768/light reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "768/light Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "768/light nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "768/light targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "768/light direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "768/light active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "768/light panel associations",
+      "pass": true
+    },
+    {
+      "name": "768/light keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "768/light focus visible",
+      "pass": true
+    },
+    {
+      "name": "768/light route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "768/light Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "768/light overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "1024/dark Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "1024/dark Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "1024/dark React Space expands",
+      "pass": true
+    },
+    {
+      "name": "1024/dark lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "1024/dark React collapses",
+      "pass": true
+    },
+    {
+      "name": "1024/dark reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "1024/dark Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "1024/dark nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "1024/dark targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "1024/dark direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "1024/dark active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "1024/dark panel associations",
+      "pass": true
+    },
+    {
+      "name": "1024/dark keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "1024/dark focus visible",
+      "pass": true
+    },
+    {
+      "name": "1024/dark route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "1024/dark Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "1024/dark overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "1024/light Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "1024/light Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "1024/light React Space expands",
+      "pass": true
+    },
+    {
+      "name": "1024/light lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "1024/light React collapses",
+      "pass": true
+    },
+    {
+      "name": "1024/light reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "1024/light Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "1024/light nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "1024/light targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "1024/light direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "1024/light active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "1024/light panel associations",
+      "pass": true
+    },
+    {
+      "name": "1024/light keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "1024/light focus visible",
+      "pass": true
+    },
+    {
+      "name": "1024/light route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "1024/light Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "1024/light overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "1440/dark Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "1440/dark Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "1440/dark React Space expands",
+      "pass": true
+    },
+    {
+      "name": "1440/dark lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "1440/dark React collapses",
+      "pass": true
+    },
+    {
+      "name": "1440/dark reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "1440/dark Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "1440/dark nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "1440/dark targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440/dark direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "1440/dark active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "1440/dark panel associations",
+      "pass": true
+    },
+    {
+      "name": "1440/dark keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "1440/dark focus visible",
+      "pass": true
+    },
+    {
+      "name": "1440/dark route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "1440/dark Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "1440/dark overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "1440/light Frontend initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "1440/light Frontend Enter expands",
+      "pass": true
+    },
+    {
+      "name": "1440/light React Space expands",
+      "pass": true
+    },
+    {
+      "name": "1440/light lessons reachable",
+      "pass": true
+    },
+    {
+      "name": "1440/light React collapses",
+      "pass": true
+    },
+    {
+      "name": "1440/light reopening retains lesson group",
+      "pass": true
+    },
+    {
+      "name": "1440/light Frontend hides entire branch",
+      "pass": true
+    },
+    {
+      "name": "1440/light nested expansion retained",
+      "pass": true
+    },
+    {
+      "name": "1440/light targets and no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440/light direct load opens parents",
+      "pass": true
+    },
+    {
+      "name": "1440/light active lesson correct",
+      "pass": true
+    },
+    {
+      "name": "1440/light panel associations",
+      "pass": true
+    },
+    {
+      "name": "1440/light keyboard collapses React",
+      "pass": true
+    },
+    {
+      "name": "1440/light focus visible",
+      "pass": true
+    },
+    {
+      "name": "1440/light route changes open parents",
+      "pass": true
+    },
+    {
+      "name": "1440/light Back restores path and expansion",
+      "pass": true
+    },
+    {
+      "name": "1440/light overview links preserved",
+      "pass": true
+    },
+    {
+      "name": "no console errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

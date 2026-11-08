@@ -4,15 +4,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { House } from "lucide-react";
 
+import type { ReactLessonNavigationData } from "@/lib/learning/react-navigation";
+import { NavigationBranch } from "./navigation-branch";
+import { ReactLessonNavigation } from "./react-lesson-navigation";
 import { categories } from "@/components/navigation/categories";
 import styles from "@/components/navigation/navigation.module.css";
 
-export function CategoryNavigation({ onNavigate }: { onNavigate?: () => void }) {
+export function CategoryNavigation({ lessonNavigation, onNavigate }: {
+  lessonNavigation: ReactLessonNavigationData | null;
+  onNavigate?: () => void;
+}) {
   const pathname = usePathname();
 
   return (
     <nav aria-label="Primary navigation" className={styles.navigation}>
       <Link
+        data-category-link=""
         href="/"
         aria-current={pathname === "/" ? "page" : undefined}
         data-route-match={pathname === "/" ? "exact" : undefined}
@@ -39,15 +46,21 @@ export function CategoryNavigation({ onNavigate }: { onNavigate?: () => void }) 
             ? pathname === category.href ? "exact" : pathname.startsWith(`${category.href}/`) ? "descendant" : undefined
             : undefined;
 
+          const overview = category.status === "available" ? (
+            <Link data-category-link="" href={category.href} aria-current={match === "exact" ? "page" : match ? "location" : undefined} data-route-match={match} onClick={onNavigate} className={styles.link}>
+              {content}
+            </Link>
+          ) : (
+            <div className={styles.upcoming}>{content}</div>
+          );
+
           return (
-            <li key={category.id}>
-              {category.status === "available" ? (
-                <Link href={category.href} aria-current={match ? "page" : undefined} data-route-match={match} onClick={onNavigate} className={styles.link}>
-                  {content}
-                </Link>
-              ) : (
-                <div className={styles.upcoming}>{content}</div>
-              )}
+            <li key={category.id} data-category-id={category.id}>
+              {category.id === "frontend" && lessonNavigation ? (
+                <NavigationBranch key={pathname} label={`${category.label} navigation`} initiallyOpen={Boolean(match)} overview={overview}>
+                  <ReactLessonNavigation data={lessonNavigation} onNavigate={onNavigate} />
+                </NavigationBranch>
+              ) : overview}
             </li>
           );
         })}

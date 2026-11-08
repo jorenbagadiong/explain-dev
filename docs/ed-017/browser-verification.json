@@ -1,0 +1,5156 @@
+{
+  "engine": "156.0.8078.4",
+  "checks": [
+    {
+      "name": "320/dark/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/dark landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/dark/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/dark all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "320/dark selection dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "320/dark Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "320/dark Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "320/dark intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 0",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 1",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 2",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 3",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 4",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 5",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 6",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 7",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 8",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 9",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 10",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 11",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 12",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 13",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 14",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 15",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 16",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 17",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 18",
+      "passed": true
+    },
+    {
+      "name": "320/dark focus trap 19",
+      "passed": true
+    },
+    {
+      "name": "320/dark body scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark backdrop dismissal",
+      "passed": true
+    },
+    {
+      "name": "320/dark close button dismissal",
+      "passed": true
+    },
+    {
+      "name": "320/dark resize closes and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "320/dark preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices focus restored",
+      "passed": true
+    },
+    {
+      "name": "320/light landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "320/light/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "320/light all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "320/light selection dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "320/light Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "320/light Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "320/light intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 0",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 1",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 2",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 3",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 4",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 5",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 6",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 7",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 8",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 9",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 10",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 11",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 12",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 13",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 14",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 15",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 16",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 17",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 18",
+      "passed": true
+    },
+    {
+      "name": "320/light focus trap 19",
+      "passed": true
+    },
+    {
+      "name": "320/light body scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light backdrop dismissal",
+      "passed": true
+    },
+    {
+      "name": "320/light close button dismissal",
+      "passed": true
+    },
+    {
+      "name": "320/light resize closes and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "320/light preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/dark landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/dark/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/dark all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "375/dark selection dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "375/dark Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "375/dark Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "375/dark intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 0",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 1",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 2",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 3",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 4",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 5",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 6",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 7",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 8",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 9",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 10",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 11",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 12",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 13",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 14",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 15",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 16",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 17",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 18",
+      "passed": true
+    },
+    {
+      "name": "375/dark focus trap 19",
+      "passed": true
+    },
+    {
+      "name": "375/dark body scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark backdrop dismissal",
+      "passed": true
+    },
+    {
+      "name": "375/dark close button dismissal",
+      "passed": true
+    },
+    {
+      "name": "375/dark resize closes and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "375/dark preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices focus restored",
+      "passed": true
+    },
+    {
+      "name": "375/light landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "375/light/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "375/light all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "375/light selection dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "375/light Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "375/light Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "375/light intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 0",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 1",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 2",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 3",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 4",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 5",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 6",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 7",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 8",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 9",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 10",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 11",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 12",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 13",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 14",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 15",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 16",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 17",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 18",
+      "passed": true
+    },
+    {
+      "name": "375/light focus trap 19",
+      "passed": true
+    },
+    {
+      "name": "375/light body scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light backdrop dismissal",
+      "passed": true
+    },
+    {
+      "name": "375/light close button dismissal",
+      "passed": true
+    },
+    {
+      "name": "375/light resize closes and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "375/light preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/dark landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/dark/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/dark all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "768/dark selection dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "768/dark Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "768/dark Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "768/dark intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 0",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 1",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 2",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 3",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 4",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 5",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 6",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 7",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 8",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 9",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 10",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 11",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 12",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 13",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 14",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 15",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 16",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 17",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 18",
+      "passed": true
+    },
+    {
+      "name": "768/dark focus trap 19",
+      "passed": true
+    },
+    {
+      "name": "768/dark body scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark backdrop dismissal",
+      "passed": true
+    },
+    {
+      "name": "768/dark close button dismissal",
+      "passed": true
+    },
+    {
+      "name": "768/dark resize closes and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "768/dark preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices opening focus on active lesson",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices focus restored",
+      "passed": true
+    },
+    {
+      "name": "768/light landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "768/light/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "768/light all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "768/light selection dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "768/light Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "768/light Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "768/light intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 0",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 1",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 2",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 3",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 4",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 5",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 6",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 7",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 8",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 9",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 10",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 11",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 12",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 13",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 14",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 15",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 16",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 17",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 18",
+      "passed": true
+    },
+    {
+      "name": "768/light focus trap 19",
+      "passed": true
+    },
+    {
+      "name": "768/light body scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light backdrop dismissal",
+      "passed": true
+    },
+    {
+      "name": "768/light close button dismissal",
+      "passed": true
+    },
+    {
+      "name": "768/light resize closes and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "768/light preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/dark landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/dark/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/dark all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "1024/dark SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "1024/dark Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "1024/dark Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "1024/dark intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "1024/dark preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1024/light landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1024/light/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1024/light all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "1024/light SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "1024/light Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "1024/light Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "1024/light intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "1024/light preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/dark landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/dark/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/dark all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "1440/dark SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "1440/dark Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "1440/dark Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "1440/dark intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "1440/dark preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices route and breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices active group only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices exact active lesson only",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices active lesson revealed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices page remains at top",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices touch targets and wrapping",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices one scrolling frame",
+      "passed": true
+    },
+    {
+      "name": "1440/light landing groups collapsed",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/fundamentals visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/state-data-flow visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/hooks visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/component-architecture visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/forms-interaction visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/performance-rendering visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/advanced-react visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices manual exclusive expansion",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices Space collapses",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices Enter expands",
+      "passed": true
+    },
+    {
+      "name": "1440/light/testing-best-practices visible focus and reduced motion",
+      "passed": true
+    },
+    {
+      "name": "1440/light all 119 canonical links",
+      "passed": true,
+      "evidence": {
+        "seen": 119
+      }
+    },
+    {
+      "name": "1440/light SPA opens destination group",
+      "passed": true
+    },
+    {
+      "name": "1440/light Back restores hooks",
+      "passed": true
+    },
+    {
+      "name": "1440/light Forward restores fundamentals",
+      "passed": true
+    },
+    {
+      "name": "1440/light intentional active collapse persists",
+      "passed": true
+    },
+    {
+      "name": "1440/light preferences untouched",
+      "passed": true
+    },
+    {
+      "name": "short desktop active revealed",
+      "passed": true
+    },
+    {
+      "name": "sidebar wheel contained",
+      "passed": true
+    },
+    {
+      "name": "main wheel independent",
+      "passed": true
+    },
+    {
+      "name": "no continuous navigation animation",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

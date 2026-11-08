@@ -1,0 +1,103 @@
+{
+  "engine": "156.0.8078.4",
+  "phase": "after",
+  "samples": [
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/designing-component-apis",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/error-handling-and-recovery",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/designing-component-apis",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/error-handling-and-recovery",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/designing-component-apis",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/error-handling-and-recovery",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/designing-component-apis",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false
+    },
+    {
+      "route": "/frontend/react/error-handling-and-recovery",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false
+    }
+  ],
+  "errors": []
+}

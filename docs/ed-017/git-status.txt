@@ -1,0 +1,26 @@
+ M README.md
+ M next-env.d.ts
+ M src/app/frontend/page.tsx
+ M src/app/frontend/react/page.tsx
+ M src/app/globals.css
+ M src/app/page.tsx
+ M src/components/layout/app-header.tsx
+ M src/components/layout/app-shell.tsx
+ M src/components/layout/app-sidebar.tsx
+ M src/components/layout/mobile-navigation.tsx
+ M src/components/learning/article-layout.tsx
+ M src/components/learning/article-modes.tsx
+ M src/components/learning/article-panels.tsx
+ M src/components/learning/code-block.tsx
+ M src/components/learning/concept-visual.tsx
+ M src/components/learning/topic-card.tsx
+ M src/components/navigation/category-navigation.test.ts
+ M src/components/navigation/category-navigation.tsx
+ M src/components/navigation/navigation.module.css
+?? docs/ed-015/
+?? docs/ed-017/
+?? src/components/navigation/react-lesson-navigation.test.ts
+?? src/components/navigation/react-lesson-navigation.tsx
+?? src/components/visuals/
+?? src/lib/learning/react-navigation.test.ts
+?? src/lib/learning/react-navigation.ts
