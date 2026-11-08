@@ -1,0 +1,553 @@
+{
+  "engine": "firefox",
+  "expectedChecks": 136,
+  "checks": [
+    {
+      "name": "index lists five challenges and loads no editor or preview",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: independent first visit",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: opaque sandbox blocks parent DOM and storage, WebRTC removed",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: rapid navigation flush and index status",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: restored text never forwarded to preview",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: refresh restores latest source",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: ordered hints survive refresh",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: warning precedes reference",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: own reference preserves learner source and cannot complete",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: copy is explicit and does not apply",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: explicitly run edited React works in interactive preview",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: all seven reference tests earn own revision completion",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: history survives without claiming edited draft passes",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: Reset is one undoable change and keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: cancelled Clear keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: confirmed Clear removes intended data only",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: other challenge records remain byte-identical",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: cleared status returns to index",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: independent first visit",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: opaque sandbox blocks parent DOM and storage, WebRTC removed",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: rapid navigation flush and index status",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: restored text never forwarded to preview",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: refresh restores latest source",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: ordered hints survive refresh",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: warning precedes reference",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: own reference preserves learner source and cannot complete",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: copy is explicit and does not apply",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: explicitly run edited React works in interactive preview",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: all seven reference tests earn own revision completion",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: history survives without claiming edited draft passes",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: Reset is one undoable change and keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: cancelled Clear keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: confirmed Clear removes intended data only",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: other challenge records remain byte-identical",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: cleared status returns to index",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: independent first visit",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: opaque sandbox blocks parent DOM and storage, WebRTC removed",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: rapid navigation flush and index status",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: restored text never forwarded to preview",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: refresh restores latest source",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: ordered hints survive refresh",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: warning precedes reference",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: own reference preserves learner source and cannot complete",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: copy is explicit and does not apply",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: explicitly run edited React works in interactive preview",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: all seven reference tests earn own revision completion",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: history survives without claiming edited draft passes",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: Reset is one undoable change and keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: cancelled Clear keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: confirmed Clear removes intended data only",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: other challenge records remain byte-identical",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: cleared status returns to index",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: independent first visit",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: opaque sandbox blocks parent DOM and storage, WebRTC removed",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: rapid navigation flush and index status",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: restored text never forwarded to preview",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: refresh restores latest source",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: ordered hints survive refresh",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: warning precedes reference",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: own reference preserves learner source and cannot complete",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: copy is explicit and does not apply",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: explicitly run edited React works in interactive preview",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: all seven reference tests earn own revision completion",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: history survives without claiming edited draft passes",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: Reset is one undoable change and keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: cancelled Clear keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: confirmed Clear removes intended data only",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: other challenge records remain byte-identical",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: cleared status returns to index",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: independent first visit",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: opaque sandbox blocks parent DOM and storage, WebRTC removed",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: rapid navigation flush and index status",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: restored text never forwarded to preview",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: refresh restores latest source",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: ordered hints survive refresh",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: warning precedes reference",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: own reference preserves learner source and cannot complete",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: copy is explicit and does not apply",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: explicitly run edited React works in interactive preview",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: all seven reference tests earn own revision completion",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: history survives without claiming edited draft passes",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: Reset is one undoable change and keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: cancelled Clear keeps history",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: confirmed Clear removes intended data only",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: other challenge records remain byte-identical",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: cleared status returns to index",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 320/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 320/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 320/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 320/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 320/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 320/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 320/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 320/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 320/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 320/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 375/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 375/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 375/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 375/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 375/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 375/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 375/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 375/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 375/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 375/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 768/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 768/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 768/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 768/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 768/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 768/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 768/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 768/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 768/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 768/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 1024/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 1024/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 1024/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 1024/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 1024/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 1024/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 1024/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 1024/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 1024/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 1024/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 1440/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 1440/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 1440/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 1440/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 1440/dark: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter 1440/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input 1440/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering 1440/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering 1440/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup 1440/light: keyboard, focus, theme, no overflow, one editor",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "browser": "157.0",
+  "complete": true
+}

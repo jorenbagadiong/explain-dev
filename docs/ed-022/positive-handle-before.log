@@ -1,0 +1,31 @@
+yarn run v1.22.22
+$ vitest run src/lab-runtime/interval-probe.test.ts
+
+ RUN  v5.1.0 /home/joren/claude/explain-dev
+
+ ❯ src/lab-runtime/interval-probe.test.ts (6 tests | 1 failed) 11ms
+   ❯ sandbox interval lifecycle instrumentation (6)
+     × observes real registrations and exact cadence without sleeping 5ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/lab-runtime/interval-probe.test.ts > sandbox interval lifecycle instrumentation > observes real registrations and exact cadence without sleeping
+AssertionError: expected -1 to be greater than 0
+ ❯ src/lab-runtime/interval-probe.test.ts:12:16
+     10|     const { target, probe } = setup(), tick = vi.fn();
+     11|     const id = target.setInterval(tick, 1000, 'argument');
+     12|     expect(id).toBeGreaterThan(0);
+       |                ^
+     13|     expect(probe.snapshot()).toEqual({ active: 1, delays: [1000], fire…
+     14|     probe.advance(999); expect(tick).not.toHaveBeenCalled(); probe.adv…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  21:59:30
+   Duration  179ms (transform 53%, import 21%, tests 19%, worker 7%)
+
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

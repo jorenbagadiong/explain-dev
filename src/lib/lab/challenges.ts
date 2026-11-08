@@ -1,3 +1,7 @@
+import { effectCleanupChallenge } from "@/content/labs/react/effect-cleanup";
+import { conditionalRenderingChallenge } from "@/content/labs/react/conditional-rendering";
+import { listFilteringChallenge } from "@/content/labs/react/list-filtering";
+import { controlledInputChallenge } from "@/content/labs/react/controlled-input";
 import { useStateCounterChallenge } from "@/content/labs/react/use-state-counter";
 import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
 import { reactCurriculumGroups } from "@/lib/learning/react-curriculum";
@@ -8,7 +12,7 @@ import type { LabChallenge } from "./types";
 export { PRACTICE_HREF };
 
 // Registry of published challenges. Order is display order.
-export const labChallenges: readonly LabChallenge[] = [useStateCounterChallenge];
+export const labChallenges: readonly LabChallenge[] = [useStateCounterChallenge, controlledInputChallenge, listFilteringChallenge, conditionalRenderingChallenge, effectCleanupChallenge];
 
 export function getLabChallenge(id: string): LabChallenge | undefined {
   return labChallenges.find((challenge) => challenge.id === id);

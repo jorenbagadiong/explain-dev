@@ -1,6 +1,10 @@
 // Coding Lab challenge model. Static, serializable data only: no editor or runtime code.
 // Lesson titles and routes are never stored here; they are resolved from the curriculum registry.
 
+import type { ChallengeId } from "./grading";
+
+export interface ReferenceSolution { code: string; explanation: readonly { title: string; body: string }[] }
+
 export type LabDifficulty = "beginner" | "intermediate" | "advanced";
 
 export interface LabStarterFile {
@@ -12,13 +16,16 @@ export interface LabStarterFile {
 
 export interface LabChallenge {
   /** Stable identifier. Never reuse or rename once published. */
-  id: string;
+  id: ChallengeId;
   /** Route segment under the technology's practice path. */
   slug: string;
   technologyId: "react";
   /** ID of an existing, available lesson in `reactTopics`. */
   lessonId: string;
+  revision: string;
   gradingRevision: string;
+  concept: string;
+  objectives: readonly string[];
   starterRevision: string;
   title: string;
   description: string;

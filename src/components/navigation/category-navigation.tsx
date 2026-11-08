@@ -34,6 +34,7 @@ export function CategoryNavigation({ lessonNavigation, onNavigate }: {
       <Link
         data-practice-link=""
         href={PRACTICE_HREF}
+        prefetch={false}
         aria-current={practiceMatch === "exact" ? "page" : practiceMatch ? "location" : undefined}
         data-route-match={practiceMatch}
         onClick={onNavigate}

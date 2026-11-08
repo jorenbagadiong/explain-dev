@@ -2,16 +2,6 @@
 export const COUNTER_CHALLENGE_ID = "react-use-state-counter";
 // Bump when required behavior/interaction contract changes; persisted completion is scoped to this revision.
 export const COUNTER_GRADING_REVISION = "counter-behavior-v1";
-export type CounterChallengeId = typeof COUNTER_CHALLENGE_ID;
-export type TestStatus = "passed" | "failed" | "error" | "timeout";
-export interface TestResult { id: string; status: TestStatus; feedback: string; durationMs: number }
-export interface GradingResult {
-  challengeId: CounterChallengeId;
-  runId: number;
-  results: TestResult[];
-  completed: boolean;
-  durationMs: number;
-}
 export interface CounterTest {
   id: string;
   title: string;
@@ -27,6 +17,58 @@ export const COUNTER_TESTS = [
   { id: "combined-interactions", title: "Combined increments, decrements and resets stay correct", steps: [{ button: "Increment", expected: 1 }, { button: "Increment", expected: 2 }, { button: "Decrement", expected: 1 }, { button: "Reset", expected: 0 }, { button: "Decrement", expected: -1 }, { button: "Increment", expected: 0 }, { button: "Increment", expected: 1 }] },
 ] as const satisfies readonly CounterTest[];
 
+export const INPUT_TESTS = [
+  { id: "input-initial", title: "Name input initially has an empty value" },
+  { id: "greeting-initial", title: "An empty name shows Hello, stranger!" },
+  { id: "typing", title: "The text input accepts a name" },
+  { id: "greeting-update", title: "Typing updates the live greeting" },
+  { id: "clearing", title: "Clearing restores the default greeting" },
+  { id: "repeated-edits", title: "Repeated edits always update the greeting" },
+  { id: "empty-string", title: "Empty-string behavior remains correct after edits" },
+] as const;
+export const FILTER_ITEMS = ["Apple", "Apricot", "Banana", "Blueberry", "Cherry", "Grape", "Pineapple"] as const;
+export const FILTER_TESTS = [
+  { id: "all-items", title: "All seven fruits appear initially in dataset order" },
+  { id: "query", title: "Typing filters the visible results" },
+  { id: "case-insensitive", title: "Matching ignores letter case" },
+  { id: "partial", title: "Partial matches return every matching fruit" },
+  { id: "empty-results", title: "No matches shows No fruits found." },
+  { id: "clear-query", title: "Clearing restores every fruit" },
+  { id: "fresh-results", title: "Repeated queries never leave stale or hardcoded results" },
+] as const;
+export const CONDITIONAL_TESTS = [
+  { id: "initial-hidden", title: "The panel is absent initially" },
+  { id: "first-toggle", title: "First activation mounts the content" },
+  { id: "second-toggle", title: "Second activation removes the content" },
+  { id: "repeated-toggle", title: "Repeated activations keep toggling" },
+  { id: "dom-removal", title: "Hidden content is removed from the DOM" },
+  { id: "button-accessibility", title: "The toggle is an enabled native button with an accurate state" },
+  { id: "consistent-state", title: "Panel content and button state stay consistent" },
+] as const;
+export const CLEANUP_TESTS = [
+  { id: "effect-setup", title: "Mount registers one 1,000 ms interval and starts at zero" },
+  { id: "mounted-ticks", title: "Each mounted interval tick updates the display" },
+  { id: "unmount-cleanup", title: "Unmount cancels the interval" },
+  { id: "no-lingering", title: "No interval callback runs after unmount" },
+  { id: "remount", title: "Remount creates exactly one fresh interval" },
+  { id: "repeated-cycles", title: "Repeated mount/unmount cycles leave no subscriptions" },
+  { id: "interval-contract", title: "Tick cadence and state remain correct across longer intervals" },
+] as const;
+export const GRADING_CONTRACTS = {
+  [COUNTER_CHALLENGE_ID]: COUNTER_TESTS,
+  "react-controlled-input": INPUT_TESTS,
+  "react-list-filtering": FILTER_TESTS,
+  "react-conditional-rendering": CONDITIONAL_TESTS,
+  "react-effect-cleanup": CLEANUP_TESTS,
+} as const;
+export type ChallengeId = keyof typeof GRADING_CONTRACTS;
+export type CounterChallengeId = typeof COUNTER_CHALLENGE_ID;
+export const isChallengeId = (value: unknown): value is ChallengeId => typeof value === "string" && Object.hasOwn(GRADING_CONTRACTS, value);
+export const getGradingTests = (id: ChallengeId) => GRADING_CONTRACTS[id];
+export type TestStatus = "passed" | "failed" | "error" | "timeout";
+export interface TestResult { id: string; status: TestStatus; feedback: string; durationMs: number }
+export interface GradingResult { challengeId: ChallengeId; runId: number; results: TestResult[]; completed: boolean; durationMs: number }
+
 export const MAX_GRADING_FEEDBACK = 500;
 export const GRADING_TIMEOUT_MS = 12_000;
 export const TEST_TIMEOUT_MS = 1_500;
@@ -41,11 +83,12 @@ function duration(value: unknown): value is number { return typeof value === "nu
 /** Reject missing, duplicate, reordered, invented, oversized and contradictory results before displaying anything. */
 export function isGradingResult(value: unknown): value is GradingResult {
   if (!record(value) || !keys(value, ["challengeId", "runId", "results", "completed", "durationMs"])) return false;
-  if (value.challengeId !== COUNTER_CHALLENGE_ID || !Number.isSafeInteger(value.runId) || (value.runId as number) < 1 || !duration(value.durationMs)) return false;
+  if (!isChallengeId(value.challengeId) || !Number.isSafeInteger(value.runId) || (value.runId as number) < 1 || !duration(value.durationMs)) return false;
+  const definitions = getGradingTests(value.challengeId as ChallengeId);
   const results = value.results;
-  if (!Array.isArray(results) || results.length !== COUNTER_TESTS.length) return false;
+  if (!Array.isArray(results) || results.length !== definitions.length) return false;
   if (!results.every((row, i) => record(row) && keys(row, ["id", "status", "feedback", "durationMs"])
-    && row.id === COUNTER_TESTS[i].id && STATUSES.includes(row.status as TestStatus)
+    && row.id === definitions[i].id && STATUSES.includes(row.status as TestStatus)
     && typeof row.feedback === "string" && row.feedback.length > 0 && row.feedback.length <= MAX_GRADING_FEEDBACK && duration(row.durationMs))) return false;
   return typeof value.completed === "boolean" && value.completed === results.every((row) => row.status === "passed");
 }

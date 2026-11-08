@@ -1,0 +1,162 @@
+yarn run v1.22.22
+$ yarn build:lab-runtime && next build
+$ vite build --config vite.lab-runtime.config.mts
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 90 modules transformed.
+rendering chunks...
+computing gzip size...
+public/lab-runtime/runtime.js  783.18 kB │ gzip: 220.98 kB
+
+✓ built in 449ms
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 71ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.7s
+  Running TypeScript ...
+  Finished TypeScript in 2.8s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/131) ...
+  Generating static pages using 15 workers (32/131) 
+  Generating static pages using 15 workers (65/131) 
+  Generating static pages using 15 workers (98/131) 
+✓ Generating static pages using 15 workers (131/131) in 1593ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /frontend
+├ ○ /frontend/react
+├ ○ /frontend/react/accessibility-fundamentals
+├ ○ /frontend/react/accessible-forms
+├ ○ /frontend/react/activity-boundaries
+├ ○ /frontend/react/advanced-ref-patterns
+├ ○ /frontend/react/avoiding-unnecessary-renders
+├ ○ /frontend/react/avoiding-unnecessary-state
+├ ○ /frontend/react/building-reusable-components
+├ ○ /frontend/react/children-and-composition-patterns
+├ ○ /frontend/react/choosing-component-responsibilities
+├ ○ /frontend/react/choosing-escape-hatches
+├ ○ /frontend/react/client-components-and-boundaries
+├ ○ /frontend/react/common-react-anti-patterns
+├ ○ /frontend/react/component-composition
+├ ○ /frontend/react/component-lifecycle-concepts
+├ ○ /frontend/react/component-maintainability
+├ ○ /frontend/react/concurrent-rendering-concepts
+├ ○ /frontend/react/conditional-rendering
+├ ○ /frontend/react/context-and-data-flow
+├ ○ /frontend/react/context-provider-architecture
+├ ○ /frontend/react/controlled-and-uncontrolled-components
+├ ○ /frontend/react/controlled-inputs
+├ ○ /frontend/react/create-context
+├ ○ /frontend/react/create-portal-and-portals
+├ ○ /frontend/react/creating-custom-hooks
+├ ○ /frontend/react/debugging-react-applications
+├ ○ /frontend/react/deferred-rendering
+├ ○ /frontend/react/designing-component-apis
+├ ○ /frontend/react/designing-suspense-boundaries
+├ ○ /frontend/react/effect-best-practices
+├ ○ /frontend/react/error-boundaries-in-larger-applications
+├ ○ /frontend/react/error-handling-and-recovery
+├ ○ /frontend/react/form-submission
+├ ○ /frontend/react/form-validation-concepts
+├ ○ /frontend/react/handling-events
+├ ○ /frontend/react/handling-form-errors
+├ ○ /frontend/react/hydration
+├ ○ /frontend/react/imperative-component-interfaces
+├ ○ /frontend/react/integrating-external-stores
+├ ○ /frontend/react/introduction-to-react
+├ ○ /frontend/react/keeping-components-pure
+├ ○ /frontend/react/keyboard-accessibility
+├ ○ /frontend/react/keyboard-interactions
+├ ○ /frontend/react/keys-and-component-identity
+├ ○ /frontend/react/lazy-and-code-splitting
+├ ○ /frontend/react/lifting-state-up
+├ ○ /frontend/react/managing-complex-forms
+├ ○ /frontend/react/managing-focus
+├ ○ /frontend/react/measuring-before-optimizing
+├ ○ /frontend/react/memoization-strategies
+├ ○ /frontend/react/mocking-external-dependencies
+├ ○ /frontend/react/optimistic-form-interactions
+├ ○ /frontend/react/organizing-updates-with-reducers
+├ ○ /frontend/react/passing-data-with-props
+├ ○ /frontend/react/pending-and-submission-states
+├ ○ /frontend/react/performance-anti-patterns
+├ ○ /frontend/react/preserving-and-resetting-state
+├ ○ /frontend/react/prop-drilling-and-alternatives
+├ ○ /frontend/react/react-compiler
+├ ○ /frontend/react/react-devtools-profiler
+├ ○ /frontend/react/react-form-actions
+├ ○ /frontend/react/react-memo
+├ ○ /frontend/react/react-rendering-architecture
+├ ○ /frontend/react/react-server-components
+├ ○ /frontend/react/react-testing-library
+├ ○ /frontend/react/reconciliation-and-identity
+├ ○ /frontend/react/ref-props-and-forwarding
+├ ○ /frontend/react/rendering-and-committing
+├ ○ /frontend/react/rendering-elements-and-components
+├ ○ /frontend/react/rendering-lists
+├ ○ /frontend/react/rules-of-hooks
+├ ○ /frontend/react/semantic-html-in-react
+├ ○ /frontend/react/separating-ui-and-logic
+├ ○ /frontend/react/server-and-client-rendering
+├ ○ /frontend/react/server-functions-and-actions
+├ ○ /frontend/react/sharing-state-between-components
+├ ○ /frontend/react/state-as-a-snapshot
+├ ○ /frontend/react/state-structure-and-derived-values
+├ ○ /frontend/react/streaming-ui
+├ ○ /frontend/react/suspense
+├ ○ /frontend/react/testing-asynchronous-ui
+├ ○ /frontend/react/testing-custom-hooks
+├ ○ /frontend/react/testing-react-components
+├ ○ /frontend/react/testing-user-interactions
+├ ○ /frontend/react/the-react-use-api
+├ ○ /frontend/react/thinking-in-declarative-ui
+├ ○ /frontend/react/transitions-and-update-priority
+├ ○ /frontend/react/typescript-with-react
+├ ○ /frontend/react/uncontrolled-inputs
+├ ○ /frontend/react/understanding-component-state
+├ ○ /frontend/react/understanding-components
+├ ○ /frontend/react/understanding-error-boundaries
+├ ○ /frontend/react/understanding-react-re-renders
+├ ○ /frontend/react/understanding-rendering-performance
+├ ○ /frontend/react/update-queues-and-batching
+├ ○ /frontend/react/updating-arrays-immutably
+├ ○ /frontend/react/updating-objects-immutably
+├ ○ /frontend/react/use-action-state
+├ ○ /frontend/react/use-callback
+├ ○ /frontend/react/use-context
+├ ○ /frontend/react/use-debug-value
+├ ○ /frontend/react/use-deferred-value
+├ ○ /frontend/react/use-effect
+├ ○ /frontend/react/use-effect-event
+├ ○ /frontend/react/use-form-status
+├ ○ /frontend/react/use-id
+├ ○ /frontend/react/use-imperative-handle
+├ ○ /frontend/react/use-insertion-effect
+├ ○ /frontend/react/use-layout-effect
+├ ○ /frontend/react/use-memo
+├ ○ /frontend/react/use-optimistic
+├ ○ /frontend/react/use-reducer
+├ ○ /frontend/react/use-ref
+├ ○ /frontend/react/use-state
+├ ○ /frontend/react/use-sync-external-store
+├ ○ /frontend/react/use-transition
+├ ○ /frontend/react/version-dependent-react-features
+├ ○ /frontend/react/view-transition
+├ ○ /frontend/react/vitest-fundamentals
+├ ○ /frontend/react/writing-ui-with-jsx
+├ ○ /icon.svg
+├ ○ /practice
+├ ○ /practice/react/conditional-rendering
+├ ○ /practice/react/controlled-input
+├ ○ /practice/react/effect-cleanup
+├ ○ /practice/react/list-filtering
+└ ○ /practice/react/use-state-counter
+
+
+○  (Static)  prerendered as static content
+
+Done in 11.41s.

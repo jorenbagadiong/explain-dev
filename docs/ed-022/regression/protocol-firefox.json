@@ -1,0 +1,264 @@
+{
+  "checks": [
+    {
+      "name": "malformed interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "all 13 malformed/spoofed/foreign results rejected before display",
+      "passed": true
+    },
+    {
+      "name": "malformed valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "markup interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "markup valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "grading feedback escaped as text",
+      "passed": true
+    },
+    {
+      "name": "deadline interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "responsive malicious preview still has a bounded grading deadline",
+      "passed": true
+    },
+    {
+      "name": "deadline closes grading frame only",
+      "passed": true
+    },
+    {
+      "name": "v3 host fails closed after protocol change",
+      "passed": true
+    },
+    {
+      "name": "navigate interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter stale grading cannot appear after navigating to react-controlled-input",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter stale completion never persists on another challenge",
+      "passed": true
+    },
+    {
+      "name": "malformed interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "all 13 malformed/spoofed/foreign results rejected before display",
+      "passed": true
+    },
+    {
+      "name": "malformed valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "markup interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "markup valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "grading feedback escaped as text",
+      "passed": true
+    },
+    {
+      "name": "deadline interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "responsive malicious preview still has a bounded grading deadline",
+      "passed": true
+    },
+    {
+      "name": "deadline closes grading frame only",
+      "passed": true
+    },
+    {
+      "name": "v3 host fails closed after protocol change",
+      "passed": true
+    },
+    {
+      "name": "navigate interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input stale grading cannot appear after navigating to react-use-state-counter",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input stale completion never persists on another challenge",
+      "passed": true
+    },
+    {
+      "name": "malformed interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "all 13 malformed/spoofed/foreign results rejected before display",
+      "passed": true
+    },
+    {
+      "name": "malformed valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "markup interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "markup valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "grading feedback escaped as text",
+      "passed": true
+    },
+    {
+      "name": "deadline interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "responsive malicious preview still has a bounded grading deadline",
+      "passed": true
+    },
+    {
+      "name": "deadline closes grading frame only",
+      "passed": true
+    },
+    {
+      "name": "v3 host fails closed after protocol change",
+      "passed": true
+    },
+    {
+      "name": "navigate interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering stale grading cannot appear after navigating to react-use-state-counter",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering stale completion never persists on another challenge",
+      "passed": true
+    },
+    {
+      "name": "malformed interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "all 13 malformed/spoofed/foreign results rejected before display",
+      "passed": true
+    },
+    {
+      "name": "malformed valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "markup interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "markup valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "grading feedback escaped as text",
+      "passed": true
+    },
+    {
+      "name": "deadline interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "responsive malicious preview still has a bounded grading deadline",
+      "passed": true
+    },
+    {
+      "name": "deadline closes grading frame only",
+      "passed": true
+    },
+    {
+      "name": "v3 host fails closed after protocol change",
+      "passed": true
+    },
+    {
+      "name": "navigate interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering stale grading cannot appear after navigating to react-use-state-counter",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering stale completion never persists on another challenge",
+      "passed": true
+    },
+    {
+      "name": "malformed interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "all 13 malformed/spoofed/foreign results rejected before display",
+      "passed": true
+    },
+    {
+      "name": "malformed valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "markup interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "markup valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "grading feedback escaped as text",
+      "passed": true
+    },
+    {
+      "name": "deadline interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "responsive malicious preview still has a bounded grading deadline",
+      "passed": true
+    },
+    {
+      "name": "deadline closes grading frame only",
+      "passed": true
+    },
+    {
+      "name": "v3 host fails closed after protocol change",
+      "passed": true
+    },
+    {
+      "name": "navigate interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup stale grading cannot appear after navigating to react-use-state-counter",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup stale completion never persists on another challenge",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+ M src/app/practice/page.tsx
+ M src/components/lab/challenge-page.tsx
+ M src/components/lab/grading-results.tsx
+ M src/components/lab/lazy-boundary.test.ts
+ M src/components/lab/learning-progress.tsx
+ M src/components/lab/practice-workspace.tsx
+ M src/components/lab/preview-frame.tsx
+ M src/components/navigation/category-navigation.tsx
+ M src/content/labs/react/use-state-counter.ts
+ M src/lab-runtime/counter-grader.ts
+ M src/lab-runtime/main.ts
+ M src/lib/lab/challenges.ts
+ M src/lib/lab/grading.ts
+ M src/lib/lab/protocol.ts
+ M src/lib/lab/types.ts
+?? docs/ed-022/
+?? src/app/practice/react/conditional-rendering/
+?? src/app/practice/react/controlled-input/
+?? src/app/practice/react/effect-cleanup/
+?? src/app/practice/react/list-filtering/
+?? src/components/lab/challenge-progress-status.tsx
+?? src/components/lab/multi-challenge.test.ts
+?? src/content/labs/react/conditional-rendering-solution.ts
+?? src/content/labs/react/conditional-rendering.ts
+?? src/content/labs/react/controlled-input-solution.ts
+?? src/content/labs/react/controlled-input.ts
+?? src/content/labs/react/effect-cleanup-solution.ts
+?? src/content/labs/react/effect-cleanup.ts
+?? src/content/labs/react/list-filtering-solution.ts
+?? src/content/labs/react/list-filtering.ts
+?? src/lab-runtime/challenge-grader.ts
+?? src/lab-runtime/grading-dom.ts
+?? src/lab-runtime/interval-probe.test.ts
+?? src/lab-runtime/interval-probe.ts
+?? src/lib/lab/multi-challenge.test.ts
+?? src/lib/lab/progress-definition.ts
+?? src/lib/lab/reference-solutions.ts

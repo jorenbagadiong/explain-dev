@@ -6,11 +6,14 @@ import { PRACTICE_HREF } from "@/lib/lab/challenges";
 import { PracticeWorkspaceLoader } from "./practice-workspace-loader";
 import { PrototypeNotice } from "./prototype-notice";
 
+import { challengeProgressDefinition } from "@/lib/lab/progress-definition";
+
 const DIFFICULTY_LABEL = { beginner: "Beginner", intermediate: "Intermediate", advanced: "Advanced" } as const;
 
 // Static challenge content is server-rendered; only the workspace below is a lazily loaded Client Component.
 export function ChallengePage({ context }: { context: LabChallengeContext }) {
   const { challenge, lesson, technology, group } = context;
+  const progressDefinition = challengeProgressDefinition(challenge);
   const headingId = "challenge-heading";
 
   return (
@@ -35,6 +38,7 @@ export function ChallengePage({ context }: { context: LabChallengeContext }) {
           </dl>
         </header>
 
+        <section aria-label="Learning objectives" className="mt-8 text-sm leading-7 text-muted-foreground"><h2 className="font-medium text-foreground">What you’ll practice</h2><ul className="mt-2 list-disc pl-5">{challenge.objectives.map(objective => <li key={objective}>{objective}</li>)}</ul></section>
         <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
           <section aria-labelledby="instructions-heading" className="min-w-0 rounded-xl border p-5 sm:p-6">
             <h2 id="instructions-heading" className="text-xl font-semibold tracking-tight">Instructions</h2>
@@ -47,14 +51,14 @@ export function ChallengePage({ context }: { context: LabChallengeContext }) {
             <ul className="mt-4 space-y-3 leading-7 text-muted-foreground">
               {challenge.requirements.map((requirement) => <li key={requirement} className="flex gap-3"><span aria-hidden="true" className="mt-3 size-1.5 shrink-0 rounded-full bg-primary" />{requirement}</li>)}
             </ul>
-            <p className="mt-4 text-xs text-muted-foreground">Try these in the preview, then select Run Tests to check the counter behavior.</p>
+            <p className="mt-4 text-xs text-muted-foreground">Try these in the preview, then select Run Tests to check this challenge’s behavior.</p>
 
           </section>
         </div>
 
         <PrototypeNotice />
         <h2 className="sr-only">Workspace</h2>
-        <PracticeWorkspaceLoader gradingRevision={challenge.gradingRevision} starterRevision={challenge.starterRevision} hints={challenge.hints} challengeId={challenge.id} challengeTitle={challenge.title} starterFile={{ name: challenge.starterFiles[0].name, code: challenge.starterFiles[0].code }} />
+        <PracticeWorkspaceLoader gradingRevision={progressDefinition.gradingRevision} starterRevision={challenge.starterRevision} hints={challenge.hints} challengeId={challenge.id} challengeTitle={challenge.title} starterFile={{ name: challenge.starterFiles[0].name, code: challenge.starterFiles[0].code }} />
       </article>
     </div>
   );

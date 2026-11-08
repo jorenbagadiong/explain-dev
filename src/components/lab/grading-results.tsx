@@ -1,6 +1,6 @@
 import { CircleCheck, CircleX, Clock3, ListChecks, LoaderCircle, TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { COUNTER_TESTS, type GradingResult, type TestStatus } from "@/lib/lab/grading";
+import { COUNTER_CHALLENGE_ID, getGradingTests, type ChallengeId, type GradingResult, type TestStatus } from "@/lib/lab/grading";
 import styles from "./lab.module.css";
 
 export type GradingState =
@@ -10,9 +10,10 @@ export type GradingState =
   | { kind: "blocked"; message: string; timeout: boolean };
 const labels: Record<TestStatus, string> = { passed: "Passed", failed: "Failed", error: "Error", timeout: "Timed out" };
 const icons = { passed: CircleCheck, failed: CircleX, error: TriangleAlert, timeout: Clock3 };
-export function GradingResults({ state, onRetry }: { state: GradingState; onRetry: () => void }) {
+export function GradingResults({ state, onRetry, challengeId = COUNTER_CHALLENGE_ID }: { state: GradingState; onRetry: () => void; challengeId?: ChallengeId }) {
+  const tests = getGradingTests(challengeId);
   const passed = state.kind === "finished" ? state.result.results.filter((row) => row.status === "passed").length : 0;
-  const announcement = state.kind === "idle" ? "Run Tests for a fresh check of the current draft." : state.kind === "running" ? "Running seven counter tests…" : state.kind === "blocked" ? (state.timeout ? "Tests timed out. Check the feedback and retry." : "Tests could not finish. Check the feedback and retry.") : `${passed} of ${COUNTER_TESTS.length} tests passed.${state.result.completed ? " Challenge complete." : " Review the results and try again."}`;
+  const announcement = state.kind === "idle" ? "Run Tests for a fresh check of the current draft." : state.kind === "running" ? "Running seven behavioral tests…" : state.kind === "blocked" ? (state.timeout ? "Tests timed out. Check the feedback and retry." : "Tests could not finish. Check the feedback and retry.") : `${passed} of ${tests.length} tests passed.${state.result.completed ? " Challenge complete." : " Review the results and try again."}`;
   return (
     <section aria-label="Test results" className={styles.gradingResults} data-grading-status={state.kind}>
       <h3 className="flex items-center gap-2 font-semibold"><ListChecks aria-hidden="true" className="size-4 text-primary" />Test results</h3>
@@ -27,7 +28,7 @@ export function GradingResults({ state, onRetry }: { state: GradingState; onRetr
             return <li key={row.id} className={styles.gradingRow} data-test-id={row.id} data-test-status={row.status}>
               <Icon aria-hidden="true" className={`mt-0.5 size-4 shrink-0 ${row.status === "passed" ? "text-primary" : "text-destructive"}`} />
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-medium">{COUNTER_TESTS[index].title}</p>
+                <p className="text-sm font-medium">{tests[index].title}</p>
                 <p className="mt-1 text-xs font-medium">{labels[row.status]} · {Math.round(row.durationMs)} ms</p>
                 <p className="mt-1 text-sm leading-6 text-muted-foreground">{row.feedback}</p>
               </div>

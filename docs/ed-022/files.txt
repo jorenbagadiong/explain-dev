@@ -1,0 +1,42 @@
+Modified source files
+src/app/practice/page.tsx
+src/components/lab/challenge-page.tsx
+src/components/lab/grading-results.tsx
+src/components/lab/lazy-boundary.test.ts
+src/components/lab/learning-progress.tsx
+src/components/lab/practice-workspace.tsx
+src/components/lab/preview-frame.tsx
+src/components/navigation/category-navigation.tsx
+src/content/labs/react/use-state-counter.ts
+src/lab-runtime/counter-grader.ts
+src/lab-runtime/main.ts
+src/lib/lab/challenges.ts
+src/lib/lab/grading.ts
+src/lib/lab/protocol.ts
+src/lib/lab/types.ts
+
+Created source files
+src/app/practice/react/conditional-rendering/page.tsx
+src/app/practice/react/controlled-input/page.tsx
+src/app/practice/react/effect-cleanup/page.tsx
+src/app/practice/react/list-filtering/page.tsx
+src/components/lab/challenge-progress-status.tsx
+src/components/lab/multi-challenge.test.ts
+src/content/labs/react/conditional-rendering-solution.ts
+src/content/labs/react/conditional-rendering.ts
+src/content/labs/react/controlled-input-solution.ts
+src/content/labs/react/controlled-input.ts
+src/content/labs/react/effect-cleanup-solution.ts
+src/content/labs/react/effect-cleanup.ts
+src/content/labs/react/list-filtering-solution.ts
+src/content/labs/react/list-filtering.ts
+src/lab-runtime/challenge-grader.ts
+src/lab-runtime/grading-dom.ts
+src/lab-runtime/interval-probe.test.ts
+src/lab-runtime/interval-probe.ts
+src/lib/lab/multi-challenge.test.ts
+src/lib/lab/progress-definition.ts
+src/lib/lab/reference-solutions.ts
+
+Documentation and evidence
+docs/ed-022/ (all new; see evidence-files.txt)

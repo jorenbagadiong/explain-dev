@@ -1,0 +1,12 @@
+yarn run v1.22.22
+$ vitest run src/lab-runtime/interval-probe.test.ts
+
+ RUN  v5.1.0 /home/joren/claude/explain-dev
+
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  20:24:14
+   Duration  185ms (transform 66%, import 17%, tests 12%, worker 5%)
+
+Done in 0.59s.

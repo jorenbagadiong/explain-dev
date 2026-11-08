@@ -3,25 +3,8 @@ import { act, createElement, type ComponentType } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { COUNTER_CHALLENGE_ID, COUNTER_TESTS, MAX_GRADING_FEEDBACK, TEST_TIMEOUT_MS, type GradingResult, type TestResult } from "@/lib/lab/grading";
 
-class BehaviorFailure extends Error {}
+import { BehaviorFailure, normalize, readable, accessibleName as name, button } from "./grading-dom";
 class TestTimeout extends Error {}
-const normalize = (text: string) => text.replace(/\s+/g, " ").trim();
-function readable(element: Element) {
-  return element.getClientRects().length > 0 && !element.closest('[hidden], [aria-hidden="true"]') && getComputedStyle(element).visibility !== "hidden";
-}
-function name(element: Element): string {
-  const labelledBy = element.getAttribute("aria-labelledby");
-  if (labelledBy) return normalize(labelledBy.split(/\s+/).map((id) => document.getElementById(id)?.textContent ?? "").join(" "));
-  return normalize(element.getAttribute("aria-label") ?? (element instanceof HTMLInputElement ? element.value : element.textContent ?? ""));
-}
-function button(container: HTMLElement, label: string): HTMLElement {
-  const matches = [...container.querySelectorAll<HTMLElement>('button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]')]
-    .filter((el) => readable(el) && name(el).toLowerCase() === label.toLowerCase());
-  if (matches.length !== 1) throw new BehaviorFailure(`Provide one visible button with the accessible name ${label}. Found ${matches.length}.`);
-  const result = matches[0];
-  if (result.matches(":disabled") || result.getAttribute("aria-disabled") === "true") throw new BehaviorFailure(`${label} is disabled. Enable it so the counter can be tested.`);
-  return result;
-}
 function count(container: HTMLElement): number {
   const parse = (el: Element) => {
     const text = normalize(el.textContent ?? "");

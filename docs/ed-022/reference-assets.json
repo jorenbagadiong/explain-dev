@@ -1,0 +1,32 @@
+{
+  "counter": {
+    "path": "/_next/static/chunks/1ab1tj4hqbkoe.js",
+    "raw": 1696,
+    "gzip": 810,
+    "presentOnInitialMeasuredRoutes": false
+  },
+  "controlled-input": {
+    "path": "/_next/static/chunks/3yffecjtxrree.js",
+    "raw": 867,
+    "gzip": 546,
+    "presentOnInitialMeasuredRoutes": false
+  },
+  "list-filtering": {
+    "path": "/_next/static/chunks/2qd3igspi53j7.js",
+    "raw": 1224,
+    "gzip": 728,
+    "presentOnInitialMeasuredRoutes": false
+  },
+  "conditional-rendering": {
+    "path": "/_next/static/chunks/3cmee46iqmbhm.js",
+    "raw": 1030,
+    "gzip": 606,
+    "presentOnInitialMeasuredRoutes": false
+  },
+  "effect-cleanup": {
+    "path": "/_next/static/chunks/1wvhsup0694n4.js",
+    "raw": 1110,
+    "gzip": 637,
+    "presentOnInitialMeasuredRoutes": false
+  }
+}

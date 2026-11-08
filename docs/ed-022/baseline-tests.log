@@ -1,0 +1,12 @@
+yarn run v1.22.22
+$ vitest run
+
+ RUN  v5.1.0 /home/joren/claude/explain-dev
+
+
+ Test Files  40 passed (40)
+      Tests  2119 passed (2119)
+   Start at  20:15:32
+   Duration  6.85s (tests 54%, import 36%, transform 9%, worker 1%)
+
+Done in 7.32s.

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, ChevronRight } from "lucide-react";
 
+import { ChallengeProgressStatus } from "@/components/lab/challenge-progress-status";
+import { challengeProgressDefinition } from "@/lib/lab/progress-definition";
 import { PrototypeNotice } from "@/components/lab/prototype-notice";
 import { getLabChallengeContext, labChallenges, type LabChallengeContext } from "@/lib/lab/challenges";
 
@@ -33,12 +35,13 @@ export default function PracticePage() {
       <section aria-labelledby="react-challenges-heading" className="mt-10">
         <h2 id="react-challenges-heading" className="text-2xl font-semibold tracking-tight">React challenges</h2>
         <ul className="mt-5 grid gap-4">
-          {challenges.map(({ challenge, href, lesson, group }) => (
+          {challenges.map(({ challenge, href, lesson }) => (
             <li key={challenge.id} className="rounded-xl border bg-background p-6" data-lab-challenge={challenge.id}>
-              <p className="text-xs font-medium text-muted-foreground">{group.title} · {DIFFICULTY_LABEL[challenge.difficulty]}</p>
+              <p className="text-xs font-medium text-muted-foreground">{challenge.concept} · {DIFFICULTY_LABEL[challenge.difficulty]}</p>
               <h3 className="mt-2 text-lg font-semibold tracking-tight">
                 <Link href={href} className="inline-flex min-h-11 items-center gap-2 underline-offset-4 hover:underline">{challenge.title}<ArrowUpRight aria-hidden="true" className="size-4 text-primary" /></Link>
               </h3>
+              <ChallengeProgressStatus definition={{ ...challengeProgressDefinition(challenge), starterCode: "" }} />
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{challenge.description}</p>
               <p className="mt-3 text-sm">
                 <Link href={lesson.href} className="inline-flex min-h-11 items-center gap-1.5 text-primary underline-offset-4 hover:underline"><BookOpen aria-hidden="true" className="size-4" />Lesson: {lesson.title}</Link>

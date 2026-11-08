@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-import { GRADING_TIMEOUT_MS, type CounterChallengeId, type GradingResult } from "@/lib/lab/grading";
+import { GRADING_TIMEOUT_MS, type ChallengeId, type GradingResult } from "@/lib/lab/grading";
 import { LAB_PREVIEW_TARGET } from "@/lib/lab/preview-target";
 import {
   isHelloMessage,
@@ -50,7 +50,7 @@ interface PreviewFrameProps {
   file: LabFile;
   theme: LabTheme;
   title: string;
-  gradingChallengeId?: CounterChallengeId;
+  gradingChallengeId?: ChallengeId;
   ownsPolicyViolations?: () => boolean;
   onInteractiveFocus?: () => void;
   onEvent: (event: PreviewFrameEvent) => void;

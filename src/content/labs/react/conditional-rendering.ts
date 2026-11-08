@@ -1,0 +1,10 @@
+import { CONDITIONAL_TESTS } from "@/lib/lab/grading";
+import type { LabChallenge } from "@/lib/lab/types";
+export const conditionalRenderingChallenge = {
+  id: "react-conditional-rendering", slug: "conditional-rendering", technologyId: "react", lessonId: "conditional-rendering",
+  revision: "v1", gradingRevision: "conditional-rendering-behavior-v1", starterRevision: "conditional-rendering-starter-v1",
+  title: "Conditional Rendering", description: "Mount and remove a details panel with an accessible toggle.", concept: "Conditional mounting", difficulty: "beginner",
+  objectives: ["Toggle boolean state", "Conditionally mount and unmount elements", "Reflect state with accessible controls"], instructions: ["Provide an enabled native button named Toggle details using aria-label. Its aria-expanded must reflect visibility and aria-controls must name the panel id.", "The details panel starts absent. A click mounts it; another click removes it from the DOM. Its text must be Extra details are visible.", "Keep the same aria-controls target across toggles. Change the visible button text to Show details or Hide details to describe the action.", "Use conditional mounting. CSS display, visibility, hidden attributes, or aria-hidden do not satisfy DOM removal."], hints: ["Remember whether the details should be shown with a boolean state value.", "Toggle that value from the button handler and use it in a conditional JSX expression.", "Keep aria-expanded tied to the same value and render the target element only when it is true."],
+  requirements: CONDITIONAL_TESTS.map(test => test.title),
+  starterFiles: [{name: "App.tsx", language: "tsx", code: "import { useState } from \"react\";\nexport default function App() {\n  // TODO: toggle state, button text, aria-expanded, and conditional panel mounting.\n  return <main><button type=\"button\" aria-label=\"Toggle details\" aria-controls=\"details\" aria-expanded=\"false\" onClick={() => {}}>Show details</button></main>;\n}"}],
+} as const satisfies LabChallenge;

@@ -1,4 +1,4 @@
-import { COUNTER_CHALLENGE_ID, isGradingResult, type CounterChallengeId, type GradingResult } from "./grading";
+import { isChallengeId, isGradingResult, type ChallengeId, type GradingResult } from "./grading";
 
 // Message protocol between the Coding Lab (parent, trusted) and the preview runtime (sandboxed, untrusted).
 //
@@ -9,8 +9,8 @@ import { COUNTER_CHALLENGE_ID, isGradingResult, type CounterChallengeId, type Gr
 // Everything received from the preview is untrusted: it is schema-checked, size-capped and only ever shown as text.
 
 export const LAB_CHANNEL = "explain-dev-lab";
-// Version 3 (ED-020): optional grading init and validated results. Deploy app and preview host together.
-export const LAB_PROTOCOL_VERSION = 3;
+// Version 4 (ED-022): a closed five-challenge grading allowlist. Deploy app and preview host together.
+export const LAB_PROTOCOL_VERSION = 4;
 export const LAB_PREVIEW_PATH = "/lab-runtime/preview.html";
 /** The only sandbox token the preview frame receives. Never add allow-same-origin. */
 export const LAB_PREVIEW_SANDBOX = "allow-scripts";
@@ -41,7 +41,7 @@ export interface InitMessage {
   runId: number;
   theme: LabTheme;
   file: LabFile;
-  gradingChallengeId?: CounterChallengeId;
+  gradingChallengeId?: ChallengeId;
 }
 
 export type CompileErrorKind = "syntax" | "unsupported-import" | "unsupported-syntax" | "missing-export" | "too-large";
@@ -121,7 +121,7 @@ export function isIncompatibleHello(value: unknown): boolean {
 
 export function isInitMessage(value: unknown): value is InitMessage {
   if (!isRecord(value) || !hasExactKeys(value, ["channel", "version", "type", "session", "runId", "theme", "file"], ["gradingChallengeId"])) return false;
-  if (value.type !== "init" || !isEnvelope(value) || !isTheme(value.theme) || (value.gradingChallengeId !== undefined && value.gradingChallengeId !== COUNTER_CHALLENGE_ID)) return false;
+  if (value.type !== "init" || !isEnvelope(value) || !isTheme(value.theme) || (value.gradingChallengeId !== undefined && !isChallengeId(value.gradingChallengeId))) return false;
   const file = value.file;
   return isRecord(file) && hasExactKeys(file, ["name", "code"]) && isText(file.name, MAX_FILE_NAME) && /^[\w-]+\.tsx$/.test(file.name) && isText(file.code, MAX_SOURCE_LENGTH, true);
 }

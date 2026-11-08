@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { CircleCheck, FileCode2, LoaderCircle, ListChecks, Play, RotateCcw, TriangleAlert } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { COUNTER_CHALLENGE_ID, COUNTER_TESTS } from "@/lib/lab/grading";
+import { getGradingTests, type ChallengeId } from "@/lib/lab/grading";
 import { LearningProgress } from "./learning-progress";
 import { useChallengeProgress } from "./use-challenge-progress";
 import type { ChallengeProgressSession, ProgressSnapshot } from "@/lib/storage/challenge-progress";
@@ -117,7 +117,7 @@ function DiagnosticView({ diagnostic, source }: { diagnostic: LabDiagnostic; sou
 }
 
 export interface PracticeWorkspaceProps {
-  challengeId: string;
+  challengeId: ChallengeId;
   gradingRevision: string;
   starterRevision: string;
   hints: readonly string[];
@@ -127,7 +127,7 @@ export interface PracticeWorkspaceProps {
 }
 
 export function PracticeWorkspace(props: PracticeWorkspaceProps) {
-  const { session, snapshot } = useChallengeProgress({ challengeId: props.challengeId, gradingRevision: props.gradingRevision, starterRevision: props.starterRevision, starterCode: props.starterFile.code, totalTests: COUNTER_TESTS.length, hintCount: props.hints.length });
+  const { session, snapshot } = useChallengeProgress({ challengeId: props.challengeId, gradingRevision: props.gradingRevision, starterRevision: props.starterRevision, starterCode: props.starterFile.code, totalTests: getGradingTests(props.challengeId).length, hintCount: props.hints.length });
   if (!snapshot.ready) return <p role="status" className="mt-8 text-sm text-muted-foreground">Loading local draft…</p>;
   return <WorkspaceEditor {...props} session={session} snapshot={snapshot} />;
 }
@@ -168,14 +168,13 @@ function WorkspaceEditor({ challengeId, challengeTitle, starterFile, hints, onMe
     session.edit(next);
   }, [invalidateGrading, session]);
   const runTests = useCallback(() => {
-    if (challengeId !== COUNTER_CHALLENGE_ID) return;
     session.attempt();
     const id = ++gradingSequence.current;
     activeGrading.current = id;
     policyOwner.current = id;
     setGrading({ kind: "running" });
     setGradingJob({ id, file: { name: starterFile.name, code } });
-  }, [challengeId, code, starterFile.name, session]);
+  }, [code, starterFile.name, session]);
   const onGradingEvent = useCallback((event: PreviewFrameEvent, id: number, source: string) => {
     if (activeGrading.current !== id || event.type === "connected" || event.type === "rendered") return;
     activeGrading.current = null;
@@ -282,9 +281,9 @@ function WorkspaceEditor({ challengeId, challengeTitle, starterFile, hints, onMe
             <RotateCcw aria-hidden="true" />
             Reset
           </Button>
-          {challengeId === COUNTER_CHALLENGE_ID ? <Button type="button" variant="outline" onClick={runTests} data-lab-tests="">
+          <Button type="button" variant="outline" onClick={runTests} data-lab-tests="">
             <ListChecks aria-hidden="true" />Run Tests
-          </Button> : null}
+          </Button>
           <span id={`${baseId}-run-shortcut`} className="hidden text-xs text-muted-foreground sm:inline">Ctrl+Enter / ⌘+Enter in the editor</span>
         </div>
         <span className="text-xs text-muted-foreground" data-save-indicator="">{snapshot.saveState === "saving" ? "Saving draft…" : snapshot.saveState === "saved" ? "Draft saved locally" : snapshot.saveState === "error" ? "Draft not saved — see Your progress" : "Local draft saving ready"}</span>
@@ -380,11 +379,11 @@ function WorkspaceEditor({ challengeId, challengeTitle, starterFile, hints, onMe
           ) : null}
         </div>
       </div>
-      {challengeId === COUNTER_CHALLENGE_ID ? <GradingResults state={grading} onRetry={runTests} /> : null}
+      <GradingResults state={grading} onRetry={runTests} challengeId={challengeId} />
       <LearningProgress key={snapshot.generation} session={session} snapshot={snapshot} hints={hints} onReset={reset} onClear={clearProgress} onLoad={loadSaved} />
-      {gradingJob && challengeId === COUNTER_CHALLENGE_ID ? <div className={styles.gradingFrame} aria-hidden="true" inert>
+      {gradingJob ? <div className={styles.gradingFrame} aria-hidden="true" inert>
         <PreviewFrame key={gradingJob.id} runId={gradingJob.id} file={gradingJob.file} theme={theme}
-          gradingChallengeId={COUNTER_CHALLENGE_ID} ownsPolicyViolations={() => policyOwner.current === gradingJob.id && activeGrading.current === gradingJob.id} title="Disposable counter test preview"
+          gradingChallengeId={challengeId} ownsPolicyViolations={() => policyOwner.current === gradingJob.id && activeGrading.current === gradingJob.id} title="Disposable challenge test preview"
           onEvent={(event) => onGradingEvent(event, gradingJob.id, gradingJob.file.code)} />
       </div> : null}
     </section>

@@ -5,7 +5,9 @@ import { Copy, Lightbulb, RotateCcw, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { challengeStatus, MAX_DRAFT_LENGTH } from "@/lib/lab/progress";
 import type { ChallengeProgressSession, ProgressSnapshot, SaveError } from "@/lib/storage/challenge-progress";
-import type { counterSolution } from "@/content/labs/react/use-state-counter-solution";
+import type { ReferenceSolution } from "@/lib/lab/types";
+import { isChallengeId } from "@/lib/lab/grading";
+import { loadReferenceSolution } from "@/lib/lab/reference-solutions";
 import styles from "./lab.module.css";
 
 const errors: Record<SaveError, string> = {
@@ -30,15 +32,16 @@ export function LearningProgress({ session, snapshot, hints, onReset, onClear, o
   const id = useId();
   const { data } = snapshot;
   const [confirmSolution, setConfirmSolution] = useState(false);
-  const [solution, setSolution] = useState<typeof counterSolution | null>(null);
+  const [solution, setSolution] = useState<ReferenceSolution | null>(null);
   const [solutionState, setSolutionState] = useState("");
   const [copyState, setCopyState] = useState("");
   const reveal = async () => {
     setSolutionState("Loading reference solution…");
     try {
-      const reference = await import("@/content/labs/react/use-state-counter-solution");
+      if (!isChallengeId(session.definition.challengeId)) throw new Error("Unknown challenge.");
+      const reference = await loadReferenceSolution(session.definition.challengeId);
       if (!session.solution(snapshot.generation)) return;
-      setSolution(reference.counterSolution); setConfirmSolution(false); setSolutionState("Reference solution revealed. Your editor is unchanged.");
+      setSolution(reference); setConfirmSolution(false); setSolutionState("Reference solution revealed. Your editor is unchanged.");
     } catch { setSolutionState("The reference could not load. Try revealing it again."); }
   };
   const copy = async () => {
@@ -89,12 +92,12 @@ export function LearningProgress({ session, snapshot, hints, onReset, onClear, o
           <Button type="button" variant="outline" className="mt-3" onClick={() => setConfirmSolution(true)}>View reference solution</Button>
         </> : null}
         {confirmSolution ? <div className="mt-3 rounded-lg border p-3 text-sm leading-6">
-          <p>This reveals the complete counter implementation. Your editor will stay unchanged. Continue?</p>
+          <p>This reveals the complete challenge implementation. Your editor will stay unchanged. Continue?</p>
           <div className="mt-2 flex flex-wrap gap-2"><Button type="button" onClick={() => { void reveal(); }}>Reveal reference solution</Button><Button type="button" variant="outline" onClick={() => setConfirmSolution(false)}>Keep practicing</Button></div>
         </div> : null}
         <p role="status" className="mt-2 text-xs text-muted-foreground">{solutionState}</p>
         {solution ? <>
-          <pre className={styles.referenceCode} tabIndex={0} aria-label="Counter reference solution"><code>{solution.code}</code></pre>
+          <pre className={styles.referenceCode} tabIndex={0} aria-label="Challenge reference solution"><code>{solution.code}</code></pre>
           <Button type="button" variant="outline" className="mt-3" onClick={() => { void copy(); }}><Copy aria-hidden="true" />Copy solution</Button>
           <p role="status" className="mt-2 text-xs text-muted-foreground">{copyState}</p>
           <dl className="mt-4 space-y-3">{solution.explanation.map((item) => <div key={item.title}><dt className="text-sm font-medium">{item.title}</dt><dd className="mt-1 text-sm leading-7 text-muted-foreground">{item.body}</dd></div>)}</dl>

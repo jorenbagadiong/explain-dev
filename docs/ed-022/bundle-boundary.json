@@ -1,0 +1,10 @@
+{
+  "articleMarkersFound": {
+    "effect-setup": false,
+    "initial-zero": false,
+    "unmount-cleanup": false,
+    "cm-content": false,
+    "sucrase": false
+  },
+  "practicePrefetchDisabled": true
+}

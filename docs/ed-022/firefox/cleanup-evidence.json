@@ -1,0 +1,312 @@
+[
+  {
+    "id": "react-effect-cleanup",
+    "name": "reference",
+    "expected": "pass",
+    "result": {
+      "channel": "explain-dev-lab",
+      "version": 4,
+      "session": "55990961-573c-454f-ac39-336dd49cfe1e",
+      "runId": 17,
+      "type": "grading-result",
+      "result": {
+        "challengeId": "react-effect-cleanup",
+        "runId": 17,
+        "results": [
+          {
+            "id": "effect-setup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "mounted-ticks",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 7
+          },
+          {
+            "id": "unmount-cleanup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 5
+          },
+          {
+            "id": "no-lingering",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 7
+          },
+          {
+            "id": "remount",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 15
+          },
+          {
+            "id": "repeated-cycles",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 29
+          },
+          {
+            "id": "interval-contract",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 13
+          }
+        ],
+        "completed": true,
+        "durationMs": 82
+      }
+    }
+  },
+  {
+    "id": "react-effect-cleanup",
+    "name": "missing cleanup",
+    "expected": "nonpass",
+    "result": {
+      "channel": "explain-dev-lab",
+      "version": 4,
+      "session": "b2036c8b-f510-44ca-929b-f5494540aeef",
+      "runId": 17,
+      "type": "grading-result",
+      "result": {
+        "challengeId": "react-effect-cleanup",
+        "runId": 17,
+        "results": [
+          {
+            "id": "effect-setup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "mounted-ticks",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "unmount-cleanup",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 3
+          },
+          {
+            "id": "no-lingering",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 5
+          },
+          {
+            "id": "remount",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 4
+          },
+          {
+            "id": "repeated-cycles",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 4
+          },
+          {
+            "id": "interval-contract",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 5
+          }
+        ],
+        "completed": false,
+        "durationMs": 33
+      }
+    }
+  },
+  {
+    "id": "react-effect-cleanup",
+    "name": "no updates after unmount but leaked timer",
+    "expected": "nonpass",
+    "result": {
+      "channel": "explain-dev-lab",
+      "version": 4,
+      "session": "5968e7b5-6f51-4ca5-9e9f-3137972d5bf5",
+      "runId": 17,
+      "type": "grading-result",
+      "result": {
+        "challengeId": "react-effect-cleanup",
+        "runId": 17,
+        "results": [
+          {
+            "id": "effect-setup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 5
+          },
+          {
+            "id": "mounted-ticks",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "unmount-cleanup",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 4
+          },
+          {
+            "id": "no-lingering",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 4
+          },
+          {
+            "id": "remount",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 5
+          },
+          {
+            "id": "repeated-cycles",
+            "status": "failed",
+            "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+            "durationMs": 4
+          },
+          {
+            "id": "interval-contract",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 4
+          }
+        ],
+        "completed": false,
+        "durationMs": 32
+      }
+    }
+  },
+  {
+    "id": "react-effect-cleanup",
+    "name": "class lifecycle alternative",
+    "expected": "pass",
+    "result": {
+      "channel": "explain-dev-lab",
+      "version": 4,
+      "session": "98740aec-ed96-4abc-a420-a23298b83350",
+      "runId": 17,
+      "type": "grading-result",
+      "result": {
+        "challengeId": "react-effect-cleanup",
+        "runId": 17,
+        "results": [
+          {
+            "id": "effect-setup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "mounted-ticks",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "unmount-cleanup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 5
+          },
+          {
+            "id": "no-lingering",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 5
+          },
+          {
+            "id": "remount",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 13
+          },
+          {
+            "id": "repeated-cycles",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 20
+          },
+          {
+            "id": "interval-contract",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 7
+          }
+        ],
+        "completed": true,
+        "durationMs": 62
+      }
+    }
+  },
+  {
+    "id": "react-effect-cleanup",
+    "name": "positive browser handle alternative",
+    "expected": "pass",
+    "result": {
+      "channel": "explain-dev-lab",
+      "version": 4,
+      "session": "6f971b98-57a2-4153-a4a6-2d24f3ee004f",
+      "runId": 17,
+      "type": "grading-result",
+      "result": {
+        "challengeId": "react-effect-cleanup",
+        "runId": 17,
+        "results": [
+          {
+            "id": "effect-setup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 9
+          },
+          {
+            "id": "mounted-ticks",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 7
+          },
+          {
+            "id": "unmount-cleanup",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 6
+          },
+          {
+            "id": "no-lingering",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 7
+          },
+          {
+            "id": "remount",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 8
+          },
+          {
+            "id": "repeated-cycles",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 15
+          },
+          {
+            "id": "interval-contract",
+            "status": "passed",
+            "feedback": "All required observations matched.",
+            "durationMs": 8
+          }
+        ],
+        "completed": true,
+        "durationMs": 60
+      }
+    }
+  }
+]

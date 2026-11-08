@@ -1,0 +1,3535 @@
+{
+  "engine": "firefox",
+  "phase": "final",
+  "checks": [
+    {
+      "name": "react-use-state-counter: reference",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: reducer alternative",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: syntax",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: render error",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: loop timeout",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: suspended timeout",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: reference",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: reducer alternative",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: syntax",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: render error",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: loop timeout",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: suspended timeout",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: reference",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: reducer alternative",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: syntax",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: render error",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: loop timeout",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: suspended timeout",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: reference",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: reducer alternative",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: syntax",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: render error",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: loop timeout",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: suspended timeout",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: reference",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: reducer alternative",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: syntax",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: render error",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: loop timeout",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: suspended timeout",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: constant hardcoded count",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: hardcoded greeting",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: stale greeting",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: wrong empty fallback",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: class alternative",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: hardcoded unfiltered list",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: case sensitive",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: exact rather than partial",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: missing empty state",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: stale query",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: CSS only hiding",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: hardcoded initial output",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: inaccurate accessibility",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: class alternative",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: missing cleanup",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: no updates after unmount but leaked timer",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: duplicate intervals",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: wrong cadence",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: stale closure",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: hardcoded ticks",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: shared clearTimeout cancellation",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: class lifecycle alternative",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: event or timer error",
+      "passed": true
+    },
+    {
+      "name": "react-controlled-input: event or timer error",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: event or timer error",
+      "passed": true
+    },
+    {
+      "name": "react-conditional-rendering: event or timer error",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: event or timer error",
+      "passed": true
+    },
+    {
+      "name": "react-use-state-counter: class counter alternative",
+      "passed": true
+    },
+    {
+      "name": "react-list-filtering: class filter alternative",
+      "passed": true
+    },
+    {
+      "name": "react-effect-cleanup: positive browser handle alternative",
+      "passed": true
+    }
+  ],
+  "results": [
+    {
+      "id": "react-use-state-counter",
+      "name": "reference",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "1f818c8b-52c9-45dc-9f37-290bfe31f9d7",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "passed",
+              "feedback": "The counter started at zero.",
+              "durationMs": 8
+            },
+            {
+              "id": "increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 9
+            },
+            {
+              "id": "repeated-increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 10
+            },
+            {
+              "id": "decrement",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 8
+            },
+            {
+              "id": "reset",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 10
+            },
+            {
+              "id": "negative-values",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 6
+            },
+            {
+              "id": "combined-interactions",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 12
+            }
+          ],
+          "completed": true,
+          "durationMs": 63
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "reducer alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "e07bd98f-c0bf-4ec4-9db0-29e8c618142e",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "passed",
+              "feedback": "The counter started at zero.",
+              "durationMs": 9
+            },
+            {
+              "id": "increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 9
+            },
+            {
+              "id": "repeated-increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 12
+            },
+            {
+              "id": "decrement",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 13
+            },
+            {
+              "id": "reset",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 11
+            },
+            {
+              "id": "negative-values",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 9
+            },
+            {
+              "id": "combined-interactions",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 18
+            }
+          ],
+          "completed": true,
+          "durationMs": 81
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "syntax",
+      "expected": "compile-error",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "7fe8831e-d756-4c50-911a-4204576af84f",
+        "runId": 17,
+        "type": "compile-error",
+        "kind": "syntax",
+        "diagnostic": {
+          "name": "SyntaxError",
+          "message": "Unexpected token",
+          "line": 1,
+          "column": 44
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "render error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "bf68a1a2-c990-4873-892e-c23662be362a",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "increment",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "repeated-increment",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "decrement",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "reset",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 2
+            },
+            {
+              "id": "negative-values",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "combined-interactions",
+              "status": "error",
+              "feedback": "Runtime error: ED022 render",
+              "durationMs": 2
+            }
+          ],
+          "completed": false,
+          "durationMs": 21
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "loop timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "e9573686-1f27-413b-9bb4-596b5e653215",
+        "runId": 17,
+        "type": "runtime-error",
+        "kind": "loop-guard",
+        "diagnostic": {
+          "name": "ExecutionLimitError",
+          "message": "Stopped after 1 second without a pause. This usually means an infinite loop or endless recursion.",
+          "line": 1
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "suspended timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "14f27c30-a8af-4bf0-848f-c42501345dfb",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "timeout",
+              "feedback": "The test did not finish. Check for unresolved async work or a component that never settles.",
+              "durationMs": 1501
+            },
+            {
+              "id": "increment",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not finish. Fix the nonresponsive code, then retry.",
+              "durationMs": 0
+            },
+            {
+              "id": "repeated-increment",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not finish. Fix the nonresponsive code, then retry.",
+              "durationMs": 0
+            },
+            {
+              "id": "decrement",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not finish. Fix the nonresponsive code, then retry.",
+              "durationMs": 0
+            },
+            {
+              "id": "reset",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not finish. Fix the nonresponsive code, then retry.",
+              "durationMs": 0
+            },
+            {
+              "id": "negative-values",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not finish. Fix the nonresponsive code, then retry.",
+              "durationMs": 0
+            },
+            {
+              "id": "combined-interactions",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not finish. Fix the nonresponsive code, then retry.",
+              "durationMs": 0
+            }
+          ],
+          "completed": false,
+          "durationMs": 1501
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "reference",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "f3e5c391-0306-4744-afe3-136391823835",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "greeting-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "typing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "greeting-update",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "clearing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "repeated-edits",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "empty-string",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            }
+          ],
+          "completed": true,
+          "durationMs": 68
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "reducer alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "722ebb18-2f33-4a36-867a-dcc9df3b7db7",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 16
+            },
+            {
+              "id": "greeting-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 18
+            },
+            {
+              "id": "typing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "greeting-update",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "clearing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "repeated-edits",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 16
+            },
+            {
+              "id": "empty-string",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            }
+          ],
+          "completed": true,
+          "durationMs": 105
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "syntax",
+      "expected": "compile-error",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "9ce27988-2270-471f-9a75-2c96e52bc651",
+        "runId": 17,
+        "type": "compile-error",
+        "kind": "syntax",
+        "diagnostic": {
+          "name": "SyntaxError",
+          "message": "Unexpected token",
+          "line": 1,
+          "column": 44
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "render error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "8925f049-2f2f-489e-bc37-4f5f0598c1ef",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 8
+            },
+            {
+              "id": "greeting-initial",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 5
+            },
+            {
+              "id": "typing",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "greeting-update",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "clearing",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "repeated-edits",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "empty-string",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            }
+          ],
+          "completed": false,
+          "durationMs": 31
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "loop timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "faf5aa8c-00c7-4a26-99d7-607372b354ef",
+        "runId": 17,
+        "type": "runtime-error",
+        "kind": "loop-guard",
+        "diagnostic": {
+          "name": "ExecutionLimitError",
+          "message": "Stopped after 1 second without a pause. This usually means an infinite loop or endless recursion.",
+          "line": 1
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "suspended timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "38136eaf-0722-4754-9b4f-5a6f4a02a80a",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "timeout",
+              "feedback": "The test did not finish. Check for unresolved work.",
+              "durationMs": 1502
+            },
+            {
+              "id": "greeting-initial",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "typing",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "greeting-update",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "clearing",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "repeated-edits",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "empty-string",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            }
+          ],
+          "completed": false,
+          "durationMs": 1502
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "reference",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "af599578-9c71-4a4a-920c-b3c8453653e1",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "case-insensitive",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "partial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 19
+            },
+            {
+              "id": "empty-results",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "clear-query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "fresh-results",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 26
+            }
+          ],
+          "completed": true,
+          "durationMs": 110
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "reducer alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "2eb5436a-d9ae-4036-b59f-8b370dd1429a",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "case-insensitive",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "partial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "empty-results",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "clear-query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "fresh-results",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 33
+            }
+          ],
+          "completed": true,
+          "durationMs": 107
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "syntax",
+      "expected": "compile-error",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "5e1d81b7-3ca0-4912-b2d3-b4b8efaeb020",
+        "runId": 17,
+        "type": "compile-error",
+        "kind": "syntax",
+        "diagnostic": {
+          "name": "SyntaxError",
+          "message": "Unexpected token",
+          "line": 1,
+          "column": 44
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "render error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "cd3f91a8-eeb7-4b4f-8585-f06c504332b4",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 5
+            },
+            {
+              "id": "query",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 5
+            },
+            {
+              "id": "case-insensitive",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "partial",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "empty-results",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "clear-query",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "fresh-results",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            }
+          ],
+          "completed": false,
+          "durationMs": 29
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "loop timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "a6924945-97db-42b4-9a15-8283cbcc254c",
+        "runId": 17,
+        "type": "runtime-error",
+        "kind": "loop-guard",
+        "diagnostic": {
+          "name": "ExecutionLimitError",
+          "message": "Stopped after 1 second without a pause. This usually means an infinite loop or endless recursion.",
+          "line": 1
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "suspended timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "d652279c-d217-4ae2-83df-04a180d34490",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "timeout",
+              "feedback": "The test did not finish. Check for unresolved work.",
+              "durationMs": 1502
+            },
+            {
+              "id": "query",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "case-insensitive",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "partial",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "empty-results",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "clear-query",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "fresh-results",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            }
+          ],
+          "completed": false,
+          "durationMs": 1502
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "reference",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "af3a3a1c-b543-4888-a410-de9023ba1f5a",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "first-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "second-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 24
+            },
+            {
+              "id": "dom-removal",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "button-accessibility",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "consistent-state",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 22
+            }
+          ],
+          "completed": true,
+          "durationMs": 102
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "reducer alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "54c535aa-5004-4d20-bbea-f9adf4a89b3f",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "first-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 4
+            },
+            {
+              "id": "second-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "dom-removal",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "button-accessibility",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "consistent-state",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 23
+            }
+          ],
+          "completed": true,
+          "durationMs": 74
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "syntax",
+      "expected": "compile-error",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "03498018-be44-42a9-8a0e-78034f5c9590",
+        "runId": 17,
+        "type": "compile-error",
+        "kind": "syntax",
+        "diagnostic": {
+          "name": "SyntaxError",
+          "message": "Unexpected token",
+          "line": 1,
+          "column": 44
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "render error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "15252308-eb18-4554-82c3-2d805d2f39f3",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "first-toggle",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 2
+            },
+            {
+              "id": "second-toggle",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 2
+            },
+            {
+              "id": "dom-removal",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "button-accessibility",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "consistent-state",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            }
+          ],
+          "completed": false,
+          "durationMs": 20
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "loop timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "ba12dfa3-2ec9-4d70-86cd-399de0f5a950",
+        "runId": 17,
+        "type": "runtime-error",
+        "kind": "loop-guard",
+        "diagnostic": {
+          "name": "ExecutionLimitError",
+          "message": "Stopped after 1 second without a pause. This usually means an infinite loop or endless recursion.",
+          "line": 1
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "suspended timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "1c291115-a7d4-4342-9d55-9e68d1599d14",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "timeout",
+              "feedback": "The test did not finish. Check for unresolved work.",
+              "durationMs": 1529
+            },
+            {
+              "id": "first-toggle",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "second-toggle",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "dom-removal",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "button-accessibility",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "consistent-state",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            }
+          ],
+          "completed": false,
+          "durationMs": 1530
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "reference",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "55990961-573c-454f-ac39-336dd49cfe1e",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "remount",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 29
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            }
+          ],
+          "completed": true,
+          "durationMs": 82
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "reducer alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "8479e04a-f645-4904-9e65-28235d5f763d",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 4
+            },
+            {
+              "id": "remount",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            }
+          ],
+          "completed": true,
+          "durationMs": 57
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "syntax",
+      "expected": "compile-error",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "52767611-5035-4876-91a7-634ba7f8edbf",
+        "runId": 17,
+        "type": "compile-error",
+        "kind": "syntax",
+        "diagnostic": {
+          "name": "SyntaxError",
+          "message": "Unexpected token",
+          "line": 1,
+          "column": 44
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "render error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "ae3de737-2079-4951-8077-39fa8f7101a3",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 5
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "no-lingering",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "remount",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 4
+            },
+            {
+              "id": "interval-contract",
+              "status": "error",
+              "feedback": "ED022 render",
+              "durationMs": 3
+            }
+          ],
+          "completed": false,
+          "durationMs": 25
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "loop timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "d1d41585-986a-40c3-bc0a-edd703dc8388",
+        "runId": 17,
+        "type": "runtime-error",
+        "kind": "loop-guard",
+        "diagnostic": {
+          "name": "ExecutionLimitError",
+          "message": "Stopped after 1 second without a pause. This usually means an infinite loop or endless recursion.",
+          "line": 1
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "suspended timeout",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "2c35286d-ca72-41cb-96a4-cc817b1970ac",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "timeout",
+              "feedback": "The test did not finish. Check for unresolved work.",
+              "durationMs": 1549
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "no-lingering",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "remount",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            },
+            {
+              "id": "interval-contract",
+              "status": "timeout",
+              "feedback": "Not run because the previous test did not settle.",
+              "durationMs": 0
+            }
+          ],
+          "completed": false,
+          "durationMs": 1549
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "constant hardcoded count",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "19493d12-a01d-4e8b-b56b-091c990d0f2e",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "passed",
+              "feedback": "The counter started at zero.",
+              "durationMs": 9
+            },
+            {
+              "id": "increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 7
+            },
+            {
+              "id": "repeated-increment",
+              "status": "failed",
+              "feedback": "After Increment → Increment, the displayed value was 1 instead of 2.",
+              "durationMs": 8
+            },
+            {
+              "id": "decrement",
+              "status": "failed",
+              "feedback": "After Increment → Increment, the displayed value was 1 instead of 2.",
+              "durationMs": 7
+            },
+            {
+              "id": "reset",
+              "status": "failed",
+              "feedback": "After Increment → Increment, the displayed value was 1 instead of 2.",
+              "durationMs": 8
+            },
+            {
+              "id": "negative-values",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 8
+            },
+            {
+              "id": "combined-interactions",
+              "status": "failed",
+              "feedback": "After Increment → Increment, the displayed value was 1 instead of 2.",
+              "durationMs": 7
+            }
+          ],
+          "completed": false,
+          "durationMs": 54
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "hardcoded greeting",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "bfda6b72-5793-48df-9aff-55c7dafe758d",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "greeting-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 4
+            },
+            {
+              "id": "typing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "greeting-update",
+              "status": "failed",
+              "feedback": "Expected Hello, Grace! in the Greeting status.",
+              "durationMs": 9
+            },
+            {
+              "id": "clearing",
+              "status": "failed",
+              "feedback": "Expected Hello, Lin! in the Greeting status.",
+              "durationMs": 8
+            },
+            {
+              "id": "repeated-edits",
+              "status": "failed",
+              "feedback": "Expected Hello, Ada! in the Greeting status.",
+              "durationMs": 7
+            },
+            {
+              "id": "empty-string",
+              "status": "failed",
+              "feedback": "Expected Hello, Zoe! in the Greeting status.",
+              "durationMs": 6
+            }
+          ],
+          "completed": false,
+          "durationMs": 53
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "stale greeting",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "1e07990e-7508-4b8c-bec8-51a9e71550d2",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "greeting-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 4
+            },
+            {
+              "id": "typing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "greeting-update",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "clearing",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"\".",
+              "durationMs": 11
+            },
+            {
+              "id": "repeated-edits",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"Alan\".",
+              "durationMs": 13
+            },
+            {
+              "id": "empty-string",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"\".",
+              "durationMs": 16
+            }
+          ],
+          "completed": false,
+          "durationMs": 65
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "wrong empty fallback",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "e1bf9840-647a-4f18-b6d1-6d39a5cc33e3",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "greeting-initial",
+              "status": "failed",
+              "feedback": "Expected Hello, stranger! in the Greeting status.",
+              "durationMs": 4
+            },
+            {
+              "id": "typing",
+              "status": "failed",
+              "feedback": "Expected Hello, stranger! in the Greeting status.",
+              "durationMs": 6
+            },
+            {
+              "id": "greeting-update",
+              "status": "failed",
+              "feedback": "Expected Hello, stranger! in the Greeting status.",
+              "durationMs": 7
+            },
+            {
+              "id": "clearing",
+              "status": "failed",
+              "feedback": "Expected Hello, stranger! in the Greeting status.",
+              "durationMs": 7
+            },
+            {
+              "id": "repeated-edits",
+              "status": "failed",
+              "feedback": "Expected Hello, stranger! in the Greeting status.",
+              "durationMs": 8
+            },
+            {
+              "id": "empty-string",
+              "status": "failed",
+              "feedback": "Expected Hello, stranger! in the Greeting status.",
+              "durationMs": 6
+            }
+          ],
+          "completed": false,
+          "durationMs": 45
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "class alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "0a48cd51-12ab-467d-a6cf-36866ff41358",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "greeting-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "typing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "greeting-update",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "clearing",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "repeated-edits",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "empty-string",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 21
+            }
+          ],
+          "completed": true,
+          "durationMs": 78
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "hardcoded unfiltered list",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "bf99bba1-0467-48a3-8032-019cc2e39600",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "query",
+              "status": "failed",
+              "feedback": "For query \"Ban\", expected [Banana], found [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple].",
+              "durationMs": 15
+            },
+            {
+              "id": "case-insensitive",
+              "status": "failed",
+              "feedback": "For query \"B\", expected [Banana, Blueberry], found [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple].",
+              "durationMs": 10
+            },
+            {
+              "id": "partial",
+              "status": "failed",
+              "feedback": "For query \"ap\", expected [Apple, Apricot, Grape, Pineapple], found [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple].",
+              "durationMs": 9
+            },
+            {
+              "id": "empty-results",
+              "status": "failed",
+              "feedback": "For query \"zz\", expected [], found [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple].",
+              "durationMs": 8
+            },
+            {
+              "id": "clear-query",
+              "status": "failed",
+              "feedback": "For query \"gr\", expected [Grape], found [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple].",
+              "durationMs": 10
+            },
+            {
+              "id": "fresh-results",
+              "status": "failed",
+              "feedback": "For query \"a\", expected [Apple, Apricot, Banana, Grape, Pineapple], found [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple].",
+              "durationMs": 12
+            }
+          ],
+          "completed": false,
+          "durationMs": 75
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "case sensitive",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "742b9253-ebaa-428a-8852-bb7365d1e1c2",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "case-insensitive",
+              "status": "failed",
+              "feedback": "For query \"bLuE\", expected [Blueberry], found [].",
+              "durationMs": 11
+            },
+            {
+              "id": "partial",
+              "status": "failed",
+              "feedback": "For query \"ap\", expected [Apple, Apricot, Grape, Pineapple], found [Grape, Pineapple].",
+              "durationMs": 11
+            },
+            {
+              "id": "empty-results",
+              "status": "failed",
+              "feedback": "For query \"apple\", expected [Apple, Pineapple], found [Pineapple].",
+              "durationMs": 18
+            },
+            {
+              "id": "clear-query",
+              "status": "failed",
+              "feedback": "For query \"gr\", expected [Grape], found [].",
+              "durationMs": 12
+            },
+            {
+              "id": "fresh-results",
+              "status": "failed",
+              "feedback": "For query \"a\", expected [Apple, Apricot, Banana, Grape, Pineapple], found [Banana, Grape, Pineapple].",
+              "durationMs": 11
+            }
+          ],
+          "completed": false,
+          "durationMs": 85
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "exact rather than partial",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "f4ac055d-b50c-4fad-a960-fbe8c1751a4e",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 7
+            },
+            {
+              "id": "query",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 5
+            },
+            {
+              "id": "case-insensitive",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 4
+            },
+            {
+              "id": "partial",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 4
+            },
+            {
+              "id": "empty-results",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 6
+            },
+            {
+              "id": "clear-query",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 6
+            },
+            {
+              "id": "fresh-results",
+              "status": "failed",
+              "feedback": "For query \"\", expected [Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple], found [].",
+              "durationMs": 7
+            }
+          ],
+          "completed": false,
+          "durationMs": 39
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "missing empty state",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "85be2a40-1cc9-41f9-8e0d-f41de9a4421d",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "case-insensitive",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "partial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "empty-results",
+              "status": "failed",
+              "feedback": "Show No fruits found. only when the result list is empty.",
+              "durationMs": 7
+            },
+            {
+              "id": "clear-query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "fresh-results",
+              "status": "failed",
+              "feedback": "Show No fruits found. only when the result list is empty.",
+              "durationMs": 32
+            }
+          ],
+          "completed": false,
+          "durationMs": 92
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "stale query",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "d60c179f-a35d-4e55-bf8e-453eff01800b",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "case-insensitive",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"bLuE\".",
+              "durationMs": 9
+            },
+            {
+              "id": "partial",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"err\".",
+              "durationMs": 13
+            },
+            {
+              "id": "empty-results",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"apple\".",
+              "durationMs": 15
+            },
+            {
+              "id": "clear-query",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"\".",
+              "durationMs": 13
+            },
+            {
+              "id": "fresh-results",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"cher\".",
+              "durationMs": 12
+            }
+          ],
+          "completed": false,
+          "durationMs": 83
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "CSS only hiding",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "5fcd9939-74f9-419e-87e7-7eb8b007e236",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 7
+            },
+            {
+              "id": "first-toggle",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 5
+            },
+            {
+              "id": "second-toggle",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 4
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 6
+            },
+            {
+              "id": "dom-removal",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 7
+            },
+            {
+              "id": "button-accessibility",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 7
+            },
+            {
+              "id": "consistent-state",
+              "status": "failed",
+              "feedback": "Remove the details panel from the DOM; CSS-only hiding does not count.",
+              "durationMs": 6
+            }
+          ],
+          "completed": false,
+          "durationMs": 42
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "hardcoded initial output",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "63fbdadb-52a3-426c-a35c-7a3863f9a976",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "first-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "second-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 10
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 13
+            },
+            {
+              "id": "dom-removal",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 8
+            },
+            {
+              "id": "button-accessibility",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 8
+            },
+            {
+              "id": "consistent-state",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 10
+            }
+          ],
+          "completed": false,
+          "durationMs": 65
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "inaccurate accessibility",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "3dd33ec0-d0ca-458d-859d-c5926759d1c4",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "first-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 7
+            },
+            {
+              "id": "second-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 7
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 8
+            },
+            {
+              "id": "dom-removal",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 6
+            },
+            {
+              "id": "button-accessibility",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 8
+            },
+            {
+              "id": "consistent-state",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 6
+            }
+          ],
+          "completed": false,
+          "durationMs": 50
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "class alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "cd9a4a5d-f8b9-4954-becf-32e378e94cc0",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "first-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "second-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 14
+            },
+            {
+              "id": "dom-removal",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "button-accessibility",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "consistent-state",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 20
+            }
+          ],
+          "completed": true,
+          "durationMs": 66
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "missing cleanup",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "b2036c8b-f510-44ca-929b-f5494540aeef",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 3
+            },
+            {
+              "id": "no-lingering",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 5
+            },
+            {
+              "id": "remount",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 4
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 4
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            }
+          ],
+          "completed": false,
+          "durationMs": 33
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "no updates after unmount but leaked timer",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "5968e7b5-6f51-4ca5-9e9f-3137972d5bf5",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 4
+            },
+            {
+              "id": "no-lingering",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 4
+            },
+            {
+              "id": "remount",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 5
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "failed",
+              "feedback": "Unmount left 1 live interval(s). Cancel the interval in cleanup.",
+              "durationMs": 4
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 4
+            }
+          ],
+          "completed": false,
+          "durationMs": 32
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "duplicate intervals",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "53d1f12e-bd27-484c-8482-f66af908539c",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 8
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 6
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 5
+            },
+            {
+              "id": "no-lingering",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 8
+            },
+            {
+              "id": "remount",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 4
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 4
+            },
+            {
+              "id": "interval-contract",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 2 with delays [1000, 1000].",
+              "durationMs": 4
+            }
+          ],
+          "completed": false,
+          "durationMs": 39
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "wrong cadence",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "8a75909c-cb1b-4fab-940e-442a11ee3409",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 10
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 6
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 4
+            },
+            {
+              "id": "no-lingering",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 5
+            },
+            {
+              "id": "remount",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 5
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 6
+            },
+            {
+              "id": "interval-contract",
+              "status": "failed",
+              "feedback": "Expected one live 1,000 ms interval; observed 1 with delays [500].",
+              "durationMs": 3
+            }
+          ],
+          "completed": false,
+          "durationMs": 39
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "stale closure",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "006e33fb-ed3c-4df9-95e7-228bbbed3f1d",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 3 display.",
+              "durationMs": 11
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "remount",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 2 display.",
+              "durationMs": 15
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 2 display.",
+              "durationMs": 13
+            },
+            {
+              "id": "interval-contract",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 4 display.",
+              "durationMs": 11
+            }
+          ],
+          "completed": false,
+          "durationMs": 78
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "hardcoded ticks",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "7f3a52d2-ea4c-4681-aa2e-41b0557cce7f",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 3 display.",
+              "durationMs": 11
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 11
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "remount",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 2 display.",
+              "durationMs": 13
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 2 display.",
+              "durationMs": 10
+            },
+            {
+              "id": "interval-contract",
+              "status": "failed",
+              "feedback": "Expected one readable Ticks: 4 display.",
+              "durationMs": 7
+            }
+          ],
+          "completed": false,
+          "durationMs": 66
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "shared clearTimeout cancellation",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "150fc226-d49b-498f-9202-8db4db69e7c2",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "remount",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 29
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            }
+          ],
+          "completed": true,
+          "durationMs": 75
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "class lifecycle alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "98740aec-ed96-4abc-a420-a23298b83350",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 5
+            },
+            {
+              "id": "remount",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 20
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            }
+          ],
+          "completed": true,
+          "durationMs": 62
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "event or timer error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "3ee1d662-2044-497f-a77f-07fbc5ab655f",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "passed",
+              "feedback": "The counter started at zero.",
+              "durationMs": 12
+            },
+            {
+              "id": "increment",
+              "status": "error",
+              "feedback": "Runtime error: ED022 event",
+              "durationMs": 7
+            },
+            {
+              "id": "repeated-increment",
+              "status": "error",
+              "feedback": "Runtime error: ED022 event",
+              "durationMs": 6
+            },
+            {
+              "id": "decrement",
+              "status": "error",
+              "feedback": "Runtime error: ED022 event",
+              "durationMs": 10
+            },
+            {
+              "id": "reset",
+              "status": "error",
+              "feedback": "Runtime error: ED022 event",
+              "durationMs": 5
+            },
+            {
+              "id": "negative-values",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 15
+            },
+            {
+              "id": "combined-interactions",
+              "status": "error",
+              "feedback": "Runtime error: ED022 event",
+              "durationMs": 6
+            }
+          ],
+          "completed": false,
+          "durationMs": 61
+        }
+      }
+    },
+    {
+      "id": "react-controlled-input",
+      "name": "event or timer error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "6306ecb3-fad4-43c8-80d3-1432363d5c5b",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-controlled-input",
+          "runId": 17,
+          "results": [
+            {
+              "id": "input-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "greeting-initial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 4
+            },
+            {
+              "id": "typing",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"Ada\".",
+              "durationMs": 5
+            },
+            {
+              "id": "greeting-update",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"Grace\".",
+              "durationMs": 3
+            },
+            {
+              "id": "clearing",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"Lin\".",
+              "durationMs": 5
+            },
+            {
+              "id": "repeated-edits",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"Ada\".",
+              "durationMs": 3
+            },
+            {
+              "id": "empty-string",
+              "status": "failed",
+              "feedback": "The Name input did not retain \"Zoe\".",
+              "durationMs": 5
+            }
+          ],
+          "completed": false,
+          "durationMs": 31
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "event or timer error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "29536923-b2fb-43d1-9803-0d8e225ff391",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 12
+            },
+            {
+              "id": "query",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"Ban\".",
+              "durationMs": 8
+            },
+            {
+              "id": "case-insensitive",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"B\".",
+              "durationMs": 9
+            },
+            {
+              "id": "partial",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"ap\".",
+              "durationMs": 7
+            },
+            {
+              "id": "empty-results",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"zz\".",
+              "durationMs": 5
+            },
+            {
+              "id": "clear-query",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"gr\".",
+              "durationMs": 8
+            },
+            {
+              "id": "fresh-results",
+              "status": "failed",
+              "feedback": "The Search fruits input did not retain \"a\".",
+              "durationMs": 6
+            }
+          ],
+          "completed": false,
+          "durationMs": 55
+        }
+      }
+    },
+    {
+      "id": "react-conditional-rendering",
+      "name": "event or timer error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "f78fe0b8-c0c3-4707-8981-fefed09ae31c",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-conditional-rendering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-hidden",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "first-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 3
+            },
+            {
+              "id": "second-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 4
+            },
+            {
+              "id": "repeated-toggle",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 4
+            },
+            {
+              "id": "dom-removal",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 4
+            },
+            {
+              "id": "button-accessibility",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 4
+            },
+            {
+              "id": "consistent-state",
+              "status": "failed",
+              "feedback": "aria-expanded must match whether the panel is mounted.",
+              "durationMs": 2
+            }
+          ],
+          "completed": false,
+          "durationMs": 28
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "event or timer error",
+      "expected": "nonpass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "ff1ec7f9-7943-4d07-a54a-a1328f2ee6ca",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "error",
+              "feedback": "ED022 timer",
+              "durationMs": 4
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "error",
+              "feedback": "ED022 timer",
+              "durationMs": 3
+            },
+            {
+              "id": "no-lingering",
+              "status": "error",
+              "feedback": "ED022 timer",
+              "durationMs": 4
+            },
+            {
+              "id": "remount",
+              "status": "error",
+              "feedback": "ED022 timer",
+              "durationMs": 2
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "error",
+              "feedback": "ED022 timer",
+              "durationMs": 4
+            },
+            {
+              "id": "interval-contract",
+              "status": "error",
+              "feedback": "ED022 timer",
+              "durationMs": 3
+            }
+          ],
+          "completed": false,
+          "durationMs": 27
+        }
+      }
+    },
+    {
+      "id": "react-use-state-counter",
+      "name": "class counter alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "7f018e0a-647e-441e-8218-fa1917780fff",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-use-state-counter",
+          "runId": 17,
+          "results": [
+            {
+              "id": "initial-zero",
+              "status": "passed",
+              "feedback": "The counter started at zero.",
+              "durationMs": 6
+            },
+            {
+              "id": "increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 8
+            },
+            {
+              "id": "repeated-increment",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 8
+            },
+            {
+              "id": "decrement",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 8
+            },
+            {
+              "id": "reset",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 5
+            },
+            {
+              "id": "negative-values",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 7
+            },
+            {
+              "id": "combined-interactions",
+              "status": "passed",
+              "feedback": "Every interaction produced the expected count.",
+              "durationMs": 11
+            }
+          ],
+          "completed": true,
+          "durationMs": 53
+        }
+      }
+    },
+    {
+      "id": "react-list-filtering",
+      "name": "class filter alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "76b58951-fe4b-485e-858b-86b1ef984836",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-list-filtering",
+          "runId": 17,
+          "results": [
+            {
+              "id": "all-items",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "case-insensitive",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "partial",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 10
+            },
+            {
+              "id": "empty-results",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 13
+            },
+            {
+              "id": "clear-query",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "fresh-results",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 24
+            }
+          ],
+          "completed": true,
+          "durationMs": 85
+        }
+      }
+    },
+    {
+      "id": "react-effect-cleanup",
+      "name": "positive browser handle alternative",
+      "expected": "pass",
+      "result": {
+        "channel": "explain-dev-lab",
+        "version": 4,
+        "session": "6f971b98-57a2-4153-a4a6-2d24f3ee004f",
+        "runId": 17,
+        "type": "grading-result",
+        "result": {
+          "challengeId": "react-effect-cleanup",
+          "runId": 17,
+          "results": [
+            {
+              "id": "effect-setup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 9
+            },
+            {
+              "id": "mounted-ticks",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "unmount-cleanup",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 6
+            },
+            {
+              "id": "no-lingering",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 7
+            },
+            {
+              "id": "remount",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            },
+            {
+              "id": "repeated-cycles",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 15
+            },
+            {
+              "id": "interval-contract",
+              "status": "passed",
+              "feedback": "All required observations matched.",
+              "durationMs": 8
+            }
+          ],
+          "completed": true,
+          "durationMs": 60
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "157.0"
+}

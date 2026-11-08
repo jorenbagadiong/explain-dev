@@ -1,0 +1,10 @@
+import { FILTER_TESTS } from "@/lib/lab/grading";
+import type { LabChallenge } from "@/lib/lab/types";
+export const listFilteringChallenge = {
+  id: "react-list-filtering", slug: "list-filtering", technologyId: "react", lessonId: "rendering-lists",
+  revision: "v1", gradingRevision: "list-filtering-behavior-v1", starterRevision: "list-filtering-starter-v1",
+  title: "List Filtering", description: "Search a fixed fruit dataset with case-insensitive partial matches.", concept: "Derived state and lists", difficulty: "beginner",
+  objectives: ["Derive results without duplicate state", "Use case-insensitive partial matching", "Render list and empty states"], instructions: ["Use this exact dataset in this order: Apple, Apricot, Banana, Blueberry, Cherry, Grape, Pineapple.", "Provide one enabled text/search input labelled Search fruits and a list labelled Fruits. Render matching fruits as list items in dataset order.", "Match any part of the fruit name, ignoring case. An empty query restores all seven items. Update immediately after every edit.", "When no items match, show a readable status named Results containing No fruits found. Remove that message when there are matches."], hints: ["Keep the query in state and derive the visible list from the fixed dataset.", "Compare query and fruit names in the same letter case; substring matching handles partial names.", "Filter on every render, render the resulting items with stable keys, and use its length to select the empty state."],
+  requirements: FILTER_TESTS.map(test => test.title),
+  starterFiles: [{name: "App.tsx", language: "tsx", code: "import { useState } from \"react\";\nconst fruits = [\"Apple\", \"Apricot\", \"Banana\", \"Blueberry\", \"Cherry\", \"Grape\", \"Pineapple\"];\nexport default function App() {\n  // TODO: store a query, derive matching fruits, and render the empty state.\n  return <main><label>Search fruits<input onChange={() => {}} /></label><ul aria-label=\"Fruits\">{fruits.map(fruit => <li key={fruit}>{fruit}</li>)}</ul></main>;\n}"}],
+} as const satisfies LabChallenge;

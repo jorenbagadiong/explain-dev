@@ -25,7 +25,7 @@ import {
   type PreviewEvent,
   type RuntimeErrorKind,
 } from "@/lib/lab/protocol";
-import { gradeCounter } from "./counter-grader";
+import { gradeChallenge } from "./challenge-grader";
 import { createExecutionGuard, ExecutionLimitError } from "./execution-guard";
 
 /** Exact parent origins compiled in by the dedicated-host build; null in the same-origin fallback build. */
@@ -168,7 +168,7 @@ function start(init: InitMessage, port: MessagePort) {
       return App;
     };
     if (init.gradingChallengeId) {
-      void gradeCounter({ createApp, runId: init.runId, setErrorHandler: (handler) => { gradingErrorHandler = handler; } })
+      void gradeChallenge({ challengeId: init.gradingChallengeId, createApp, runId: init.runId, setErrorHandler: (handler) => { gradingErrorHandler = handler; } })
         .then((result) => { if (!stopped) send({ type: "grading-result", result }); })
         .catch((error) => report("render", error));
       return;
