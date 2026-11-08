@@ -12,7 +12,7 @@ const labels: Record<TestStatus, string> = { passed: "Passed", failed: "Failed",
 const icons = { passed: CircleCheck, failed: CircleX, error: TriangleAlert, timeout: Clock3 };
 export function GradingResults({ state, onRetry }: { state: GradingState; onRetry: () => void }) {
   const passed = state.kind === "finished" ? state.result.results.filter((row) => row.status === "passed").length : 0;
-  const announcement = state.kind === "idle" ? "Tests have not run for the current code." : state.kind === "running" ? "Running seven counter tests…" : state.kind === "blocked" ? (state.timeout ? "Tests timed out. Check the feedback and retry." : "Tests could not finish. Check the feedback and retry.") : `${passed} of ${COUNTER_TESTS.length} tests passed.${state.result.completed ? " Challenge complete." : " Review the results and try again."}`;
+  const announcement = state.kind === "idle" ? "Run Tests for a fresh check of the current draft." : state.kind === "running" ? "Running seven counter tests…" : state.kind === "blocked" ? (state.timeout ? "Tests timed out. Check the feedback and retry." : "Tests could not finish. Check the feedback and retry.") : `${passed} of ${COUNTER_TESTS.length} tests passed.${state.result.completed ? " Challenge complete." : " Review the results and try again."}`;
   return (
     <section aria-label="Test results" className={styles.gradingResults} data-grading-status={state.kind}>
       <h3 className="flex items-center gap-2 font-semibold"><ListChecks aria-hidden="true" className="size-4 text-primary" />Test results</h3>

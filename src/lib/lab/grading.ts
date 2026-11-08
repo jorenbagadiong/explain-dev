@@ -1,5 +1,7 @@
 // Serializable requirements shared by the sandbox and the Practice results UI. No execution here.
 export const COUNTER_CHALLENGE_ID = "react-use-state-counter";
+// Bump when required behavior/interaction contract changes; persisted completion is scoped to this revision.
+export const COUNTER_GRADING_REVISION = "counter-behavior-v1";
 export type CounterChallengeId = typeof COUNTER_CHALLENGE_ID;
 export type TestStatus = "passed" | "failed" | "error" | "timeout";
 export interface TestResult { id: string; status: TestStatus; feedback: string; durationMs: number }

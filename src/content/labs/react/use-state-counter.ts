@@ -1,4 +1,4 @@
-import { COUNTER_CHALLENGE_ID, COUNTER_TESTS } from "@/lib/lab/grading";
+import { COUNTER_CHALLENGE_ID, COUNTER_GRADING_REVISION, COUNTER_TESTS } from "@/lib/lab/grading";
 import type { LabChallenge } from "@/lib/lab/types";
 
 const starterCode = `import { useState } from "react";
@@ -38,6 +38,8 @@ export const useStateCounterChallenge = {
   slug: "use-state-counter",
   technologyId: "react",
   lessonId: "use-state",
+  gradingRevision: COUNTER_GRADING_REVISION,
+  starterRevision: "counter-starter-v1",
   title: "Build a Counter",
   description: "Turn a static counter into an interactive component by storing the count in state.",
   difficulty: "beginner",
@@ -51,9 +53,9 @@ export const useStateCounterChallenge = {
   ],
   requirements: COUNTER_TESTS.map((test) => test.title),
   hints: [
-    "useState returns a pair: the current value and a function that schedules an update.",
-    "Calling setCount(count + 1) asks React to render again with the new value.",
-    "Reset does not need the previous value: setCount(0) is enough.",
+    "A plain variable is recreated when a component renders. Which React Hook lets a component remember a value between renders?",
+    "Calling a state setter schedules a render. Read the stored number in the count display, and call the setter from each button’s event handler.",
+    "When the next count depends on the previous count, use a functional updater such as previous => previous + 1. Decrement needs the opposite change; Reset can set a known value directly.",
   ],
   starterFiles: [{ name: "App.tsx", language: "tsx", code: starterCode }],
 } as const satisfies LabChallenge;

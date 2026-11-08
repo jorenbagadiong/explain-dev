@@ -6,7 +6,7 @@ export function PrototypeNotice() {
       <ul className="mt-2 list-outside list-disc space-y-1 pl-5 marker:text-primary">
         <li>TypeScript types are removed, not checked. Type errors are not reported.</li>
         <li>Only <code className="font-mono text-foreground">react</code> and <code className="font-mono text-foreground">react-dom/client</code> can be imported. Network requests are blocked.</li>
-        <li>Your edits are kept only while this page is open.</li>
+        <li>Drafts and progress are stored only in this browser, with no device sync. Saved code stays inert until you choose Run or Run Tests.</li>
       </ul>
     </aside>
   );

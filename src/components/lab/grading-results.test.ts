@@ -28,6 +28,7 @@ describe("grading feedback presentation", () => {
   it.each<GradingState>([{ kind: "idle" }, { kind: "running" }, { kind: "blocked", message: "Compile error. No tests were executed.", timeout: false }, { kind: "blocked", message: "Check for loops.", timeout: true }])("announces $kind without stale rows", (state) => {
     const html = render(state);
     expect(html).not.toContain("data-test-id"); expect(html.match(/role="status"/g)).toHaveLength(1);
+    if (state.kind === "idle") expect(html).toContain("fresh check of the current draft");
     if (state.kind === "blocked") { expect(html).toContain(state.message); expect(html).toContain("Retry tests"); }
   });
 });

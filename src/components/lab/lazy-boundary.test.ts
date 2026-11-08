@@ -7,7 +7,7 @@ import { describe, expect, it } from "vitest";
 
 const src = path.join(process.cwd(), "src");
 const SANDBOX_PACKAGES = /^(@codemirror\/|sucrase|acorn)/;
-const LAB_MODULES = ["components/lab/practice-workspace", "components/lab/practice-workspace-loader", "components/lab/code-editor", "components/lab/preview-frame", "lib/lab/compiler", "components/lab/grading-results", "lab-runtime/"];
+const LAB_MODULES = ["components/lab/practice-workspace", "components/lab/practice-workspace-loader", "components/lab/code-editor", "components/lab/preview-frame", "lib/lab/compiler", "components/lab/grading-results", "components/lab/learning-progress", "components/lab/use-challenge-progress", "lib/storage/challenge-progress", "content/labs/react/use-state-counter-solution", "lab-runtime/"];
 
 function resolveImport(from: string, specifier: string): string | null {
   const base = specifier.startsWith("@/") ? path.join(src, specifier.slice(2)) : specifier.startsWith(".") ? path.resolve(path.dirname(from), specifier) : null;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, ChevronRight, Lightbulb, ListChecks } from "lucide-react";
+import { BookOpen, ChevronRight, ListChecks } from "lucide-react";
 
 import type { LabChallengeContext } from "@/lib/lab/challenges";
 import { PRACTICE_HREF } from "@/lib/lab/challenges";
@@ -48,18 +48,13 @@ export function ChallengePage({ context }: { context: LabChallengeContext }) {
               {challenge.requirements.map((requirement) => <li key={requirement} className="flex gap-3"><span aria-hidden="true" className="mt-3 size-1.5 shrink-0 rounded-full bg-primary" />{requirement}</li>)}
             </ul>
             <p className="mt-4 text-xs text-muted-foreground">Try these in the preview, then select Run Tests to check the counter behavior.</p>
-            <details className="mt-4 rounded-lg border p-3 text-sm">
-              <summary className="flex min-h-11 cursor-pointer items-center gap-2 font-medium"><Lightbulb aria-hidden="true" className="size-4 text-primary" />Hints</summary>
-              <ul className="mt-2 list-outside list-disc space-y-2 pl-5 leading-6 text-muted-foreground marker:text-primary">
-                {challenge.hints.map((hint) => <li key={hint}>{hint}</li>)}
-              </ul>
-            </details>
+
           </section>
         </div>
 
         <PrototypeNotice />
         <h2 className="sr-only">Workspace</h2>
-        <PracticeWorkspaceLoader challengeId={challenge.id} challengeTitle={challenge.title} starterFile={{ name: challenge.starterFiles[0].name, code: challenge.starterFiles[0].code }} />
+        <PracticeWorkspaceLoader gradingRevision={challenge.gradingRevision} starterRevision={challenge.starterRevision} hints={challenge.hints} challengeId={challenge.id} challengeTitle={challenge.title} starterFile={{ name: challenge.starterFiles[0].name, code: challenge.starterFiles[0].code }} />
       </article>
     </div>
   );

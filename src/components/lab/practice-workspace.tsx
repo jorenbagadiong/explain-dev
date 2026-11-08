@@ -5,7 +5,10 @@ import { useTheme } from "next-themes";
 import { CircleCheck, FileCode2, LoaderCircle, ListChecks, Play, RotateCcw, TriangleAlert } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { COUNTER_CHALLENGE_ID } from "@/lib/lab/grading";
+import { COUNTER_CHALLENGE_ID, COUNTER_TESTS } from "@/lib/lab/grading";
+import { LearningProgress } from "./learning-progress";
+import { useChallengeProgress } from "./use-challenge-progress";
+import type { ChallengeProgressSession, ProgressSnapshot } from "@/lib/storage/challenge-progress";
 import { GradingResults, type GradingState } from "./grading-results";
 import { createCodeFrame } from "@/lib/lab/diagnostics";
 import type { CompileErrorKind, LabDiagnostic, LabFile, LabTheme, RuntimeErrorKind } from "@/lib/lab/protocol";
@@ -115,19 +118,30 @@ function DiagnosticView({ diagnostic, source }: { diagnostic: LabDiagnostic; sou
 
 export interface PracticeWorkspaceProps {
   challengeId: string;
+  gradingRevision: string;
+  starterRevision: string;
+  hints: readonly string[];
   challengeTitle: string;
   starterFile: LabFile;
   onMetric?: (name: "editor-init" | "preview-ready" | "preview-render", ms: number) => void;
 }
 
-export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, onMetric }: PracticeWorkspaceProps) {
+export function PracticeWorkspace(props: PracticeWorkspaceProps) {
+  const { session, snapshot } = useChallengeProgress({ challengeId: props.challengeId, gradingRevision: props.gradingRevision, starterRevision: props.starterRevision, starterCode: props.starterFile.code, totalTests: COUNTER_TESTS.length, hintCount: props.hints.length });
+  if (!snapshot.ready) return <p role="status" className="mt-8 text-sm text-muted-foreground">Loading local draft…</p>;
+  return <WorkspaceEditor {...props} session={session} snapshot={snapshot} />;
+}
+
+// The editor mounts after restore, so a restored draft is its initial document, not a reset transaction.
+function WorkspaceEditor({ challengeId, challengeTitle, starterFile, hints, onMetric, session, snapshot }: PracticeWorkspaceProps & { session: ChallengeProgressSession; snapshot: ProgressSnapshot }) {
   const baseId = useId();
   const editorHelpId = `${baseId}-editor-help`;
   const isDesktop = useIsDesktop();
   const { resolvedTheme } = useTheme();
   const theme: LabTheme = resolvedTheme === "light" ? "light" : "dark";
 
-  const [code, setCode] = useState(starterFile.code);
+  const code = snapshot.data.draftCode;
+  // Only trusted static starter text is automatically sent to the initial preview. Never initialize this from the draft.
   const [run, setRun] = useState<{ id: number; file: LabFile }>(() => ({ id: 1, file: { name: starterFile.name, code: starterFile.code } }));
   const [status, setStatus] = useState<PreviewStatus>({ kind: "starting" });
   const [problems, setProblems] = useState<RuntimeProblem[]>([]);
@@ -151,21 +165,23 @@ export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, on
   }, []);
   const changeCode = useCallback((next: string) => {
     invalidateGrading();
-    setCode(next);
-  }, [invalidateGrading]);
+    session.edit(next);
+  }, [invalidateGrading, session]);
   const runTests = useCallback(() => {
     if (challengeId !== COUNTER_CHALLENGE_ID) return;
+    session.attempt();
     const id = ++gradingSequence.current;
     activeGrading.current = id;
     policyOwner.current = id;
     setGrading({ kind: "running" });
     setGradingJob({ id, file: { name: starterFile.name, code } });
-  }, [challengeId, code, starterFile.name]);
-  const onGradingEvent = useCallback((event: PreviewFrameEvent, id: number) => {
+  }, [challengeId, code, starterFile.name, session]);
+  const onGradingEvent = useCallback((event: PreviewFrameEvent, id: number, source: string) => {
     if (activeGrading.current !== id || event.type === "connected" || event.type === "rendered") return;
     activeGrading.current = null;
     setGradingJob(null);
     if (event.type === "grading-result") {
+      session.record(event.result, source);
       setGrading({ kind: "finished", result: event.result });
     } else if (event.type === "compile-error") {
       setGrading({ kind: "blocked", timeout: false, message: `Compile error${event.diagnostic.line ? ` on line ${event.diagnostic.line}` : ""}: ${event.diagnostic.message} No tests were executed. Fix the code, then retry.` });
@@ -177,8 +193,7 @@ export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, on
     } else {
       setGrading({ kind: "blocked", timeout: false, message: FAILED_MESSAGE[event.reason] });
     }
-  }, []);
-
+  }, [session]);
 
   const runCode = useCallback((source: string) => {
     invalidateGrading();
@@ -193,10 +208,22 @@ export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, on
   const runCurrent = useCallback(() => runCode(code), [runCode, code]);
 
   const reset = useCallback(() => {
-    setCode(starterFile.code);
+    session.reset();
     runCode(starterFile.code);
     setNotice("Restored the starter code. Press Ctrl+Z (⌘+Z) in the editor to undo the reset.");
-  }, [runCode, starterFile.code]);
+  }, [runCode, starterFile.code, session]);
+
+  const clearProgress = () => {
+    if (!window.confirm("Permanently clear this challenge’s saved draft, completion history, test progress, hints and solution history, and reset the editor including its undo history? This cannot be undone.")) return;
+    if (session.clear()) {
+      runCode(starterFile.code);
+      setNotice("Progress cleared. The editor has a fresh undo history.");
+    }
+  };
+  const loadSaved = () => {
+    if (snapshot.dirty && !window.confirm("Discard this tab’s unsaved changes and load the saved draft?")) return;
+    invalidateGrading(); session.loadSaved();
+  };
 
   const onPreviewEvent = useCallback((event: PreviewFrameEvent) => {
     switch (event.type) {
@@ -260,6 +287,7 @@ export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, on
           </Button> : null}
           <span id={`${baseId}-run-shortcut`} className="hidden text-xs text-muted-foreground sm:inline">Ctrl+Enter / ⌘+Enter in the editor</span>
         </div>
+        <span className="text-xs text-muted-foreground" data-save-indicator="">{snapshot.saveState === "saving" ? "Saving draft…" : snapshot.saveState === "saved" ? "Draft saved locally" : snapshot.saveState === "error" ? "Draft not saved — see Your progress" : "Local draft saving ready"}</span>
         <p role="status" className={styles.statusText} data-lab-status="">
           {status.kind === "ready" && !dirty ? <CircleCheck aria-hidden="true" className="size-4 text-primary" /> : null}
           {status.kind === "compile-error" || status.kind === "runtime-error" || status.kind === "stopped" || status.kind === "failed" ? <TriangleAlert aria-hidden="true" className="size-4 text-destructive" /> : null}
@@ -302,7 +330,7 @@ export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, on
           <div className={styles.editorHost}>
             <EditorBoundary onRecover={() => setEditorKey((key) => key + 1)}>
               <CodeEditor
-                key={editorKey}
+                key={`${editorKey}:${snapshot.generation}`}
                 value={code}
                 onChange={changeCode}
                 onRun={runCurrent}
@@ -353,10 +381,11 @@ export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, on
         </div>
       </div>
       {challengeId === COUNTER_CHALLENGE_ID ? <GradingResults state={grading} onRetry={runTests} /> : null}
+      <LearningProgress key={snapshot.generation} session={session} snapshot={snapshot} hints={hints} onReset={reset} onClear={clearProgress} onLoad={loadSaved} />
       {gradingJob && challengeId === COUNTER_CHALLENGE_ID ? <div className={styles.gradingFrame} aria-hidden="true" inert>
         <PreviewFrame key={gradingJob.id} runId={gradingJob.id} file={gradingJob.file} theme={theme}
           gradingChallengeId={COUNTER_CHALLENGE_ID} ownsPolicyViolations={() => policyOwner.current === gradingJob.id && activeGrading.current === gradingJob.id} title="Disposable counter test preview"
-          onEvent={(event) => onGradingEvent(event, gradingJob.id)} />
+          onEvent={(event) => onGradingEvent(event, gradingJob.id, gradingJob.file.code)} />
       </div> : null}
     </section>
   );

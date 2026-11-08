@@ -73,3 +73,7 @@
 .gradingRow { display: flex; align-items: flex-start; gap: .625rem; min-width: 0; padding: .75rem; border: 1px solid var(--border); border-radius: .625rem; background: var(--background); }
 /* Keep a real layout viewport for DOM behavior, without exposing or focusing the disposable frame. */
 .gradingFrame { position: fixed; left: -10000px; top: 0; width: 800px; height: 600px; pointer-events: none; }
+
+.learningProgress { margin-top: 1rem; padding: 1.25rem; min-width: 0; border: 1px solid var(--border); border-radius: .875rem; background: color-mix(in oklch, var(--primary) 3%, var(--background)); overflow-wrap: anywhere; }
+.referenceCode { margin-top: 1rem; max-width: 100%; overflow-x: auto; padding: 1rem; border: 1px solid var(--border); border-radius: .625rem; background: var(--background); font: .8125rem/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; }
+.referenceCode:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }

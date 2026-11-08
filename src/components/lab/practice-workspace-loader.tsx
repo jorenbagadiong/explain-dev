@@ -43,7 +43,7 @@ class WorkspaceBoundary extends Component<{ children: ReactNode }, { failed: boo
 export function PracticeWorkspaceLoader(props: Omit<PracticeWorkspaceProps, "onMetric">) {
   return (
     <WorkspaceBoundary>
-      <PracticeWorkspace {...props} onMetric={reportMetric} />
+      <PracticeWorkspace key={`${props.challengeId}:${props.gradingRevision}:${props.starterRevision}`} {...props} onMetric={reportMetric} />
     </WorkspaceBoundary>
   );
 }

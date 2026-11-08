@@ -32,9 +32,10 @@ describe("useState counter practice page", () => {
     expect(html).toContain("React Hooks");
   });
 
-  it("server-renders instructions, requirements and hints", () => {
-    for (const text of [...challenge.instructions, ...challenge.requirements, ...challenge.hints]) expect(html).toContain(text);
+  it("server-renders instructions and requirements, keeping progressive hints in the client workspace", () => {
+    for (const text of [...challenge.instructions, ...challenge.requirements]) expect(html).toContain(text);
     expect(html).toContain("select Run Tests");
+    for (const hint of challenge.hints) expect(html).not.toContain(hint);
   });
 
   it("discloses prototype limitations, including that types are not checked", () => {
@@ -42,7 +43,7 @@ describe("useState counter practice page", () => {
     expect(notice).toContain("Research prototype.");
     expect(notice).toContain("TypeScript types are removed, not checked.");
     expect(notice).toContain("Network requests are blocked.");
-    expect(notice).toContain("Your edits are kept only while this page is open.");
+    expect(notice).toContain("Drafts and progress are stored only in this browser");
   });
 
   it("passes the starter file to the lazily loaded workspace", () => {

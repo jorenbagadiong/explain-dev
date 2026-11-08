@@ -18,6 +18,8 @@ export interface LabChallenge {
   technologyId: "react";
   /** ID of an existing, available lesson in `reactTopics`. */
   lessonId: string;
+  gradingRevision: string;
+  starterRevision: string;
   title: string;
   description: string;
   difficulty: LabDifficulty;
