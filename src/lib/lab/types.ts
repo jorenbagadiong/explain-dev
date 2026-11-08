@@ -22,7 +22,7 @@ export interface LabChallenge {
   description: string;
   difficulty: LabDifficulty;
   instructions: readonly string[];
-  /** Observable outcomes the learner should reach. Shown as a checklist; not graded automatically. */
+  /** Observable outcomes the learner should reach. Shown as a checklist; supported challenges also have behavioral tests. */
   requirements: readonly string[];
   hints: readonly string[];
   starterFiles: readonly [LabStarterFile, ...LabStarterFile[]];

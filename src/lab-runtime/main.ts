@@ -25,6 +25,7 @@ import {
   type PreviewEvent,
   type RuntimeErrorKind,
 } from "@/lib/lab/protocol";
+import { gradeCounter } from "./counter-grader";
 import { createExecutionGuard, ExecutionLimitError } from "./execution-guard";
 
 /** Exact parent origins compiled in by the dedicated-host build; null in the same-origin fallback build. */
@@ -78,9 +79,14 @@ function start(init: InitMessage, port: MessagePort) {
   let reported = 0;
   let stopped = false;
   let rendered = false;
+  let gradingErrorHandler: ((error: unknown) => void) | null = null;
 
   const report = (kind: RuntimeErrorKind, error: unknown, detail?: string) => {
     if ((stopped && kind !== "loop-guard") || reported >= MAX_REPORTED_ERRORS) return;
+    if (init.gradingChallengeId && gradingErrorHandler && kind !== "loop-guard") {
+      gradingErrorHandler(error);
+      return;
+    }
     reported++;
     let diagnostic;
     try {
@@ -138,10 +144,12 @@ function start(init: InitMessage, port: MessagePort) {
   });
 
   window.addEventListener("error", (event) => {
+    if (init.gradingChallengeId) event.preventDefault();
     if (event.error instanceof ExecutionLimitError) return;
     report(rendered ? "event" : "module", event.error ?? new Error(event.message || "Script error"));
   });
   window.addEventListener("unhandledrejection", (event) => {
+    if (init.gradingChallengeId) event.preventDefault();
     if (event.reason instanceof ExecutionLimitError) return;
     report("promise", event.reason);
   });
@@ -152,6 +160,19 @@ function start(init: InitMessage, port: MessagePort) {
   };
 
   const mount = (factory: Factory) => {
+    const createApp = () => {
+      const learnerModule = { exports: {} as Record<string, unknown> };
+      factory(requireModule, learnerModule, learnerModule.exports, guard);
+      const App = learnerModule.exports.default;
+      if (!isComponent(App)) throw new TypeError("The default export is not a React component. Export a function component.");
+      return App;
+    };
+    if (init.gradingChallengeId) {
+      void gradeCounter({ createApp, runId: init.runId, setErrorHandler: (handler) => { gradingErrorHandler = handler; } })
+        .then((result) => { if (!stopped) send({ type: "grading-result", result }); })
+        .catch((error) => report("render", error));
+      return;
+    }
     const learnerModule = { exports: {} as Record<string, unknown> };
     try {
       factory(requireModule, learnerModule, learnerModule.exports, guard);

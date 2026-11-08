@@ -46,10 +46,13 @@ describe("Coding Lab challenge registry", () => {
     expect(context.group.id).toBe("hooks");
     expect(context.challenge.difficulty).toBe("beginner");
     expect(context.challenge.requirements).toEqual([
-      "The preview initially shows “Count: 0”.",
-      "Increment increases the count by one.",
-      "Decrement decreases the count by one.",
-      "Reset returns the count to zero.",
+      "The counter initially displays zero",
+      "Increment increases the count by one",
+      "Repeated increments update on every click",
+      "Decrement decreases the count by one",
+      "Reset returns a changed count to zero",
+      "The counter supports negative values",
+      "Combined increments, decrements and resets stay correct",
     ]);
     const starter = context.challenge.starterFiles[0].code;
     expect(starter).toContain("Count: {count}");

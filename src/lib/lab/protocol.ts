@@ -1,3 +1,5 @@
+import { COUNTER_CHALLENGE_ID, isGradingResult, type CounterChallengeId, type GradingResult } from "./grading";
+
 // Message protocol between the Coding Lab (parent, trusted) and the preview runtime (sandboxed, untrusted).
 //
 // Handshake (window.postMessage, one message each way per preview frame):
@@ -7,8 +9,8 @@
 // Everything received from the preview is untrusted: it is schema-checked, size-capped and only ever shown as text.
 
 export const LAB_CHANNEL = "explain-dev-lab";
-// Version 2 (ED-019): navigation diagnostics; the app and a dedicated preview host may be deployed separately.
-export const LAB_PROTOCOL_VERSION = 2;
+// Version 3 (ED-020): optional grading init and validated results. Deploy app and preview host together.
+export const LAB_PROTOCOL_VERSION = 3;
 export const LAB_PREVIEW_PATH = "/lab-runtime/preview.html";
 /** The only sandbox token the preview frame receives. Never add allow-same-origin. */
 export const LAB_PREVIEW_SANDBOX = "allow-scripts";
@@ -39,6 +41,7 @@ export interface InitMessage {
   runId: number;
   theme: LabTheme;
   file: LabFile;
+  gradingChallengeId?: CounterChallengeId;
 }
 
 export type CompileErrorKind = "syntax" | "unsupported-import" | "unsupported-syntax" | "missing-export" | "too-large";
@@ -63,6 +66,7 @@ interface PortEnvelope {
 export type PreviewEvent =
   | { type: "rendered" }
   | { type: "heartbeat" }
+  | { type: "grading-result"; result: GradingResult }
   | { type: "compile-error"; kind: CompileErrorKind; diagnostic: LabDiagnostic }
   | { type: "runtime-error"; kind: RuntimeErrorKind; diagnostic: LabDiagnostic };
 
@@ -116,8 +120,8 @@ export function isIncompatibleHello(value: unknown): boolean {
 }
 
 export function isInitMessage(value: unknown): value is InitMessage {
-  if (!isRecord(value) || !hasExactKeys(value, ["channel", "version", "type", "session", "runId", "theme", "file"])) return false;
-  if (value.type !== "init" || !isEnvelope(value) || !isTheme(value.theme)) return false;
+  if (!isRecord(value) || !hasExactKeys(value, ["channel", "version", "type", "session", "runId", "theme", "file"], ["gradingChallengeId"])) return false;
+  if (value.type !== "init" || !isEnvelope(value) || !isTheme(value.theme) || (value.gradingChallengeId !== undefined && value.gradingChallengeId !== COUNTER_CHALLENGE_ID)) return false;
   const file = value.file;
   return isRecord(file) && hasExactKeys(file, ["name", "code"]) && isText(file.name, MAX_FILE_NAME) && /^[\w-]+\.tsx$/.test(file.name) && isText(file.code, MAX_SOURCE_LENGTH, true);
 }
@@ -142,6 +146,8 @@ export function isPreviewMessage(value: unknown): value is PreviewMessage {
     case "rendered":
     case "heartbeat":
       return hasExactKeys(value, envelope);
+    case "grading-result":
+      return hasExactKeys(value, [...envelope, "result"]) && isGradingResult(value.result) && value.result.runId === value.runId;
     case "compile-error":
       return hasExactKeys(value, [...envelope, "kind", "diagnostic"]) && COMPILE_KINDS.includes(value.kind as CompileErrorKind) && isDiagnostic(value.diagnostic);
     case "runtime-error":

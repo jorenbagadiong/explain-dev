@@ -1,0 +1,13 @@
+[
+  "src/lab-runtime/main.ts",
+  "src/content/labs/react/use-state-counter.ts",
+  "src/lib/lab/challenges.test.ts",
+  "src/lib/lab/types.ts",
+  "src/lib/lab/protocol.ts",
+  "src/components/lab/practice-workspace.tsx",
+  "src/components/lab/lab.module.css",
+  "src/components/lab/challenge-page.tsx",
+  "src/components/lab/lazy-boundary.test.ts",
+  "src/components/lab/preview-frame.tsx",
+  "src/app/practice/react/use-state-counter/page.test.ts"
+]

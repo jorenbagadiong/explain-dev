@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "name": "malformed interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "all 12 malformed/spoofed results rejected before display",
+      "passed": true
+    },
+    {
+      "name": "malformed valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "markup interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "markup valid result eventually accepted",
+      "passed": true
+    },
+    {
+      "name": "grading feedback escaped as text",
+      "passed": true
+    },
+    {
+      "name": "deadline interactive preview cannot deliver grading results",
+      "passed": true
+    },
+    {
+      "name": "responsive malicious preview still has a bounded grading deadline",
+      "passed": true
+    },
+    {
+      "name": "deadline closes grading frame only",
+      "passed": true
+    },
+    {
+      "name": "v2 host fails closed after protocol change",
+      "passed": true
+    }
+  ]
+}

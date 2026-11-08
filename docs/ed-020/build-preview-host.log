@@ -1,0 +1,4 @@
+yarn run v1.22.22
+$ node scripts/build-preview-host.mjs
+Preview host built: preview-host/dist (runtime.ef1e36899f2cfd6a.js); parent origins: http://localhost:3118
+Done in 1.11s.

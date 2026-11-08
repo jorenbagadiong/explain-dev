@@ -1,3 +1,4 @@
+import { COUNTER_CHALLENGE_ID, COUNTER_TESTS } from "@/lib/lab/grading";
 import type { LabChallenge } from "@/lib/lab/types";
 
 const starterCode = `import { useState } from "react";
@@ -33,7 +34,7 @@ export default function Counter() {
 `;
 
 export const useStateCounterChallenge = {
-  id: "react-use-state-counter",
+  id: COUNTER_CHALLENGE_ID,
   slug: "use-state-counter",
   technologyId: "react",
   lessonId: "use-state",
@@ -45,13 +46,10 @@ export const useStateCounterChallenge = {
     "Replace the constant with a state variable created by useState, starting at 0.",
     "Complete the three event handlers so that each one calls the state setter.",
     "Select Run (or press Ctrl+Enter / ⌘+Enter in the editor) to render your code in the preview, then try the buttons.",
+    "Keep one readable Count: number display and enabled buttons named Increment, Decrement and Reset. You may change the markup and state variable names.",
+    "Select Run Tests to check the current code. Each test starts with a fresh counter; the interactive preview is kept as it is.",
   ],
-  requirements: [
-    "The preview initially shows “Count: 0”.",
-    "Increment increases the count by one.",
-    "Decrement decreases the count by one.",
-    "Reset returns the count to zero.",
-  ],
+  requirements: COUNTER_TESTS.map((test) => test.title),
   hints: [
     "useState returns a pair: the current value and a function that schedules an update.",
     "Calling setCount(count + 1) asks React to render again with the new value.",

@@ -1,0 +1,130 @@
+{
+  "chromium-fallback": {
+    "checks": 99,
+    "failed": 0,
+    "unexpectedErrors": [],
+    "gradingMs": {
+      "samples": [
+        195,
+        182,
+        179,
+        163,
+        162,
+        166,
+        163,
+        166,
+        169,
+        178,
+        179,
+        217,
+        162,
+        162,
+        182
+      ],
+      "min": 162,
+      "median": 169,
+      "max": 217
+    },
+    "parentHeapBytes": {
+      "before": 14487768,
+      "after": 14463933
+    },
+    "fixtures": 17
+  },
+  "chromium-dedicated": {
+    "checks": 99,
+    "failed": 0,
+    "unexpectedErrors": [],
+    "gradingMs": {
+      "samples": [
+        162,
+        165,
+        164,
+        165,
+        145,
+        170,
+        163,
+        162,
+        146,
+        152,
+        143,
+        167,
+        148,
+        167,
+        161
+      ],
+      "min": 143,
+      "median": 162,
+      "max": 170
+    },
+    "parentHeapBytes": {
+      "before": 14359250,
+      "after": 14360789
+    },
+    "fixtures": 17
+  },
+  "firefox-fallback": {
+    "checks": 99,
+    "failed": 0,
+    "unexpectedErrors": [],
+    "gradingMs": {
+      "samples": [
+        327,
+        383,
+        317,
+        297,
+        333,
+        332,
+        331,
+        877,
+        379,
+        380,
+        334,
+        330,
+        383,
+        408,
+        343
+      ],
+      "min": 297,
+      "median": 334,
+      "max": 877
+    },
+    "parentHeapBytes": {
+      "before": null,
+      "after": null
+    },
+    "fixtures": 17
+  },
+  "firefox-dedicated": {
+    "checks": 99,
+    "failed": 0,
+    "unexpectedErrors": [],
+    "gradingMs": {
+      "samples": [
+        278,
+        275,
+        747,
+        303,
+        305,
+        267,
+        258,
+        268,
+        275,
+        307,
+        315,
+        309,
+        366,
+        311,
+        287
+      ],
+      "min": 258,
+      "median": 303,
+      "max": 747
+    },
+    "parentHeapBytes": {
+      "before": null,
+      "after": null
+    },
+    "fixtures": 17
+  }
+}

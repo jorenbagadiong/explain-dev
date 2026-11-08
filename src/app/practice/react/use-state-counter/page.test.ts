@@ -34,7 +34,7 @@ describe("useState counter practice page", () => {
 
   it("server-renders instructions, requirements and hints", () => {
     for (const text of [...challenge.instructions, ...challenge.requirements, ...challenge.hints]) expect(html).toContain(text);
-    expect(html).toContain("Automatic grading isn&#x27;t available yet.");
+    expect(html).toContain("select Run Tests");
   });
 
   it("discloses prototype limitations, including that types are not checked", () => {

@@ -2,9 +2,11 @@
 
 import { Component, useCallback, useId, useRef, useState, useSyncExternalStore, type KeyboardEvent, type ReactNode } from "react";
 import { useTheme } from "next-themes";
-import { CircleCheck, FileCode2, LoaderCircle, Play, RotateCcw, TriangleAlert } from "lucide-react";
+import { CircleCheck, FileCode2, LoaderCircle, ListChecks, Play, RotateCcw, TriangleAlert } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { COUNTER_CHALLENGE_ID } from "@/lib/lab/grading";
+import { GradingResults, type GradingState } from "./grading-results";
 import { createCodeFrame } from "@/lib/lab/diagnostics";
 import type { CompileErrorKind, LabDiagnostic, LabFile, LabTheme, RuntimeErrorKind } from "@/lib/lab/protocol";
 import { CodeEditor } from "./code-editor";
@@ -112,12 +114,13 @@ function DiagnosticView({ diagnostic, source }: { diagnostic: LabDiagnostic; sou
 }
 
 export interface PracticeWorkspaceProps {
+  challengeId: string;
   challengeTitle: string;
   starterFile: LabFile;
   onMetric?: (name: "editor-init" | "preview-ready" | "preview-render", ms: number) => void;
 }
 
-export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: PracticeWorkspaceProps) {
+export function PracticeWorkspace({ challengeId, challengeTitle, starterFile, onMetric }: PracticeWorkspaceProps) {
   const baseId = useId();
   const editorHelpId = `${baseId}-editor-help`;
   const isDesktop = useIsDesktop();
@@ -134,14 +137,58 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
   const tabRefs = useRef<Record<"code" | "preview", HTMLButtonElement | null>>({ code: null, preview: null });
   const problemId = useRef(0);
   const dirty = code !== run.file.code;
+  const [gradingJob, setGradingJob] = useState<{ id: number; file: LabFile } | null>(null);
+  const [grading, setGrading] = useState<GradingState>({ kind: "idle" });
+  const gradingSequence = useRef(0);
+  const activeGrading = useRef<number | null>(null);
+  // Keep completed/cancelled grading ownership until an explicit preview Run/focus.
+  // Firefox can deliver document-wide CSP reports after the grading frame was removed.
+  const policyOwner = useRef<"preview" | number>("preview");
+  const invalidateGrading = useCallback(() => {
+    activeGrading.current = null;
+    setGradingJob(null);
+    setGrading({ kind: "idle" });
+  }, []);
+  const changeCode = useCallback((next: string) => {
+    invalidateGrading();
+    setCode(next);
+  }, [invalidateGrading]);
+  const runTests = useCallback(() => {
+    if (challengeId !== COUNTER_CHALLENGE_ID) return;
+    const id = ++gradingSequence.current;
+    activeGrading.current = id;
+    policyOwner.current = id;
+    setGrading({ kind: "running" });
+    setGradingJob({ id, file: { name: starterFile.name, code } });
+  }, [challengeId, code, starterFile.name]);
+  const onGradingEvent = useCallback((event: PreviewFrameEvent, id: number) => {
+    if (activeGrading.current !== id || event.type === "connected" || event.type === "rendered") return;
+    activeGrading.current = null;
+    setGradingJob(null);
+    if (event.type === "grading-result") {
+      setGrading({ kind: "finished", result: event.result });
+    } else if (event.type === "compile-error") {
+      setGrading({ kind: "blocked", timeout: false, message: `Compile error${event.diagnostic.line ? ` on line ${event.diagnostic.line}` : ""}: ${event.diagnostic.message} No tests were executed. Fix the code, then retry.` });
+    } else if (event.type === "stopped") {
+      const timeout = ["timeout", "unresponsive", "loop-guard"].includes(event.reason);
+      setGrading({ kind: "blocked", timeout, message: timeout ? "The grading preview stopped responding or exceeded its execution limit. Check for loops or unfinished async work, then retry. Your interactive preview is unchanged." : STOPPED_MESSAGE[event.reason] });
+    } else if (event.type === "runtime-error") {
+      setGrading({ kind: "blocked", timeout: false, message: `Runtime error: ${event.diagnostic.message}` });
+    } else {
+      setGrading({ kind: "blocked", timeout: false, message: FAILED_MESSAGE[event.reason] });
+    }
+  }, []);
+
 
   const runCode = useCallback((source: string) => {
+    invalidateGrading();
+    policyOwner.current = "preview";
     setRun((previous) => ({ id: previous.id + 1, file: { name: starterFile.name, code: source } }));
     setStatus({ kind: "starting" });
     setProblems([]);
     setNotice("");
     if (!window.matchMedia(DESKTOP_QUERY).matches) setPanel("preview");
-  }, [starterFile.name]);
+  }, [starterFile.name, invalidateGrading]);
 
   const runCurrent = useCallback(() => runCode(code), [runCode, code]);
 
@@ -153,6 +200,7 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
 
   const onPreviewEvent = useCallback((event: PreviewFrameEvent) => {
     switch (event.type) {
+      case "grading-result": return;
       case "connected":
         onMetric?.("preview-ready", event.readyMs);
         setStatus((current) => (current.kind === "starting" ? { kind: "rendering" } : current));
@@ -207,6 +255,9 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
             <RotateCcw aria-hidden="true" />
             Reset
           </Button>
+          {challengeId === COUNTER_CHALLENGE_ID ? <Button type="button" variant="outline" onClick={runTests} data-lab-tests="">
+            <ListChecks aria-hidden="true" />Run Tests
+          </Button> : null}
           <span id={`${baseId}-run-shortcut`} className="hidden text-xs text-muted-foreground sm:inline">Ctrl+Enter / ⌘+Enter in the editor</span>
         </div>
         <p role="status" className={styles.statusText} data-lab-status="">
@@ -253,7 +304,7 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
               <CodeEditor
                 key={editorKey}
                 value={code}
-                onChange={setCode}
+                onChange={changeCode}
                 onRun={runCurrent}
                 label={`${starterFile.name} code editor`}
                 describedBy={editorHelpId}
@@ -270,7 +321,8 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
             <span className="text-xs text-muted-foreground">Sandboxed · no network</span>
           </div>
           <div className={styles.previewHost}>
-            <PreviewFrame key={run.id} runId={run.id} file={run.file} theme={theme} title={`Preview of ${starterFile.name}`} onEvent={onPreviewEvent} />
+            <PreviewFrame key={run.id} runId={run.id} file={run.file} theme={theme} title={`Preview of ${starterFile.name}`} ownsPolicyViolations={() => policyOwner.current === "preview"}
+              onInteractiveFocus={() => { if (activeGrading.current === null) policyOwner.current = "preview"; }} onEvent={onPreviewEvent} />
             {status.kind === "starting" || status.kind === "rendering" ? <div className={styles.previewOverlay} aria-hidden="true"><LoaderCircle className="size-5 animate-spin motion-reduce:animate-none" /></div> : null}
           </div>
           {showProblems ? (
@@ -300,6 +352,12 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
           ) : null}
         </div>
       </div>
+      {challengeId === COUNTER_CHALLENGE_ID ? <GradingResults state={grading} onRetry={runTests} /> : null}
+      {gradingJob && challengeId === COUNTER_CHALLENGE_ID ? <div className={styles.gradingFrame} aria-hidden="true" inert>
+        <PreviewFrame key={gradingJob.id} runId={gradingJob.id} file={gradingJob.file} theme={theme}
+          gradingChallengeId={COUNTER_CHALLENGE_ID} ownsPolicyViolations={() => policyOwner.current === gradingJob.id && activeGrading.current === gradingJob.id} title="Disposable counter test preview"
+          onEvent={(event) => onGradingEvent(event, gradingJob.id)} />
+      </div> : null}
     </section>
   );
 }

@@ -1,0 +1,35 @@
+chromium {
+  violations: [
+    {
+      target: '#document',
+      source: '',
+      uri: 'https://example.invalid',
+      time: 1647.3999999994412,
+      frames: [Array]
+    }
+  ],
+  preview: 'stopped',
+  grade: 'blocked',
+  frames: 0
+}
+firefox {
+  violations: [
+    {
+      target: '#document',
+      source: '',
+      uri: 'https://example.invalid',
+      time: 2023,
+      frames: [Array]
+    },
+    {
+      target: '#document',
+      source: '',
+      uri: 'https://example.invalid',
+      time: 2046,
+      frames: []
+    }
+  ],
+  preview: 'stopped',
+  grade: 'blocked',
+  frames: 0
+}
