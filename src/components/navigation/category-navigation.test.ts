@@ -98,3 +98,39 @@ describe("shared category navigation", () => {
     );
   });
 });
+
+describe("Practice entry point", () => {
+  function practiceLink(pathname: string) {
+    const { html } = renderNavigation(pathname);
+    const match = html.match(/<a\b([^>]*data-practice-link=""[^>]*)>([\s\S]*?)<\/a>/);
+    return { html, attributes: match?.[1] ?? "", content: match?.[2] ?? "" };
+  }
+
+  it("renders one Practice link after Home and before the learning categories", () => {
+    const { html, attributes, content } = practiceLink("/");
+    expect(html.match(/data-practice-link=""/g)).toHaveLength(1);
+    expect(attributes).toContain('href="/practice"');
+    expect(content).toContain("Practice");
+    expect(content).toContain("Coding Lab prototype");
+    expect(html.indexOf('href="/"')).toBeLessThan(html.indexOf('href="/practice"'));
+    expect(html.indexOf('href="/practice"')).toBeLessThan(html.indexOf("Learning categories"));
+  });
+
+  it.each([
+    ["/practice", "page", "exact"],
+    ["/practice/react/use-state-counter", "location", "descendant"],
+    ["/", undefined, undefined],
+    ["/practice-other", undefined, undefined],
+    ["/frontend/react/use-state", undefined, undefined],
+  ])("marks %s with the matching current state", (pathname, current, routeMatch) => {
+    const { attributes } = practiceLink(pathname);
+    expect(attributes.match(/aria-current="([^"]+)"/)?.[1]).toBe(current);
+    expect(attributes.match(/data-route-match="([^"]+)"/)?.[1]).toBe(routeMatch);
+  });
+
+  it("keeps a single page-level current link on Practice routes", () => {
+    const { html } = renderNavigation("/practice/react/use-state-counter");
+    expect(html.match(/aria-current="page"/g)).toBeNull();
+    expect(renderNavigation("/practice").html.match(/aria-current="page"/g)).toHaveLength(1);
+  });
+});

@@ -1,0 +1,1042 @@
+{
+  "engine": "Chromium 156.0.8078.4 (headless, full build)",
+  "base": "http://127.0.0.1:3118",
+  "startedAt": "2026-11-08T06:21:58.326Z",
+  "checks": [
+    {
+      "name": "challenge route returns 200",
+      "passed": true
+    },
+    {
+      "name": "iframe sandbox is exactly allow-scripts",
+      "passed": true
+    },
+    {
+      "name": "iframe source is the preview document",
+      "passed": true
+    },
+    {
+      "name": "iframe sends no referrer",
+      "passed": true
+    },
+    {
+      "name": "starter initially renders Count: 0",
+      "passed": true
+    },
+    {
+      "name": "starter TODO handlers do not change the count",
+      "passed": true
+    },
+    {
+      "name": "preview theme follows the app (dark)",
+      "passed": true
+    },
+    {
+      "name": "editing marks the preview as outdated",
+      "passed": true
+    },
+    {
+      "name": "Ctrl/Cmd+Enter in the editor runs the code",
+      "passed": true
+    },
+    {
+      "name": "learner solution is executed: increment, decrement and reset work",
+      "passed": true,
+      "evidence": [
+        "Count: 1",
+        "Count: 2",
+        "Count: 1",
+        "Count: 0",
+        "Count: -1"
+      ]
+    },
+    {
+      "name": "edited text changes the rendered preview",
+      "passed": true
+    },
+    {
+      "name": "Reset restores the starter code and re-runs it",
+      "passed": true
+    },
+    {
+      "name": "Reset explains how to undo",
+      "passed": true
+    },
+    {
+      "name": "one undo after Reset restores exactly the replaced code",
+      "passed": true
+    },
+    {
+      "name": "JSX syntax error is reported as a compile error",
+      "passed": true
+    },
+    {
+      "name": "syntax error shows message, line and code frame",
+      "passed": true,
+      "evidence": "Problems\n\nSyntaxError: Unexpected token\n\nLine 2, column 15\n\n1export default function App() {\n\n2  return <div>;\n\n3}\n\n4 \n\nRun again\nReset to starter"
+    },
+    {
+      "name": "compile error removes the preview frame",
+      "passed": true
+    },
+    {
+      "name": "compile errors are recoverable with Run again",
+      "passed": true
+    },
+    {
+      "name": "unsupported import is rejected",
+      "passed": true
+    },
+    {
+      "name": "dynamic import is rejected",
+      "passed": true
+    },
+    {
+      "name": "missing default export is explained",
+      "passed": true
+    },
+    {
+      "name": "TypeScript type errors are not reported (documented limitation)",
+      "passed": true
+    },
+    {
+      "name": "render exception is reported as a runtime error",
+      "passed": true
+    },
+    {
+      "name": "render error shows kind, message, source line and component stack",
+      "passed": true,
+      "evidence": "Problems\n\nWHILE RENDERING\n\nError: Boom from render\n\nLine 4\n\n2  const value = 1;\n\n3  if (value) {\n\n4    throw new Error(\"Boom from render\");\n\n5  }\n\n6  return <p>unreachable</p>;\n\nat App (blob:null/728d1501-14cf-4676-9b6d-513bf48646c2:4:11)\nRun again\nReset to starter"
+    },
+    {
+      "name": "event handler program renders",
+      "passed": true
+    },
+    {
+      "name": "event handler error is reported and the preview stays usable",
+      "passed": true,
+      "evidence": "Problems\n\nIN AN EVENT HANDLER OR TIMER\n\nTypeError: Handler failed\n\nLine 3\n\n1export default function App() {\n\n2  function handle() {\n\n3    throw new TypeError(\"Handler failed\");\n\n4  }\n\n5  return <button type=\"button\" onClick={handle}>Break</button>;\n\nRun again\nReset to starter"
+    },
+    {
+      "name": "hook misuse program renders",
+      "passed": true
+    },
+    {
+      "name": "React development errors are meaningful (Rules of Hooks)",
+      "passed": true,
+      "evidence": "Problems\n\nWHILE RENDERING\n\nError: Rendered more hooks than during the previous render.\n\nLine 5\n\n3  const [flag, setFlag] = useState(false);\n\n4  if (flag) {\n\n5    useState(1);\n\n6  }\n\n7  return <button type=\"button\" onClick={() => setFlag(true)}>Toggle</button>;\n\nat App (blob:null/eff95d81-8da1-4cd0-85ec-f2b58ec665f5:3:43)\nRun again\nReset to starter"
+    },
+    {
+      "name": "unbounded recursion is reported as RangeError",
+      "passed": true
+    },
+    {
+      "name": "infinite render loop is stopped by the execution guard",
+      "passed": true,
+      "evidence": {
+        "problems": "Problems\n\nThe preview was stopped because your code ran for more than one second without pausing. Look for an infinite loop or endless recursion.\n\nStopped: Last instrumented code ran near line 3.\n\nLine 3\n\n1export default function App() {\n\n2  let i = 0;\n\n3  while (true) {\n\n4    i++;\n\n5  }\n\nRun again\nReset to starter",
+        "elapsedMs": 1217
+      }
+    },
+    {
+      "name": "infinite render loop: preview frame removed",
+      "passed": true
+    },
+    {
+      "name": "infinite render loop: parent stays responsive",
+      "passed": true,
+      "evidence": {
+        "maxParentTimerGapMs": 51
+      }
+    },
+    {
+      "name": "endless microtask chain is stopped by the execution guard",
+      "passed": true,
+      "evidence": {
+        "problems": "Problems\n\nThe preview was stopped because your code ran for more than one second without pausing. Look for an infinite loop or endless recursion.\n\nStopped: Last instrumented code ran near line 4.\n\nLine 4\n\n2export default function App() {\n\n3  useEffect(() => {\n\n4    const spin = () => Promise.resolve().then(spin);\n\n5    spin();\n\n6  }, []);\n\nRun again\nReset to starter",
+        "elapsedMs": 1250
+      }
+    },
+    {
+      "name": "endless microtask chain: preview frame removed",
+      "passed": true
+    },
+    {
+      "name": "endless microtask chain: parent stays responsive",
+      "passed": true,
+      "evidence": {
+        "maxParentTimerGapMs": 50
+      }
+    },
+    {
+      "name": "click-handler loop program renders",
+      "passed": true
+    },
+    {
+      "name": "infinite loop in an event handler is stopped",
+      "passed": true,
+      "evidence": {
+        "maxParentTimerGapMs": 50
+      }
+    },
+    {
+      "name": "catastrophic regex (uninstrumented): contained and reported without crashing the app",
+      "passed": true
+    },
+    {
+      "name": "catastrophic regex (uninstrumented): parent stays responsive (Chromium site isolation)",
+      "passed": true,
+      "evidence": {
+        "maxParentTimerGapMs": 51
+      }
+    },
+    {
+      "name": "unbounded memory allocation: contained and reported without crashing the app",
+      "passed": true
+    },
+    {
+      "name": "unbounded memory allocation: parent stays responsive (Chromium site isolation)",
+      "passed": true,
+      "evidence": {
+        "maxParentTimerGapMs": 50
+      }
+    },
+    {
+      "name": "self-navigation is detected and the preview removed",
+      "passed": true
+    },
+    {
+      "name": "link navigation program renders",
+      "passed": true
+    },
+    {
+      "name": "link navigation inside the preview is detected",
+      "passed": true
+    },
+    {
+      "name": "top-level page never navigated",
+      "passed": true
+    },
+    {
+      "name": "alert/confirm program renders",
+      "passed": true
+    },
+    {
+      "name": "modal dialogs are blocked in the preview",
+      "passed": true,
+      "evidence": {
+        "dialogs": 0
+      }
+    },
+    {
+      "name": "attack program renders",
+      "passed": true
+    },
+    {
+      "name": "attack blocked: origin",
+      "passed": true,
+      "evidence": "ALLOWED: null"
+    },
+    {
+      "name": "attack blocked: parent.document",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: parent.localStorage",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: own.localStorage",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: sessionStorage",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: document.cookie",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: parent.appState",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: parent.location.href",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: top.navigation",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: parent.history",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: window.open",
+      "passed": true,
+      "evidence": "ALLOWED: null"
+    },
+    {
+      "name": "attack blocked: eval",
+      "passed": true,
+      "evidence": "blocked: EvalError"
+    },
+    {
+      "name": "attack blocked: Function",
+      "passed": true,
+      "evidence": "blocked: EvalError"
+    },
+    {
+      "name": "attack blocked: fetch.external",
+      "passed": true,
+      "evidence": "blocked: TypeError"
+    },
+    {
+      "name": "attack blocked: fetch.app",
+      "passed": true,
+      "evidence": "blocked: TypeError"
+    },
+    {
+      "name": "attack blocked: xhr",
+      "passed": true,
+      "evidence": "blocked: Error"
+    },
+    {
+      "name": "attack blocked: websocket",
+      "passed": true,
+      "evidence": "blocked: Error"
+    },
+    {
+      "name": "attack blocked: image",
+      "passed": true,
+      "evidence": "blocked: Error"
+    },
+    {
+      "name": "attack blocked: script",
+      "passed": true,
+      "evidence": "blocked: Error"
+    },
+    {
+      "name": "attack blocked: worker",
+      "passed": true,
+      "evidence": "blocked: Error"
+    },
+    {
+      "name": "attack blocked: indexedDB",
+      "passed": true,
+      "evidence": "blocked: SecurityError"
+    },
+    {
+      "name": "attack blocked: beacon",
+      "passed": true,
+      "evidence": "ALLOWED: true"
+    },
+    {
+      "name": "attack blocked: css.url",
+      "passed": true,
+      "evidence": "ALLOWED: url(\"http://127.0.0.1:4802/?exfil=css\")"
+    },
+    {
+      "name": "attack blocked: form",
+      "passed": true,
+      "evidence": "ALLOWED: submit() called"
+    },
+    {
+      "name": "attack blocked: broadcast",
+      "passed": true,
+      "evidence": "ALLOWED: posted"
+    },
+    {
+      "name": "no attack request reached the canary server",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "BroadcastChannel does not reach the parent",
+      "passed": true
+    },
+    {
+      "name": "preview frame only loaded its own document, stylesheet and runtime",
+      "passed": true,
+      "evidence": [
+        "/lab-runtime/preview.html",
+        "/lab-runtime/preview.css",
+        "/lab-runtime/runtime.js"
+      ]
+    },
+    {
+      "name": "no popup windows were opened",
+      "passed": true
+    },
+    {
+      "name": "forging program renders",
+      "passed": true
+    },
+    {
+      "name": "forged postMessage payloads from the preview are rejected",
+      "passed": true,
+      "evidence": {
+        "rejected": 7
+      }
+    },
+    {
+      "name": "messages from other windows and frames are ignored",
+      "passed": true
+    },
+    {
+      "name": "no injected markup reached the parent DOM",
+      "passed": true
+    },
+    {
+      "name": "parent URL, title, preferences, theme and cookies are unchanged",
+      "passed": true,
+      "evidence": {
+        "initial": {
+          "url": "http://127.0.0.1:3118/practice/react/use-state-counter",
+          "title": "Build a Counter · Practice | Explain Dev",
+          "preferences": "{\"version\":1,\"bookmarkedTopicIds\":[\"preserve\"],\"readTopicIds\":[\"preserve\"]}",
+          "theme": "dark",
+          "cookie": "",
+          "iframes": 1
+        },
+        "finalState": {
+          "url": "http://127.0.0.1:3118/practice/react/use-state-counter",
+          "title": "Build a Counter · Practice | Explain Dev",
+          "preferences": "{\"version\":1,\"bookmarkedTopicIds\":[\"preserve\"],\"readTopicIds\":[\"preserve\"]}",
+          "theme": "dark",
+          "cookie": "",
+          "iframes": 1
+        }
+      }
+    },
+    {
+      "name": "only one preview frame exists after 15 runs",
+      "passed": true
+    },
+    {
+      "name": "theme change updates the running preview without a re-run",
+      "passed": true
+    },
+    {
+      "name": "no uncaught errors in the parent document",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "preview opened directly is still sandboxed (CSP sandbox)",
+      "passed": true,
+      "evidence": {
+        "origin": "null",
+        "storage": "SecurityError",
+        "text": "Open the Coding Lab to use this preview."
+      }
+    },
+    {
+      "name": "runtime refuses to run outside the Coding Lab frame",
+      "passed": true,
+      "evidence": "Open the Coding Lab to use this preview."
+    },
+    {
+      "name": "Tab moves from Run to Reset",
+      "passed": true
+    },
+    {
+      "name": "Tab then reaches the code editor",
+      "passed": true
+    },
+    {
+      "name": "editor has an accessible name and help text",
+      "passed": true
+    },
+    {
+      "name": "Tab inside the editor indents instead of moving focus",
+      "passed": true
+    },
+    {
+      "name": "Escape then Tab leaves the editor (no keyboard trap)",
+      "passed": true,
+      "evidence": "IFRAME"
+    },
+    {
+      "name": "visible focus indicator on Run",
+      "passed": true
+    },
+    {
+      "name": "Practice link is current on /practice",
+      "passed": true
+    },
+    {
+      "name": "Practice link marks the challenge as a descendant location",
+      "passed": true
+    },
+    {
+      "name": "navigating away removes the preview",
+      "passed": true
+    },
+    {
+      "name": "returning starts a fresh session with the starter code (drafts are not persisted)",
+      "passed": true
+    },
+    {
+      "name": "no uncaught errors during navigation",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "mobile shows a Code/Preview tablist",
+      "passed": true
+    },
+    {
+      "name": "code tab is selected first",
+      "passed": true
+    },
+    {
+      "name": "ArrowRight selects and focuses the Preview tab",
+      "passed": true
+    },
+    {
+      "name": "switching views keeps the edited code",
+      "passed": true
+    },
+    {
+      "name": "Run on mobile shows the preview with the edited code",
+      "passed": true
+    },
+    {
+      "name": "touch interaction works inside the preview",
+      "passed": true
+    },
+    {
+      "name": "320/dark no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        320,
+        320
+      ]
+    },
+    {
+      "name": "320/dark app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "320/dark layout: tabs",
+      "passed": true
+    },
+    {
+      "name": "320/dark toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "320/dark no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "320/light no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        320,
+        320
+      ]
+    },
+    {
+      "name": "320/light app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "320/light layout: tabs",
+      "passed": true
+    },
+    {
+      "name": "320/light toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "320/light no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "375/dark no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        375,
+        375
+      ]
+    },
+    {
+      "name": "375/dark app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "375/dark layout: tabs",
+      "passed": true
+    },
+    {
+      "name": "375/dark toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "375/dark no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "375/dark /practice has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        375,
+        375
+      ]
+    },
+    {
+      "name": "375/light app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "375/light layout: tabs",
+      "passed": true
+    },
+    {
+      "name": "375/light toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "375/light no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "375/light /practice has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        768,
+        768
+      ]
+    },
+    {
+      "name": "768/dark app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "768/dark layout: tabs",
+      "passed": true
+    },
+    {
+      "name": "768/dark toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "768/dark no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "768/light no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        768,
+        768
+      ]
+    },
+    {
+      "name": "768/light app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "768/light layout: tabs",
+      "passed": true
+    },
+    {
+      "name": "768/light toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "768/light no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "1024/dark no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "1024/dark app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "1024/dark layout: side-by-side panels",
+      "passed": true
+    },
+    {
+      "name": "1024/dark toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "1024/dark no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "1024/light no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "1024/light app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "1024/light layout: side-by-side panels",
+      "passed": true
+    },
+    {
+      "name": "1024/light toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "1024/light no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "1440/dark no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        1440,
+        1440
+      ]
+    },
+    {
+      "name": "1440/dark app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "1440/dark layout: side-by-side panels",
+      "passed": true
+    },
+    {
+      "name": "1440/dark toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "1440/dark no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "1440/dark /practice has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light no horizontal page overflow",
+      "passed": true,
+      "evidence": [
+        1440,
+        1440
+      ]
+    },
+    {
+      "name": "1440/light app and preview themes match",
+      "passed": true
+    },
+    {
+      "name": "1440/light layout: side-by-side panels",
+      "passed": true
+    },
+    {
+      "name": "1440/light toolbar buttons meet 44px targets",
+      "passed": true
+    },
+    {
+      "name": "1440/light no uncaught errors or hydration warnings",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "1440/light /practice has no horizontal overflow",
+      "passed": true
+    }
+  ],
+  "canaryHits": [
+    {
+      "method": "GET",
+      "url": "/?exfil=self-navigation",
+      "at": 1794118938921,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "remote": "127.0.0.1",
+      "dest": "iframe",
+      "mode": "navigate",
+      "site": "cross-site"
+    },
+    {
+      "method": "GET",
+      "url": "/?exfil=link-navigation",
+      "at": 1794118939781,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "remote": "127.0.0.1",
+      "dest": "iframe",
+      "mode": "navigate",
+      "site": "cross-site"
+    }
+  ],
+  "observations": {
+    "catastrophic regex (uninstrumented)": {
+      "status": "stopped",
+      "elapsedMs": 8098,
+      "maxParentTimerGapMs": 51,
+      "problems": "Problems |  | The preview stopped responding, so it was closed. Code that never pauses can freeze the preview.",
+      "renderersBusyAfterRemoval": []
+    },
+    "unbounded memory allocation": {
+      "status": "stopped",
+      "elapsedMs": 3245,
+      "maxParentTimerGapMs": 50,
+      "problems": "Problems |  | The preview was stopped because your code ran for more than one second without pausing. Look for an infinite loop or endless recursion.",
+      "renderersBusyAfterRemoval": []
+    },
+    "self-navigation canary requests": [
+      {
+        "method": "GET",
+        "url": "/?exfil=self-navigation",
+        "at": 1794118938921,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "remote": "127.0.0.1",
+        "dest": "iframe",
+        "mode": "navigate",
+        "site": "cross-site"
+      }
+    ],
+    "attack results": {
+      "origin": "ALLOWED: null",
+      "parent.document": "blocked: SecurityError",
+      "parent.localStorage": "blocked: SecurityError",
+      "own.localStorage": "blocked: SecurityError",
+      "sessionStorage": "blocked: SecurityError",
+      "document.cookie": "blocked: SecurityError",
+      "parent.appState": "blocked: SecurityError",
+      "parent.location.href": "blocked: SecurityError",
+      "top.navigation": "blocked: SecurityError",
+      "parent.history": "blocked: SecurityError",
+      "window.open": "ALLOWED: null",
+      "eval": "blocked: EvalError",
+      "Function": "blocked: EvalError",
+      "fetch.external": "blocked: TypeError",
+      "fetch.app": "blocked: TypeError",
+      "xhr": "blocked: Error",
+      "websocket": "blocked: Error",
+      "image": "blocked: Error",
+      "script": "blocked: Error",
+      "worker": "blocked: Error",
+      "indexedDB": "blocked: SecurityError",
+      "beacon": "ALLOWED: true",
+      "css.url": "ALLOWED: url(\"http://127.0.0.1:4802/?exfil=css\")",
+      "form": "ALLOWED: submit() called",
+      "broadcast": "ALLOWED: posted"
+    },
+    "requests attempted by the preview and blocked by the browser": [
+      "http://127.0.0.1:4802/?exfil=xhr (csp)",
+      "http://127.0.0.1:4802/x.js?exfil=script (csp)",
+      "http://127.0.0.1:4802/?exfil=img (csp)",
+      "http://127.0.0.1:4802/?exfil=css (csp)"
+    ],
+    "parent JS heap before/after 15 runs (bytes, approximate)": {
+      "before": 14639840,
+      "after": 15156622
+    },
+    "errors thrown inside the preview frame (expected learner errors)": [
+      "Handler failed",
+      "Stopped after 1 second without a pause. This usually means an infinite loop or endless recursion."
+    ],
+    "parent console errors (preview-originated messages are expected)": [
+      {
+        "text": "Error: Boom from render\n    at App (blob:null/728d1501-14cf-4676-9b6d-513bf48646c2:4:11)\n    at Object.react_stack_bottom_frame (http://127.0.0.1:3118/lab-runtime/runtime.js:226:251)\n    at Ma (http://127.0.0.1:3118/lab-runtime/runtime.js:119:803)\n    at Ns (http://127.0.0.1:3118/lab-runtime/runtime",
+        "frame": "http://127.0.0.1:3118/lab-runtime/runtime.js"
+      },
+      {
+        "text": "React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks\n\n   Previous render            Next render\n   ------------------------------------------------------\n%s",
+        "frame": "http://127.0.0.1:3118/lab-runtime/runtime.js"
+      },
+      {
+        "text": "Error: Rendered more hooks than during the previous render.\n    at Ba (http://127.0.0.1:3118/lab-runtime/runtime.js:119:3160)\n    at qa (http://127.0.0.1:3118/lab-runtime/runtime.js:119:4805)\n    at Object.useState (http://127.0.0.1:3118/lab-runtime/runtime.js:230:4860)\n    at e.useState (http://127",
+        "frame": "http://127.0.0.1:3118/lab-runtime/runtime.js"
+      },
+      {
+        "text": "RangeError: Maximum call stack size exceeded\n    at s (http://127.0.0.1:3118/lab-runtime/runtime.js:391:323)\n    at down (blob:null/35fb5936-d048-4266-9294-63bede4f348b:1:256)\n    at down (blob:null/35fb5936-d048-4266-9294-63bede4f348b:2:10)\n    at down (blob:null/35fb5936-d048-4266-9294-63bede4f348",
+        "frame": "http://127.0.0.1:3118/lab-runtime/runtime.js"
+      },
+      {
+        "text": "Ignored call to 'alert()'. The document is sandboxed, and the 'allow-modals' keyword is not set.",
+        "frame": "blob:null/42ca799e-a971-4cce-a0ba-8dd020a79a99"
+      },
+      {
+        "text": "Ignored call to 'confirm()'. The document is sandboxed, and the 'allow-modals' keyword is not set.",
+        "frame": "blob:null/42ca799e-a971-4cce-a0ba-8dd020a79a99"
+      },
+      {
+        "text": "Unsafe attempt to initiate navigation for frame with origin 'http://127.0.0.1:3118' from frame with URL 'http://127.0.0.1:3118/lab-runtime/preview.html'. The frame attempting navigation of the top-level window is sandboxed, but the flag of 'allow-top-navigation' or 'allow-top-navigation-by-user-acti",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Blocked opening 'http://127.0.0.1:4802/?exfil=popup' in a new window because the request was made in a sandboxed frame whose 'allow-popups' permission is not set.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=fetch' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Fetch API cannot load http://127.0.0.1:4802/?exfil=fetch. Refused to connect because it violates the document's Content Security Policy.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:3118/?exfil=fetch-app' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Fetch API cannot load http://127.0.0.1:3118/?exfil=fetch-app. Refused to connect because it violates the document's Content Security Policy.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=xhr' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'ws://127.0.0.1:4802/?exfil=ws' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Loading the script 'http://127.0.0.1:4802/x.js?exfil=script' violates the following Content Security Policy directive: \"script-src 'self' blob:\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Creating a worker from 'blob:null/9b1d14ac-2f11-4390-9799-9081bed82175' violates the following Content Security Policy directive: \"worker-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Loading the image 'http://127.0.0.1:4802/?exfil=img' violates the following Content Security Policy directive: \"img-src data: blob:\". The action has been blocked.",
+        "frame": "http://127.0.0.1:3118/lab-runtime/preview.html"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=beacon' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Loading the image 'http://127.0.0.1:4802/?exfil=css' violates the following Content Security Policy directive: \"img-src data: blob:\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Blocked form submission to 'http://127.0.0.1:4802/?exfil=form' because the form's frame is sandboxed and the 'allow-forms' permission is not set.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Unsafe attempt to initiate navigation for frame with origin 'http://127.0.0.1:3118' from frame with URL 'http://127.0.0.1:3118/lab-runtime/preview.html'. The frame attempting navigation of the top-level window is sandboxed, but the flag of 'allow-top-navigation' or 'allow-top-navigation-by-user-acti",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Blocked opening 'http://127.0.0.1:4802/?exfil=popup' in a new window because the request was made in a sandboxed frame whose 'allow-popups' permission is not set.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=fetch' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Fetch API cannot load http://127.0.0.1:4802/?exfil=fetch. Refused to connect because it violates the document's Content Security Policy.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:3118/?exfil=fetch-app' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Fetch API cannot load http://127.0.0.1:3118/?exfil=fetch-app. Refused to connect because it violates the document's Content Security Policy.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=xhr' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'ws://127.0.0.1:4802/?exfil=ws' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Loading the script 'http://127.0.0.1:4802/x.js?exfil=script' violates the following Content Security Policy directive: \"script-src 'self' blob:\". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Creating a worker from 'blob:null/9b1d14ac-2f11-4390-9799-9081bed82175' violates the following Content Security Policy directive: \"worker-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Loading the image 'http://127.0.0.1:4802/?exfil=img' violates the following Content Security Policy directive: \"img-src data: blob:\". The action has been blocked.",
+        "frame": "http://127.0.0.1:3118/lab-runtime/preview.html"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=beacon' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Loading the image 'http://127.0.0.1:4802/?exfil=css' violates the following Content Security Policy directive: \"img-src data: blob:\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Blocked form submission to 'http://127.0.0.1:4802/?exfil=form' because the form's frame is sandboxed and the 'allow-forms' permission is not set.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Unsafe attempt to initiate navigation for frame with origin 'http://127.0.0.1:3118' from frame with URL 'http://127.0.0.1:3118/lab-runtime/preview.html'. The frame attempting navigation of the top-level window is sandboxed, but the flag of 'allow-top-navigation' or 'allow-top-navigation-by-user-acti",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Blocked opening 'http://127.0.0.1:4802/?exfil=popup' in a new window because the request was made in a sandboxed frame whose 'allow-popups' permission is not set.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:4802/?exfil=fetch' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Fetch API cannot load http://127.0.0.1:4802/?exfil=fetch. Refused to connect because it violates the document's Content Security Policy.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Connecting to 'http://127.0.0.1:3118/?exfil=fetch-app' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has been blocked.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      },
+      {
+        "text": "Fetch API cannot load http://127.0.0.1:3118/?exfil=fetch-app. Refused to connect because it violates the document's Content Security Policy.",
+        "frame": "blob:null/d577b39b-40c4-4d08-abf2-e5126bec4d84"
+      }
+    ]
+  },
+  "errors": [],
+  "finishedAt": "2026-11-08T06:22:47.211Z"
+}

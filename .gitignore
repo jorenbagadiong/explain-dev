@@ -7,3 +7,6 @@ coverage/
 !.env.example
 .DS_Store
 .vitest/
+
+# Generated Coding Lab preview runtime (yarn build:lab-runtime)
+/public/lab-runtime/runtime.js

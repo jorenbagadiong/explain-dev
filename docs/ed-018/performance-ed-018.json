@@ -1,0 +1,116 @@
+{
+  "label": "ed-018",
+  "base": "http://127.0.0.1:3118",
+  "engine": "156.0.8078.4",
+  "measuredAt": "2026-11-08T06:21:31.444Z",
+  "routes": [
+    {
+      "route": "/",
+      "scripts": 8,
+      "encodedBytes": 167646,
+      "decodedBytes": 553489,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": false
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/frontend/react",
+      "scripts": 8,
+      "encodedBytes": 167646,
+      "decodedBytes": 553489,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": false
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "scripts": 9,
+      "encodedBytes": 169145,
+      "decodedBytes": 556752,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": false
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/practice",
+      "scripts": 10,
+      "encodedBytes": 171643,
+      "decodedBytes": 563531,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": true
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/practice/react/use-state-counter",
+      "scripts": 11,
+      "encodedBytes": 325387,
+      "decodedBytes": 1022069,
+      "parentBundlesContain": {
+        "codemirror": true,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": true
+      },
+      "previewRuntime": {
+        "url": "/lab-runtime/runtime.js",
+        "transferredBytes": 214141,
+        "contentEncoding": "gzip",
+        "uncompressedBytes": 767232
+      }
+    }
+  ],
+  "lab": {
+    "samples": {
+      "editorInitMs": [
+        23.59999999962747,
+        24,
+        22.700000001117587,
+        23.90000000037253,
+        20.40000000037253
+      ],
+      "previewReadyMs": [
+        102.60000000149012,
+        97.59999999962747,
+        99.5,
+        99.5,
+        102.79999999888241
+      ],
+      "previewRenderMs": [
+        130.80000000074506,
+        129.40000000037253,
+        131.59999999962747,
+        132.09999999962747,
+        131
+      ],
+      "workspaceVisibleMs": [
+        446,
+        453,
+        455,
+        454,
+        456
+      ]
+    },
+    "medians": {
+      "editorInitMs": 23.6,
+      "previewReadyMs": 99.5,
+      "previewRenderMs": 131,
+      "workspaceVisibleMs": 454
+    }
+  }
+}

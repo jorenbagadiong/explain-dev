@@ -1,0 +1,10 @@
+<!doctype html><html><body><h1 id="secret-heading">PARENT SECRET DOM</h1>
+<script>
+document.cookie = "session=PARENT_COOKIE; path=/";
+localStorage.setItem("explain-dev:v1:preferences", "PARENT_STORAGE");
+window.appState = { secret: "PARENT_STATE" };
+window.received = [];
+const bc = new BroadcastChannel("probe"); window.bcReceived = []; bc.onmessage = (e) => window.bcReceived.push(e.data);
+addEventListener("message", (e) => window.received.push({ origin: e.origin, data: e.data, fromFrame: e.source === document.querySelector("iframe")?.contentWindow }));
+window.mount = (src) => { const f = document.createElement("iframe"); f.setAttribute("sandbox", "allow-scripts"); f.setAttribute("referrerpolicy", "no-referrer"); f.src = src; window.loads = 0; f.addEventListener("load", () => window.loads++); document.body.append(f); return f; };
+</script></body></html>

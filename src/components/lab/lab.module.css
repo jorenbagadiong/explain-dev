@@ -1,0 +1,70 @@
+/* Coding Lab workspace. Uses only the committed theme tokens from globals.css. */
+.workspace {
+  --lab-syntax-meta: oklch(0.45 0.02 285);
+  --lab-syntax-keyword: oklch(0.45 0.2 310);
+  --lab-syntax-atom: oklch(0.45 0.15 255);
+  --lab-syntax-literal: oklch(0.47 0.12 160);
+  --lab-syntax-string: oklch(0.48 0.15 30);
+  --lab-syntax-regexp: oklch(0.52 0.16 50);
+  --lab-syntax-definition: oklch(0.45 0.17 265);
+  --lab-syntax-local: oklch(0.42 0.17 290);
+  --lab-syntax-type: oklch(0.47 0.11 180);
+  --lab-syntax-class: oklch(0.46 0.1 200);
+  --lab-syntax-special: oklch(0.45 0.09 220);
+  --lab-syntax-property: oklch(0.44 0.15 255);
+  --lab-syntax-comment: oklch(0.5 0.07 70);
+  --lab-syntax-invalid: oklch(0.55 0.22 27);
+  min-width: 0;
+  margin-top: 2rem;
+}
+
+:global(.dark) .workspace {
+  --lab-syntax-meta: oklch(0.75 0.02 285);
+  --lab-syntax-keyword: oklch(0.78 0.14 310);
+  --lab-syntax-atom: oklch(0.8 0.11 240);
+  --lab-syntax-literal: oklch(0.82 0.12 160);
+  --lab-syntax-string: oklch(0.82 0.1 60);
+  --lab-syntax-regexp: oklch(0.8 0.13 40);
+  --lab-syntax-definition: oklch(0.82 0.1 250);
+  --lab-syntax-local: oklch(0.82 0.1 290);
+  --lab-syntax-type: oklch(0.82 0.1 185);
+  --lab-syntax-class: oklch(0.82 0.09 200);
+  --lab-syntax-special: oklch(0.8 0.08 220);
+  --lab-syntax-property: oklch(0.82 0.09 245);
+  --lab-syntax-comment: oklch(0.7 0.05 80);
+  --lab-syntax-invalid: oklch(0.7 0.19 22);
+}
+
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1rem; padding-bottom: 0.75rem; }
+.statusText { display: inline-flex; min-width: 0; align-items: center; gap: 0.5rem; font-size: 0.8125rem; line-height: 1.5; color: var(--muted-foreground); overflow-wrap: anywhere; }
+
+.tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25rem; margin-bottom: 0.75rem; padding: 0.25rem; border: 1px solid var(--border); border-radius: 0.75rem; background: color-mix(in oklch, var(--muted) 40%, transparent); }
+.tab { min-height: 2.75rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 500; color: var(--muted-foreground); }
+.tab[aria-selected="true"] { color: var(--foreground); background: var(--background); box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--primary) 30%, var(--border)); }
+.tab:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+.panels { display: grid; gap: 1rem; min-width: 0; }
+@media (min-width: 1024px) { .panels { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+
+.panel { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: 0.875rem; background: color-mix(in oklch, var(--muted) 22%, var(--background)); box-shadow: 0 18px 40px -32px color-mix(in oklch, var(--foreground) 45%, transparent); }
+.panel[hidden] { display: none; }
+.panelHeader { display: flex; min-height: 2.75rem; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25rem 0.75rem; padding: 0.5rem 1rem; border-bottom: 1px solid var(--border); background: color-mix(in oklch, var(--primary) 4%, transparent); }
+.panelFootnote { padding: 0.5rem 1rem; border-top: 1px solid var(--border); font-size: 0.6875rem; color: var(--muted-foreground); }
+
+.editorHost { height: clamp(22rem, 62vh, 36rem); min-width: 0; }
+.editorHost :global(.cm-editor) { height: 100%; }
+.editorHost :global(.cm-editor.cm-focused) { box-shadow: inset 0 0 0 2px var(--ring); }
+
+.previewHost { position: relative; height: clamp(16rem, 40vh, 24rem); background: var(--background); }
+.previewOverlay { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted-foreground); background: color-mix(in oklch, var(--background) 60%, transparent); pointer-events: none; }
+
+.problems { padding: 1rem; border-top: 1px solid color-mix(in oklch, var(--destructive) 35%, var(--border)); background: color-mix(in oklch, var(--destructive) 6%, var(--background)); overflow-wrap: anywhere; }
+.codeFrame, .componentStack { margin-top: 0.75rem; max-width: 100%; overflow-x: auto; padding: 0.625rem 0; border: 1px solid var(--border); border-radius: 0.5rem; background: var(--background); font: 12px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; }
+.componentStack { padding: 0.625rem 0.75rem; color: var(--muted-foreground); }
+.codeFrame > span { display: block; padding-right: 0.75rem; }
+.codeFrameNumber { display: inline-block; width: 3rem; padding-right: 0.75rem; text-align: right; color: var(--muted-foreground); user-select: none; }
+.codeFrameHighlight { background: color-mix(in oklch, var(--destructive) 14%, transparent); box-shadow: inset 3px 0 var(--destructive); }
+
+.skeleton { display: grid; gap: 1rem; margin-top: 2rem; }
+@media (min-width: 1024px) { .skeleton { grid-template-columns: 1fr 1fr; } }
+.skeletonPanel { height: clamp(16rem, 50vh, 30rem); border: 1px solid var(--border); border-radius: 0.875rem; background: color-mix(in oklch, var(--muted) 30%, var(--background)); }

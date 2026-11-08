@@ -1,0 +1,413 @@
+{
+ "engine": "156.0.8078.4",
+ "exe": "/home/joren/.cache/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell",
+ "scenarios": {
+  "sameOriginOpaque": {
+   "dialogs": 0,
+   "popups": 0,
+   "console": [
+    "Connecting to 'http://localhost:4801/parent.html?exfil=fetch-same' violates the following Content Security Policy directive: \"connect-src 'n",
+    "Fetch API cannot load http://localhost:4801/parent.html?exfil=fetch-same. Refused to connect because it violates the document's Content Secu",
+    "Connecting to 'http://127.0.0.1:4802/?exfil=fetch-ext' violates the following Content Security Policy directive: \"connect-src 'none'\". The a",
+    "Fetch API cannot load http://127.0.0.1:4802/?exfil=fetch-ext. Refused to connect because it violates the document's Content Security Policy.",
+    "Connecting to 'http://localhost:4801/?exfil=xhr' violates the following Content Security Policy directive: \"connect-src 'none'\". The action ",
+    "Connecting to 'http://localhost:4801/?exfil=beacon' violates the following Content Security Policy directive: \"connect-src 'none'\". The acti",
+    "Connecting to 'ws://127.0.0.1:4802/?exfil=ws' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has",
+    "Executing inline script violates the following Content Security Policy directive 'script-src 'self' blob:'. Either the 'unsafe-inline' keywo",
+    "Loading the image 'http://127.0.0.1:4802/?exfil=img' violates the following Content Security Policy directive: \"img-src data: blob:\". The ac",
+    "Loading the image 'http://127.0.0.1:4802/?exfil=css' violates the following Content Security Policy directive: \"img-src data: blob:\". The ac",
+    "Loading the script 'http://127.0.0.1:4802/preview-probe.js?exfil=script' violates the following Content Security Policy directive: \"script-s",
+    "Executing inline script violates the following Content Security Policy directive 'script-src 'self' blob:'. Either the 'unsafe-inline' keywo",
+    "Loading the script 'http://127.0.0.1:4802/preview-probe.js?exfil=import' violates the following Content Security Policy directive: \"script-s",
+    "Loading the script 'data:text/javascript,window.__data=1' violates the following Content Security Policy directive: \"script-src 'self' blob:",
+    "Creating a worker from 'blob:null/c39b506e-ede0-449a-a91d-a2caa3bc0f7a' violates the following Content Security Policy directive: \"worker-sr",
+    "Blocked opening 'http://127.0.0.1:4802/?exfil=popup' in a new window because the request was made in a sandboxed frame whose 'allow-popups' ",
+    "Ignored call to 'alert()'. The document is sandboxed, and the 'allow-modals' keyword is not set.",
+    "Blocked form submission to 'http://127.0.0.1:4802/?' because the form's frame is sandboxed and the 'allow-forms' permission is not set.",
+    "Unsafe attempt to initiate navigation for frame with URL 'http://localhost:4801/parent.html' from frame with URL 'http://localhost:4801/prev"
+   ],
+   "url": "http://localhost:4801/parent.html",
+   "results": {
+    "origin": "null",
+    "data": {
+     "type": "probe-results",
+     "results": {
+      "selfOrigin": {
+       "ok": true,
+       "value": "null"
+      },
+      "locationHref": {
+       "ok": true,
+       "value": "http://localhost:4801/preview.html"
+      },
+      "parentDocument": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'document' from 'Window': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "parentAppState": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'appState' from 'Window': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "parentLocationRead": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'href' from 'Location': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "parentLocalStorage": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'localStorage' from 'Window': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "ownLocalStorage": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'localStorage' property from 'Window': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "sessionStorage": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "indexedDB": {
+       "ok": false,
+       "error": "SecurityError: Failed to execute 'open' on 'IDBFactory': access to the Indexed Database API is denied in this context."
+      },
+      "cookie": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'cookie' property from 'Document': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "cookieWrite": {
+       "ok": false,
+       "error": "SecurityError: Failed to set the 'cookie' property on 'Document': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "fetchSameApp": {
+       "ok": false,
+       "error": "TypeError: Failed to fetch"
+      },
+      "fetchExternal": {
+       "ok": false,
+       "error": "TypeError: Failed to fetch"
+      },
+      "xhr": {
+       "ok": false,
+       "error": "Error: xhr error"
+      },
+      "sendBeacon": {
+       "ok": true,
+       "value": "true"
+      },
+      "websocket": {
+       "ok": false,
+       "error": "Error: ws error"
+      },
+      "imgExternal": {
+       "ok": false,
+       "error": "Error: img error"
+      },
+      "cssBackground": {
+       "ok": true,
+       "value": "url(\"http://127.0.0.1:4802/?exfil=css\")"
+      },
+      "scriptExternal": {
+       "ok": false,
+       "error": "Error: script error"
+      },
+      "inlineScriptAtLoad": {
+       "ok": true,
+       "value": "false"
+      },
+      "inlineScriptInjected": {
+       "ok": true,
+       "value": "false"
+      },
+      "blobScript": {
+       "ok": true,
+       "value": "42"
+      },
+      "eval": {
+       "ok": false,
+       "error": "EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: "
+      },
+      "newFunction": {
+       "ok": false,
+       "error": "EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: "
+      },
+      "dynamicImportExternal": {
+       "ok": false,
+       "error": "TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4802/preview-probe.js?exfil=import"
+      },
+      "dynamicImportBlob": {
+       "ok": true,
+       "value": "1"
+      },
+      "dataScript": {
+       "ok": false,
+       "error": "Error: data script error"
+      },
+      "workerRuns": {
+       "ok": false,
+       "error": "Error: worker error event"
+      },
+      "windowOpen": {
+       "ok": true,
+       "value": "null"
+      },
+      "alert": {
+       "ok": true,
+       "value": "returned after 0ms"
+      },
+      "formSubmit": {
+       "ok": true,
+       "value": "submitted"
+      },
+      "broadcastChannel": {
+       "ok": true,
+       "value": "posted"
+      },
+      "topNavigation": {
+       "ok": false,
+       "error": "SecurityError: Failed to set a named property 'href' on 'Location': The current window does not have permission to navigate the target frame to 'http://127.0.0."
+      },
+      "serviceWorker": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'serviceWorker' property from 'Navigator': Service worker is disabled because the context is sandboxed and lacks the 'allow-sa"
+      },
+      "sharedArrayBuffer": {
+       "ok": true,
+       "value": "undefined"
+      },
+      "crossOriginIsolated": {
+       "ok": true,
+       "value": "false"
+      }
+     }
+    },
+    "fromFrame": true
+   },
+   "bcReceived": [],
+   "cookieAfter": "session=PARENT_COOKIE",
+   "storageAfter": "PARENT_STORAGE",
+   "loads": 1,
+   "block": {
+    "maxParentTimerGapMs": 3000
+   },
+   "blockedDone": {
+    "type": "blocked-done",
+    "blockedMs": 3000
+   },
+   "selfNavigation": {
+    "loadsBefore": 1,
+    "loadsAfter": 2
+   }
+  },
+  "crossSiteOpaque": {
+   "dialogs": 0,
+   "popups": 0,
+   "console": [
+    "Connecting to 'http://127.0.0.1:4802/parent.html?exfil=fetch-same' violates the following Content Security Policy directive: \"connect-src 'n",
+    "Fetch API cannot load http://127.0.0.1:4802/parent.html?exfil=fetch-same. Refused to connect because it violates the document's Content Secu",
+    "Connecting to 'http://127.0.0.1:4802/?exfil=fetch-ext' violates the following Content Security Policy directive: \"connect-src 'none'\". The a",
+    "Fetch API cannot load http://127.0.0.1:4802/?exfil=fetch-ext. Refused to connect because it violates the document's Content Security Policy.",
+    "Connecting to 'http://127.0.0.1:4802/?exfil=xhr' violates the following Content Security Policy directive: \"connect-src 'none'\". The action ",
+    "Connecting to 'http://127.0.0.1:4802/?exfil=beacon' violates the following Content Security Policy directive: \"connect-src 'none'\". The acti",
+    "Connecting to 'ws://127.0.0.1:4802/?exfil=ws' violates the following Content Security Policy directive: \"connect-src 'none'\". The action has",
+    "Executing inline script violates the following Content Security Policy directive 'script-src 'self' blob:'. Either the 'unsafe-inline' keywo",
+    "Loading the image 'http://127.0.0.1:4802/?exfil=img' violates the following Content Security Policy directive: \"img-src data: blob:\". The ac",
+    "Loading the image 'http://127.0.0.1:4802/?exfil=css' violates the following Content Security Policy directive: \"img-src data: blob:\". The ac",
+    "Executing inline script violates the following Content Security Policy directive 'script-src 'self' blob:'. Either the 'unsafe-inline' keywo",
+    "Access to script at 'http://127.0.0.1:4802/preview-probe.js?exfil=import' from origin 'null' has been blocked by CORS policy: No 'Access-Con",
+    "Failed to load resource: net::ERR_FAILED",
+    "Loading the script 'data:text/javascript,window.__data=1' violates the following Content Security Policy directive: \"script-src 'self' blob:",
+    "Creating a worker from 'blob:null/a659b1c5-fdde-4d1f-9dc6-6f69f902ddec' violates the following Content Security Policy directive: \"worker-sr",
+    "Blocked opening 'http://127.0.0.1:4802/?exfil=popup' in a new window because the request was made in a sandboxed frame whose 'allow-popups' ",
+    "Ignored call to 'alert()'. The document is sandboxed, and the 'allow-modals' keyword is not set.",
+    "Blocked form submission to 'http://127.0.0.1:4802/?' because the form's frame is sandboxed and the 'allow-forms' permission is not set.",
+    "Unsafe attempt to initiate navigation for frame with URL 'http://localhost:4801/parent.html' from frame with URL 'http://127.0.0.1:4802/prev"
+   ],
+   "url": "http://localhost:4801/parent.html",
+   "results": {
+    "origin": "null",
+    "data": {
+     "type": "probe-results",
+     "results": {
+      "selfOrigin": {
+       "ok": true,
+       "value": "null"
+      },
+      "locationHref": {
+       "ok": true,
+       "value": "http://127.0.0.1:4802/preview.html"
+      },
+      "parentDocument": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'document' from 'Window': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "parentAppState": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'appState' from 'Window': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "parentLocationRead": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'href' from 'Location': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "parentLocalStorage": {
+       "ok": false,
+       "error": "SecurityError: Failed to read a named property 'localStorage' from 'Window': Blocked a frame with origin \"null\" from accessing a cross-origin frame."
+      },
+      "ownLocalStorage": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'localStorage' property from 'Window': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "sessionStorage": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "indexedDB": {
+       "ok": false,
+       "error": "SecurityError: Failed to execute 'open' on 'IDBFactory': access to the Indexed Database API is denied in this context."
+      },
+      "cookie": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'cookie' property from 'Document': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "cookieWrite": {
+       "ok": false,
+       "error": "SecurityError: Failed to set the 'cookie' property on 'Document': The document is sandboxed and lacks the 'allow-same-origin' flag."
+      },
+      "fetchSameApp": {
+       "ok": false,
+       "error": "TypeError: Failed to fetch"
+      },
+      "fetchExternal": {
+       "ok": false,
+       "error": "TypeError: Failed to fetch"
+      },
+      "xhr": {
+       "ok": false,
+       "error": "Error: xhr error"
+      },
+      "sendBeacon": {
+       "ok": true,
+       "value": "true"
+      },
+      "websocket": {
+       "ok": false,
+       "error": "Error: ws error"
+      },
+      "imgExternal": {
+       "ok": false,
+       "error": "Error: img error"
+      },
+      "cssBackground": {
+       "ok": true,
+       "value": "url(\"http://127.0.0.1:4802/?exfil=css\")"
+      },
+      "scriptExternal": {
+       "ok": true,
+       "value": "loaded"
+      },
+      "inlineScriptAtLoad": {
+       "ok": true,
+       "value": "false"
+      },
+      "inlineScriptInjected": {
+       "ok": true,
+       "value": "false"
+      },
+      "blobScript": {
+       "ok": true,
+       "value": "42"
+      },
+      "eval": {
+       "ok": false,
+       "error": "EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: "
+      },
+      "newFunction": {
+       "ok": false,
+       "error": "EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: "
+      },
+      "dynamicImportExternal": {
+       "ok": false,
+       "error": "TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4802/preview-probe.js?exfil=import"
+      },
+      "dynamicImportBlob": {
+       "ok": true,
+       "value": "1"
+      },
+      "dataScript": {
+       "ok": false,
+       "error": "Error: data script error"
+      },
+      "workerRuns": {
+       "ok": false,
+       "error": "Error: worker error event"
+      },
+      "windowOpen": {
+       "ok": true,
+       "value": "null"
+      },
+      "alert": {
+       "ok": true,
+       "value": "returned after 0ms"
+      },
+      "formSubmit": {
+       "ok": true,
+       "value": "submitted"
+      },
+      "broadcastChannel": {
+       "ok": true,
+       "value": "posted"
+      },
+      "topNavigation": {
+       "ok": false,
+       "error": "SecurityError: Failed to set a named property 'href' on 'Location': The current window does not have permission to navigate the target frame to 'http://127.0.0."
+      },
+      "serviceWorker": {
+       "ok": false,
+       "error": "SecurityError: Failed to read the 'serviceWorker' property from 'Navigator': Service worker is disabled because the context is sandboxed and lacks the 'allow-sa"
+      },
+      "sharedArrayBuffer": {
+       "ok": true,
+       "value": "undefined"
+      },
+      "crossOriginIsolated": {
+       "ok": true,
+       "value": "false"
+      }
+     }
+    },
+    "fromFrame": true
+   },
+   "bcReceived": [],
+   "cookieAfter": "session=PARENT_COOKIE",
+   "storageAfter": "PARENT_STORAGE",
+   "loads": 1,
+   "block": {
+    "maxParentTimerGapMs": 3000
+   },
+   "blockedDone": {
+    "type": "blocked-done",
+    "blockedMs": 3000
+   },
+   "selfNavigation": {
+    "loadsBefore": 1,
+    "loadsAfter": 2
+   }
+  }
+ },
+ "directOpen": {
+  "origin": "null",
+  "localStorage": "SecurityError",
+  "cookie": "SecurityError"
+ },
+ "serverHits": [
+  "4801 GET /parent.html dest=document mode=navigate ref=",
+  "4801 GET /preview.html dest=iframe mode=navigate ref=",
+  "4801 GET /preview-probe.js dest=script mode=no-cors ref=",
+  "4802 GET /parent.html?exfil=selfnav dest=iframe mode=navigate ref=",
+  "4801 GET /parent.html dest=document mode=navigate ref=",
+  "4802 GET /preview.html dest=iframe mode=navigate ref=",
+  "4802 GET /preview-probe.js dest=script mode=no-cors ref=",
+  "4802 GET /preview-probe.js?exfil=script dest=script mode=no-cors ref=",
+  "4802 GET /preview-probe.js?exfil=import dest=script mode=cors ref=",
+  "4802 GET /parent.html?exfil=selfnav dest=iframe mode=navigate ref=",
+  "4801 GET /preview-blank.html dest=document mode=navigate ref=",
+  "4801 GET /__hits dest=undefined mode=cors ref="
+ ]
+}

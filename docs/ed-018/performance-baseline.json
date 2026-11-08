@@ -1,0 +1,56 @@
+{
+  "label": "baseline",
+  "base": "http://127.0.0.1:3119",
+  "engine": "156.0.8078.4",
+  "measuredAt": "2026-11-08T06:21:02.047Z",
+  "routes": [
+    {
+      "route": "/",
+      "scripts": 8,
+      "encodedBytes": 167411,
+      "decodedBytes": 552624,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": false
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/frontend/react",
+      "scripts": 8,
+      "encodedBytes": 167411,
+      "decodedBytes": 552624,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": false
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "scripts": 9,
+      "encodedBytes": 168910,
+      "decodedBytes": 555887,
+      "parentBundlesContain": {
+        "codemirror": false,
+        "sucrase": false,
+        "acorn": false,
+        "labRuntime": false
+      },
+      "previewRuntime": null
+    },
+    {
+      "route": "/practice",
+      "status": 404
+    },
+    {
+      "route": "/practice/react/use-state-counter",
+      "status": 404
+    }
+  ],
+  "lab": null
+}

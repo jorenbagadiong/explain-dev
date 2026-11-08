@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { House } from "lucide-react";
+import { FlaskConical, House } from "lucide-react";
 
+import { PRACTICE_HREF } from "@/lib/lab/practice-route";
 import type { ReactLessonNavigationData } from "@/lib/learning/react-navigation";
 import { NavigationBranch } from "./navigation-branch";
 import { ReactLessonNavigation } from "./react-lesson-navigation";
@@ -15,6 +16,7 @@ export function CategoryNavigation({ lessonNavigation, onNavigate }: {
   onNavigate?: () => void;
 }) {
   const pathname = usePathname();
+  const practiceMatch = pathname === PRACTICE_HREF ? "exact" : pathname.startsWith(`${PRACTICE_HREF}/`) ? "descendant" : undefined;
 
   return (
     <nav aria-label="Primary navigation" className={styles.navigation}>
@@ -28,6 +30,20 @@ export function CategoryNavigation({ lessonNavigation, onNavigate }: {
       >
         <span className={styles.icon} aria-hidden="true"><House className="size-4" /></span>
         <span className={styles.label}>Home</span>
+      </Link>
+      <Link
+        data-practice-link=""
+        href={PRACTICE_HREF}
+        aria-current={practiceMatch === "exact" ? "page" : practiceMatch ? "location" : undefined}
+        data-route-match={practiceMatch}
+        onClick={onNavigate}
+        className={`${styles.link} mt-1.5`}
+      >
+        <span className={styles.icon} aria-hidden="true"><FlaskConical className="size-4" /></span>
+        <span className="flex min-w-0 flex-1 flex-col">
+          <span className={styles.label}>Practice</span>
+          <span className={styles.status}>Coding Lab prototype</span>
+        </span>
       </Link>
       <p className={styles.sectionLabel}>Learning categories</p>
       <ul className={styles.list}>
