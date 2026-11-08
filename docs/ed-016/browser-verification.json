@@ -1,0 +1,4912 @@
+{
+  "engine": "Chromium headless shell 156.0.8078.4",
+  "checks": [
+    {
+      "name": "320/dark /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light /: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/light /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/light /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/light /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/light /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/light /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/light /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/light /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/light /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light /: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/light /: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/light /: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light /: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/light /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/light /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/light /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/light /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/light /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/light /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/light /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/light /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light /: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/light /: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/light /: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light /: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/light /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/light /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/light /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/light /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/light /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/light /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/light /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/light /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light /: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/light /: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/light /: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: background scroll locked",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: focus remains in Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: Escape restores focus",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: backdrop dismisses",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: navigation dismisses Sheet",
+      "passed": true
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light /: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: selected strength does not reflow row",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/use-state: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: route, theme and no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: expected sidebar breakpoint",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: original link order",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: original statuses, no invented expandable list",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: correct active location",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: exact versus section strength",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: touch targets and labels fit",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: upcoming items are noninteractive",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: tab skips unavailable rows",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: actual-background text contrast",
+      "passed": true
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components: theme persistence and preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "Short desktop: sidebar scrolls independently",
+      "passed": true
+    },
+    {
+      "name": "Short desktop: footer is reachable without overlap",
+      "passed": true
+    },
+    {
+      "name": "Short desktop: edge wheel stays contained",
+      "passed": true
+    },
+    {
+      "name": "SPA route change: sidebar scroll is retained",
+      "passed": true
+    },
+    {
+      "name": "Short mobile: one drawer scroller with locked background",
+      "passed": true
+    },
+    {
+      "name": "Resize to desktop closes drawer and focuses brand",
+      "passed": true
+    },
+    {
+      "name": "200% desktop text dark: actual growth/no overflow",
+      "passed": true
+    },
+    {
+      "name": "200% narrow navigation text dark: actual enlargement/no clipping",
+      "passed": true
+    },
+    {
+      "name": "200% desktop text light: actual growth/no overflow",
+      "passed": true
+    },
+    {
+      "name": "200% narrow navigation text light: actual enlargement/no clipping",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "contrasts": [
+    {
+      "name": "320/dark /",
+      "count": 13,
+      "minimum": 7.4152318583740495,
+      "failures": []
+    },
+    {
+      "name": "320/dark /frontend",
+      "count": 13,
+      "minimum": 6.82593432128032,
+      "failures": []
+    },
+    {
+      "name": "320/dark /frontend/react",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "320/dark /frontend/react/introduction-to-react",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "320/dark /frontend/react/use-state",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "320/dark /frontend/react/react-server-components",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "320/light /",
+      "count": 13,
+      "minimum": 6.240135655096108,
+      "failures": []
+    },
+    {
+      "name": "320/light /frontend",
+      "count": 13,
+      "minimum": 5.551633942923592,
+      "failures": []
+    },
+    {
+      "name": "320/light /frontend/react",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "320/light /frontend/react/introduction-to-react",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "320/light /frontend/react/use-state",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "320/light /frontend/react/react-server-components",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "375/dark /",
+      "count": 13,
+      "minimum": 7.4152318583740495,
+      "failures": []
+    },
+    {
+      "name": "375/dark /frontend",
+      "count": 13,
+      "minimum": 6.82593432128032,
+      "failures": []
+    },
+    {
+      "name": "375/dark /frontend/react",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "375/dark /frontend/react/introduction-to-react",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "375/dark /frontend/react/use-state",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "375/dark /frontend/react/react-server-components",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "375/light /",
+      "count": 13,
+      "minimum": 6.240135655096108,
+      "failures": []
+    },
+    {
+      "name": "375/light /frontend",
+      "count": 13,
+      "minimum": 5.551633942923592,
+      "failures": []
+    },
+    {
+      "name": "375/light /frontend/react",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "375/light /frontend/react/introduction-to-react",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "375/light /frontend/react/use-state",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "375/light /frontend/react/react-server-components",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "768/dark /",
+      "count": 13,
+      "minimum": 7.431749178093124,
+      "failures": []
+    },
+    {
+      "name": "768/dark /frontend",
+      "count": 13,
+      "minimum": 6.82593432128032,
+      "failures": []
+    },
+    {
+      "name": "768/dark /frontend/react",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "768/dark /frontend/react/introduction-to-react",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "768/dark /frontend/react/use-state",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "768/dark /frontend/react/react-server-components",
+      "count": 13,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "768/light /",
+      "count": 13,
+      "minimum": 6.236068906294098,
+      "failures": []
+    },
+    {
+      "name": "768/light /frontend",
+      "count": 13,
+      "minimum": 5.551633942923592,
+      "failures": []
+    },
+    {
+      "name": "768/light /frontend/react",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "768/light /frontend/react/introduction-to-react",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "768/light /frontend/react/use-state",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "768/light /frontend/react/react-server-components",
+      "count": 13,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1024/dark /",
+      "count": 11,
+      "minimum": 7.371427555637413,
+      "failures": []
+    },
+    {
+      "name": "1024/dark /frontend",
+      "count": 11,
+      "minimum": 6.82593432128032,
+      "failures": []
+    },
+    {
+      "name": "1024/dark /frontend/react",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1024/dark /frontend/react/introduction-to-react",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1024/dark /frontend/react/use-state",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1024/dark /frontend/react/react-server-components",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1024/light /",
+      "count": 11,
+      "minimum": 6.146610217914518,
+      "failures": []
+    },
+    {
+      "name": "1024/light /frontend",
+      "count": 11,
+      "minimum": 5.551633942923592,
+      "failures": []
+    },
+    {
+      "name": "1024/light /frontend/react",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1024/light /frontend/react/introduction-to-react",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1024/light /frontend/react/use-state",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1024/light /frontend/react/react-server-components",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1440/dark /",
+      "count": 11,
+      "minimum": 7.371427555637413,
+      "failures": []
+    },
+    {
+      "name": "1440/dark /frontend",
+      "count": 11,
+      "minimum": 6.82593432128032,
+      "failures": []
+    },
+    {
+      "name": "1440/dark /frontend/react",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1440/dark /frontend/react/introduction-to-react",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1440/dark /frontend/react/use-state",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1440/dark /frontend/react/react-server-components",
+      "count": 11,
+      "minimum": 7.354237878825191,
+      "failures": []
+    },
+    {
+      "name": "1440/light /",
+      "count": 11,
+      "minimum": 6.146610217914518,
+      "failures": []
+    },
+    {
+      "name": "1440/light /frontend",
+      "count": 11,
+      "minimum": 5.551633942923592,
+      "failures": []
+    },
+    {
+      "name": "1440/light /frontend/react",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1440/light /frontend/react/introduction-to-react",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1440/light /frontend/react/use-state",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    },
+    {
+      "name": "1440/light /frontend/react/react-server-components",
+      "count": 11,
+      "minimum": 6.077498072462552,
+      "failures": []
+    }
+  ]
+}

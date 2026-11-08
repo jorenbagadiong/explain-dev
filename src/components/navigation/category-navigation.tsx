@@ -5,62 +5,48 @@ import { usePathname } from "next/navigation";
 import { House } from "lucide-react";
 
 import { categories } from "@/components/navigation/categories";
-import { cn } from "@/lib/utils";
-
-const linkClassName =
-  "flex min-h-11 items-center gap-3 rounded-md px-3 py-3 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground aria-[current=page]:bg-primary/10 aria-[current=page]:text-primary";
+import styles from "@/components/navigation/navigation.module.css";
 
 export function CategoryNavigation({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
 
   return (
-    <nav aria-label="Primary navigation">
+    <nav aria-label="Primary navigation" className={styles.navigation}>
       <Link
         href="/"
         aria-current={pathname === "/" ? "page" : undefined}
+        data-route-match={pathname === "/" ? "exact" : undefined}
         onClick={onNavigate}
-        className={cn(linkClassName, "font-medium")}
+        className={styles.link}
       >
-        <House className="size-4 shrink-0" aria-hidden="true" />
-        Home
+        <span className={styles.icon} aria-hidden="true"><House className="size-4" /></span>
+        <span className={styles.label}>Home</span>
       </Link>
-      <p className="mt-9 mb-3 px-3 text-[10px] font-medium tracking-[0.16em] text-muted-foreground uppercase">
-        Learning categories
-      </p>
-      <ul className="space-y-2">
+      <p className={styles.sectionLabel}>Learning categories</p>
+      <ul className={styles.list}>
         {categories.map((category) => {
           const Icon = category.icon;
           const content = (
             <>
-              <Icon className="size-4 shrink-0" aria-hidden="true" />
-              <span className="flex min-w-0 flex-1 flex-col gap-1.5">
-                <span>{category.label}</span>
-                <span className="text-[10px] text-muted-foreground">
-                  {category.status === "coming-soon" ? "Coming soon" : "Available"}
-                </span>
+              <span className={styles.icon} aria-hidden="true"><Icon className="size-4" /></span>
+              <span className="flex min-w-0 flex-1 flex-col">
+                <span className={styles.label}>{category.label}</span>
+                <span className={styles.status}>{category.status === "coming-soon" ? "Coming soon" : "Available"}</span>
               </span>
             </>
           );
+          const match = category.status === "available"
+            ? pathname === category.href ? "exact" : pathname.startsWith(`${category.href}/`) ? "descendant" : undefined
+            : undefined;
 
           return (
             <li key={category.id}>
               {category.status === "available" ? (
-                <Link
-                  href={category.href}
-                  aria-current={
-                    pathname === category.href || pathname.startsWith(`${category.href}/`)
-                      ? "page"
-                      : undefined
-                  }
-                  onClick={onNavigate}
-                  className={linkClassName}
-                >
+                <Link href={category.href} aria-current={match ? "page" : undefined} data-route-match={match} onClick={onNavigate} className={styles.link}>
                   {content}
                 </Link>
               ) : (
-                <div className="flex items-start gap-3 px-3 py-3 text-sm text-muted-foreground">
-                  {content}
-                </div>
+                <div className={styles.upcoming}>{content}</div>
               )}
             </li>
           );

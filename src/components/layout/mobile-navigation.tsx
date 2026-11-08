@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { Code2, Menu } from "lucide-react";
+
+import styles from "@/components/navigation/navigation.module.css";
 
 import { CategoryNavigation } from "@/components/navigation/category-navigation";
 import { Button } from "@/components/ui/button";
@@ -40,6 +42,7 @@ export function MobileNavigation() {
         </Button>
       </SheetTrigger>
       <SheetContent
+        className={styles.drawerSurface}
         onCloseAutoFocus={(event) => {
           // The trigger is hidden after switching to the desktop layout.
           if (window.matchMedia("(min-width: 1024px)").matches) {
@@ -48,14 +51,14 @@ export function MobileNavigation() {
           }
         }}
       >
-        <SheetHeader>
-          <SheetTitle>Explore Explain Dev</SheetTitle>
+        <SheetHeader className={styles.drawerHeader}>
+          <SheetTitle className={styles.drawerTitle}><span className={styles.brandMark} aria-hidden="true"><Code2 className="size-4" /></span><span>Explore Explain Dev</span></SheetTitle>
           <SheetDescription>Find your next area of development.</SheetDescription>
         </SheetHeader>
-        <div className="mt-8">
+        <div className={styles.drawerNav}>
           <CategoryNavigation onNavigate={() => setOpen(false)} />
         </div>
-        <p className="mt-auto pt-10 text-xs leading-relaxed text-muted-foreground">
+        <p className={styles.drawerFooter}>
           Complex development concepts, explained simply.
         </p>
       </SheetContent>

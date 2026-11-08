@@ -1,0 +1,175 @@
+{
+  "engine": "156.0.8078.4",
+  "phase": "after",
+  "samples": [
+    {
+      "route": "/",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/react-server-components",
+      "width": 375,
+      "theme": "dark",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/react-server-components",
+      "width": 375,
+      "theme": "light",
+      "drawerOpen": true,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/react-server-components",
+      "width": 1440,
+      "theme": "dark",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false,
+      "overflow": false
+    },
+    {
+      "route": "/frontend/react/react-server-components",
+      "width": 1440,
+      "theme": "light",
+      "drawerOpen": false,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

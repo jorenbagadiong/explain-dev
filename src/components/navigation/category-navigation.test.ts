@@ -13,6 +13,7 @@ function renderNavigation(pathname: string) {
   const html = renderToStaticMarkup(createElement(CategoryNavigation));
   const links = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map((match) => ({
     href: match[1].match(/\bhref="([^"]+)"/)?.[1],
+    routeMatch: match[1].match(/\bdata-route-match="([^"]+)"/)?.[1],
     current: match[1].includes('aria-current="page"'),
     content: match[2],
   }));
@@ -39,6 +40,21 @@ describe("shared category navigation", () => {
     }
     expect(html).not.toContain("<button");
     expect(html).not.toContain('tabindex="0"');
+  });
+
+  it.each([
+    ["/", "/", "exact"],
+    ["/frontend", "/frontend", "exact"],
+    ["/frontend/react", "/frontend", "descendant"],
+    ["/frontend/react/use-state", "/frontend", "descendant"],
+    ["/frontend-tools", undefined, undefined],
+  ])("distinguishes exact and active-section presentation on %s from the existing pathname", (pathname, href, routeMatch) => {
+    const { links } = renderNavigation(pathname);
+    const matched = links.filter((link) => link.routeMatch);
+    expect(matched.map((link) => ({ href: link.href, routeMatch: link.routeMatch }))).toEqual(
+      href ? [{ href, routeMatch }] : [],
+    );
+    expect(matched.every((link) => link.current)).toBe(true);
   });
 
   it.each([

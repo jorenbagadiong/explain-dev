@@ -1,0 +1,13 @@
+{
+  "scope": "All emitted production assets; Node gzip estimate, not network transfer or per-route execution.",
+  "js": {
+    "files": 14,
+    "raw": 678889,
+    "gzipEstimate": 211224
+  },
+  "css": {
+    "files": 1,
+    "raw": 50360,
+    "gzipEstimate": 10270
+  }
+}

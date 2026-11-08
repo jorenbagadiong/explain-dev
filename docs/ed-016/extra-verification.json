@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Forward focus wrap 0",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 1",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 2",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 3",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 4",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 5",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 6",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 7",
+    "passed": true
+  },
+  {
+    "name": "Forward focus wrap 8",
+    "passed": true
+  },
+  {
+    "name": "Reverse focus wrap 0",
+    "passed": true
+  },
+  {
+    "name": "Reverse focus wrap 1",
+    "passed": true
+  },
+  {
+    "name": "Reverse focus wrap 2",
+    "passed": true
+  },
+  {
+    "name": "Reverse focus wrap 3",
+    "passed": true
+  },
+  {
+    "name": "Reverse focus wrap 4",
+    "passed": true
+  },
+  {
+    "name": "Reverse focus wrap 5",
+    "passed": true
+  },
+  {
+    "name": "Reduced motion removes nav transitions",
+    "passed": true
+  },
+  {
+    "name": "Reduced motion has no running animations",
+    "passed": true
+  },
+  {
+    "name": "Wheel exits sidebar normally over main content",
+    "passed": true
+  },
+  {
+    "name": "Normal motion has no continuous nav animations",
+    "passed": true
+  }
+]
