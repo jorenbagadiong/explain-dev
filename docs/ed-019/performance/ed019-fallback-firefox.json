@@ -1,0 +1,151 @@
+{
+  "label": "ed019-fallback",
+  "engine": "firefox 157.0",
+  "base": "http://localhost:3118",
+  "measuredAt": "2026-11-08T08:08:33.112Z",
+  "errors": [],
+  "cold": {
+    "navigationToReadyMs": {
+      "samples": [
+        652,
+        448,
+        462,
+        448,
+        448
+      ],
+      "min": 448,
+      "median": 448,
+      "max": 652
+    },
+    "editorInitMs": {
+      "samples": [
+        18,
+        19,
+        18,
+        18,
+        19
+      ],
+      "min": 18,
+      "median": 18,
+      "max": 19
+    },
+    "previewReadyMs": {
+      "samples": [
+        133,
+        119,
+        120,
+        118,
+        120
+      ],
+      "min": 118,
+      "median": 120,
+      "max": 133
+    },
+    "previewRenderMs": {
+      "samples": [
+        151,
+        138,
+        138,
+        137,
+        138
+      ],
+      "min": 137,
+      "median": 138,
+      "max": 151
+    },
+    "parentScriptsEncodedBytes": {
+      "samples": [
+        325929,
+        325929,
+        325929,
+        325929,
+        325929
+      ],
+      "min": 325929,
+      "median": 325929,
+      "max": 325929
+    },
+    "parentScriptsDecodedBytes": {
+      "samples": [
+        1023572,
+        1023572,
+        1023572,
+        1023572,
+        1023572
+      ],
+      "min": 1023572,
+      "median": 1023572,
+      "max": 1023572
+    }
+  },
+  "previewAssets": {
+    "document": {
+      "url": "http://localhost:3118/lab-runtime/preview.html",
+      "status": 200,
+      "transferredBytes": 361,
+      "contentEncoding": null,
+      "uncompressedBytes": 361,
+      "gzipBytes": 236,
+      "cacheControl": "public, max-age=0"
+    },
+    "runtime": {
+      "url": "http://localhost:3118/lab-runtime/runtime.js",
+      "status": 200,
+      "transferredBytes": 214366,
+      "contentEncoding": "gzip",
+      "uncompressedBytes": 767759,
+      "gzipBytes": 213633,
+      "cacheControl": "public, max-age=0"
+    },
+    "stylesheet": {
+      "url": "http://localhost:3118/lab-runtime/preview.css",
+      "status": 200,
+      "transferredBytes": 730,
+      "contentEncoding": "gzip",
+      "uncompressedBytes": 1877,
+      "gzipBytes": 729,
+      "cacheControl": "public, max-age=0"
+    }
+  },
+  "runToPreviewMs": {
+    "samples": [
+      174,
+      159,
+      159,
+      161,
+      176,
+      160,
+      160,
+      143,
+      165,
+      156
+    ],
+    "min": 143,
+    "median": 160,
+    "max": 176
+  },
+  "previewRequestsPerRun": {
+    "samples": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "min": 1,
+    "median": 1,
+    "max": 1
+  },
+  "repeatedRuns": {
+    "runs": 20,
+    "parentHeapBeforeBytes": null,
+    "parentHeapAfterBytes": null,
+    "iframesAfter": 1,
+    "note": "performance.memory is not available in this engine"
+  }
+}

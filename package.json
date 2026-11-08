@@ -8,8 +8,12 @@
   },
   "scripts": {
     "dev": "yarn build:lab-runtime && next dev",
+    "dev:isolated": "node scripts/dev-isolated.mjs",
     "build": "yarn build:lab-runtime && next build",
     "build:lab-runtime": "vite build --config vite.lab-runtime.config.mts",
+    "build:preview-host": "node scripts/build-preview-host.mjs",
+    "build:preview-host:dev": "node scripts/build-preview-host.mjs --dev",
+    "preview-host": "node scripts/preview-host-server.mjs",
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit",

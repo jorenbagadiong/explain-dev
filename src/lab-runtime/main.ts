@@ -27,6 +27,9 @@ import {
 } from "@/lib/lab/protocol";
 import { createExecutionGuard, ExecutionLimitError } from "./execution-guard";
 
+/** Exact parent origins compiled in by the dedicated-host build; null in the same-origin fallback build. */
+declare const __LAB_PARENT_ORIGINS__: readonly string[] | null;
+
 const HEARTBEAT_MS = 1_000;
 const MAX_REPORTED_ERRORS = 10;
 
@@ -89,6 +92,17 @@ function start(init: InitMessage, port: MessagePort) {
     }
     send({ type: "runtime-error", kind, diagnostic });
   };
+
+  // Block link navigation before learner code exists. In an opaque-origin document the Navigation API fires no events,
+  // so location.assign/replace/href and meta refresh cannot be cancelled here; the parent detects those by the frame's
+  // second load event and removes the frame (one request may still leave; see docs/ed-019/security.md).
+  addEventListener("click", (event) => {
+    const target = event.target;
+    const link = target instanceof Element ? target.closest("a[href], area[href]") : null;
+    if (!link || (link.getAttribute("href") ?? "").startsWith("#")) return;
+    event.preventDefault();
+    report("navigation", new Error("Links to other pages are disabled in the Coding Lab preview."));
+  }, true);
 
   port.onmessage = (event) => {
     const data: unknown = event.data;
@@ -180,7 +194,29 @@ function start(init: InitMessage, port: MessagePort) {
   document.head.append(script);
 }
 
+/**
+ * WebRTC is not governed by CSP (connect-src does not apply and the proposed `webrtc` directive is not implemented),
+ * so a peer connection can send STUN/TURN traffic to any host. Remove the constructors before learner code exists.
+ * Defense in depth only: the other RTC interfaces cannot be constructed, and new realms (frames, workers) are blocked by CSP.
+ */
+function disableWebRtc() {
+  const scope = self as unknown as Record<string, unknown>;
+  for (const name of ["RTCPeerConnection", "webkitRTCPeerConnection", "mozRTCPeerConnection"]) {
+    try {
+      delete scope[name];
+    } catch {
+      // Not deletable in this engine; the definition below still shadows it.
+    }
+    try {
+      Object.defineProperty(scope, name, { value: undefined, configurable: false, writable: false, enumerable: false });
+    } catch {
+      // Already locked.
+    }
+  }
+}
+
 function boot() {
+  disableWebRtc();
   // Refuse to run unless the browser isolated this document into an opaque origin inside a frame.
   if (self.origin !== "null") {
     showNotice("This preview only runs inside the Explain Dev Coding Lab sandbox.");
@@ -191,10 +227,10 @@ function boot() {
     return;
   }
 
-  const parentOrigin = new URL(location.href).origin;
+  const parentOrigins = __LAB_PARENT_ORIGINS__ ?? [new URL(location.href).origin];
   let initialized = false;
   const onMessage = (event: MessageEvent) => {
-    if (initialized || event.source !== window.parent || event.origin !== parentOrigin) return;
+    if (initialized || event.source !== window.parent || !parentOrigins.includes(event.origin)) return;
     if (!isInitMessage(event.data) || event.ports.length !== 1) return;
     initialized = true;
     window.removeEventListener("message", onMessage);
@@ -202,7 +238,8 @@ function boot() {
   };
   window.addEventListener("message", onMessage);
   const hello: HelloMessage = { channel: LAB_CHANNEL, version: LAB_PROTOCOL_VERSION, type: "hello" };
-  window.parent.postMessage(hello, parentOrigin);
+  // Only a parent whose origin is allowlisted receives the hello; other targets are dropped by the browser.
+  for (const origin of parentOrigins) window.parent.postMessage(hello, origin);
 }
 
 boot();

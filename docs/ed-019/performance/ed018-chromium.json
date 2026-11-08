@@ -1,0 +1,151 @@
+{
+  "label": "ed018",
+  "engine": "chromium 156.0.8078.4",
+  "base": "http://localhost:3119",
+  "measuredAt": "2026-11-08T08:14:27.234Z",
+  "errors": [],
+  "cold": {
+    "navigationToReadyMs": {
+      "samples": [
+        458,
+        458,
+        448,
+        479,
+        446
+      ],
+      "min": 446,
+      "median": 458,
+      "max": 479
+    },
+    "editorInitMs": {
+      "samples": [
+        25.3,
+        25.6,
+        23.1,
+        23,
+        22.4
+      ],
+      "min": 22.4,
+      "median": 23.1,
+      "max": 25.6
+    },
+    "previewReadyMs": {
+      "samples": [
+        104.8,
+        105.3,
+        103.8,
+        112.9,
+        104.3
+      ],
+      "min": 103.8,
+      "median": 104.8,
+      "max": 112.9
+    },
+    "previewRenderMs": {
+      "samples": [
+        135.9,
+        138.6,
+        136.1,
+        148.8,
+        136.1
+      ],
+      "min": 135.9,
+      "median": 136.1,
+      "max": 148.8
+    },
+    "parentScriptsEncodedBytes": {
+      "samples": [
+        325377,
+        325377,
+        325377,
+        325377,
+        325377
+      ],
+      "min": 325377,
+      "median": 325377,
+      "max": 325377
+    },
+    "parentScriptsDecodedBytes": {
+      "samples": [
+        1022047,
+        1022047,
+        1022047,
+        1022047,
+        1022047
+      ],
+      "min": 1022047,
+      "median": 1022047,
+      "max": 1022047
+    }
+  },
+  "previewAssets": {
+    "document": {
+      "url": "http://localhost:3119/lab-runtime/preview.html",
+      "status": 200,
+      "transferredBytes": 361,
+      "contentEncoding": null,
+      "uncompressedBytes": 361,
+      "gzipBytes": 236,
+      "cacheControl": "public, max-age=0"
+    },
+    "runtime": {
+      "url": "http://localhost:3119/lab-runtime/runtime.js",
+      "status": 200,
+      "transferredBytes": 214141,
+      "contentEncoding": "gzip",
+      "uncompressedBytes": 767232,
+      "gzipBytes": 213410,
+      "cacheControl": "public, max-age=0"
+    },
+    "stylesheet": {
+      "url": "http://localhost:3119/lab-runtime/preview.css",
+      "status": 200,
+      "transferredBytes": 730,
+      "contentEncoding": "gzip",
+      "uncompressedBytes": 1877,
+      "gzipBytes": 729,
+      "cacheControl": "public, max-age=0"
+    }
+  },
+  "runToPreviewMs": {
+    "samples": [
+      172.7,
+      188.1,
+      193.7,
+      178.4,
+      178.9,
+      178.2,
+      182.4,
+      187.2,
+      183.1,
+      195.7
+    ],
+    "min": 172.7,
+    "median": 183.1,
+    "max": 195.7
+  },
+  "previewRequestsPerRun": {
+    "samples": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "min": 4,
+    "median": 4,
+    "max": 4
+  },
+  "repeatedRuns": {
+    "runs": 20,
+    "parentHeapBeforeBytes": 11277584,
+    "parentHeapAfterBytes": 13388944,
+    "iframesAfter": 1,
+    "note": "approximate; no forced GC"
+  }
+}

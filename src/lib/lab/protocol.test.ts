@@ -30,8 +30,8 @@ describe("Coding Lab message protocol", () => {
     for (const forged of [
       { channel: LAB_CHANNEL, version: LAB_PROTOCOL_VERSION, type: "hello", extra: 1 },
       { channel: "other", version: LAB_PROTOCOL_VERSION, type: "hello" },
-      { channel: LAB_CHANNEL, version: 2, type: "hello" },
-      { channel: LAB_CHANNEL, version: "1", type: "hello" },
+      { channel: LAB_CHANNEL, version: LAB_PROTOCOL_VERSION + 1, type: "hello" },
+      { channel: LAB_CHANNEL, version: String(LAB_PROTOCOL_VERSION), type: "hello" },
       [LAB_CHANNEL, 1, "hello"],
       "hello",
       null,

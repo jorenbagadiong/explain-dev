@@ -1,0 +1,9 @@
+
+ RUN  v5.1.0 /home/joren/claude/explain-dev
+
+
+ Test Files  35 passed (35)
+      Tests  2024 passed (2024)
+   Start at  16:24:34
+   Duration  6.52s (tests 55%, import 36%, transform 9%, worker 1%)
+

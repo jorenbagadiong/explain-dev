@@ -10,6 +10,9 @@ export default defineConfig({
   },
   define: {
     "process.env.NODE_ENV": JSON.stringify("development"),
+    // null = same-origin fallback (parent origin is the preview's own origin). The dedicated host build
+    // (scripts/build-preview-host.mjs) replaces this with its exact LAB_PARENT_ORIGINS allowlist.
+    __LAB_PARENT_ORIGINS__: "null",
   },
   build: {
     outDir: fileURLToPath(new URL("./public/lab-runtime", import.meta.url)),

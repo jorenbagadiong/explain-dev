@@ -7,7 +7,8 @@
 // Everything received from the preview is untrusted: it is schema-checked, size-capped and only ever shown as text.
 
 export const LAB_CHANNEL = "explain-dev-lab";
-export const LAB_PROTOCOL_VERSION = 1;
+// Version 2 (ED-019): navigation diagnostics; the app and a dedicated preview host may be deployed separately.
+export const LAB_PROTOCOL_VERSION = 2;
 export const LAB_PREVIEW_PATH = "/lab-runtime/preview.html";
 /** The only sandbox token the preview frame receives. Never add allow-same-origin. */
 export const LAB_PREVIEW_SANDBOX = "allow-scripts";
@@ -41,7 +42,7 @@ export interface InitMessage {
 }
 
 export type CompileErrorKind = "syntax" | "unsupported-import" | "unsupported-syntax" | "missing-export" | "too-large";
-export type RuntimeErrorKind = "module" | "render" | "event" | "promise" | "loop-guard";
+export type RuntimeErrorKind = "module" | "render" | "event" | "promise" | "loop-guard" | "navigation";
 
 export interface LabDiagnostic {
   name: string;
@@ -69,7 +70,7 @@ export type PreviewMessage = PortEnvelope & PreviewEvent;
 export type ParentPortMessage = PortEnvelope & { type: "theme"; theme: LabTheme };
 
 const COMPILE_KINDS: readonly CompileErrorKind[] = ["syntax", "unsupported-import", "unsupported-syntax", "missing-export", "too-large"];
-const RUNTIME_KINDS: readonly RuntimeErrorKind[] = ["module", "render", "event", "promise", "loop-guard"];
+const RUNTIME_KINDS: readonly RuntimeErrorKind[] = ["module", "render", "event", "promise", "loop-guard", "navigation"];
 const SESSION_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 
 type UnknownRecord = Record<string, unknown>;
@@ -107,6 +108,11 @@ function isEnvelope(value: UnknownRecord): boolean {
 
 export function isHelloMessage(value: unknown): value is HelloMessage {
   return isRecord(value) && hasExactKeys(value, ["channel", "version", "type"]) && value.channel === LAB_CHANNEL && value.version === LAB_PROTOCOL_VERSION && value.type === "hello";
+}
+
+/** A hello from a preview built for a different protocol version (app and preview host out of sync). */
+export function isIncompatibleHello(value: unknown): boolean {
+  return isRecord(value) && value.channel === LAB_CHANNEL && value.type === "hello" && value.version !== LAB_PROTOCOL_VERSION && Number.isInteger(value.version);
 }
 
 export function isInitMessage(value: unknown): value is InitMessage {

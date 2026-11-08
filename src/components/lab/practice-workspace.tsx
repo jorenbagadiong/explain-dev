@@ -17,8 +17,8 @@ export type PreviewStatus =
   | { kind: "ready" }
   | { kind: "compile-error"; errorKind: CompileErrorKind; diagnostic: LabDiagnostic }
   | { kind: "runtime-error" }
-  | { kind: "stopped"; reason: "loop-guard" | "timeout" | "unresponsive" | "navigated"; diagnostic?: LabDiagnostic }
-  | { kind: "failed" };
+  | { kind: "stopped"; reason: "loop-guard" | "timeout" | "unresponsive" | "navigated" | "protocol-violation"; diagnostic?: LabDiagnostic }
+  | { kind: "failed"; reason: "unavailable" | "incompatible" };
 
 interface RuntimeProblem {
   id: number;
@@ -34,6 +34,7 @@ const RUNTIME_KIND_LABEL: Record<RuntimeErrorKind, string> = {
   event: "In an event handler or timer",
   promise: "In an unhandled promise",
   "loop-guard": "Execution limit",
+  navigation: "Navigation blocked",
 };
 
 const STOPPED_MESSAGE: Record<Extract<PreviewStatus, { kind: "stopped" }>["reason"], string> = {
@@ -41,6 +42,12 @@ const STOPPED_MESSAGE: Record<Extract<PreviewStatus, { kind: "stopped" }>["reaso
   timeout: `The preview didn't finish rendering within ${RENDER_TIMEOUT_MS / 1000} seconds, so it was closed.`,
   unresponsive: "The preview stopped responding, so it was closed. Code that never pauses can freeze the preview.",
   navigated: "The preview tried to open another page. Navigation is disabled in the Coding Lab, so the preview was closed.",
+  "protocol-violation": "The preview sent too many unexpected messages, so it was closed.",
+};
+
+const FAILED_MESSAGE: Record<Extract<PreviewStatus, { kind: "failed" }>["reason"], string> = {
+  unavailable: "The preview couldn't start. Check your connection, then run again.",
+  incompatible: "The preview service is a different version from this page. Reload the page; if this persists, the Coding Lab is being updated.",
 };
 
 const DESKTOP_QUERY = "(min-width: 1024px)";
@@ -62,8 +69,8 @@ export function statusLabel(status: PreviewStatus, dirty: boolean): string {
     case "ready": return dirty ? "Code changed. Run to update the preview." : "Preview is up to date.";
     case "compile-error": return status.diagnostic.line ? `Compile error on line ${status.diagnostic.line}.` : "Compile error.";
     case "runtime-error": return "Runtime error. See Problems.";
-    case "stopped": return status.reason === "loop-guard" ? "Stopped: possible infinite loop." : status.reason === "navigated" ? "Stopped: navigation blocked." : "Stopped: the preview didn't respond.";
-    case "failed": return "The preview couldn't start.";
+    case "stopped": return status.reason === "loop-guard" ? "Stopped: possible infinite loop." : status.reason === "navigated" ? "Stopped: navigation blocked." : status.reason === "protocol-violation" ? "Stopped: unexpected messages." : "Stopped: the preview didn't respond.";
+    case "failed": return status.reason === "incompatible" ? "Preview unavailable: version mismatch." : "The preview couldn't start.";
   }
 }
 
@@ -165,7 +172,7 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
         setStatus({ kind: "stopped", reason: event.reason, diagnostic: event.diagnostic });
         return;
       case "failed":
-        setStatus({ kind: "failed" });
+        setStatus({ kind: "failed", reason: event.reason });
     }
   }, [onMetric]);
 
@@ -277,7 +284,7 @@ export function PracticeWorkspace({ challengeTitle, starterFile, onMetric }: Pra
                     {status.diagnostic?.line ? <DiagnosticView diagnostic={{ ...status.diagnostic, name: "Stopped", message: `Last instrumented code ran near line ${status.diagnostic.line}.` }} source={run.file.code} /> : null}
                   </div>
                 ) : null}
-                {status.kind === "failed" ? <p className="text-sm leading-6">The preview couldn&apos;t start. Check your connection, then run again.</p> : null}
+                {status.kind === "failed" ? <p className="text-sm leading-6">{FAILED_MESSAGE[status.reason]}</p> : null}
                 {problems.map((problem) => (
                   <div key={problem.id}>
                     <p className="mb-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">{RUNTIME_KIND_LABEL[problem.kind]}</p>

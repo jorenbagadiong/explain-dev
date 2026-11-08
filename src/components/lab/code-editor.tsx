@@ -129,5 +129,17 @@ export function CodeEditor({ value, onChange, onRun, label, describedBy, onReady
     }
   }, [value]);
 
-  return <div ref={hostRef} data-code-editor="" className="h-full min-h-0" />;
+  // After the learner interacts with the preview (a separate, out-of-process frame), Firefox 157 can keep focus on the
+  // preview iframe when the editor is pressed, and element.focus() alone does not move it. Blur the frame, then focus.
+  const ensureFocus = () => {
+    requestAnimationFrame(() => {
+      const view = viewRef.current;
+      if (!view || view.hasFocus) return;
+      const active = document.activeElement;
+      if (active instanceof HTMLIFrameElement) active.blur();
+      view.focus();
+    });
+  };
+
+  return <div ref={hostRef} data-code-editor="" className="h-full min-h-0" onPointerDown={ensureFocus} />;
 }

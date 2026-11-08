@@ -16,11 +16,13 @@ async function previewHeaders() {
 }
 
 describe("Coding Lab sandbox configuration", () => {
-  it("scopes security headers to the preview path only", async () => {
+  it("scopes security headers to the preview path and frame restrictions to Practice routes only", async () => {
     const { rules } = await previewHeaders();
-    expect(rules).toHaveLength(1);
+    expect(rules).toHaveLength(2);
     expect(rules[0].source).toBe("/lab-runtime/:path*");
     expect(LAB_PREVIEW_PATH.startsWith("/lab-runtime/")).toBe(true);
+    // ED-019: the same-origin fallback restricts Practice framing (and preview self-navigation) to this origin.
+    expect(rules[1]).toEqual({ source: "/practice/:path*", headers: [{ key: "Content-Security-Policy", value: "frame-src 'self'" }] });
   });
 
   it("sends a CSP that sandboxes, denies network access and forbids eval", async () => {

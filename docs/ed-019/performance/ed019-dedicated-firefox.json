@@ -1,0 +1,151 @@
+{
+  "label": "ed019-dedicated",
+  "engine": "firefox 157.0",
+  "base": "http://localhost:3118",
+  "measuredAt": "2026-11-08T08:09:32.241Z",
+  "errors": [],
+  "cold": {
+    "navigationToReadyMs": {
+      "samples": [
+        623,
+        434,
+        437,
+        449,
+        433
+      ],
+      "min": 433,
+      "median": 437,
+      "max": 623
+    },
+    "editorInitMs": {
+      "samples": [
+        18,
+        18,
+        15,
+        16,
+        18
+      ],
+      "min": 15,
+      "median": 18,
+      "max": 18
+    },
+    "previewReadyMs": {
+      "samples": [
+        110,
+        104,
+        105,
+        107,
+        96
+      ],
+      "min": 96,
+      "median": 105,
+      "max": 110
+    },
+    "previewRenderMs": {
+      "samples": [
+        129,
+        121,
+        122,
+        124,
+        115
+      ],
+      "min": 115,
+      "median": 122,
+      "max": 129
+    },
+    "parentScriptsEncodedBytes": {
+      "samples": [
+        325930,
+        325930,
+        325930,
+        325930,
+        325930
+      ],
+      "min": 325930,
+      "median": 325930,
+      "max": 325930
+    },
+    "parentScriptsDecodedBytes": {
+      "samples": [
+        1023550,
+        1023550,
+        1023550,
+        1023550,
+        1023550
+      ],
+      "min": 1023550,
+      "median": 1023550,
+      "max": 1023550
+    }
+  },
+  "previewAssets": {
+    "document": {
+      "url": "http://127.0.0.1:4100/preview.html",
+      "status": 200,
+      "transferredBytes": 354,
+      "contentEncoding": null,
+      "uncompressedBytes": 354,
+      "gzipBytes": 246,
+      "cacheControl": "no-cache"
+    },
+    "runtime": {
+      "url": "http://127.0.0.1:4100/runtime.173e9d0bc2d027fc.js",
+      "status": 200,
+      "transferredBytes": 767753,
+      "contentEncoding": null,
+      "uncompressedBytes": 767753,
+      "gzipBytes": 213641,
+      "cacheControl": "public, max-age=31536000, immutable"
+    },
+    "stylesheet": {
+      "url": "http://127.0.0.1:4100/preview.css",
+      "status": 200,
+      "transferredBytes": 1877,
+      "contentEncoding": null,
+      "uncompressedBytes": 1877,
+      "gzipBytes": 729,
+      "cacheControl": "no-cache"
+    }
+  },
+  "runToPreviewMs": {
+    "samples": [
+      172,
+      158,
+      175,
+      128,
+      126,
+      127,
+      128,
+      126,
+      128,
+      125
+    ],
+    "min": 125,
+    "median": 128,
+    "max": 175
+  },
+  "previewRequestsPerRun": {
+    "samples": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "min": 1,
+    "median": 1,
+    "max": 2
+  },
+  "repeatedRuns": {
+    "runs": 20,
+    "parentHeapBeforeBytes": null,
+    "parentHeapAfterBytes": null,
+    "iframesAfter": 1,
+    "note": "performance.memory is not available in this engine"
+  }
+}

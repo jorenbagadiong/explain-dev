@@ -10,3 +10,8 @@ coverage/
 
 # Generated Coding Lab preview runtime (yarn build:lab-runtime)
 /public/lab-runtime/runtime.js
+
+# Generated dedicated preview host (yarn build:preview-host)
+/preview-host/dist/
+/preview-host/.build/
+/preview-host/.vercel/

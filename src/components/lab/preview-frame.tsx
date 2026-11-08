@@ -2,11 +2,12 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
+import { LAB_PREVIEW_TARGET } from "@/lib/lab/preview-target";
 import {
   isHelloMessage,
+  isIncompatibleHello,
   isPreviewMessage,
   LAB_CHANNEL,
-  LAB_PREVIEW_PATH,
   LAB_PREVIEW_SANDBOX,
   LAB_PROTOCOL_VERSION,
   type CompileErrorKind,
@@ -21,14 +22,16 @@ import {
 export const HELLO_TIMEOUT_MS = 10_000;
 export const RENDER_TIMEOUT_MS = 8_000;
 export const HEARTBEAT_TIMEOUT_MS = 5_000;
+/** Unexpected messages tolerated per frame before the preview is closed as misbehaving. */
+export const MAX_REJECTED_MESSAGES = 50;
 
 export type PreviewFrameEvent =
   | { type: "connected"; readyMs: number }
   | { type: "rendered"; renderMs: number }
   | { type: "compile-error"; kind: CompileErrorKind; diagnostic: LabDiagnostic }
   | { type: "runtime-error"; kind: RuntimeErrorKind; diagnostic: LabDiagnostic }
-  | { type: "stopped"; reason: "loop-guard" | "timeout" | "unresponsive" | "navigated"; diagnostic?: LabDiagnostic }
-  | { type: "failed" };
+  | { type: "stopped"; reason: "loop-guard" | "timeout" | "unresponsive" | "navigated" | "protocol-violation"; diagnostic?: LabDiagnostic }
+  | { type: "failed"; reason: "unavailable" | "incompatible" };
 
 /** Per-frame capability. crypto.randomUUID needs a secure context, so fall back to getRandomValues. */
 export function createSession(): string {
@@ -91,6 +94,7 @@ export function PreviewFrame({ runId, file, theme, title, onEvent }: PreviewFram
     const markRejected = () => {
       rejected++;
       if (wrapperRef.current) wrapperRef.current.dataset.rejectedMessages = String(rejected);
+      if (rejected > MAX_REJECTED_MESSAGES && phase !== "closed") terminate({ type: "stopped", reason: "protocol-violation" });
     };
     const close = () => {
       phase = "closed";
@@ -99,6 +103,7 @@ export function PreviewFrame({ runId, file, theme, title, onEvent }: PreviewFram
       window.clearInterval(watchdog);
       window.removeEventListener("message", onWindowMessage);
       document.removeEventListener("visibilitychange", onVisibility);
+      document.removeEventListener("securitypolicyviolation", onPolicyViolation);
       frame.removeEventListener("load", onLoad);
       if (port) {
         port.onmessage = null;
@@ -150,7 +155,14 @@ export function PreviewFrame({ runId, file, theme, title, onEvent }: PreviewFram
     const onWindowMessage = (event: MessageEvent) => {
       // Messages from other windows are not addressed to this frame.
       if (event.source !== frame.contentWindow) return;
-      if (phase !== "loading" || loads !== 1 || event.origin !== "null" || !isHelloMessage(event.data)) {
+      if (phase === "loading" && event.origin === "null" && isIncompatibleHello(event.data)) {
+        // App and preview host were built for different protocol versions: fail closed, never run.
+        terminate({ type: "failed", reason: "incompatible" });
+        return;
+      }
+      // The runtime is a deferred script, so its hello may arrive before or after the first load event (engine-dependent);
+      // any later load is a navigation and is handled by onLoad.
+      if (phase !== "loading" || loads > 1 || event.origin !== "null" || !isHelloMessage(event.data)) {
         markRejected();
         return;
       }
@@ -175,12 +187,19 @@ export function PreviewFrame({ runId, file, theme, title, onEvent }: PreviewFram
       // A second load means the preview navigated itself. Remove it instead of trusting the new document.
       if (loads > 1) terminate({ type: "stopped", reason: "navigated" });
     };
+    // The Practice page's CSP frame-src refuses navigations of the preview to other origins before any request is sent.
+    // Chromium then loads an error page (a second load event); Firefox keeps the current document, so the violation event
+    // on this document is the signal. Either way, the learner is told and the preview is removed.
+    const onPolicyViolation = (event: SecurityPolicyViolationEvent) => {
+      const directive = event.effectiveDirective || event.violatedDirective;
+      if (phase !== "closed" && (directive === "frame-src" || directive === "child-src")) terminate({ type: "stopped", reason: "navigated" });
+    };
     const onVisibility = () => {
       if (document.visibilityState === "visible") lastBeat = performance.now();
     };
 
     const helloTimer = window.setTimeout(() => {
-      if (phase === "loading") terminate({ type: "failed" });
+      if (phase === "loading") terminate({ type: "failed", reason: "unavailable" });
     }, HELLO_TIMEOUT_MS);
     // Hidden tabs throttle timers in both documents, so only judge responsiveness while visible.
     const watchdog = window.setInterval(() => {
@@ -191,16 +210,17 @@ export function PreviewFrame({ runId, file, theme, title, onEvent }: PreviewFram
 
     window.addEventListener("message", onWindowMessage);
     document.addEventListener("visibilitychange", onVisibility);
+    document.addEventListener("securitypolicyviolation", onPolicyViolation);
     frame.addEventListener("load", onLoad);
     return close;
   }, [runId, file]);
 
   return (
-    <div ref={wrapperRef} data-preview-frame="" data-run-id={runId} className="h-full">
+    <div ref={wrapperRef} data-preview-frame="" data-preview-mode={LAB_PREVIEW_TARGET.mode} data-run-id={runId} className="h-full">
       {active ? (
         <iframe
           ref={frameRef}
-          src={LAB_PREVIEW_PATH}
+          src={LAB_PREVIEW_TARGET.url}
           sandbox={LAB_PREVIEW_SANDBOX}
           referrerPolicy="no-referrer"
           title={title}

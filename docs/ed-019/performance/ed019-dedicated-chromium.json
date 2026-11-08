@@ -1,0 +1,151 @@
+{
+  "label": "ed019-dedicated",
+  "engine": "chromium 156.0.8078.4",
+  "base": "http://localhost:3118",
+  "measuredAt": "2026-11-08T08:09:20.762Z",
+  "errors": [],
+  "cold": {
+    "navigationToReadyMs": {
+      "samples": [
+        449,
+        458,
+        441,
+        447,
+        449
+      ],
+      "min": 441,
+      "median": 449,
+      "max": 458
+    },
+    "editorInitMs": {
+      "samples": [
+        25.7,
+        25.2,
+        22.2,
+        24,
+        24.1
+      ],
+      "min": 22.2,
+      "median": 24.1,
+      "max": 25.7
+    },
+    "previewReadyMs": {
+      "samples": [
+        102.3,
+        104.6,
+        95.6,
+        94.9,
+        97.6
+      ],
+      "min": 94.9,
+      "median": 97.6,
+      "max": 104.6
+    },
+    "previewRenderMs": {
+      "samples": [
+        131.5,
+        134,
+        127.2,
+        126.8,
+        129.7
+      ],
+      "min": 126.8,
+      "median": 129.7,
+      "max": 134
+    },
+    "parentScriptsEncodedBytes": {
+      "samples": [
+        325930,
+        325930,
+        325930,
+        325930,
+        325930
+      ],
+      "min": 325930,
+      "median": 325930,
+      "max": 325930
+    },
+    "parentScriptsDecodedBytes": {
+      "samples": [
+        1023550,
+        1023550,
+        1023550,
+        1023550,
+        1023550
+      ],
+      "min": 1023550,
+      "median": 1023550,
+      "max": 1023550
+    }
+  },
+  "previewAssets": {
+    "document": {
+      "url": "http://127.0.0.1:4100/preview.html",
+      "status": 200,
+      "transferredBytes": 354,
+      "contentEncoding": null,
+      "uncompressedBytes": 354,
+      "gzipBytes": 246,
+      "cacheControl": "no-cache"
+    },
+    "runtime": {
+      "url": "http://127.0.0.1:4100/runtime.173e9d0bc2d027fc.js",
+      "status": 200,
+      "transferredBytes": 767753,
+      "contentEncoding": null,
+      "uncompressedBytes": 767753,
+      "gzipBytes": 213641,
+      "cacheControl": "public, max-age=31536000, immutable"
+    },
+    "stylesheet": {
+      "url": "http://127.0.0.1:4100/preview.css",
+      "status": 200,
+      "transferredBytes": 1877,
+      "contentEncoding": null,
+      "uncompressedBytes": 1877,
+      "gzipBytes": 729,
+      "cacheControl": "no-cache"
+    }
+  },
+  "runToPreviewMs": {
+    "samples": [
+      177.2,
+      146.3,
+      142.3,
+      176.6,
+      161,
+      162.3,
+      161.5,
+      161.8,
+      161.9,
+      155.4
+    ],
+    "min": 142.3,
+    "median": 161.8,
+    "max": 177.2
+  },
+  "previewRequestsPerRun": {
+    "samples": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "min": 4,
+    "median": 4,
+    "max": 4
+  },
+  "repeatedRuns": {
+    "runs": 20,
+    "parentHeapBeforeBytes": 11289085,
+    "parentHeapAfterBytes": 13363245,
+    "iframesAfter": 1,
+    "note": "approximate; no forced GC"
+  }
+}

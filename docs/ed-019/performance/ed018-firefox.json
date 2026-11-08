@@ -1,0 +1,81 @@
+{
+  "label": "ed018",
+  "engine": "firefox 157.0",
+  "base": "http://localhost:3119",
+  "measuredAt": "2026-11-08T08:14:38.660Z",
+  "errors": [
+    {
+      "phase": "cold load",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.",
+      "status": "failed"
+    },
+    {
+      "phase": "cold load",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.",
+      "status": "failed"
+    },
+    {
+      "phase": "cold load",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.",
+      "status": "failed"
+    },
+    {
+      "phase": "cold load",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.",
+      "status": "failed"
+    },
+    {
+      "phase": "cold load",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.",
+      "status": "failed"
+    },
+    {
+      "phase": "measurement",
+      "error": "page.waitForFunction: Timeout 30000ms exceeded.\n    at ready (/home/joren/claude/explain-dev/docs/ed-019/tools/measure-performance.cjs:39:14)\n    at /home/joren/claude/explain-dev/docs/ed-019/tools/measure-performance.cjs:92:11"
+    }
+  ],
+  "cold": {
+    "navigationToReadyMs": {
+      "samples": [
+        "failed: page.waitForFunction: Timeout 30000ms exceeded.",
+        "failed: page.waitForFunction: Timeout 30000ms exceeded.",
+        "failed: page.waitForFunction: Timeout 30000ms exceeded.",
+        "failed: page.waitForFunction: Timeout 30000ms exceeded.",
+        "failed: page.waitForFunction: Timeout 30000ms exceeded."
+      ],
+      "min": null,
+      "median": null,
+      "max": null
+    },
+    "editorInitMs": {
+      "samples": [],
+      "min": null,
+      "median": null,
+      "max": null
+    },
+    "previewReadyMs": {
+      "samples": [],
+      "min": null,
+      "median": null,
+      "max": null
+    },
+    "previewRenderMs": {
+      "samples": [],
+      "min": null,
+      "median": null,
+      "max": null
+    },
+    "parentScriptsEncodedBytes": {
+      "samples": [],
+      "min": null,
+      "median": null,
+      "max": null
+    },
+    "parentScriptsDecodedBytes": {
+      "samples": [],
+      "min": null,
+      "median": null,
+      "max": null
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{"browser":"firefox 157.0","isolationStrategy":0,"mode":"dedicated","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0","workspaceStatus":"ready","maxParentTimerGapMs":3248}
+{"browser":"firefox 157.0","isolationStrategy":1,"mode":"dedicated","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0","workspaceStatus":"ready","maxParentTimerGapMs":52}
+{"browser":"firefox 157.0","isolationStrategy":0,"mode":"fallback","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0","workspaceStatus":"ready","maxParentTimerGapMs":2679}
+{"browser":"firefox 157.0","isolationStrategy":1,"mode":"fallback","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0","workspaceStatus":"ready","maxParentTimerGapMs":3650}

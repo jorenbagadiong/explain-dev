@@ -1,0 +1,4 @@
+{"engine":"chromium 156.0.8078.4","origin":"http://localhost:4941","hasNavigation":true,"entries":1,"events":[{"type":"replace","cancelable":true},{"type":"push","cancelable":true}]}
+{"engine":"chromium 156.0.8078.4","origin":"null","hasNavigation":true,"entries":0,"events":[]}
+{"engine":"firefox 157.0","origin":"http://localhost:4941","hasNavigation":true,"entries":1,"events":[{"type":"replace","cancelable":true},{"type":"push","cancelable":true}]}
+{"engine":"firefox 157.0","origin":"null","hasNavigation":true,"entries":0,"events":[]}
