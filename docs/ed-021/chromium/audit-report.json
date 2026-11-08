@@ -1,0 +1,91 @@
+{
+  "engine": "chromium",
+  "checks": [
+    {
+      "name": "missing-locks: accessible status warns unsaved",
+      "passed": true
+    },
+    {
+      "name": "missing-locks: no unlocked/failed write and editor retained",
+      "passed": true
+    },
+    {
+      "name": "missing-locks: source never auto-executes",
+      "passed": true
+    },
+    {
+      "name": "missing-locks: explicit retry saves exact current buffer",
+      "passed": true
+    },
+    {
+      "name": "rejected-lock: accessible status warns unsaved",
+      "passed": true
+    },
+    {
+      "name": "rejected-lock: no unlocked/failed write and editor retained",
+      "passed": true
+    },
+    {
+      "name": "rejected-lock: source never auto-executes",
+      "passed": true
+    },
+    {
+      "name": "rejected-lock: explicit retry saves exact current buffer",
+      "passed": true
+    },
+    {
+      "name": "read-throws: accessible status warns unsaved",
+      "passed": true
+    },
+    {
+      "name": "read-throws: no unlocked/failed write and editor retained",
+      "passed": true
+    },
+    {
+      "name": "read-throws: source never auto-executes",
+      "passed": true
+    },
+    {
+      "name": "read-throws: explicit retry saves exact current buffer",
+      "passed": true
+    },
+    {
+      "name": "write-throws: accessible status warns unsaved",
+      "passed": true
+    },
+    {
+      "name": "write-throws: no unlocked/failed write and editor retained",
+      "passed": true
+    },
+    {
+      "name": "write-throws: source never auto-executes",
+      "passed": true
+    },
+    {
+      "name": "write-throws: explicit retry saves exact current buffer",
+      "passed": true
+    },
+    {
+      "name": "new editor revision is pending before debounce, not shown saved",
+      "passed": true
+    },
+    {
+      "name": "closing owner flushes pending text and follower cannot silently overwrite",
+      "passed": true
+    },
+    {
+      "name": "cancelled load preserves unsaved editor",
+      "passed": true
+    },
+    {
+      "name": "confirmed replacement alone persists the follower revision",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "browser": "156.0.8078.4",
+  "pendingObservation": {
+    "label": "Saving draft…",
+    "stored": "first persisted source"
+  }
+}

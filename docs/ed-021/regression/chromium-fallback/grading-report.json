@@ -1,0 +1,1755 @@
+{
+  "checks": [
+    {
+      "name": "starter fails behavior (only initial passes)",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "1 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "failed",
+            "text": "Increment increases the count by oneFailed · 4 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "failed",
+            "text": "Repeated increments update on every clickFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "decrement",
+            "status": "failed",
+            "text": "Decrement decreases the count by oneFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "reset",
+            "status": "failed",
+            "text": "Reset returns a changed count to zeroFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "negative-values",
+            "status": "failed",
+            "text": "The counter supports negative valuesFailed · 2 msAfter Decrement, the displayed value was 0 instead of -1."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 1 msAfter Increment, the displayed value was 0 instead of 1."
+          }
+        ],
+        "elapsedMs": 198
+      }
+    },
+    {
+      "name": "correct passes all seven",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "7 of 7 tests passed. Challenge complete.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "passed",
+            "text": "Combined increments, decrements and resets stay correctPassed · 7 msEvery interaction produced the expected count."
+          }
+        ],
+        "elapsedMs": 182
+      }
+    },
+    {
+      "name": "correct disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "autofocus passes all seven",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "7 of 7 tests passed. Challenge complete.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "passed",
+            "text": "Combined increments, decrements and resets stay correctPassed · 9 msEvery interaction produced the expected count."
+          }
+        ],
+        "elapsedMs": 195
+      }
+    },
+    {
+      "name": "learner autofocus cannot steal grading control focus",
+      "passed": true
+    },
+    {
+      "name": "autofocus disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "functional passes all seven",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "7 of 7 tests passed. Challenge complete.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "passed",
+            "text": "Combined increments, decrements and resets stay correctPassed · 3 msEvery interaction produced the expected count."
+          }
+        ],
+        "elapsedMs": 175
+      }
+    },
+    {
+      "name": "functional disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "reducer passes all seven",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "7 of 7 tests passed. Challenge complete.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 6 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "passed",
+            "text": "Combined increments, decrements and resets stay correctPassed · 6 msEvery interaction produced the expected count."
+          }
+        ],
+        "elapsedMs": 185
+      }
+    },
+    {
+      "name": "reducer disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "classCounter passes all seven",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "7 of 7 tests passed. Challenge complete.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 9 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 6 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "passed",
+            "text": "Combined increments, decrements and resets stay correctPassed · 7 msEvery interaction produced the expected count."
+          }
+        ],
+        "elapsedMs": 196
+      }
+    },
+    {
+      "name": "classCounter disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "globalState passes all seven",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "7 of 7 tests passed. Challenge complete.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "passed",
+            "text": "Combined increments, decrements and resets stay correctPassed · 6 msEvery interaction produced the expected count."
+          }
+        ],
+        "elapsedMs": 185
+      }
+    },
+    {
+      "name": "globalState disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "missingIncrement fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "2 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "failed",
+            "text": "Increment increases the count by oneFailed · 3 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "failed",
+            "text": "Repeated increments update on every clickFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "decrement",
+            "status": "failed",
+            "text": "Decrement decreases the count by oneFailed · 1 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "reset",
+            "status": "failed",
+            "text": "Reset returns a changed count to zeroFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+          }
+        ],
+        "elapsedMs": 184
+      }
+    },
+    {
+      "name": "missingIncrement disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "wrongDecrement fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "4 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 4 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 7 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "failed",
+            "text": "Decrement decreases the count by oneFailed · 4 msAfter Increment → Increment → Decrement, the displayed value was 3 instead of 1."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "failed",
+            "text": "The counter supports negative valuesFailed · 4 msAfter Decrement, the displayed value was 1 instead of -1."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 3 msAfter Increment → Increment → Decrement, the displayed value was 3 instead of 1."
+          }
+        ],
+        "elapsedMs": 180
+      }
+    },
+    {
+      "name": "wrongDecrement disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "brokenReset fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "5 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "failed",
+            "text": "Reset returns a changed count to zeroFailed · 2 msAfter Increment → Increment → Reset, the displayed value was 99 instead of 0."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 4 msAfter Increment → Increment → Decrement → Reset, the displayed value was 99 instead of 0."
+          }
+        ],
+        "elapsedMs": 181
+      }
+    },
+    {
+      "name": "brokenReset disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "wrongInitial fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "0 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "failed",
+            "text": "The counter initially displays zeroFailed · 5 msOn a fresh mount, the displayed value was 5 instead of 0."
+          },
+          {
+            "id": "increment",
+            "status": "failed",
+            "text": "Increment increases the count by oneFailed · 2 msOn a fresh mount, the displayed value was 5 instead of 0."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "failed",
+            "text": "Repeated increments update on every clickFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+          },
+          {
+            "id": "decrement",
+            "status": "failed",
+            "text": "Decrement decreases the count by oneFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+          },
+          {
+            "id": "reset",
+            "status": "failed",
+            "text": "Reset returns a changed count to zeroFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+          },
+          {
+            "id": "negative-values",
+            "status": "failed",
+            "text": "The counter supports negative valuesFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+          }
+        ],
+        "elapsedMs": 149
+      }
+    },
+    {
+      "name": "wrongInitial disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "stale fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "3 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "failed",
+            "text": "Repeated increments update on every clickFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+          },
+          {
+            "id": "decrement",
+            "status": "failed",
+            "text": "Decrement decreases the count by oneFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+          },
+          {
+            "id": "reset",
+            "status": "failed",
+            "text": "Reset returns a changed count to zeroFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 1 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+          }
+        ],
+        "elapsedMs": 132
+      }
+    },
+    {
+      "name": "stale disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "noNegative fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "5 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "passed",
+            "text": "Increment increases the count by onePassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "passed",
+            "text": "Repeated increments update on every clickPassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "decrement",
+            "status": "passed",
+            "text": "Decrement decreases the count by onePassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "reset",
+            "status": "passed",
+            "text": "Reset returns a changed count to zeroPassed · 3 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "negative-values",
+            "status": "failed",
+            "text": "The counter supports negative valuesFailed · 1 msAfter Decrement, the displayed value was 0 instead of -1."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "failed",
+            "text": "Combined increments, decrements and resets stay correctFailed · 3 msAfter Increment → Increment → Decrement → Reset → Decrement, the displayed value was 0 instead of -1."
+          }
+        ],
+        "elapsedMs": 138
+      }
+    },
+    {
+      "name": "noNegative disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "invalid JSX executes no tests",
+      "passed": true,
+      "evidence": {
+        "state": "blocked",
+        "summary": "Tests could not finish. Check the feedback and retry.",
+        "error": "Compile error on line 1: Unexpected token No tests were executed. Fix the code, then retry.",
+        "results": [],
+        "elapsedMs": 130
+      }
+    },
+    {
+      "name": "syntax disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "renderError fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "0 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "error",
+            "text": "The counter initially displays zeroError · 5 msRuntime error: Intentional render failure"
+          },
+          {
+            "id": "increment",
+            "status": "error",
+            "text": "Increment increases the count by oneError · 2 msRuntime error: Intentional render failure"
+          },
+          {
+            "id": "repeated-increment",
+            "status": "error",
+            "text": "Repeated increments update on every clickError · 1 msRuntime error: Intentional render failure"
+          },
+          {
+            "id": "decrement",
+            "status": "error",
+            "text": "Decrement decreases the count by oneError · 1 msRuntime error: Intentional render failure"
+          },
+          {
+            "id": "reset",
+            "status": "error",
+            "text": "Reset returns a changed count to zeroError · 1 msRuntime error: Intentional render failure"
+          },
+          {
+            "id": "negative-values",
+            "status": "error",
+            "text": "The counter supports negative valuesError · 1 msRuntime error: Intentional render failure"
+          },
+          {
+            "id": "combined-interactions",
+            "status": "error",
+            "text": "Combined increments, decrements and resets stay correctError · 2 msRuntime error: Intentional render failure"
+          }
+        ],
+        "elapsedMs": 210
+      }
+    },
+    {
+      "name": "renderError disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "eventError fails its relevant requirement",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "2 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "passed",
+            "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+          },
+          {
+            "id": "increment",
+            "status": "error",
+            "text": "Increment increases the count by oneError · 2 msRuntime error: Intentional click failure"
+          },
+          {
+            "id": "repeated-increment",
+            "status": "error",
+            "text": "Repeated increments update on every clickError · 1 msRuntime error: Intentional click failure"
+          },
+          {
+            "id": "decrement",
+            "status": "error",
+            "text": "Decrement decreases the count by oneError · 1 msRuntime error: Intentional click failure"
+          },
+          {
+            "id": "reset",
+            "status": "error",
+            "text": "Reset returns a changed count to zeroError · 1 msRuntime error: Intentional click failure"
+          },
+          {
+            "id": "negative-values",
+            "status": "passed",
+            "text": "The counter supports negative valuesPassed · 2 msEvery interaction produced the expected count."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "error",
+            "text": "Combined increments, decrements and resets stay correctError · 2 msRuntime error: Intentional click failure"
+          }
+        ],
+        "elapsedMs": 176
+      }
+    },
+    {
+      "name": "eventError disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "loop terminates with timeout/error",
+      "passed": true,
+      "evidence": {
+        "state": "blocked",
+        "summary": "Tests timed out. Check the feedback and retry.",
+        "error": "The grading preview stopped responding or exceeded its execution limit. Check for loops or unfinished async work, then retry. Your interactive preview is unchanged.",
+        "results": [],
+        "elapsedMs": 1142
+      }
+    },
+    {
+      "name": "loop disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "neverSettles terminates with timeout/error",
+      "passed": true,
+      "evidence": {
+        "state": "finished",
+        "summary": "0 of 7 tests passed. Review the results and try again.",
+        "results": [
+          {
+            "id": "initial-zero",
+            "status": "timeout",
+            "text": "The counter initially displays zeroTimed out · 1501 msThe test did not finish. Check for unresolved async work or a component that never settles."
+          },
+          {
+            "id": "increment",
+            "status": "timeout",
+            "text": "Increment increases the count by oneTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+          },
+          {
+            "id": "repeated-increment",
+            "status": "timeout",
+            "text": "Repeated increments update on every clickTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+          },
+          {
+            "id": "decrement",
+            "status": "timeout",
+            "text": "Decrement decreases the count by oneTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+          },
+          {
+            "id": "reset",
+            "status": "timeout",
+            "text": "Reset returns a changed count to zeroTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+          },
+          {
+            "id": "negative-values",
+            "status": "timeout",
+            "text": "The counter supports negative valuesTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+          },
+          {
+            "id": "combined-interactions",
+            "status": "timeout",
+            "text": "Combined increments, decrements and resets stay correctTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+          }
+        ],
+        "elapsedMs": 1606
+      }
+    },
+    {
+      "name": "neverSettles disposable frame cleaned",
+      "passed": true
+    },
+    {
+      "name": "recovers after nonresponsive work",
+      "passed": true
+    },
+    {
+      "name": "repeat 0",
+      "passed": true
+    },
+    {
+      "name": "repeat 1",
+      "passed": true
+    },
+    {
+      "name": "repeat 2",
+      "passed": true
+    },
+    {
+      "name": "repeat 3",
+      "passed": true
+    },
+    {
+      "name": "repeat 4",
+      "passed": true
+    },
+    {
+      "name": "repeat 5",
+      "passed": true
+    },
+    {
+      "name": "repeat 6",
+      "passed": true
+    },
+    {
+      "name": "repeat 7",
+      "passed": true
+    },
+    {
+      "name": "repeat 8",
+      "passed": true
+    },
+    {
+      "name": "repeat 9",
+      "passed": true
+    },
+    {
+      "name": "repeat 10",
+      "passed": true
+    },
+    {
+      "name": "repeat 11",
+      "passed": true
+    },
+    {
+      "name": "repeat 12",
+      "passed": true
+    },
+    {
+      "name": "repeat 13",
+      "passed": true
+    },
+    {
+      "name": "repeat 14",
+      "passed": true
+    },
+    {
+      "name": "grading leaves editor and visible preview untouched",
+      "passed": true
+    },
+    {
+      "name": "grading navigation cannot stop or change the visible preview",
+      "passed": true
+    },
+    {
+      "name": "edit immediately invalidates results",
+      "passed": true
+    },
+    {
+      "name": "in-flight edit cancels stale results",
+      "passed": true
+    },
+    {
+      "name": "Reset cancels grading",
+      "passed": true
+    },
+    {
+      "name": "Reset remains undoable",
+      "passed": true
+    },
+    {
+      "name": "new run supersedes old work",
+      "passed": true
+    },
+    {
+      "name": "320/dark keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "320/dark no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "320/dark only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "320/light keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "320/light accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "320/light no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "320/light only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/dark keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "375/dark no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "375/dark only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "375/light keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "375/light accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "375/light no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "375/light only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/dark keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "768/dark no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "768/dark only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "768/light keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "768/light accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "768/light no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "768/light only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/dark keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1024/dark accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "1024/dark no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/dark only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1024/light keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1024/light accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "1024/light no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1024/light only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/dark keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1440/dark accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "1440/dark no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/dark only scoped progress storage; preferences preserved",
+      "passed": true
+    },
+    {
+      "name": "1440/light keyboard and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1440/light accessible summary and seven results",
+      "passed": true
+    },
+    {
+      "name": "1440/light no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "1440/light only scoped progress storage; preferences preserved",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "fixtures": {
+    "correct": {
+      "state": "finished",
+      "summary": "7 of 7 tests passed. Challenge complete.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "passed",
+          "text": "Combined increments, decrements and resets stay correctPassed · 7 msEvery interaction produced the expected count."
+        }
+      ],
+      "elapsedMs": 182
+    },
+    "autofocus": {
+      "state": "finished",
+      "summary": "7 of 7 tests passed. Challenge complete.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "passed",
+          "text": "Combined increments, decrements and resets stay correctPassed · 9 msEvery interaction produced the expected count."
+        }
+      ],
+      "elapsedMs": 195
+    },
+    "functional": {
+      "state": "finished",
+      "summary": "7 of 7 tests passed. Challenge complete.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "passed",
+          "text": "Combined increments, decrements and resets stay correctPassed · 3 msEvery interaction produced the expected count."
+        }
+      ],
+      "elapsedMs": 175
+    },
+    "reducer": {
+      "state": "finished",
+      "summary": "7 of 7 tests passed. Challenge complete.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 6 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "passed",
+          "text": "Combined increments, decrements and resets stay correctPassed · 6 msEvery interaction produced the expected count."
+        }
+      ],
+      "elapsedMs": 185
+    },
+    "classCounter": {
+      "state": "finished",
+      "summary": "7 of 7 tests passed. Challenge complete.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 9 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 6 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "passed",
+          "text": "Combined increments, decrements and resets stay correctPassed · 7 msEvery interaction produced the expected count."
+        }
+      ],
+      "elapsedMs": 196
+    },
+    "globalState": {
+      "state": "finished",
+      "summary": "7 of 7 tests passed. Challenge complete.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "passed",
+          "text": "Combined increments, decrements and resets stay correctPassed · 6 msEvery interaction produced the expected count."
+        }
+      ],
+      "elapsedMs": 185
+    },
+    "missingIncrement": {
+      "state": "finished",
+      "summary": "2 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "failed",
+          "text": "Increment increases the count by oneFailed · 3 msAfter Increment, the displayed value was 0 instead of 1."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "failed",
+          "text": "Repeated increments update on every clickFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+        },
+        {
+          "id": "decrement",
+          "status": "failed",
+          "text": "Decrement decreases the count by oneFailed · 1 msAfter Increment, the displayed value was 0 instead of 1."
+        },
+        {
+          "id": "reset",
+          "status": "failed",
+          "text": "Reset returns a changed count to zeroFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "failed",
+          "text": "Combined increments, decrements and resets stay correctFailed · 2 msAfter Increment, the displayed value was 0 instead of 1."
+        }
+      ],
+      "elapsedMs": 184
+    },
+    "wrongDecrement": {
+      "state": "finished",
+      "summary": "4 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 5 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 4 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 7 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "failed",
+          "text": "Decrement decreases the count by oneFailed · 4 msAfter Increment → Increment → Decrement, the displayed value was 3 instead of 1."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 5 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "failed",
+          "text": "The counter supports negative valuesFailed · 4 msAfter Decrement, the displayed value was 1 instead of -1."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "failed",
+          "text": "Combined increments, decrements and resets stay correctFailed · 3 msAfter Increment → Increment → Decrement, the displayed value was 3 instead of 1."
+        }
+      ],
+      "elapsedMs": 180
+    },
+    "brokenReset": {
+      "state": "finished",
+      "summary": "5 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "failed",
+          "text": "Reset returns a changed count to zeroFailed · 2 msAfter Increment → Increment → Reset, the displayed value was 99 instead of 0."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "failed",
+          "text": "Combined increments, decrements and resets stay correctFailed · 4 msAfter Increment → Increment → Decrement → Reset, the displayed value was 99 instead of 0."
+        }
+      ],
+      "elapsedMs": 181
+    },
+    "wrongInitial": {
+      "state": "finished",
+      "summary": "0 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "failed",
+          "text": "The counter initially displays zeroFailed · 5 msOn a fresh mount, the displayed value was 5 instead of 0."
+        },
+        {
+          "id": "increment",
+          "status": "failed",
+          "text": "Increment increases the count by oneFailed · 2 msOn a fresh mount, the displayed value was 5 instead of 0."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "failed",
+          "text": "Repeated increments update on every clickFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+        },
+        {
+          "id": "decrement",
+          "status": "failed",
+          "text": "Decrement decreases the count by oneFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+        },
+        {
+          "id": "reset",
+          "status": "failed",
+          "text": "Reset returns a changed count to zeroFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+        },
+        {
+          "id": "negative-values",
+          "status": "failed",
+          "text": "The counter supports negative valuesFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "failed",
+          "text": "Combined increments, decrements and resets stay correctFailed · 1 msOn a fresh mount, the displayed value was 5 instead of 0."
+        }
+      ],
+      "elapsedMs": 149
+    },
+    "stale": {
+      "state": "finished",
+      "summary": "3 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "failed",
+          "text": "Repeated increments update on every clickFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+        },
+        {
+          "id": "decrement",
+          "status": "failed",
+          "text": "Decrement decreases the count by oneFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+        },
+        {
+          "id": "reset",
+          "status": "failed",
+          "text": "Reset returns a changed count to zeroFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 1 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "failed",
+          "text": "Combined increments, decrements and resets stay correctFailed · 1 msAfter Increment → Increment, the displayed value was 1 instead of 2."
+        }
+      ],
+      "elapsedMs": 132
+    },
+    "noNegative": {
+      "state": "finished",
+      "summary": "5 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "passed",
+          "text": "Increment increases the count by onePassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "passed",
+          "text": "Repeated increments update on every clickPassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "decrement",
+          "status": "passed",
+          "text": "Decrement decreases the count by onePassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "reset",
+          "status": "passed",
+          "text": "Reset returns a changed count to zeroPassed · 3 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "negative-values",
+          "status": "failed",
+          "text": "The counter supports negative valuesFailed · 1 msAfter Decrement, the displayed value was 0 instead of -1."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "failed",
+          "text": "Combined increments, decrements and resets stay correctFailed · 3 msAfter Increment → Increment → Decrement → Reset → Decrement, the displayed value was 0 instead of -1."
+        }
+      ],
+      "elapsedMs": 138
+    },
+    "syntax": {
+      "state": "blocked",
+      "summary": "Tests could not finish. Check the feedback and retry.",
+      "error": "Compile error on line 1: Unexpected token No tests were executed. Fix the code, then retry.",
+      "results": [],
+      "elapsedMs": 130
+    },
+    "renderError": {
+      "state": "finished",
+      "summary": "0 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "error",
+          "text": "The counter initially displays zeroError · 5 msRuntime error: Intentional render failure"
+        },
+        {
+          "id": "increment",
+          "status": "error",
+          "text": "Increment increases the count by oneError · 2 msRuntime error: Intentional render failure"
+        },
+        {
+          "id": "repeated-increment",
+          "status": "error",
+          "text": "Repeated increments update on every clickError · 1 msRuntime error: Intentional render failure"
+        },
+        {
+          "id": "decrement",
+          "status": "error",
+          "text": "Decrement decreases the count by oneError · 1 msRuntime error: Intentional render failure"
+        },
+        {
+          "id": "reset",
+          "status": "error",
+          "text": "Reset returns a changed count to zeroError · 1 msRuntime error: Intentional render failure"
+        },
+        {
+          "id": "negative-values",
+          "status": "error",
+          "text": "The counter supports negative valuesError · 1 msRuntime error: Intentional render failure"
+        },
+        {
+          "id": "combined-interactions",
+          "status": "error",
+          "text": "Combined increments, decrements and resets stay correctError · 2 msRuntime error: Intentional render failure"
+        }
+      ],
+      "elapsedMs": 210
+    },
+    "eventError": {
+      "state": "finished",
+      "summary": "2 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "passed",
+          "text": "The counter initially displays zeroPassed · 4 msThe counter started at zero."
+        },
+        {
+          "id": "increment",
+          "status": "error",
+          "text": "Increment increases the count by oneError · 2 msRuntime error: Intentional click failure"
+        },
+        {
+          "id": "repeated-increment",
+          "status": "error",
+          "text": "Repeated increments update on every clickError · 1 msRuntime error: Intentional click failure"
+        },
+        {
+          "id": "decrement",
+          "status": "error",
+          "text": "Decrement decreases the count by oneError · 1 msRuntime error: Intentional click failure"
+        },
+        {
+          "id": "reset",
+          "status": "error",
+          "text": "Reset returns a changed count to zeroError · 1 msRuntime error: Intentional click failure"
+        },
+        {
+          "id": "negative-values",
+          "status": "passed",
+          "text": "The counter supports negative valuesPassed · 2 msEvery interaction produced the expected count."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "error",
+          "text": "Combined increments, decrements and resets stay correctError · 2 msRuntime error: Intentional click failure"
+        }
+      ],
+      "elapsedMs": 176
+    },
+    "loop": {
+      "state": "blocked",
+      "summary": "Tests timed out. Check the feedback and retry.",
+      "error": "The grading preview stopped responding or exceeded its execution limit. Check for loops or unfinished async work, then retry. Your interactive preview is unchanged.",
+      "results": [],
+      "elapsedMs": 1142
+    },
+    "neverSettles": {
+      "state": "finished",
+      "summary": "0 of 7 tests passed. Review the results and try again.",
+      "results": [
+        {
+          "id": "initial-zero",
+          "status": "timeout",
+          "text": "The counter initially displays zeroTimed out · 1501 msThe test did not finish. Check for unresolved async work or a component that never settles."
+        },
+        {
+          "id": "increment",
+          "status": "timeout",
+          "text": "Increment increases the count by oneTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+        },
+        {
+          "id": "repeated-increment",
+          "status": "timeout",
+          "text": "Repeated increments update on every clickTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+        },
+        {
+          "id": "decrement",
+          "status": "timeout",
+          "text": "Decrement decreases the count by oneTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+        },
+        {
+          "id": "reset",
+          "status": "timeout",
+          "text": "Reset returns a changed count to zeroTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+        },
+        {
+          "id": "negative-values",
+          "status": "timeout",
+          "text": "The counter supports negative valuesTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+        },
+        {
+          "id": "combined-interactions",
+          "status": "timeout",
+          "text": "Combined increments, decrements and resets stay correctTimed out · 0 msNot run because the previous test did not finish. Fix the nonresponsive code, then retry."
+        }
+      ],
+      "elapsedMs": 1606
+    }
+  },
+  "durations": [
+    133,
+    152,
+    142,
+    135,
+    134,
+    125,
+    122,
+    130,
+    129,
+    130,
+    134,
+    115,
+    114,
+    131,
+    115
+  ],
+  "browser": "156.0.8078.4",
+  "memory": {
+    "before": 14238608,
+    "after": 15263477
+  }
+}

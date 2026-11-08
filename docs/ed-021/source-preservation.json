@@ -1,0 +1,30 @@
+{
+  "baselineCommit": "5d3ab5bfa7bf270cd228bc5426c864404bd9881a",
+  "baselineFiles": 336,
+  "modifiedSourceFiles": [
+    "src/content/labs/react/use-state-counter.ts",
+    "src/lib/lab/grading.ts",
+    "src/lib/lab/types.ts",
+    "src/components/lab/grading-results.tsx",
+    "src/components/lab/practice-workspace.tsx",
+    "src/components/lab/prototype-notice.tsx",
+    "src/components/lab/practice-workspace-loader.tsx",
+    "src/components/lab/lab.module.css",
+    "src/components/lab/challenge-page.tsx",
+    "src/components/lab/grading-results.test.ts",
+    "src/components/lab/lazy-boundary.test.ts",
+    "src/app/practice/react/use-state-counter/page.test.ts"
+  ],
+  "newSourceFiles": [
+    "src/components/lab/learning-progress.test.ts",
+    "src/components/lab/learning-progress.tsx",
+    "src/components/lab/use-challenge-progress.ts",
+    "src/content/labs/react/use-state-counter-solution.ts",
+    "src/lib/lab/progress.test.ts",
+    "src/lib/lab/progress.ts",
+    "src/lib/storage/challenge-progress.test.ts",
+    "src/lib/storage/challenge-progress.ts"
+  ],
+  "unchangedBaselineFiles": 324,
+  "unexpectedChanges": []
+}

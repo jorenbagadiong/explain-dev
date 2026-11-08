@@ -1,0 +1,125 @@
+{
+  "engine": "firefox 157.0",
+  "base": "http://localhost:3118",
+  "checks": [
+    {
+      "name": "manifest lists 119 lessons in eight groups",
+      "passed": true,
+      "evidence": {
+        "lessons": 119,
+        "groups": [
+          "React Fundamentals",
+          "State & Data Flow",
+          "React Hooks",
+          "Component Architecture",
+          "Forms & User Interaction",
+          "Performance & Rendering",
+          "Advanced React",
+          "Testing & Best Practices"
+        ]
+      }
+    },
+    {
+      "name": "/ returns 200",
+      "passed": true
+    },
+    {
+      "name": "/frontend returns 200",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react returns 200",
+      "passed": true
+    },
+    {
+      "name": "/practice returns 200",
+      "passed": true
+    },
+    {
+      "name": "/practice/react/use-state-counter returns 200",
+      "passed": true
+    },
+    {
+      "name": "React overview shows all eight curriculum groups",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "name": "React overview links to all 119 lessons",
+      "passed": true
+    },
+    {
+      "name": "all 119 lessons load with one heading and three learning modes",
+      "passed": true,
+      "evidence": {
+        "available": 119
+      }
+    },
+    {
+      "name": "/frontend/react/introduction-to-react starts in Learn",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/introduction-to-react Quick Review mode",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/introduction-to-react Interview mode",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/introduction-to-react back to Learn",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-state starts in Learn",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-state Quick Review mode",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-state Interview mode",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-state back to Learn",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-effect starts in Learn",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-effect Quick Review mode",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-effect Interview mode",
+      "passed": true
+    },
+    {
+      "name": "/frontend/react/use-effect back to Learn",
+      "passed": true
+    },
+    {
+      "name": "stored preferences are unchanged after lessons and the Coding Lab",
+      "passed": true
+    },
+    {
+      "name": "Coding Lab adds no storage keys",
+      "passed": true,
+      "evidence": [
+        "theme",
+        "explain-dev:v1:preferences"
+      ]
+    },
+    {
+      "name": "no console errors or hydration warnings on any page",
+      "passed": true,
+      "evidence": []
+    }
+  ],
+  "errors": []
+}

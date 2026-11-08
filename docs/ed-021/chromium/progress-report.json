@@ -1,0 +1,326 @@
+{
+  "checks": [
+    {
+      "name": "first visit is Not Started with no progress write",
+      "passed": true
+    },
+    {
+      "name": "hints and reference start hidden",
+      "passed": true
+    },
+    {
+      "name": "debounced save reports saved local draft",
+      "passed": true
+    },
+    {
+      "name": "refresh restores source as inert editor text",
+      "passed": true
+    },
+    {
+      "name": "saved source never reaches initial preview init",
+      "passed": true
+    },
+    {
+      "name": "refresh before debounce flushes latest text",
+      "passed": true
+    },
+    {
+      "name": "rapid edit then SPA navigate away and back restores latest text",
+      "passed": true
+    },
+    {
+      "name": "empty drafts restore rather than falling back to starter",
+      "passed": true
+    },
+    {
+      "name": "one hint at a time",
+      "passed": true
+    },
+    {
+      "name": "hint prefix survives refresh",
+      "passed": true
+    },
+    {
+      "name": "no later hint can be revealed out of order",
+      "passed": true
+    },
+    {
+      "name": "reference requires an explicit warning step",
+      "passed": true
+    },
+    {
+      "name": "revealing does not overwrite or complete the editor",
+      "passed": true
+    },
+    {
+      "name": "copy leaves editor unchanged",
+      "passed": true
+    },
+    {
+      "name": "explained reference passes all seven behavioral tests",
+      "passed": true
+    },
+    {
+      "name": "passing marks revision-complete immediately",
+      "passed": true
+    },
+    {
+      "name": "completion and current verification survive refresh",
+      "passed": true
+    },
+    {
+      "name": "refresh does not auto-reveal reference or re-execute a saved solution",
+      "passed": true
+    },
+    {
+      "name": "edit keeps history but invalidates current draft evidence",
+      "passed": true
+    },
+    {
+      "name": "Reset is one undoable change",
+      "passed": true
+    },
+    {
+      "name": "partial failure does not erase historical completion or pretend current pass",
+      "passed": true
+    },
+    {
+      "name": "cancelled Clear Progress changes nothing",
+      "passed": true
+    },
+    {
+      "name": "confirmed Clear resets all learning data",
+      "passed": true
+    },
+    {
+      "name": "clear removes learner source and evidence, keeping only a tombstone",
+      "passed": true
+    },
+    {
+      "name": "Clear has fresh editor undo history",
+      "passed": true
+    },
+    {
+      "name": "cleared progress stays initial after refresh",
+      "passed": true
+    },
+    {
+      "name": "oversize input does not overwrite saved data",
+      "passed": true
+    },
+    {
+      "name": "explicit maximum draft saves",
+      "passed": true
+    },
+    {
+      "name": "obsolete contract cannot claim current completion",
+      "passed": true
+    },
+    {
+      "name": "starter/version changes preserve draft and history",
+      "passed": true
+    },
+    {
+      "name": "corrupt data safely uses starter without deleting raw data",
+      "passed": true
+    },
+    {
+      "name": "corrupt record recovers on edit",
+      "passed": true
+    },
+    {
+      "name": "future formats are not silently overwritten",
+      "passed": true
+    },
+    {
+      "name": "disabled storage is a visible recoverable failure",
+      "passed": true
+    },
+    {
+      "name": "disabled retry saves preserved text",
+      "passed": true
+    },
+    {
+      "name": "quota storage is a visible recoverable failure",
+      "passed": true
+    },
+    {
+      "name": "quota retry saves preserved text",
+      "passed": true
+    },
+    {
+      "name": "second tab cannot save while first holds lease",
+      "passed": true
+    },
+    {
+      "name": "cross-tab updates preserve local editor",
+      "passed": true
+    },
+    {
+      "name": "retry does not overwrite a newer head",
+      "passed": true
+    },
+    {
+      "name": "explicit reload resolves conflict without executing source",
+      "passed": true
+    },
+    {
+      "name": "clear marker prevents silent stale-tab resurrection",
+      "passed": true
+    },
+    {
+      "name": "replacement requires explicit choice and can then save",
+      "passed": true
+    },
+    {
+      "name": "320/dark keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "320/dark no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "320/dark theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "320/light keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "320/light no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "320/light theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "375/dark keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "375/dark no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "375/dark theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "375/light keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "375/light no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "375/light theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "768/dark keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "768/dark no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "768/dark theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "768/light keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "768/light no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "768/light theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "1024/dark keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1024/dark no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "1024/dark theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "1024/light keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1024/light no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "1024/light theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "1440/dark keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1440/dark no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "1440/dark theme and local scope",
+      "passed": true
+    },
+    {
+      "name": "1440/light keyboard hint and visible focus",
+      "passed": true
+    },
+    {
+      "name": "1440/light no overflow and touch targets",
+      "passed": true
+    },
+    {
+      "name": "1440/light theme and local scope",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "storage": {
+    "completedUtf16Bytes": 2260,
+    "tombstoneUtf16Bytes": 174,
+    "maxDraftUtf16Bytes": 100760
+  },
+  "browser": "156.0.8078.4",
+  "completedRecord": {
+    "version": 1,
+    "challengeId": "react-use-state-counter",
+    "gradingRevision": "counter-behavior-v1",
+    "starterRevision": "counter-starter-v1",
+    "draftCode": "import { useState } from \"react\";\n\nexport default function Counter() {\n  const [count, setCount] = useState(0);\n\n  function increment() {\n    setCount(previous => previous + 1);\n  }\n\n  function decrement() {\n    setCount(previous => previous - 1);\n  }\n\n  function reset() {\n    setCount(0);\n  }\n\n  return (\n    <main>\n      <p aria-live=\"polite\">Count: {count}</p>\n      <div>\n        <button type=\"button\" onClick={decrement}>Decrement</button>\n        <button type=\"button\" onClick={increment}>Increment</button>\n        <button type=\"button\" onClick={reset}>Reset</button>\n      </div>\n    </main>\n  );\n}",
+    "started": true,
+    "completion": {
+      "revision": "counter-behavior-v1",
+      "at": "2026-11-08T12:04:46.801Z"
+    },
+    "verification": {
+      "passedCount": 7,
+      "at": "2026-11-08T12:04:46.801Z"
+    },
+    "bestPassedCount": 7,
+    "totalTests": 7,
+    "revealedHintCount": 3,
+    "solutionRevealed": true,
+    "lastEditedAt": "2026-11-08T12:04:46.669Z",
+    "savedAt": "2026-11-08T12:04:46.802Z",
+    "writeRevision": 10
+  }
+}
