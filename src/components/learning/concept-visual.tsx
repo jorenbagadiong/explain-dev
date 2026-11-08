@@ -3,7 +3,7 @@ import type { ArticleConceptVisual, ArticleHierarchyNode, ArticleHierarchyVisual
 
 function HierarchyNode({ node }: { node: ArticleHierarchyNode }) {
   return (
-    <li className="min-w-0">
+    <li className="concept-node min-w-0">
       <p className="font-mono text-sm font-semibold text-primary">{node.title}</p>
       <p className="mt-1 text-sm leading-7 text-muted-foreground">{node.description}</p>
       {node.children && <ul className="mt-4 space-y-4 border-l-2 border-primary/30 pl-4 sm:pl-6">{node.children.map((child) => <HierarchyNode key={child.id} node={child} />)}</ul>}
@@ -14,7 +14,7 @@ function HierarchyNode({ node }: { node: ArticleHierarchyNode }) {
 // Examples are existing article records, matched by stable ID rather than copied.
 export function ConceptVisual({ visual, examples = [] }: { visual: ArticleConceptVisual | ArticleHierarchyVisual; examples?: readonly CodeExample[] }) {
   return (
-    <figure className="my-8 rounded-xl border bg-muted/20 p-4 sm:p-6">
+    <figure className="concept-visual my-8 rounded-xl border bg-muted/20 p-4 sm:p-6">
       <figcaption className="text-lg font-semibold">{visual.heading}</figcaption>
       <p className="mt-3 text-sm leading-7 text-muted-foreground">{visual.context}</p>
       {"root" in visual ? (

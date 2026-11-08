@@ -1,0 +1,909 @@
+{
+  "browser": "Chromium headless shell 156.0.8078.4",
+  "viewportHeight": 900,
+  "motion": "reduce",
+  "source": "Fresh local production contexts; no CPU/network throttling. Single observations, not field metrics.",
+  "samples": [
+    {
+      "name": "home",
+      "route": "/",
+      "width": 375,
+      "theme": "dark",
+      "cls": 0.00015783045267489713,
+      "lcp": 176,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 176
+        }
+      ],
+      "domContentLoaded": 119.1999999997206,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "curriculum",
+      "route": "/frontend/react",
+      "width": 375,
+      "theme": "dark",
+      "cls": 0.0022848183641975307,
+      "lcp": 76,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 44
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 76
+        }
+      ],
+      "domContentLoaded": 66.20000000018626,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "use-state",
+      "route": "/frontend/react/use-state",
+      "width": 375,
+      "theme": "dark",
+      "cls": 0.010413100308641975,
+      "lcp": 104,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 104
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 104
+        }
+      ],
+      "domContentLoaded": 41.8000000002794,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "home",
+      "route": "/",
+      "width": 375,
+      "theme": "light",
+      "cls": 0.00015783045267489713,
+      "lcp": 56,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 44
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 56
+        }
+      ],
+      "domContentLoaded": 24.40000000037253,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "curriculum",
+      "route": "/frontend/react",
+      "width": 375,
+      "theme": "light",
+      "cls": 0.0022848183641975307,
+      "lcp": 80,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 80
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 80
+        }
+      ],
+      "domContentLoaded": 30.899999999906868,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "use-state",
+      "route": "/frontend/react/use-state",
+      "width": 375,
+      "theme": "light",
+      "cls": 0.010413100308641975,
+      "lcp": 68,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 44
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 68
+        }
+      ],
+      "domContentLoaded": 29.5,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "home",
+      "route": "/",
+      "width": 1440,
+      "theme": "dark",
+      "cls": 0.019309931014365782,
+      "lcp": 96,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 96
+        }
+      ],
+      "domContentLoaded": 19.300000000279397,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "curriculum",
+      "route": "/frontend/react",
+      "width": 1440,
+      "theme": "dark",
+      "cls": 0.0004465158470373585,
+      "lcp": 96,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 96
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 96
+        }
+      ],
+      "domContentLoaded": 32.10000000009313,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "use-state",
+      "route": "/frontend/react/use-state",
+      "width": 1440,
+      "theme": "dark",
+      "cls": 0.01076213479375643,
+      "lcp": 80,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 40
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 80
+        }
+      ],
+      "domContentLoaded": 26.59999999962747,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "home",
+      "route": "/",
+      "width": 1440,
+      "theme": "light",
+      "cls": 0.019301315529487096,
+      "lcp": 88,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 88
+        }
+      ],
+      "domContentLoaded": 47.299999999813735,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "curriculum",
+      "route": "/frontend/react",
+      "width": 1440,
+      "theme": "light",
+      "cls": 0.0004465158470373585,
+      "lcp": 92,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 44
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 92
+        }
+      ],
+      "domContentLoaded": 68.10000000009313,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "name": "use-state",
+      "route": "/frontend/react/use-state",
+      "width": 1440,
+      "theme": "light",
+      "cls": 0.01076213479375643,
+      "lcp": 80,
+      "longTasks": [],
+      "paints": [
+        {
+          "name": "first-paint",
+          "ms": 36
+        },
+        {
+          "name": "first-contentful-paint",
+          "ms": 80
+        }
+      ],
+      "domContentLoaded": 54.90000000037253,
+      "js": [
+        {
+          "path": "/_next/static/chunks/310vm2bl3xxpt.js",
+          "decoded": 5364,
+          "encoded": 1970,
+          "transfer": 2270
+        },
+        {
+          "path": "/_next/static/chunks/1wnov70f88xjy.js",
+          "decoded": 29127,
+          "encoded": 7650,
+          "transfer": 7950
+        },
+        {
+          "path": "/_next/static/chunks/23e6jep2anmtk.js",
+          "decoded": 229288,
+          "encoded": 71752,
+          "transfer": 72052
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "decoded": 9974,
+          "encoded": 3905,
+          "transfer": 4205
+        },
+        {
+          "path": "/_next/static/chunks/3btgypv7-1nd9.js",
+          "decoded": 24139,
+          "encoded": 7330,
+          "transfer": 7630
+        },
+        {
+          "path": "/_next/static/chunks/0c1ad7rcpjghx.js",
+          "decoded": 169437,
+          "encoded": 46446,
+          "transfer": 46746
+        },
+        {
+          "path": "/_next/static/chunks/36skgmk00yv1h.js",
+          "decoded": 46723,
+          "encoded": 15984,
+          "transfer": 16284
+        },
+        {
+          "path": "/_next/static/chunks/3x4kf2jcacpg6.js",
+          "decoded": 3241,
+          "encoded": 1489,
+          "transfer": 1789
+        },
+        {
+          "path": "/_next/static/chunks/3hr-9dlc7qjrq.js",
+          "decoded": 33628,
+          "encoded": 11046,
+          "transfer": 11346
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

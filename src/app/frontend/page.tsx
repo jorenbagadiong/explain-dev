@@ -24,6 +24,7 @@ export default function FrontendPage() {
         <ArrowLeft className="size-4" aria-hidden="true" />
         All categories
       </Link>
+      <div className="overview-hero">
       <div className="mb-6 flex size-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
         <Icon className="size-6" aria-hidden="true" />
       </div>
@@ -33,6 +34,7 @@ export default function FrontendPage() {
       <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         {description}
       </p>
+      </div>
 
       <section aria-labelledby="technologies-heading" className="mt-12 sm:mt-14">
         <h2 id="technologies-heading" className="text-xl font-semibold tracking-tight">Explore frontend technologies</h2>
@@ -59,7 +61,7 @@ export default function FrontendPage() {
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{technology.description}</p>
               </>
             );
-            const cardClassName = "block h-full rounded-xl border bg-background p-6 sm:p-7";
+            const cardClassName = "depth-card block h-full rounded-xl border bg-background p-6 sm:p-7";
 
             return (
               <li key={technology.id}>

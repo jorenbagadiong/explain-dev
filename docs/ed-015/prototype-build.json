@@ -1,0 +1,1060 @@
+{
+  "scope": "Local production files. Node gzip estimates; not browser transfer or field performance.",
+  "js": [
+    {
+      "file": ".next/static/UV1yPh2-B0Q5S2WEO4Wqx/_buildManifest.js",
+      "raw": 219,
+      "gzipEstimate": 154
+    },
+    {
+      "file": ".next/static/UV1yPh2-B0Q5S2WEO4Wqx/_clientMiddlewareManifest.js",
+      "raw": 96,
+      "gzipEstimate": 66
+    },
+    {
+      "file": ".next/static/UV1yPh2-B0Q5S2WEO4Wqx/_ssgManifest.js",
+      "raw": 80,
+      "gzipEstimate": 64
+    },
+    {
+      "file": ".next/static/chunks/0c1ad7rcpjghx.js",
+      "raw": 169437,
+      "gzipEstimate": 46446
+    },
+    {
+      "file": ".next/static/chunks/0cz1d0mv5g_q7.js",
+      "raw": 112594,
+      "gzipEstimate": 39627
+    },
+    {
+      "file": ".next/static/chunks/1wnov70f88xjy.js",
+      "raw": 29127,
+      "gzipEstimate": 7650
+    },
+    {
+      "file": ".next/static/chunks/23e6jep2anmtk.js",
+      "raw": 229288,
+      "gzipEstimate": 71752
+    },
+    {
+      "file": ".next/static/chunks/310vm2bl3xxpt.js",
+      "raw": 5364,
+      "gzipEstimate": 1970
+    },
+    {
+      "file": ".next/static/chunks/36skgmk00yv1h.js",
+      "raw": 46723,
+      "gzipEstimate": 15984
+    },
+    {
+      "file": ".next/static/chunks/3btgypv7-1nd9.js",
+      "raw": 24139,
+      "gzipEstimate": 7330
+    },
+    {
+      "file": ".next/static/chunks/3hr-9dlc7qjrq.js",
+      "raw": 33628,
+      "gzipEstimate": 11046
+    },
+    {
+      "file": ".next/static/chunks/3qfy96eoyh-ek.js",
+      "raw": 13994,
+      "gzipEstimate": 3515
+    },
+    {
+      "file": ".next/static/chunks/3x4kf2jcacpg6.js",
+      "raw": 3241,
+      "gzipEstimate": 1489
+    },
+    {
+      "file": ".next/static/chunks/turbopack-2u1d16houkiyo.js",
+      "raw": 9974,
+      "gzipEstimate": 3905
+    }
+  ],
+  "css": [
+    {
+      "file": ".next/static/chunks/05nr-ewyl5tyz.css",
+      "raw": 40467,
+      "gzipEstimate": 8627
+    }
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "html": {
+        "raw": 38457,
+        "gzipEstimate": 7555
+      },
+      "referencedJsRaw": 660274
+    },
+    {
+      "route": "/frontend",
+      "html": {
+        "raw": 43985,
+        "gzipEstimate": 7840
+      },
+      "referencedJsRaw": 660274
+    },
+    {
+      "route": "/frontend/react",
+      "html": {
+        "raw": 260806,
+        "gzipEstimate": 25801
+      },
+      "referencedJsRaw": 660274
+    },
+    {
+      "route": "/frontend/react/introduction-to-react",
+      "html": {
+        "raw": 176680,
+        "gzipEstimate": 31861
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/thinking-in-declarative-ui",
+      "html": {
+        "raw": 178101,
+        "gzipEstimate": 32910
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/writing-ui-with-jsx",
+      "html": {
+        "raw": 83015,
+        "gzipEstimate": 16443
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/understanding-components",
+      "html": {
+        "raw": 86679,
+        "gzipEstimate": 16542
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/passing-data-with-props",
+      "html": {
+        "raw": 85055,
+        "gzipEstimate": 16671
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/rendering-elements-and-components",
+      "html": {
+        "raw": 82913,
+        "gzipEstimate": 15965
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/conditional-rendering",
+      "html": {
+        "raw": 81007,
+        "gzipEstimate": 15685
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/rendering-lists",
+      "html": {
+        "raw": 77734,
+        "gzipEstimate": 15203
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/keys-and-component-identity",
+      "html": {
+        "raw": 81639,
+        "gzipEstimate": 16089
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/handling-events",
+      "html": {
+        "raw": 87597,
+        "gzipEstimate": 16764
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/keeping-components-pure",
+      "html": {
+        "raw": 83479,
+        "gzipEstimate": 16212
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/rendering-and-committing",
+      "html": {
+        "raw": 86484,
+        "gzipEstimate": 16782
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/component-lifecycle-concepts",
+      "html": {
+        "raw": 87320,
+        "gzipEstimate": 16689
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/understanding-component-state",
+      "html": {
+        "raw": 79822,
+        "gzipEstimate": 15481
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/state-as-a-snapshot",
+      "html": {
+        "raw": 83196,
+        "gzipEstimate": 16054
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/update-queues-and-batching",
+      "html": {
+        "raw": 89900,
+        "gzipEstimate": 17268
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/updating-objects-immutably",
+      "html": {
+        "raw": 79869,
+        "gzipEstimate": 15703
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/updating-arrays-immutably",
+      "html": {
+        "raw": 80081,
+        "gzipEstimate": 15347
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/sharing-state-between-components",
+      "html": {
+        "raw": 79792,
+        "gzipEstimate": 15574
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/lifting-state-up",
+      "html": {
+        "raw": 82631,
+        "gzipEstimate": 16004
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/controlled-and-uncontrolled-components",
+      "html": {
+        "raw": 88033,
+        "gzipEstimate": 16867
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/preserving-and-resetting-state",
+      "html": {
+        "raw": 83492,
+        "gzipEstimate": 16217
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/state-structure-and-derived-values",
+      "html": {
+        "raw": 90343,
+        "gzipEstimate": 17655
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/organizing-updates-with-reducers",
+      "html": {
+        "raw": 89577,
+        "gzipEstimate": 17475
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/context-and-data-flow",
+      "html": {
+        "raw": 88910,
+        "gzipEstimate": 17321
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/avoiding-unnecessary-state",
+      "html": {
+        "raw": 81305,
+        "gzipEstimate": 15945
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-state",
+      "html": {
+        "raw": 103934,
+        "gzipEstimate": 19765
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-effect",
+      "html": {
+        "raw": 129859,
+        "gzipEstimate": 24351
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-ref",
+      "html": {
+        "raw": 90288,
+        "gzipEstimate": 17132
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-memo",
+      "html": {
+        "raw": 85033,
+        "gzipEstimate": 16809
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-callback",
+      "html": {
+        "raw": 84604,
+        "gzipEstimate": 16141
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-context",
+      "html": {
+        "raw": 85650,
+        "gzipEstimate": 16486
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-reducer",
+      "html": {
+        "raw": 89499,
+        "gzipEstimate": 16585
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-action-state",
+      "html": {
+        "raw": 96912,
+        "gzipEstimate": 18126
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-optimistic",
+      "html": {
+        "raw": 94626,
+        "gzipEstimate": 18335
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-imperative-handle",
+      "html": {
+        "raw": 79338,
+        "gzipEstimate": 15243
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-layout-effect",
+      "html": {
+        "raw": 81620,
+        "gzipEstimate": 15705
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-insertion-effect",
+      "html": {
+        "raw": 80698,
+        "gzipEstimate": 15023
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-effect-event",
+      "html": {
+        "raw": 85527,
+        "gzipEstimate": 16291
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-transition",
+      "html": {
+        "raw": 96432,
+        "gzipEstimate": 17743
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-deferred-value",
+      "html": {
+        "raw": 89572,
+        "gzipEstimate": 16901
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-id",
+      "html": {
+        "raw": 75955,
+        "gzipEstimate": 14093
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-sync-external-store",
+      "html": {
+        "raw": 88078,
+        "gzipEstimate": 16278
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-debug-value",
+      "html": {
+        "raw": 70775,
+        "gzipEstimate": 12805
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/use-form-status",
+      "html": {
+        "raw": 82644,
+        "gzipEstimate": 15120
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/component-composition",
+      "html": {
+        "raw": 89547,
+        "gzipEstimate": 17659
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/children-and-composition-patterns",
+      "html": {
+        "raw": 82927,
+        "gzipEstimate": 16059
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/building-reusable-components",
+      "html": {
+        "raw": 85240,
+        "gzipEstimate": 16663
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/creating-custom-hooks",
+      "html": {
+        "raw": 92469,
+        "gzipEstimate": 17476
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/separating-ui-and-logic",
+      "html": {
+        "raw": 83577,
+        "gzipEstimate": 16758
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/choosing-component-responsibilities",
+      "html": {
+        "raw": 84808,
+        "gzipEstimate": 17039
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/prop-drilling-and-alternatives",
+      "html": {
+        "raw": 86975,
+        "gzipEstimate": 16469
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/context-provider-architecture",
+      "html": {
+        "raw": 89832,
+        "gzipEstimate": 17459
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/understanding-error-boundaries",
+      "html": {
+        "raw": 92569,
+        "gzipEstimate": 17153
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/create-portal-and-portals",
+      "html": {
+        "raw": 84307,
+        "gzipEstimate": 16200
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/ref-props-and-forwarding",
+      "html": {
+        "raw": 84049,
+        "gzipEstimate": 15962
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/imperative-component-interfaces",
+      "html": {
+        "raw": 79685,
+        "gzipEstimate": 15541
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/designing-component-apis",
+      "html": {
+        "raw": 86929,
+        "gzipEstimate": 17057
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/create-context",
+      "html": {
+        "raw": 77245,
+        "gzipEstimate": 14563
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/controlled-inputs",
+      "html": {
+        "raw": 87397,
+        "gzipEstimate": 16692
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/uncontrolled-inputs",
+      "html": {
+        "raw": 84658,
+        "gzipEstimate": 16231
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/form-submission",
+      "html": {
+        "raw": 82732,
+        "gzipEstimate": 15638
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/form-validation-concepts",
+      "html": {
+        "raw": 89346,
+        "gzipEstimate": 17590
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-form-actions",
+      "html": {
+        "raw": 91970,
+        "gzipEstimate": 17348
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/pending-and-submission-states",
+      "html": {
+        "raw": 89180,
+        "gzipEstimate": 17691
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/handling-form-errors",
+      "html": {
+        "raw": 91202,
+        "gzipEstimate": 18033
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/optimistic-form-interactions",
+      "html": {
+        "raw": 88958,
+        "gzipEstimate": 17649
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/accessible-forms",
+      "html": {
+        "raw": 92469,
+        "gzipEstimate": 17588
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/managing-focus",
+      "html": {
+        "raw": 91944,
+        "gzipEstimate": 17859
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/keyboard-interactions",
+      "html": {
+        "raw": 90710,
+        "gzipEstimate": 18025
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/managing-complex-forms",
+      "html": {
+        "raw": 90070,
+        "gzipEstimate": 18102
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/understanding-react-re-renders",
+      "html": {
+        "raw": 88317,
+        "gzipEstimate": 16734
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/reconciliation-and-identity",
+      "html": {
+        "raw": 92855,
+        "gzipEstimate": 17759
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/understanding-rendering-performance",
+      "html": {
+        "raw": 90880,
+        "gzipEstimate": 17501
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-memo",
+      "html": {
+        "raw": 91654,
+        "gzipEstimate": 17546
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/memoization-strategies",
+      "html": {
+        "raw": 90384,
+        "gzipEstimate": 17548
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/lazy-and-code-splitting",
+      "html": {
+        "raw": 83432,
+        "gzipEstimate": 15839
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/suspense",
+      "html": {
+        "raw": 93197,
+        "gzipEstimate": 16896
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/transitions-and-update-priority",
+      "html": {
+        "raw": 89194,
+        "gzipEstimate": 17154
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/deferred-rendering",
+      "html": {
+        "raw": 82196,
+        "gzipEstimate": 15796
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-devtools-profiler",
+      "html": {
+        "raw": 85062,
+        "gzipEstimate": 16453
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-compiler",
+      "html": {
+        "raw": 93100,
+        "gzipEstimate": 17518
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/avoiding-unnecessary-renders",
+      "html": {
+        "raw": 87379,
+        "gzipEstimate": 16893
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/measuring-before-optimizing",
+      "html": {
+        "raw": 89895,
+        "gzipEstimate": 17301
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/performance-anti-patterns",
+      "html": {
+        "raw": 89623,
+        "gzipEstimate": 17743
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-server-components",
+      "html": {
+        "raw": 96303,
+        "gzipEstimate": 17825
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/client-components-and-boundaries",
+      "html": {
+        "raw": 94313,
+        "gzipEstimate": 17433
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/server-and-client-rendering",
+      "html": {
+        "raw": 92636,
+        "gzipEstimate": 17303
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/hydration",
+      "html": {
+        "raw": 91178,
+        "gzipEstimate": 17068
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/streaming-ui",
+      "html": {
+        "raw": 91428,
+        "gzipEstimate": 17457
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/designing-suspense-boundaries",
+      "html": {
+        "raw": 91930,
+        "gzipEstimate": 17328
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/error-boundaries-in-larger-applications",
+      "html": {
+        "raw": 91376,
+        "gzipEstimate": 18032
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/the-react-use-api",
+      "html": {
+        "raw": 90503,
+        "gzipEstimate": 16841
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/server-functions-and-actions",
+      "html": {
+        "raw": 92430,
+        "gzipEstimate": 17462
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/concurrent-rendering-concepts",
+      "html": {
+        "raw": 93173,
+        "gzipEstimate": 17578
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/integrating-external-stores",
+      "html": {
+        "raw": 90509,
+        "gzipEstimate": 17362
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/advanced-ref-patterns",
+      "html": {
+        "raw": 90313,
+        "gzipEstimate": 17598
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/choosing-escape-hatches",
+      "html": {
+        "raw": 87493,
+        "gzipEstimate": 17272
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-rendering-architecture",
+      "html": {
+        "raw": 93728,
+        "gzipEstimate": 18000
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/version-dependent-react-features",
+      "html": {
+        "raw": 89298,
+        "gzipEstimate": 17003
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/activity-boundaries",
+      "html": {
+        "raw": 90013,
+        "gzipEstimate": 16913
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/view-transition",
+      "html": {
+        "raw": 95647,
+        "gzipEstimate": 17535
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/testing-react-components",
+      "html": {
+        "raw": 91364,
+        "gzipEstimate": 17834
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/react-testing-library",
+      "html": {
+        "raw": 91880,
+        "gzipEstimate": 17758
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/vitest-fundamentals",
+      "html": {
+        "raw": 90185,
+        "gzipEstimate": 17355
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/testing-user-interactions",
+      "html": {
+        "raw": 85455,
+        "gzipEstimate": 16716
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/testing-asynchronous-ui",
+      "html": {
+        "raw": 89152,
+        "gzipEstimate": 17704
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/testing-custom-hooks",
+      "html": {
+        "raw": 91304,
+        "gzipEstimate": 17469
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/mocking-external-dependencies",
+      "html": {
+        "raw": 93020,
+        "gzipEstimate": 18335
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/accessibility-fundamentals",
+      "html": {
+        "raw": 92708,
+        "gzipEstimate": 17999
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/semantic-html-in-react",
+      "html": {
+        "raw": 90699,
+        "gzipEstimate": 17642
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/keyboard-accessibility",
+      "html": {
+        "raw": 94156,
+        "gzipEstimate": 17830
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/rules-of-hooks",
+      "html": {
+        "raw": 91742,
+        "gzipEstimate": 17025
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/effect-best-practices",
+      "html": {
+        "raw": 94789,
+        "gzipEstimate": 18425
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/debugging-react-applications",
+      "html": {
+        "raw": 92718,
+        "gzipEstimate": 18151
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/common-react-anti-patterns",
+      "html": {
+        "raw": 92933,
+        "gzipEstimate": 18182
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/component-maintainability",
+      "html": {
+        "raw": 90362,
+        "gzipEstimate": 17874
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/typescript-with-react",
+      "html": {
+        "raw": 97906,
+        "gzipEstimate": 18765
+      },
+      "referencedJsRaw": 663515
+    },
+    {
+      "route": "/frontend/react/error-handling-and-recovery",
+      "html": {
+        "raw": 100443,
+        "gzipEstimate": 19468
+      },
+      "referencedJsRaw": 663515
+    }
+  ]
+}

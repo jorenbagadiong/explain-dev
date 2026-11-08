@@ -4,6 +4,8 @@ Complex development concepts, explained simply.
 
 Explain Dev is a developer learning and reference project. **ED-013 is complete: all 119 React topics are published as static lessons.** Every lesson offers Learn, Quick Review, and Interview modes, and has a Back to Top button. See [React curriculum completion (ED-013)](#react-curriculum-completion-ed-013) for status, workflow, and limitations. The other frontend technologies and the remaining categories are still coming soon.
 
+ED-015 adds a CSS-first cinematic exploration layer: a layered homepage workspace, dimensional curriculum cards, compact editorial article heroes, and refined code/diagram surfaces. The 119 lessons, routes, learning modes, storage, and themes are preserved. See [ED-015 evidence and verification](docs/ed-015/verification.md), including [before/after screenshots](docs/ed-015/visual-verification.md), [accessibility scope](docs/ed-015/accessibility.md), and [measured performance](docs/ed-015/performance.md). Nothing is automatically committed or deployed.
+
 The approved ED-001/ED-002 foundation, responsive shell, typography, and themes are preserved. ED-003 provides the browser preferences repository and storage tests; there is still no bookmark, reading progress, or settings UI.
 
 ## Prerequisites

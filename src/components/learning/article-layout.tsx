@@ -42,7 +42,7 @@ export function ArticleLayout({ topic, heading, eyebrow, sections, sources, quic
         </ol>
       </nav>
       <article aria-labelledby="article-heading" className="min-w-0">
-        <header>
+        <header className="article-hero">
           <p className="mb-4 text-xs font-medium tracking-[0.16em] text-primary uppercase">{eyebrow}</p>
           <h1 id="article-heading" className="text-4xl leading-tight font-semibold tracking-[-0.045em] sm:text-5xl">{heading}</h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">{topic.summary}</p>
@@ -50,7 +50,7 @@ export function ArticleLayout({ topic, heading, eyebrow, sections, sources, quic
         <ArticleModes
           learn={
             <>
-              <nav aria-label="On this page" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">
+              <nav aria-label="On this page" className="article-toc mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">
                 <p className="mb-3 text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">On this page</p>
                 <ol className="grid gap-x-6 sm:grid-cols-2">
                   {sections.map((section) => <li key={section.id}><a href={`#${section.id}`} className="inline-flex min-h-11 items-center rounded-md py-2 text-sm text-primary underline-offset-4 hover:underline">{section.heading}</a></li>)}
@@ -91,7 +91,7 @@ export function ArticleComparison({ columns }: { columns: readonly ComparisonCol
   return (
     <div className="mt-6 grid gap-4 sm:grid-cols-2">
       {columns.map((column) => (
-        <div key={column.id} className="min-w-0 rounded-xl border p-5">
+        <div key={column.id} className="comparison-panel min-w-0 rounded-xl border p-5">
           <h3 className="font-semibold">{column.title}</h3>
           <ul className="mt-3 list-outside list-disc space-y-3 pl-5 text-sm leading-7 text-muted-foreground marker:text-primary">{column.items.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>

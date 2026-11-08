@@ -13,7 +13,7 @@ export function TopicCard({ topic }: { topic: ReactTopic }) {
       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{topic.summary}</p>
     </>
   );
-  const cardClassName = "block h-full rounded-xl border bg-background p-6";
+  const cardClassName = "topic-card depth-card block h-full rounded-xl border bg-background p-6";
 
   return topic.status === "available" ? (
     <Link href={topic.href} className={`${cardClassName} transition-colors hover:border-primary/50 hover:bg-accent/30`}>

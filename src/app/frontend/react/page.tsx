@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 
+import { DeveloperWorkspace } from "@/components/visuals/developer-workspace";
 import { TopicCard } from "@/components/learning/topic-card";
 import { categories } from "@/components/navigation/categories";
 import { frontendTechnologies } from "@/lib/learning/frontend-technologies";
@@ -34,6 +35,9 @@ export default function ReactPage() {
           <li><span aria-current="page" className="text-foreground">{react.name}</span></li>
         </ol>
       </nav>
+      <div className="curriculum-intro-container">
+      <div className="curriculum-hero">
+        <div>
       <div className="mb-6 flex size-12 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
         <Icon className="size-6" aria-hidden="true" />
       </div>
@@ -47,11 +51,16 @@ export default function ReactPage() {
         </p>
       </section>
 
+        </div>
+        <DeveloperWorkspace compact />
+      </div>
+      </div>
+
       <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
         {publishedCount === reactTopics.length ? `All ${reactTopics.length} lessons are available now.` : `${publishedCount} of ${reactTopics.length} lessons are available now, and the rest are coming soon.`} Follow the curriculum from fundamentals to advanced patterns, or jump to a group below.
       </p>
 
-      <nav aria-label="React curriculum" className="mt-8 rounded-xl border bg-muted/30 p-5 sm:p-6">
+      <nav aria-label="React curriculum" className="curriculum-index mt-8 rounded-xl border p-5 sm:p-6">
         <p className="mb-3 text-xs font-medium tracking-[0.12em] text-muted-foreground uppercase">Explore the curriculum</p>
         <ol className="grid gap-x-6 sm:grid-cols-2">
           {[...reactCurriculumGroups].sort((a, b) => a.order - b.order).map((group) => (
@@ -60,10 +69,15 @@ export default function ReactPage() {
         </ol>
       </nav>
 
-      {[...reactCurriculumGroups].sort((a, b) => a.order - b.order).map((group) => (
-        <section key={group.id} id={group.id} aria-labelledby={`${group.id}-heading`} className="mt-14 scroll-mt-28 border-t pt-8 sm:mt-16">
-          <h2 id={`${group.id}-heading`} className="text-2xl font-semibold tracking-tight">{group.title}</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{group.description}</p>
+      {[...reactCurriculumGroups].sort((a, b) => a.order - b.order).map((group, index) => (
+        <section key={group.id} id={group.id} aria-labelledby={`${group.id}-heading`} className="curriculum-group mt-14 scroll-mt-28 border-t pt-8 sm:mt-16">
+          <div className="curriculum-group-heading">
+            <span className="curriculum-group-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            <div className="min-w-0">
+              <h2 id={`${group.id}-heading`} className="text-2xl font-semibold tracking-tight">{group.title}</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{group.description}</p>
+            </div>
+          </div>
           <ul className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3 sm:gap-5">
             {reactTopics.filter((topic) => topic.groupId === group.id).sort((a, b) => a.order - b.order).map((topic) => (
               <li key={topic.id}><TopicCard topic={topic} /></li>

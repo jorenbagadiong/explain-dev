@@ -18,7 +18,7 @@ export function QuickReviewPanel({ review }: { review: ArticleQuickReview }) {
         <h3 className="text-lg font-semibold">Common mistakes</h3>
         <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-muted-foreground">{review.commonMistakes.map((mistake) => <li key={mistake}>{mistake}</li>)}</ul>
       </div>
-      <aside className="rounded-xl border bg-muted/30 p-5 sm:p-6">
+      <aside className="learning-callout rounded-xl border bg-muted/30 p-5 sm:p-6">
         <h3 className="font-semibold">The interview trap</h3>
         <p className="mt-3 leading-7 text-muted-foreground">{review.interviewTrap}</p>
       </aside>
@@ -34,7 +34,7 @@ export function InterviewPanel({ questions }: { questions: readonly InterviewQue
       <p className="mt-3 leading-7 text-muted-foreground">Explain your answer in your own words first. Then reveal the suggested answer and compare your reasoning.</p>
       <ol className="mt-6 space-y-5">
         {questions.map((question, index) => (
-          <li key={question.id} className="rounded-xl border p-5 sm:p-6">
+          <li key={question.id} className="interview-card rounded-xl border p-5 sm:p-6">
             <p className="mb-3 text-xs font-medium tracking-wide text-muted-foreground uppercase">Question {index + 1}</p>
             <h3 className="text-lg font-semibold leading-7">{question.question}</h3>
             <AnswerReveal question={question.question}><p className="leading-8 text-muted-foreground">{question.answer}</p></AnswerReveal>

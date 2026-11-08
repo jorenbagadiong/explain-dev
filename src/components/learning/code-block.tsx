@@ -2,8 +2,8 @@ import type { CodeExample } from "@/content/react/article-types";
 
 export function CodeBlock({ example }: { example: CodeExample }) {
   return (
-    <figure className="my-6 min-w-0 overflow-hidden rounded-xl border bg-muted/30">
-      <figcaption className="flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3 text-xs sm:px-5">
+    <figure className="code-panel my-6 min-w-0 overflow-hidden rounded-xl border bg-muted/30">
+      <figcaption className="code-panel-header flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3 text-xs sm:px-5">
         <span className="font-medium">{example.title}</span>
         <span className="font-mono text-muted-foreground">{example.language.toUpperCase()}</span>
       </figcaption>

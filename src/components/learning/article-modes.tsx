@@ -10,7 +10,7 @@ export function ArticleModes({ learn, review, interview }: { learn: ReactNode; r
 
   return (
     <div className="mt-8">
-      <div role="group" aria-label="Article mode" className="grid grid-cols-3 gap-1 rounded-xl border bg-muted/30 p-1.5">
+      <div role="group" aria-label="Article mode" className="article-mode-selector grid grid-cols-3 gap-1 rounded-xl border bg-muted/30 p-1.5">
         {modes.map((item) => (
           <button key={item.id} id={`${id}-${item.id}-button`} type="button" aria-pressed={mode === item.id} aria-controls={`${id}-${item.id}-panel`} onClick={() => setMode(item.id)} className="min-h-11 rounded-lg px-1 py-2 text-sm font-medium text-muted-foreground hover:text-foreground aria-pressed:bg-primary aria-pressed:text-primary-foreground aria-pressed:underline aria-pressed:decoration-2 aria-pressed:underline-offset-4 sm:px-4">
             {item.label}

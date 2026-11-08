@@ -1,21 +1,24 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import { DeveloperWorkspace } from "@/components/visuals/developer-workspace";
 import { categories } from "@/components/navigation/categories";
 
 export default function Home() {
   return (
     <>
-      <p className="mb-5 flex items-center gap-3 text-[10px] font-medium tracking-[0.18em] text-muted-foreground uppercase">
-        <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />
-        A clearer way to learn
-      </p>
-      <h1 className="max-w-2xl text-4xl leading-tight font-semibold tracking-[-0.045em] sm:text-5xl">
-        Explore development concepts
-      </h1>
-      <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-        Understand frontend, backend, full-stack, and DevOps concepts through clear explanations and practical examples.
-      </p>
+      <div className="explore-hero">
+        <div className="explore-hero-copy">
+          <p className="hero-eyebrow"><span aria-hidden="true" />A clearer way to learn</p>
+          <h1 className="hero-title">Explore development concepts</h1>
+          <p className="hero-description">Understand frontend, backend, full-stack, and DevOps concepts through clear explanations and practical examples.</p>
+          <div className="hero-actions">
+            <Link href="/frontend/react" className="hero-primary-link">Explore React <ArrowUpRight className="size-4" aria-hidden="true" /></Link>
+            <Link href="/frontend/react/introduction-to-react" prefetch={false} className="hero-secondary-link">Start with the fundamentals <span aria-hidden="true">→</span></Link>
+          </div>
+        </div>
+        <DeveloperWorkspace />
+      </div>
 
       <section aria-labelledby="categories-heading" className="mt-12 sm:mt-14">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
@@ -44,7 +47,7 @@ export default function Home() {
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{category.description}</p>
               </>
             );
-            const cardClassName = "block h-full rounded-xl border bg-background p-6 sm:p-7";
+            const cardClassName = "depth-card block h-full rounded-xl border bg-background p-6 sm:p-7";
 
             return (
               <li key={category.id}>

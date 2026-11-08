@@ -1,0 +1,28 @@
+[
+  {
+    "width": 375,
+    "theme": "light",
+    "extraScreenshots": 4
+  },
+  {
+    "width": 1440,
+    "theme": "dark",
+    "extraScreenshots": 4
+  },
+  {
+    "noJavaScript": "/",
+    "passed": true
+  },
+  {
+    "noJavaScript": "/frontend/react",
+    "passed": true
+  },
+  {
+    "noJavaScript": "/frontend/react/introduction-to-react",
+    "passed": true
+  },
+  {
+    "noJavaScript": "/frontend/react/use-state",
+    "passed": true
+  }
+]
